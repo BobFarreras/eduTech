@@ -5,6 +5,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   ├── config
 │   ├── description
 │   ├── FETCH_HEAD
+│   ├── fork-settings
 │   ├── HEAD
 │   ├── hooks
 │   │   ├── applypatch-msg.sample
@@ -27,68 +28,143 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   ├── logs
 │   │   ├── HEAD
 │   │   └── refs
-│   │       └── heads
-│   │           └── master
+│   │       ├── heads
+│   │       │   ├── develop
+│   │       │   ├── feature
+│   │       │   │   └── intro
+│   │       │   ├── main
+│   │       │   └── release
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── main
 │   ├── objects
 │   │   ├── 00
 │   │   │   └── 4145cddf3f9db91b57b9cb596683c8eb420862
 │   │   ├── 05
 │   │   │   └── e726d1b4201bc8c7716d2b058279676582e8c0
+│   │   ├── 16
+│   │   │   └── c346783d7e4de061a989a4660454ec563981a8
+│   │   ├── 19
+│   │   │   └── f1cd7c5a82bd4185760e4cb037bf65550ef2fb
+│   │   ├── 1b
+│   │   │   └── 38c4140d843dd5048c7fc01778190a278d5f4f
+│   │   ├── 1e
+│   │   │   └── 9299edcaaf0d95b04beba9a1fd734ad9efd61c
+│   │   ├── 20
+│   │   │   └── 04c8a4c68447324ad5c34657703fce95ffd976
 │   │   ├── 22
 │   │   │   └── 3a5c1d5702bf142f9bb8557b4bb0c831ffca78
+│   │   ├── 25
+│   │   │   └── 620be82adf68408563df8406776739ece50cba
 │   │   ├── 29
 │   │   │   └── 5f8fdf14fcfe6cccaa832133037157521b1890
+│   │   ├── 35
+│   │   │   └── 00afdf9f09b933f0bc6954f576be9400fc45cb
 │   │   ├── 3a
 │   │   │   └── 13f90a773b0facb675bf5b1a8239c8f33d36f5
+│   │   ├── 3e
+│   │   │   └── b652e6cc3294e4256523cf995dd0863bf140d4
+│   │   ├── 43
+│   │   │   └── 15996943841cc3786a79ea7e75da20c3b4c0f5
 │   │   ├── 48
 │   │   │   └── 51e0ce64b2e9cc2a84534b3a5769121d0d61a2
+│   │   ├── 4b
+│   │   │   └── 40cf3b66c4cd1859a7b09996e8f553ac9081b2
+│   │   ├── 50
+│   │   │   └── f654f106d61febdd8e3f458595c3d906ad6ee8
 │   │   ├── 51
+│   │   │   ├── 131b825c832aa9eab3694152db63bf82f95cf9
 │   │   │   └── 74b28c565c285e3e312ec5178be64fbeca8398
 │   │   ├── 56
 │   │   │   └── 7f17b0d7c7fb662c16d4357dd74830caf2dccb
+│   │   ├── 5d
+│   │   │   └── 4bf334306b76a2d560210c0ae495be7490dcf6
 │   │   ├── 5e
 │   │   │   └── f6a520780202a1d6addd833d800ccb1ecac0bb
 │   │   ├── 61
 │   │   │   └── e36849cf7cfa9f1f71b4a3964a4953e3e243d3
+│   │   ├── 6a
+│   │   │   └── c5bdf674999accb0a886a0073a9e8d56c39c31
+│   │   ├── 70
+│   │   │   └── 53ebdab5909131d942fe35697a7748b6d6f37a
 │   │   ├── 71
 │   │   │   └── 8d6fea4835ec2d246af9800eddb7ffb276240c
 │   │   ├── 77
 │   │   │   └── 053960334e2e34dc584dea8019925c3b4ccca9
+│   │   ├── 87
+│   │   │   └── 70f254e209aca2304a1e8436a2bb082ceddbec
+│   │   ├── 94
+│   │   │   └── 51a8f3e3588f383bb93711e0772a33bbfcccb0
+│   │   ├── 95
+│   │   │   └── fcdab10ee521da7fea7417812b63e2566635e7
+│   │   ├── 9f
+│   │   │   └── ff0be18a7cc4adbec703370de0699e0e2b8035
 │   │   ├── a2
 │   │   │   ├── 6a0f6774d196847097b42a7b1fb209198b5311
 │   │   │   └── dc41ecee5ec435200fe7cba2bde4107f823774
+│   │   ├── a5
+│   │   │   └── 6967e5f6925a30da01bf8a2fd2b4d3c90212d5
 │   │   ├── aa
 │   │   │   └── ad6f9e6e9b2262b043340091540f96d909e849
+│   │   ├── b0
+│   │   │   └── 43215504c26a302f47378a169a7fd92d071809
 │   │   ├── b2
 │   │   │   └── b2a44f6ebc70c450043c05a002e7a93ba5d651
+│   │   ├── b6
+│   │   │   └── 807fa1e0255e7564262a1eed638f835461ce98
+│   │   ├── b8
+│   │   │   └── aedb04de049fdf8c4b46cd4c86ad21364a3c2e
+│   │   ├── ba
+│   │   │   └── 512d945cb5e8ae6480ac980182580583cb1471
 │   │   ├── c8
 │   │   │   └── 8f389de09f418da376598c42e8788d4fb6d172
 │   │   ├── ce
-│   │   │   └── 891dfa9c5e080ab2571fcf2c82243db37b7267
+│   │   │   ├── 891dfa9c5e080ab2571fcf2c82243db37b7267
+│   │   │   └── e0907b7e7cbc66a82b00933185a67456bd6115
+│   │   ├── d4
+│   │   │   └── eb1c32f75c809ad2c12d55950f4dd4869ae825
+│   │   ├── d7
+│   │   │   └── a7e233674fa7a1d33557b1661158e1d2a64186
+│   │   ├── d9
+│   │   │   └── eecedba03e8cfdc49c57c52ee2468eef4aeb40
 │   │   ├── e2
 │   │   │   └── 15bc4ccf138bbc38ad58ad57e92135484b3c0f
+│   │   ├── e5
+│   │   │   └── ed42749de21f0c22f9a7f0360671f5171e7c20
+│   │   ├── e6
+│   │   │   └── 4cf6e3cbd001069367388c82ae42c9d68a53d4
 │   │   ├── e9
 │   │   │   └── ffa3083ad279ecf95fd8eae59cb253e9a539c4
+│   │   ├── ed
+│   │   │   └── abd1131859b6172c3de33f678cd1b5ec64dbd0
 │   │   ├── f7
 │   │   │   └── fa87eb875260ed98651bc419c8139b5119e554
+│   │   ├── f8
+│   │   │   └── a22820db6e9db08bc546bb0e4726ccb754c527
+│   │   ├── fe
+│   │   │   └── c93eccc9bfd9142908bf93fdd0d729f7da0c61
 │   │   ├── ff
 │   │   │   └── b0ceb24de959555afe74dd0fb439f96a20868f
 │   │   ├── info
 │   │   └── pack
 │   └── refs
 │       ├── heads
-│       │   └── master
+│       │   ├── develop
+│       │   ├── feature
+│       │   │   └── intro
+│       │   ├── main
+│       │   └── release
+│       ├── remotes
+│       │   └── origin
+│       │       ├── HEAD
+│       │       └── main
 │       └── tags
 ├── .github
 │   └── workflows
 ├── .gitignore
 ├── .vscode
 ├── AGENTS.md
-├── app
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
 ├── codi_i_estructura_edutech.txt
 ├── content
 │   └── legal
@@ -96,8 +172,9 @@ ESTRUCTURA DEL PROJECTE (./src)
 ├── init-structure.js
 ├── merge.js
 ├── messages
-│   ├── ca.json
-│   └── en.json
+│   ├── ca.ts
+│   ├── en.ts
+│   └── es.ts
 ├── next-env.d.ts
 ├── next.config.ts
 ├── package.json
@@ -118,8 +195,10 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │       ├── (game)
 │   │       │   ├── arena
 │   │       │   └── learn
-│   │       └── api
-│   │           └── webhooks
+│   │       ├── api
+│   │       │   └── webhooks
+│   │       ├── layout.tsx
+│   │       └── page.tsx
 │   ├── application
 │   │   ├── dto
 │   │   ├── README.md
@@ -135,171 +214,36 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── repositories
 │   │   ├── services
 │   │   └── types
+│   ├── i18n.ts
 │   ├── infrastructure
 │   │   ├── adapters
 │   │   ├── config
 │   │   ├── database
 │   │   └── repositories
 │   │       └── supabase
-│   └── presentation
-│       ├── actions
-│       ├── components
-│       │   ├── admin
-│       │   ├── features
-│       │   │   ├── auth
-│       │   │   ├── game-engine
-│       │   │   │   ├── challenges
-│       │   │   │   └── README.md
-│       │   │   ├── leaderboard
-│       │   │   └── topics
-│       │   ├── feedback
-│       │   ├── layout
-│       │   └── ui
-│       ├── hooks
-│       └── utils
+│   ├── presentation
+│   │   ├── actions
+│   │   ├── components
+│   │   │   ├── admin
+│   │   │   ├── features
+│   │   │   │   ├── auth
+│   │   │   │   ├── game-engine
+│   │   │   │   │   ├── challenges
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── leaderboard
+│   │   │   │   └── topics
+│   │   │   ├── feedback
+│   │   │   ├── layout
+│   │   │   └── ui
+│   │   ├── hooks
+│   │   └── utils
+│   └── proxy.ts
 ├── tests
 │   └── e2e
 └── tsconfig.json
 
 
 CONTINGUT DELS FITXERS
-
-
-// =================== FILE: app/globals.css ===================
-
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-// =================== FILE: app/layout.tsx ===================
-
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Generated by create next app",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
-
-
-// =================== FILE: app/page.tsx ===================
-
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
-}
 
 
 // =================== FILE: init-structure.js ===================
@@ -502,25 +446,50 @@ try {
   console.error("❌ Hi ha hagut un error en crear el fitxer:", error);
 }
 
-// =================== FILE: messages/ca.json ===================
+// =================== FILE: messages/ca.ts ===================
 
-{
-  "app": { "name": "TechMastery" },
-  "game": { "start": "Comença", "check": "Comprovar" }
-}
+// filepath: messages/ca.ts
+export default {
+  app: {
+    name: "TechMastery"
+  },
+  game: {
+    start: "Comença",
+    check: "Comprovar"
+  }
+} as const;
 
-// =================== FILE: messages/en.json ===================
+// =================== FILE: messages/en.ts ===================
 
-{
-  "app": { "name": "TechMastery" },
-  "game": { "start": "Start", "check": "Check" }
-}
+// filepath: messages/en.ts
+export default {
+  app: {
+    name: "TechMastery"
+  },
+  game: {
+    start: "Start",
+    check: "Check"
+  }
+} as const;
+
+// =================== FILE: messages/es.ts ===================
+
+// filepath: messages/es.ts
+export default {
+  app: {
+    name: "TechMastery"
+  },
+  game: {
+    start: "Empezar",
+    check: "Comprobar"
+  }
+} as const;
 
 // =================== FILE: next-env.d.ts ===================
 
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
-import "./.next/types/routes.d.ts";
+import "./.next/dev/types/routes.d.ts";
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
@@ -528,14 +497,14 @@ import "./.next/types/routes.d.ts";
 
 // =================== FILE: next.config.ts ===================
 
-import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts'); // Apunta al fitxer que crearem ara
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
+export default withNextIntl(nextConfig);
 
 // =================== FILE: package.json ===================
 
@@ -582,9 +551,140 @@ export default nextConfig;
 
 // =================== FILE: src/app/globals.css ===================
 
+/* filepath: src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+// =================== FILE: src/app/[locale]/layout.tsx ===================
+
+// filepath: src/app/[locale]/layout.tsx
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import "../globals.css"; // Assegura't que la ruta és correcta
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "TechMastery",
+  description: "Aprèn tecnologia jugant",
+};
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  // En Next.js 15/16 params és una Promise, cal fer await
+  const { locale } = await params;
+  
+  // Obtenim els missatges del servidor per passar-los al client
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
+
+// =================== FILE: src/app/[locale]/page.tsx ===================
+
+// filepath: src/app/[locale]/page.tsx
+import { useTranslations } from 'next-intl';
+
+export default function HomePage() {
+  const t = useTranslations('app');
+  const tGame = useTranslations('game');
+
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-slate-900 text-white">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <h1 className="text-4xl font-bold text-blue-500 mb-4">
+          {t('name')}
+        </h1>
+      </div>
+
+      <div className="mt-10 border border-slate-700 p-10 rounded-xl bg-slate-800">
+        <p className="text-xl mb-6">Benvingut al futur de l'aprenentatge.</p>
+        
+        <button className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-bold transition-all">
+          {tGame('start')}
+        </button>
+      </div>
+
+      <div className="mt-10 text-slate-400">
+        <p>Ruta actual: /src/app/[locale]/page.tsx</p>
+      </div>
+    </main>
+  );
+}
+
+// =================== FILE: src/i18n.ts ===================
+
+// filepath: src/i18n.ts
+import { notFound } from 'next/navigation';
+import { getRequestConfig } from 'next-intl/server';
+
+// Definim els idiomes suportats i el tipus
+export const locales = ['ca', 'es', 'en'] as const;
+export type Locale = (typeof locales)[number];
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  // Aconseguim el locale de la petició
+  const locale = await requestLocale;
+
+  // Validació estricta
+  if (!locale || !locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  return {
+    locale,
+    // AQUI ESTÀ EL CANVI: Importem el fitxer .ts directament
+    messages: (await import(`../messages/${locale}.ts`)).default
+  };
+});
+
+// =================== FILE: src/proxy.ts ===================
+
+// filepath: src/proxy.ts
+import createMiddleware from 'next-intl/middleware';
+import { locales } from './i18n';
+ 
+export default createMiddleware({
+  locales: locales,
+  defaultLocale: 'ca'
+});
+ 
+export const config = {
+  // Matcher per ignorar fitxers interns i API
+  matcher: ['/', '/(ca|es|en)/:path*']
+};
 
 // =================== FILE: tsconfig.json ===================
 
@@ -608,8 +708,8 @@ export default nextConfig;
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./*"]
+   "paths": {
+      "@/*": ["./src/*"]
     }
   },
   "include": [
