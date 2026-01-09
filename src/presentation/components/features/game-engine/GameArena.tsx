@@ -3,7 +3,8 @@
 
 import { Challenge } from '@/core/entities/challenge.entity';
 import { useGameSession } from '@/presentation/hooks/game/useGameSession';
-import { QuizView } from './QuizView';
+// ❌ ELIMINA: import { QuizView } from './QuizView'; (Ja no cal aquí)
+import { ChallengeRenderer } from './ChallengeRenderer'; // ✅ AQUEST ÉS EL BO
 import { GameResult } from './GameResult';
 import { GameError } from './GameError';
 import { Loader2 } from 'lucide-react';
@@ -11,9 +12,10 @@ import { useTranslations } from 'next-intl';
 
 interface GameArenaProps {
   challenges: Challenge[];
+  topicSlug: string;
 }
 
-export function GameArena({ challenges }: GameArenaProps) {
+export function GameArena({ challenges, topicSlug }: GameArenaProps) {
   const t = useTranslations('game.arena');
   
   const { 
@@ -45,6 +47,7 @@ export function GameArena({ challenges }: GameArenaProps) {
             xpEarned={result.xpEarned} 
             newLevel={result.newLevel} 
             leveledUp={result.leveledUp} 
+            topicSlug={topicSlug}
         />
     );
   }
@@ -57,6 +60,7 @@ export function GameArena({ challenges }: GameArenaProps) {
   // 4. ESTAT: JUGANT
   return (
     <div className="w-full max-w-3xl mx-auto">
+      {/* BARRA DE PROGRÉS */}
       <div className="mb-8 px-4">
         <div className="flex justify-between text-xs text-slate-400 mb-2 uppercase font-bold tracking-wider">
           <span>{t('progress')}</span>
@@ -70,19 +74,18 @@ export function GameArena({ challenges }: GameArenaProps) {
         </div>
       </div>
 
+      {/* ZONA DE JOC */}
       <div className="animate-in slide-in-from-right-8 duration-300">
-        {currentChallenge.type === 'QUIZ' ? (
-          // 🔑 KEY ÉS CRÍTICA: Reseteja l'estat del QuizView quan canvia la pregunta
-          <QuizView 
-            key={currentChallenge.id} 
-            challenge={currentChallenge} 
-            onNext={handleNext} 
-          />
-        ) : (
-           <div className="text-center p-12 bg-slate-800 rounded-xl text-slate-400">
-             {t('construction')} <button onClick={handleNext} className="underline">{t('skip')}</button>
-           </div>
-        )}
+        
+        {/* 🛑 ASSEGURA'T QUE NOMÉS TENS AIXÒ! 
+            Si tens un 'if (type === QUIZ)' aquí a sobre, ESBORRA'L.
+        */}
+        
+        <ChallengeRenderer 
+           challenge={currentChallenge}
+           onNext={handleNext}
+        />
+
       </div>
     </div>
   );

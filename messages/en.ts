@@ -22,18 +22,23 @@ export default {
       lesson_complete: "Lesson Completed!",
       xp_earned: "XP Earned",
       dashboard_btn: "Back to Dashboard",
-      level_up: "LEVEL UP!"
+      level_up: "LEVEL UP!",
+      continue_btn: "Continue" // <--- AFEGIR
     }
 
   },
   dashboard: {
-    availableTopics: "Learning Paths",
-    startTopic: "Enter"
+    welcome_title: "Welcome back",
+    subtitle: "What technology do you want to master today?",
+    availableTopics: "Available Topics"
   },
   topic: {
-    react: { title: "Advanced React" },
+    react: { title: "React Basics" },
+    typescript: { title: "TypeScript Pro" },
     supabase: { title: "Supabase & SQL" },
-    typescript: { title: "Total TypeScript" }
+    legacy: { title: "Legacy PHP" }, // Encara que estigui desactivat
+    security: { title: "OWASP Top 10" }, // Exemple extra
+    docker: { title: "Docker Containers" }
   },
   auth: {
     login: {
@@ -67,5 +72,14 @@ export default {
       check_email: "Account created! Check your email."
     },
     logout: "Logout"
+  },
+  landing: {
+    badge: "Learn coding by playing",
+    title_prefix: "Become a",
+    title_highlight: "Senior Developer",
+    description: "Master React, Docker, and Cybersecurity with interactive challenges. No boring videos. Just real practice.",
+    cta_primary: "START FOR FREE",
+    cta_secondary: "LEARN MORE",
+    login_button: "LOGIN"
   }
 } as const;

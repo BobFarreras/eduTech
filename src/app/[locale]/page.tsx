@@ -1,44 +1,82 @@
-// filepath: src/app/[locale]/page.tsx
-import { getTopicsAction } from '@/presentation/actions/topics/get-topics.action';
-import { TopicCard } from '@/presentation/components/features/topics/TopicCard';
+// ✅ ARA (CORRECTE - Apuntant al teu fitxer v4):
+import { Link } from '@/navigation';   // <-- AQUEST ÉS EL CANVI CLAU
+import { redirect } from 'next/navigation'; // El redirect aquí pot ser el natiu pq ja tenim el locale als params
+
+import { createClient } from '@/infrastructure/utils/supabase/server';
+import { ArrowRight, Code2, Terminal } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
-export default async function HomePage() {
-  const t = await getTranslations('app');
-  const tDash = await getTranslations('dashboard');
+interface LandingPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-  // Cridem a la Server Action directament (és codi de servidor)
-  const response = await getTopicsAction();
+export default async function LandingPage({ params }: LandingPageProps) {
+  // 1. OBTENIR LOCALE I TRADUCCIONS
+  const { locale } = await params;
+  const t = await getTranslations('landing');
+  const supabase = await createClient();
+
+  // 2. SI JA TÉ SESSIÓ -> CAP AL DASHBOARD (AMB LOCALE CORRECTE!)
+  const { data: { user } } = await supabase.auth.getUser();
   
-  const topics = response.success ? response.data : [];
+  if (user) {
+    redirect(`/${locale}/dashboard`);
+  }
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 bg-slate-900 text-white">
-      <div className="z-10 max-w-5xl w-full flex flex-col items-center">
-        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-12">
-          {t('name')}
+    <main className="flex min-h-screen flex-col bg-slate-950 text-white overflow-hidden relative">
+      
+
+
+      {/* Fons Decoratiu */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[500px] h-125 bg-blue-600/20 rounded-full blur-[100px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px]" />
+      </div>
+
+      {/* Contingut */}
+      <div className="z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center max-w-4xl mx-auto pt-20">
+        
+        {/* Badge */}
+        <div className="mb-8 px-4 py-1.5 rounded-full border border-slate-700 bg-slate-900/50 backdrop-blur-sm text-sm text-slate-300 font-medium inline-flex items-center gap-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
+           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+           {t('badge')}
+        </div>
+
+        {/* Títol Hero */}
+        <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight animate-in fade-in slide-in-from-bottom-8 duration-700">
+           {t('title_prefix')} <br/>
+           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">
+             {t('title_highlight')}
+           </span>
         </h1>
 
-        <div className="w-full">
-          <h2 className="text-2xl font-semibold mb-6 text-slate-200">
-            {tDash('availableTopics')}
-          </h2>
+        <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-700">
+           {t('description')}
+        </p>
 
-          {!response.success && (
-             <div className="p-4 bg-red-900/50 border border-red-500 rounded text-red-200">
-                {response.error}
-             </div>
-          )}
+        {/* Botons */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-in fade-in slide-in-from-bottom-16 duration-700">
+           <Link 
+             href="/login" 
+             className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2"
+           >
+             {t('cta_primary')} <ArrowRight className="w-5 h-5" />
+           </Link>
+           <Link 
+             href="/about" 
+             className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700"
+           >
+             {t('cta_secondary')}
+           </Link>
+        </div>
 
-          {topics.length === 0 && response.success ? (
-            <p className="text-slate-400 italic">No hi ha temes actius en aquest moment.</p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-              {topics.map((topic) => (
-                <TopicCard key={topic.id} topic={topic} />
-              ))}
-            </div>
-          )}
+        {/* Icones Flotants (Decoració) */}
+        <div className="absolute top-1/4 left-10 md:left-20 opacity-20 rotate-[-12deg] animate-pulse pointer-events-none">
+            <Code2 className="w-24 h-24" />
+        </div>
+        <div className="absolute bottom-1/4 right-10 md:right-20 opacity-20 rotate-[12deg] animate-pulse pointer-events-none">
+            <Terminal className="w-24 h-24" />
         </div>
       </div>
     </main>

@@ -5,14 +5,15 @@ import {
   Server, 
   Globe, 
   Cpu, 
-  Terminal, 
+  Terminal,
+  ShieldCheck,
+  Atom,
+  Container,
+  Layers,
   LucideIcon 
 } from 'lucide-react';
 
-/**
- * Mapa d'icones disponibles per als temes.
- * La clau ha de coincidir amb el camp 'icon_name' de la BD.
- */
+// Mapa de claus (string BD) -> Components (Lucide)
 const ICON_MAP: Record<string, LucideIcon> = {
   'code': Code2,
   'database': Database,
@@ -20,10 +21,22 @@ const ICON_MAP: Record<string, LucideIcon> = {
   'web': Globe,
   'algo': Cpu,
   'terminal': Terminal,
-  // Fallback per defecte
+  
+  // Nous temes
+  'brand-react': Atom,
+  'security': ShieldCheck,
+  'docker': Container,
+  'fullstack': Layers,
+  
+  // Fallback
   'default': Code2 
 };
 
-export const getTopicIcon = (iconName: string): LucideIcon => {
-  return ICON_MAP[iconName] || ICON_MAP['default'];
+/**
+ * Retorna directament el JSX de la icona.
+ * Així al component només has de fer: {getTopicIcon(nom, classes)}
+ */
+export const getTopicIcon = (iconName: string, className?: string) => {
+  const IconComponent = ICON_MAP[iconName] || ICON_MAP['default'];
+  return <IconComponent className={className} />;
 };

@@ -1,35 +1,58 @@
 // filepath: src/infrastructure/repositories/supabase/challenge.repository.ts
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenge.entity';
+import { Challenge, ChallengeType, ChallengeContent } from '@/core/entities/challenge.entity';
 
-// --- TIPUS DE DADES (DATABASE TYPES) ---
+// --- 1. DEFINICIÓ DE TIPUS DE LA BASE DE DADES (RAW JSON) ---
 
 type LocalizedString = Record<string, string>;
 
-// 1. Format NOU (Multidioma)
-type RawChallengeContent = {
+// Estructura JSON per a MATCHING a la BD
+type RawMatchingContent = {
+  instruction: LocalizedString;
+  pairs: Array<{
+    left: { id: string; text: LocalizedString };
+    right: { id: string; text: LocalizedString };
+  }>;
+};
+
+// Estructura JSON per a CODE_FIX a la BD
+type RawCodeFixContent = {
+  description: LocalizedString;
+  initialCode: string;
+  solution: string;
+  tests?: Array<{ input: string; output: string }>;
+  hint: LocalizedString; // <--- NOU
+  options: Array<{       // <--- NOU
+    id: string;
+    code: string;
+    isCorrect: boolean
+  }>;
+};
+
+// Estructura JSON per a QUIZ a la BD (Format Nou)
+type RawQuizContent = {
   question: LocalizedString;
   explanation: LocalizedString;
   options: Array<{ id: string; text: LocalizedString }>;
   correctOptionIndex: number;
 };
-// 2. Format VELL (Strings simples) - Aquest és el que necessitem pel fallback
+
+// Estructura JSON per a QUIZ a la BD (Legacy / Fallback)
 type LegacyRawContent = {
-  question: string;
-  explanation: string;
-  options: string[]; // <--- Array d'strings simple
-  correctOptionIndex: number;
+  question?: string;
+  explanation?: string;
+  options?: string[];
+  correctOptionIndex?: number;
 };
 
-
-// 3. Tipus de la fila SQL
+// Tipus de la fila SQL (content és unknown fins que el validem)
 type ChallengeRow = {
   id: string;
   topic_id: string;
   difficulty_tier: number;
   type: string;
-  content: unknown; // Usem 'unknown' perquè pot ser qualsevol dels dos formats anteriors
+  content: unknown;
   created_at: string;
 };
 
@@ -47,51 +70,105 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
 
   private mapToEntity(row: ChallengeRow, locale: string): Challenge {
     const challengeType = row.type as ChallengeType;
-    const rawData = row.content;
 
-    let localizedContent: QuizContent;
+    // 1. Processar el JSON (pot venir com string o objecte)
+    let rawData = row.content;
+    if (typeof rawData === 'string') {
+      try {
+        rawData = JSON.parse(rawData);
+      } catch (e) {
+        console.error(`Error parsing JSON for challenge ${row.id}`, e);
+        rawData = {};
+      }
+    }
 
-    // --- DETECTION LOGIC (Type Guard) ---
-    // Comprovem si és el format NOU (té opcions com a objectes)
-    const isNewFormat =
-      rawData &&
-      typeof rawData === 'object' &&
-      'options' in rawData &&
-      Array.isArray((rawData as RawChallengeContent).options) &&
-      (rawData as RawChallengeContent).options.length > 0 &&
-      typeof (rawData as RawChallengeContent).options[0] === 'object';
+    let localizedContent: ChallengeContent;
 
-    if (isNewFormat) {
-      // --- FORMAT NOU (JSONB Multidioma) ---
-      // Fem el cast segur perquè ja hem comprovat l'estructura
-      const content = rawData as RawChallengeContent;
+    // --- LOGICA POLIMÒRFICA STRICTA (SENSE ANY) ---
+    switch (challengeType) {
 
-      localizedContent = {
-        question: this.translate(content.question, locale),
-        explanation: this.translate(content.explanation, locale),
-        correctOptionIndex: content.correctOptionIndex,
-        options: content.options.map(opt => ({
-          id: opt.id,
-          text: this.translate(opt.text, locale)
-        }))
-      };
-    } else {
-      // --- FORMAT VELL (Fallback) ---
-      // 🛡️ CORRECCIÓ: Usem 'as unknown as LegacyRawContent' en lloc de 'any'
-      // Això li diu a TS: "Confia en mi, si no és el format nou, tracta-ho com el vell"
-      const content = rawData as unknown as LegacyRawContent;
+      // CAS 1: MATCHING
+      case 'MATCHING': {
+        // Fem un cast al tipus RAW específic
+        const content = rawData as RawMatchingContent;
 
-      const oldOptions = Array.isArray(content.options) ? content.options : [];
+        localizedContent = {
+          instruction: this.translate(content.instruction, locale),
+          pairs: Array.isArray(content.pairs)
+            ? content.pairs.map(p => ({
+              left: {
+                id: p.left.id,
+                text: this.translate(p.left.text, locale)
+              },
+              right: {
+                id: p.right.id,
+                text: this.translate(p.right.text, locale)
+              }
+            }))
+            : []
+        };
+        break;
+      }
 
-      localizedContent = {
-        question: String(content.question || ''),
-        explanation: String(content.explanation || ''),
-        correctOptionIndex: content.correctOptionIndex || 0,
-        options: oldOptions.map((txt, idx) => ({
-          id: `opt-${idx}`, // Generem un ID sintètic per mantenir consistència
-          text: String(txt)
-        }))
-      };
+      // CAS 2: CODE_FIX
+      case 'CODE_FIX': {
+        const content = rawData as RawCodeFixContent;
+
+        localizedContent = {
+          description: this.translate(content.description, locale),
+          initialCode: content.initialCode || '',
+          solution: content.solution || '',
+          // ✅ Assignem la traducció a 'hint' (singular)
+          hint: this.translate(content.hint, locale),
+          tests: content.tests || [],
+          options: Array.isArray(content.options) ? content.options.map(opt => ({
+            id: opt.id,
+            code: opt.code,
+            isCorrect: opt.isCorrect
+          })) : []
+        };
+        break;
+      }
+
+      // CAS 3: QUIZ
+      case 'QUIZ':
+      default: {
+        // Type Guard per detectar format nou
+        const quizObj = rawData as Partial<RawQuizContent>;
+        const isNewFormat =
+          quizObj &&
+          'options' in quizObj &&
+          Array.isArray(quizObj.options) &&
+          quizObj.options.length > 0 &&
+          typeof quizObj.options[0] === 'object';
+
+        if (isNewFormat) {
+          const content = rawData as RawQuizContent;
+          localizedContent = {
+            question: this.translate(content.question, locale),
+            explanation: this.translate(content.explanation, locale),
+            correctOptionIndex: content.correctOptionIndex,
+            options: content.options.map(opt => ({
+              id: opt.id,
+              text: this.translate(opt.text, locale)
+            }))
+          };
+        } else {
+          // Legacy
+          const content = rawData as LegacyRawContent;
+          const oldOptions = Array.isArray(content.options) ? content.options : [];
+          localizedContent = {
+            question: String(content.question || ''),
+            explanation: String(content.explanation || ''),
+            correctOptionIndex: content.correctOptionIndex || 0,
+            options: oldOptions.map((txt, idx) => ({
+              id: `opt-${idx}`,
+              text: String(txt)
+            }))
+          };
+        }
+        break;
+      }
     }
 
     return {
@@ -103,12 +180,12 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
       createdAt: new Date(row.created_at),
     };
   }
+
   // --- PUBLIC METHODS ---
 
-  async findNextForUser(topicId: string, userId: string, locale: string): Promise<Challenge[]> {
+  async findNextForUser(topicId: string, userId: string, locale: string, difficulty: number): Promise<Challenge[]> {
     const supabase = await createClient();
 
-    // 1. Obtenir completats
     const { data: completed } = await supabase
       .from('user_progress')
       .select('challenge_id')
@@ -117,44 +194,46 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
 
     const completedIds = completed?.map(c => c.challenge_id) || [];
 
-    // 2. Query Principal
     let query = supabase
       .from('challenges')
       .select('*')
       .eq('topic_id', topicId)
-      .order('difficulty_tier', { ascending: true })
-      .limit(5);
+      .eq('difficulty_tier', difficulty);
 
     if (completedIds.length > 0) {
-      // Nota: Usem filter per la negació d'una llista
       query = query.filter('id', 'not.in', `(${completedIds.join(',')})`);
     }
 
-    const { data, error } = await query;
+    const { data: newChallenges } = await query.limit(10);
 
-    if (error) throw new Error(`Error fetching challenges: ${error.message}`);
-    if (!data) return [];
+    if (newChallenges && newChallenges.length > 0) {
+      return newChallenges.map(row => this.mapToEntity(row as ChallengeRow, locale));
+    }
 
-    return data.map(row => this.mapToEntity(row as ChallengeRow, locale));
+    // Fallback Mode Repàs
+    const { data: reviewChallenges } = await supabase
+      .from('challenges')
+      .select('*')
+      .eq('topic_id', topicId)
+      .eq('difficulty_tier', difficulty)
+      .limit(10);
+
+    return (reviewChallenges || []).map(row => this.mapToEntity(row as ChallengeRow, locale));
   }
 
-  // Aquests mètodes també necessiten locale ara, o un locale per defecte ('ca')
   async findByTopicId(topicId: string, locale: string = 'ca'): Promise<Challenge[]> {
-    const supabase = await createClient(); // Instancia local
-
+    const supabase = await createClient();
     const { data, error } = await supabase
       .from('challenges')
       .select('*')
       .eq('topic_id', topicId);
 
     if (error) throw new Error(error.message);
-
     return data.map((row) => this.mapToEntity(row as ChallengeRow, locale));
   }
 
   async findById(id: string, locale: string = 'ca'): Promise<Challenge | null> {
-    const supabase = await createClient(); // Instancia local
-
+    const supabase = await createClient();
     const { data, error } = await supabase
       .from('challenges')
       .select('*')
@@ -165,7 +244,6 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
       if (error.code === 'PGRST116') return null;
       throw new Error(error.message);
     }
-
     return this.mapToEntity(data as ChallengeRow, locale);
   }
 }

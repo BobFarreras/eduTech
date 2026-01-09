@@ -93,6 +93,33 @@ El progrés es guarda referenciant l'ID del tema.
     * *Nota:* Usem UUIDs com a claus per si canviem el nom del tema ('React.js' -> 'React 19') no perdem el progrés.
 
 ---
+### 4.3 Sistema de Progressió (Path Logic)
+El progrés és seqüencial i basat en competència, no en XP acumulada.
+
+**Regla de Desbloqueig (Unlock):**
+- **Nivell 1:** Sempre desbloquejat per defecte.
+- **Nivell N:** Es desbloqueja automàticament quan l'usuari ha completat el **Nivell N-1**.
+
+**Definició de "Nivell Completat":**
+Un nivell es considera completat quan l'usuari ha superat amb èxit un % significatiu dels reptes únics d'aquell nivell (per exemple, el 80% o tots).
+
+**XP (Experiència):**
+L'XP és una mètrica global per a gamificació (rànquings) i no afecta al desbloqueig de rutes.
+
+### 4.4 Tipus de Reptes (Game Modes)
+El sistema ha de suportar múltiples modalitats de joc. L'arquitectura ha de permetre afegir-ne de nous fàcilment.
+
+**Tipus Suportats (MVP):**
+1.  **QUIZ:** Pregunta tipus test (1 correcta de N opcions).
+2.  **CODE_FILL:** Emplenar forats en un fragment de codi.
+3.  **MATCHING:** Relacionar conceptes (Ex: 'useState' -> 'Hook d'Estat').
+
+### 4.5 Feedback Visual al Mapa
+- **Current Position:** L'últim nivell completat ha de mostrar un indicador "Estàs aquí" (Avatar/Icona).
+- **Next Up:** El següent nivell desbloquejat ha de tenir una animació de "pols" o "ones" per convidar a jugar.
+- **Game Icon:** Cada node ha de mostrar una icona representativa del tipus de joc predominant en aquell nivell.
+
+---
 
 ## 4. USER STORIES (GESTIÓ DINÀMICA)
 

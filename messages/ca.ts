@@ -10,30 +10,37 @@ export default {
     finish: "Acabar",
     loading: "Carregant...",
     arena: {
-        loading: "Guardant el teu progrés...",
-        progress: "Progrés",
-        construction: "En construcció...",
-        skip: "Saltar",
-        unauthorized_title: "Inicia sessió",
-        unauthorized_desc: "Necessites un compte per guardar el teu progrés i pujar de nivell.",
-        error_title: "Ups! Alguna cosa ha fallat",
-        login_btn: "Entrar",
-        retry_btn: "Reintentar",
-        lesson_complete: "Lliçó Completada!",
-        xp_earned: "XP Guanyada",
-        dashboard_btn: "Tornar al Dashboard",
-        level_up: "NIVELL SUPERAT!"
+      loading: "Guardant el teu progrés...",
+      progress: "Progrés",
+      construction: "En construcció...",
+      skip: "Saltar",
+      unauthorized_title: "Inicia sessió",
+      unauthorized_desc: "Necessites un compte per guardar el teu progrés i pujar de nivell.",
+      error_title: "Ups! Alguna cosa ha fallat",
+      login_btn: "Entrar",
+      retry_btn: "Reintentar",
+      lesson_complete: "Lliçó Completada!",
+      xp_earned: "XP Guanyada",
+      dashboard_btn: "Tornar al Dashboard",
+      level_up: "NIVELL SUPERAT!",
+      continue_btn: "Continuar" // <--- AFEGIR
     }
   },
+  // AFEGEIX AIXÒ:
   dashboard: {
-    availableTopics: "Rutes d'Aprenentatge",
-    startTopic: "Entrar"
+    welcome_title: "Hola de nou",
+    subtitle: "Quina tecnologia vols dominar avui?",
+    availableTopics: "Temes Disponibles"
   },
   topic: {
-    react: { title: "React Avançat" },
-    supabase: { title: "Supabase & SQL" },
-    typescript: { title: "TypeScript Total" }
+    react: { title: "Fonaments de React" },
+    typescript: { title: "TypeScript Pro" },
+    supabase: { title: "Supabase i SQL" },
+    legacy: { title: "PHP Legacy" },
+    security: { title: "Seguretat OWASP" },
+    docker: { title: "Contenidors Docker" }
   },
+
   // --- NOVA SECCIÓ AUTH ---
   auth: {
     login: {
@@ -67,5 +74,14 @@ export default {
       check_email: "Compte creat! Revisa el teu correu."
     },
     logout: "Tancar Sessió"
+  },
+  landing: {
+    badge: "Aprèn programació jugant",
+    title_prefix: "Converteix-te en",
+    title_highlight: "Senior Developer",
+    description: "Domina React, Docker i Ciberseguretat amb reptes interactius. Sense vídeos avorrits. Només pràctica real.",
+    cta_primary: "COMENÇAR GRATIS",
+    cta_secondary: "SABER-NE MÉS",
+    login_button: "ENTRAR"
   }
 } as const;

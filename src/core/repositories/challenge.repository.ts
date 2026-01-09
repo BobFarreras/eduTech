@@ -6,8 +6,8 @@ export interface IChallengeRepository {
    * Obté el següent repte per a un usuari en un tema,
    * traduït a l'idioma especificat.
    */
-  findNextForUser(topicId: string, userId: string, locale: string): Promise<Challenge[]>;
-  
+  findNextForUser(topicId: string, userId: string, locale: string, difficulty: number): Promise<Challenge[]>;
+
   // (Opcional) Si necessites aquests altres mètodes, també han de rebre locale
   findByTopicId(topicId: string, locale: string): Promise<Challenge[]>;
   findById(id: string, locale: string): Promise<Challenge | null>;

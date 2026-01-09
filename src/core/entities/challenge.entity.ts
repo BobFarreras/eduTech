@@ -1,37 +1,63 @@
 // filepath: src/core/entities/challenge.entity.ts
 
-export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'TERMINAL';
+// 1. Definim tots els tipus de joc que suportarà el sistema
+export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'MATCHING' | 'TERMINAL';
 
-// 1. Definim l'estructura d'una opció
+// --- COMPONENTS REUTILITZABLES ---
+
 export interface ChallengeOption {
   id: string;
   text: string;
 }
 
-// 2. Actualitzem el QuizContent
+// --- CONTINGUTS ESPECÍFICS PER A CADA JOC ---
+
+// A. Tipus Test (El que ja tens)
 export interface QuizContent {
   question: string;
   explanation: string;
-  options: ChallengeOption[]; // <--- ABANS ERA string[], ARA ÉS EL NOSTRE OBJECTE
+  options: ChallengeOption[]; 
   correctOptionIndex: number;
 }
-
-// (Altres tipus poden quedar igual o adaptar-se)
+export interface CodeFixOption {
+  id: string;
+  code: string;     // El text que es mostrarà a la carta (ex: "useState")
+  isCorrect: boolean;
+}
+// B. Tipus "Arregla el Codi" (El teu, molt potent)
 export interface CodeFixContent {
   description: string;
   initialCode: string;
-  solution: string;
-  tests: { input: string; output: string }[];
+  solution: string; // La solució correcta (per validar o mostrar)
+  hint: string; // 👈 Cambiat de 'hints?: string[]' a 'hint: string'
+  tests: { input: string; output: string }[]; // Casos de prova per validar l'execució
+  options: CodeFixOption[]; // Les 3 opcions
 }
 
-// Union Type per al contingut
-export type ChallengeContent = QuizContent | CodeFixContent; // | TerminalContent...
+// C. Tipus "Relacionar Conceptes" (Nou requisit: sinònims, conceptes)
+export interface MatchingContent {
+  instruction: string; // Ex: "Relaciona cada hook amb la seva funció"
+  pairs: { 
+    left: ChallengeOption; 
+    right: ChallengeOption 
+  }[];
+}
 
+// --- UNION TYPE (POLIMORFISME) ---
+// Això permet que TypeScript sàpiga automàticament quins camps tens
+// si comproves el 'type'.
+export type ChallengeContent = 
+  | QuizContent 
+  | CodeFixContent 
+  | MatchingContent;
+  // | TerminalContent (Futur)
+
+// --- ENTITAT PRINCIPAL ---
 export interface Challenge {
   id: string;
   topicId: string;
   difficultyTier: number;
-  type: ChallengeType;
-  content: ChallengeContent;
+  type: ChallengeType;       // El discriminador
+  content: ChallengeContent; // Contingut dinàmic
   createdAt: Date;
 }

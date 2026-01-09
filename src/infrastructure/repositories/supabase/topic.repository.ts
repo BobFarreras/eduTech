@@ -1,9 +1,10 @@
 // filepath: src/infrastructure/repositories/supabase/topic.repository.ts
-import { createClient } from '@supabase/supabase-js';
-import { ITopicRepository } from '@/core/repositories/topic.repository';
+
+import { ITopicRepository, TierProgressStats } from '@/core/repositories/topic.repository';
 import { Topic, CreateTopicInput } from '@/core/entities/topic.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
-
+import { createClient } from '@/infrastructure/utils/supabase/server'; // El teu helper
+import { ChallengeType } from '@/core/entities/challenge.entity';
 // 1. Definim el tipus exacte de la fila a la BD (Lectura)
 type TopicRow = {
   id: string;
@@ -15,10 +16,10 @@ type TopicRow = {
   is_active: boolean;
   created_at: string;
   updated_at: string;
+  description?: string;
 };
 
 // 2. Definim el tipus per a Escriptura (Insert/Update)
-// Ometem camps generats (id, dates) i fem servir snake_case
 type TopicPersistencePayload = {
   slug?: string;
   name_key?: string;
@@ -29,13 +30,9 @@ type TopicPersistencePayload = {
 };
 
 export class SupabaseTopicRepository implements ITopicRepository {
-  // Nota: En un entorn real de Next.js amb Server Actions, 
-  // hauríem d'injectar el client creat amb createServerClient per gestionar cookies.
-  // Per ara, mantenim aquest client estàtic per a la fase d'infraestructura pura.
-  private supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+
+  // ❌ ESBORRAT: No podem tenir una propietat 'supabase' aquí perquè el client és async.
+  // private supabase = ...
 
   private mapToEntity(row: TopicRow): Topic {
     return {
@@ -48,23 +45,29 @@ export class SupabaseTopicRepository implements ITopicRepository {
       isActive: row.is_active,
       createdAt: new Date(row.created_at),
       updatedAt: new Date(row.updated_at),
+      description: row.description || ''
     };
   }
 
   async findAllActive(): Promise<Topic[]> {
-    const { data, error } = await this.supabase
+    // ✅ CORRECCIÓ: Instanciem el client DINS del mètode
+    const supabase = await createClient();
+
+    const { data, error } = await supabase
       .from('topics')
       .select('*')
       .eq('is_active', true)
-      .returns<TopicRow[]>(); // Forcem el tipat de retorn
+      .returns<TopicRow[]>();
 
     if (error) throw new Error(`Supabase Error: ${error.message}`);
-    
+
     return data.map((row) => this.mapToEntity(row));
   }
 
   async findAll(): Promise<Topic[]> {
-    const { data, error } = await this.supabase
+    const supabase = await createClient(); // ✅ Instancia local
+
+    const { data, error } = await supabase
       .from('topics')
       .select('*')
       .returns<TopicRow[]>();
@@ -74,7 +77,9 @@ export class SupabaseTopicRepository implements ITopicRepository {
   }
 
   async findById(id: string): Promise<Topic | null> {
-    const { data, error } = await this.supabase
+    const supabase = await createClient(); // ✅ Instancia local
+
+    const { data, error } = await supabase
       .from('topics')
       .select('*')
       .eq('id', id)
@@ -89,7 +94,9 @@ export class SupabaseTopicRepository implements ITopicRepository {
   }
 
   async findBySlug(slug: string): Promise<Topic | null> {
-    const { data, error } = await this.supabase
+    const supabase = await createClient(); // ✅ Instancia local
+
+    const { data, error } = await supabase
       .from('topics')
       .select('*')
       .eq('slug', slug)
@@ -104,6 +111,8 @@ export class SupabaseTopicRepository implements ITopicRepository {
   }
 
   async create(input: CreateTopicInput): Promise<Topic> {
+    const supabase = await createClient(); // ✅ Instancia local
+
     const dbPayload: TopicPersistencePayload = {
       slug: input.slug,
       name_key: input.nameKey,
@@ -113,7 +122,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
       is_active: input.isActive
     };
 
-    const { data, error } = await this.supabase
+    const { data, error } = await supabase
       .from('topics')
       .insert(dbPayload)
       .select()
@@ -124,9 +133,10 @@ export class SupabaseTopicRepository implements ITopicRepository {
   }
 
   async update(id: string, input: Partial<CreateTopicInput>): Promise<Topic> {
-    // Construïm l'objecte d'actualització de forma tipada, sense 'any'
+    const supabase = await createClient(); // ✅ Instancia local
+
     const dbPayload: TopicPersistencePayload = {};
-    
+
     if (input.slug !== undefined) dbPayload.slug = input.slug;
     if (input.nameKey !== undefined) dbPayload.name_key = input.nameKey;
     if (input.iconName !== undefined) dbPayload.icon_name = input.iconName;
@@ -134,7 +144,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
     if (input.isActive !== undefined) dbPayload.is_active = input.isActive;
     if (input.parentTopicId !== undefined) dbPayload.parent_topic_id = input.parentTopicId;
 
-    const { data, error } = await this.supabase
+    const { data, error } = await supabase
       .from('topics')
       .update(dbPayload)
       .eq('id', id)
@@ -142,13 +152,64 @@ export class SupabaseTopicRepository implements ITopicRepository {
       .single<TopicRow>();
 
     if (error) {
-      // AQUÍ fem servir l'error de domini: Si no troba la fila per actualitzar
       if (error.code === 'PGRST116') {
         throw new TopicNotFoundError(id);
       }
       throw new Error(error.message);
     }
-    
+
     return this.mapToEntity(data);
   }
+
+  async getTopicProgressSummary(topicId: string, userId: string): Promise<TierProgressStats[]> {
+    const supabase = await createClient();
+
+    // 1. Obtenir reptes amb el seu TIPUS
+    const { data: challenges, error: chalError } = await supabase
+      .from('challenges')
+      .select('id, difficulty_tier, type') // <--- AFEGIM 'type'
+      .eq('topic_id', topicId);
+
+    if (chalError) throw new Error(chalError.message);
+    if (!challenges) return [];
+
+    // 2. Obtenir el progrés de l'usuari en aquest tema
+    const { data: progress, error: progError } = await supabase
+      .from('user_progress')
+      .select('challenge_id')
+      .eq('user_id', userId)
+      .eq('topic_id', topicId);
+
+    if (progError) throw new Error(progError.message);
+
+    // 3. Càlculs (Igual que abans)
+    const completedSet = new Set(progress?.map(p => p.challenge_id));
+   const statsMap = new Map<number, TierProgressStats>();
+
+    challenges.forEach(c => {
+      const tier = c.difficulty_tier;
+      
+      // ✅ CORRECCIÓ 3: Cast segur al nostre tipus (ChallengeType) en lloc de 'any'
+      // Supabase retorna string, nosaltres li diem a TS que confiem que és un dels nostres tipus.
+      const type = c.type as ChallengeType; 
+
+      if (!statsMap.has(tier)) {
+        statsMap.set(tier, {
+          tier,
+          totalChallenges: 0,
+          completedChallenges: 0,
+          mostCommonType: type // Usem la variable tipada
+        });
+      }
+      const stat = statsMap.get(tier)!;
+      stat.totalChallenges++;
+      if (completedSet.has(c.id)) {
+        stat.completedChallenges++;
+      }
+    });
+
+    return Array.from(statsMap.values()).sort((a, b) => a.tier - b.tier);
+  }
+
+  
 }

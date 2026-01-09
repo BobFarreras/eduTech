@@ -12,7 +12,7 @@ export interface Topic {
   colorTheme: string;      // Classe CSS o Hex (ex: 'bg-blue-500')
   parentTopicId?: string;  // Opcional: Per a jerarquies
   isActive: boolean;       // Per a soft-deletes i control de visibilitat
-  
+  description: string,
   // Metadades d'auditoria (opcionals al domini pur, però útils)
   createdAt: Date;
   updatedAt: Date;

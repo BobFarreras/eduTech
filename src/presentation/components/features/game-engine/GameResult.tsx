@@ -1,15 +1,16 @@
 // filepath: src/presentation/components/features/game-engine/GameResult.tsx
-import { Trophy, Star } from 'lucide-react';
-import { Link } from '@/navigation';
+import { Trophy, Star, ArrowRight } from 'lucide-react';
+import { Link } from '@/navigation'; // ✅ Import correcte
 import { useTranslations } from 'next-intl';
 
 interface GameResultProps {
   xpEarned: number;
-  newLevel: number; // Ara el farem servir!
+  newLevel: number;
   leveledUp: boolean;
+  topicSlug: string; // <--- NOVA PROP NECESSÀRIA
 }
 
-export function GameResult({ xpEarned, newLevel, leveledUp }: GameResultProps) {
+export function GameResult({ xpEarned, newLevel, leveledUp, topicSlug }: GameResultProps) {
   const t = useTranslations('game.arena');
 
   return (
@@ -32,16 +33,16 @@ export function GameResult({ xpEarned, newLevel, leveledUp }: GameResultProps) {
                 +{xpEarned} <Star className="w-4 h-4 fill-green-400" />
             </span>
          </div>
-         {/* CORRECCIÓ: Usem newLevel per que no sigui unused variable */}
          <div className="flex justify-between items-center text-slate-300 pt-4 border-t border-slate-700">
             <span>Nivell Actual</span>
             <span className="text-white font-bold text-xl">{newLevel}</span>
          </div>
       </div>
 
-      <Link href="/dashboard">
-        <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-500 transition-all">
-            {t('dashboard_btn')}
+      {/* ARA TORNA AL MAPA DEL TEMA */}
+      <Link href={`/learn/${topicSlug}`}>
+        <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-500 transition-all flex items-center gap-2">
+            {t('continue_btn') || "Continuar"} <ArrowRight className="w-5 h-5" />
         </button>
       </Link>
     </div>

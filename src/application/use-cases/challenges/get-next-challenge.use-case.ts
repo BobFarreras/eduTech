@@ -10,15 +10,15 @@ export class GetNextChallengeUseCase {
     private readonly challengeRepository: IChallengeRepository
   ) {}
 
-  // 1. Afegim 'locale' als arguments
-  async execute(topicSlug: string, userId: string, locale: string): Promise<Challenge[]> {
+  // 1. AFEGIM 'difficulty' A LA SIGNATURA
+  async execute(topicSlug: string, userId: string, locale: string, difficulty: number): Promise<Challenge[]> {
     const topic = await this.topicRepository.findBySlug(topicSlug);
 
     if (!topic) {
       throw new TopicNotFoundError(topicSlug);
     }
 
-    // 2. Passem 'locale' al repositori
-    return this.challengeRepository.findNextForUser(topic.id, userId, locale);
+    // 2. PASSEM 'difficulty' AL REPOSITORI
+    return this.challengeRepository.findNextForUser(topic.id, userId, locale, difficulty);
   }
 }

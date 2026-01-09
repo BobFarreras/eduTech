@@ -22,18 +22,23 @@ export default {
       lesson_complete: "¡Lección completada!",
       xp_earned: "XP ganada",
       dashboard_btn: "Volver al Dashboard",
-      level_up: "¡NIVEL SUPERADO!"
+      level_up: "¡NIVEL SUPERADO!",
+      continue_btn: "Continuar" // <--- AFEGIR
     }
 
   },
   dashboard: {
-    availableTopics: "Rutas de Aprendizaje",
-    startTopic: "Entrar"
+    welcome_title: "Hola de nuevo",
+    subtitle: "¿Qué tecnología quieres dominar hoy?",
+    availableTopics: "Temas Disponibles"
   },
   topic: {
-    react: { title: "React Avanzado" },
+    react: { title: "Fundamentos de React" },
+    typescript: { title: "TypeScript Pro" },
     supabase: { title: "Supabase y SQL" },
-    typescript: { title: "TypeScript Total" }
+    legacy: { title: "PHP Legacy" },
+    security: { title: "Seguridad OWASP" },
+    docker: { title: "Contenedores Docker" }
   },
   auth: {
     login: {
@@ -67,5 +72,14 @@ export default {
       check_email: "¡Cuenta creada! Revisa tu correo electrónico."
     },
     logout: "Cerrar sesión"
+  },
+  landing: {
+    badge: "Aprende programación jugando",
+    title_prefix: "Conviértete en",
+    title_highlight: "Senior Developer",
+    description: "Domina React, Docker y Ciberseguridad con retos interactivos. Sin vídeos aburridos. Solo práctica real.",
+    cta_primary: "EMPEZAR GRATIS",
+    cta_secondary: "SABER MÁS",
+    login_button: "ENTRAR"
   }
 } as const;
