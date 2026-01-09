@@ -124,3 +124,19 @@ El progrés es guarda referenciant l'ID del tema.
 2.  **Validació de JSON:** Encara que els temes siguin dinàmics, l'estructura del `content` dins de `challenges` ha de seguir un esquema Zod estricte segons el `type` de repte.
 
 ---
+
+## 6. EXPERIÈNCIA D'USUARI (UX FLOW)
+
+### 6.1 Dashboard (World Select)
+* Vista tipus graella de tots els temes disponibles.
+* Cada targeta mostra: Icona, Nom, Barra de progrés global del tema.
+
+### 6.2 Learning Path (Topic View)
+* Vista vertical amb "scroll infinit" cap amunt o avall.
+* Representació visual d'un camí (Path).
+* Els nodes del camí representen nivells de dificultat (`difficulty_tier`).
+* **Bloqueig de Progrés:** L'usuari no pot accedir al Tier 2 fins que no hagi superat el Tier 1 (o hagi fet un examen de nivell).
+
+### 6.3 Game Mode
+* Interfície immersiva (sense header/footer de navegació).
+* Feedback immediat.
