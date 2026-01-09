@@ -3,9 +3,7 @@
 
 import { CompleteSessionUseCase, SessionResult } from '@/application/use-cases/gamification/complete-session.use-case';
 import { SupabaseUserRepository } from '@/infrastructure/repositories/supabase/user.repository';
-
-// IMPORTANT: Aquest ID ha de coincidir amb el que vam fer a l'INSERT SQL
-const DEMO_USER_ID = '00000000-0000-0000-0000-000000000000';
+import { createClient } from '@/infrastructure/utils/supabase/server'; // <--- Nou import
 
 type ActionResponse = 
   | { success: true; data: SessionResult }
@@ -13,13 +11,23 @@ type ActionResponse =
 
 export async function submitSessionAction(challengeIds: string[], topicId: string): Promise<ActionResponse> {
   try {
-    // Pattern: Composition Root (Instanciem tot l'arbre de dependències aquí)
+    // 1. Obtenim l'usuari real de la sessió
+    const supabase = await createClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return { success: false, error: 'Unauthorized: Please login first' };
+    }
+
+    // 2. Ja tenim l'ID real!
+    const userId = user.id;
+
+    // 3. Executem el cas d'ús
     const userRepo = new SupabaseUserRepository();
     const useCase = new CompleteSessionUseCase(userRepo);
 
-    const result = await useCase.execute(DEMO_USER_ID, challengeIds, topicId);
+    const result = await useCase.execute(userId, challengeIds, topicId);
 
-    // Revalidar paths si calgués (revalidatePath)
     return { success: true, data: result };
   } catch (error) {
     console.error('Error submitting session:', error);
