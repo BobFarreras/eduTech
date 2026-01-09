@@ -8,7 +8,22 @@ export default {
     check: "Comprovar",
     next: "Següent",
     finish: "Acabar",
-    loading: "Carregant..."
+    loading: "Carregant...",
+    arena: {
+        loading: "Guardant el teu progrés...",
+        progress: "Progrés",
+        construction: "En construcció...",
+        skip: "Saltar",
+        unauthorized_title: "Inicia sessió",
+        unauthorized_desc: "Necessites un compte per guardar el teu progrés i pujar de nivell.",
+        error_title: "Ups! Alguna cosa ha fallat",
+        login_btn: "Entrar",
+        retry_btn: "Reintentar",
+        lesson_complete: "Lliçó Completada!",
+        xp_earned: "XP Guanyada",
+        dashboard_btn: "Tornar al Dashboard",
+        level_up: "NIVELL SUPERAT!"
+    }
   },
   dashboard: {
     availableTopics: "Rutes d'Aprenentatge",

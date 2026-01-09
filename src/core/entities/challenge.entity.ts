@@ -1,39 +1,37 @@
 // filepath: src/core/entities/challenge.entity.ts
 
-/**
- * Tipus de reptes suportats pel motor.
- * Coincideix amb l'ENUM de la base de dades.
- */
-export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'TERMINAL' | 'DRAG_DROP';
+export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'TERMINAL';
 
-/**
- * Estructura base per al contingut d'un Quiz.
- */
-export interface QuizContent {
-  question: string;
-  options: string[];
-  correctOptionIndex: number; // 0, 1, 2...
-  explanation: string;
+// 1. Definim l'estructura d'una opció
+export interface ChallengeOption {
+  id: string;
+  text: string;
 }
 
-/**
- * Estructura base per a un repte de Codi.
- */
+// 2. Actualitzem el QuizContent
+export interface QuizContent {
+  question: string;
+  explanation: string;
+  options: ChallengeOption[]; // <--- ABANS ERA string[], ARA ÉS EL NOSTRE OBJECTE
+  correctOptionIndex: number;
+}
+
+// (Altres tipus poden quedar igual o adaptar-se)
 export interface CodeFixContent {
   description: string;
   initialCode: string;
-  solutionPattern: string; // Regex o string exacte per validar
-  hints: string[];
+  solution: string;
+  tests: { input: string; output: string }[];
 }
 
-// Unió discriminada per tipar el contingut segons el tipus de repte
-export type ChallengeContent = QuizContent | CodeFixContent; 
+// Union Type per al contingut
+export type ChallengeContent = QuizContent | CodeFixContent; // | TerminalContent...
 
 export interface Challenge {
   id: string;
   topicId: string;
-  difficultyTier: number; // 1-10
+  difficultyTier: number;
   type: ChallengeType;
-  content: ChallengeContent; // Aquí està la màgia: Tipat fort, no JSON genèric
+  content: ChallengeContent;
   createdAt: Date;
 }

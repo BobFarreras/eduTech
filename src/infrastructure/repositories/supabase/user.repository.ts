@@ -1,54 +1,70 @@
 // filepath: src/infrastructure/repositories/supabase/user.repository.ts
-import { createClient } from '@supabase/supabase-js';
-import { IUserRepository, UserProfile } from '@/core/repositories/user.repository';
+import { createClient } from '@/infrastructure/utils/supabase/server';
+import { IUserRepository, UserProfile } from '@/core/repositories/user.repository'; // Assegura't que aquesta interfície existeix al Core
 
 export class SupabaseUserRepository implements IUserRepository {
-  // Nota: En Next.js Server Actions, hauríem d'usar cookies() per auth real.
-  // Aquí usem el client genèric perquè estem amb un usuari demo.
-  private supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
-
+  
   async findById(userId: string): Promise<UserProfile | null> {
-    const { data, error } = await this.supabase
+    const supabase = await createClient();
+    
+    // Obtenim el perfil de la taula 'profiles'
+    const { data, error } = await supabase
       .from('profiles')
-      .select('id, total_xp, current_level')
+      .select('*')
       .eq('id', userId)
       .single();
 
-    if (error) return null;
+    if (error) {
+      console.error('Error fetching user profile:', error);
+      return null;
+    }
 
     return {
       id: data.id,
-      totalXp: data.total_xp,
-      level: data.current_level
+      totalXp: data.total_xp || 0,
+      level: data.level || 1,
+      // Mapem altres camps si cal
     };
   }
 
   async saveProgress(userId: string, challengeIds: string[], topicId: string, xpPerChallenge: number): Promise<void> {
-    // Mapegem els IDs a files per a la taula user_progress
-    const records = challengeIds.map(challengeId => ({
+    const supabase = await createClient();
+
+    // Guardem cada repte completat a 'user_progress'
+    // Usem upsert per evitar errors si ja existeix
+    const progressInserts = challengeIds.map(challengeId => ({
       user_id: userId,
       challenge_id: challengeId,
       topic_id: topicId,
+      completed_at: new Date().toISOString(),
       xp_earned: xpPerChallenge
     }));
 
-    // Usem 'upsert' amb 'ignoreDuplicates' per evitar errors si l'usuari repeteix el repte
-    const { error } = await this.supabase
-      .from('user_progress')
-      .upsert(records, { onConflict: 'user_id,challenge_id', ignoreDuplicates: true });
+    const { error } = await supabase
+      .from('user_progress') // Assegura't que aquesta taula existeix
+      .upsert(progressInserts, { onConflict: 'user_id, challenge_id' });
 
-    if (error) throw new Error(`Error saving progress: ${error.message}`);
+    if (error) {
+      console.error('Error saving progress:', error);
+      throw new Error('Database error saving progress');
+    }
   }
 
-  async updateXp(userId: string, newXp: number, newLevel: number): Promise<void> {
-    const { error } = await this.supabase
+  async updateXp(userId: string, newTotalXp: number, newLevel: number): Promise<void> {
+    const supabase = await createClient();
+
+    const { error } = await supabase
       .from('profiles')
-      .update({ total_xp: newXp, current_level: newLevel })
+      .update({ 
+        total_xp: newTotalXp,
+        level: newLevel,
+        updated_at: new Date().toISOString()
+      })
       .eq('id', userId);
 
-    if (error) throw new Error(`Error updating XP: ${error.message}`);
+    if (error) {
+      console.error('Error updating XP:', error);
+      throw new Error('Database error updating XP');
+    }
   }
 }

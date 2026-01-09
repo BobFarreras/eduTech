@@ -3,20 +3,12 @@ import { Challenge } from '../entities/challenge.entity';
 
 export interface IChallengeRepository {
   /**
-   * Cerca reptes associats a un tema específic.
+   * Obté el següent repte per a un usuari en un tema,
+   * traduït a l'idioma especificat.
    */
-  findByTopicId(topicId: string): Promise<Challenge[]>;
-
-  /**
-   * Obté un repte concret per ID (per validar la resposta).
-   */
-  findById(id: string): Promise<Challenge | null>;
-
-  /**
-   * Mètode intel·ligent: Obté el següent repte per a un usuari en un tema.
-   * (Més endavant filtrarà els que l'usuari ja ha completat).
-   * Per ara, pot retornar el primer disponible.
-   */
-  findNextForUser(topicId: string, userId: string): Promise<Challenge[]>;
-
+  findNextForUser(topicId: string, userId: string, locale: string): Promise<Challenge[]>;
+  
+  // (Opcional) Si necessites aquests altres mètodes, també han de rebre locale
+  findByTopicId(topicId: string, locale: string): Promise<Challenge[]>;
+  findById(id: string, locale: string): Promise<Challenge | null>;
 }

@@ -5,20 +5,25 @@ import { GetNextChallengeUseCase } from '@/application/use-cases/challenges/get-
 import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
 import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
 import { Challenge } from '@/core/entities/challenge.entity';
+import { getLocale } from 'next-intl/server'; // <--- IMPORTANT
 
-// CORRECCIÓ AQUÍ: data és Challenge[] (Array)
 type ActionResponse = 
   | { success: true; data: Challenge[] } 
   | { success: false; error: string };
 
 export async function getNextChallengeAction(topicSlug: string): Promise<ActionResponse> {
   try {
+    const locale = await getLocale(); // Obtenim idioma actual
+    
     const topicRepo = new SupabaseTopicRepository();
     const challengeRepo = new SupabaseChallengeRepository();
     const useCase = new GetNextChallengeUseCase(topicRepo, challengeRepo);
 
+    // TODO: Obtenir l'ID real de l'usuari amb supabase.auth.getUser()
     const userId = 'demo-user-id'; 
-    const challenges = await useCase.execute(topicSlug, userId); // Això ara retorna array
+
+    // Passem el locale al Use Case
+    const challenges = await useCase.execute(topicSlug, userId, locale); 
 
     return { success: true, data: challenges };
   } catch (error) {

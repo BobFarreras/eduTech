@@ -8,7 +8,23 @@ export default {
     check: "Comprobar",
     next: "Siguiente",
     finish: "Finalizar",
-    loading: "Cargando..."
+    loading: "Cargando...",
+    arena: {
+      loading: "Guardando tu progreso...",
+      progress: "Progreso",
+      construction: "En construcción...",
+      skip: "Saltar",
+      unauthorized_title: "Inicia sesión",
+      unauthorized_desc: "Necesitas una cuenta para guardar tu progreso y subir de nivel.",
+      error_title: "¡Ups! Algo ha fallado",
+      login_btn: "Entrar",
+      retry_btn: "Reintentar",
+      lesson_complete: "¡Lección completada!",
+      xp_earned: "XP ganada",
+      dashboard_btn: "Volver al Dashboard",
+      level_up: "¡NIVEL SUPERADO!"
+    }
+
   },
   dashboard: {
     availableTopics: "Rutas de Aprendizaje",

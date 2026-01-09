@@ -4,13 +4,16 @@
 import { useActionState } from 'react';
 import { authAction } from '@/presentation/actions/auth/auth.action';
 import { Loader2, LogIn } from 'lucide-react';
-import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
+
+// 1. IMPORTACIÓ CORRECTA (Arquitectura Centralitzada)
+import { Link } from '@/navigation'; 
 
 export function LoginForm() {
-  const t = useTranslations('auth'); // 👈 Carreguem traduccions
-  const locale = useLocale();        // 👈 Necessari per als enllaços
+  const t = useTranslations('auth');
   
+  // 2. HEM ELIMINAT 'const locale = useLocale();' -> Ja no cal!
+
   const [state, action, isPending] = useActionState(authAction, {});
 
   return (
@@ -37,7 +40,8 @@ export function LoginForm() {
           {t('fields.password')}
         </label>
         <div className="text-right mb-1">
-            <Link href="#" className="text-xs text-blue-400 hover:underline">
+            {/* TODO: Crear ruta real /forgot-password */}
+            <Link href="/forgot-password" className="text-xs text-blue-400 hover:underline">
               {t('login.forgot_password')}
             </Link>
         </div>
@@ -51,10 +55,9 @@ export function LoginForm() {
         />
       </div>
 
-      {/* ERRORS (Traduïts) */}
+      {/* ERRORS */}
       {state?.errorKey && (
         <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm flex items-center gap-2">
-          
           ⚠️ <span>{t(state.errorKey)}</span>
         </div>
       )}
@@ -72,11 +75,11 @@ export function LoginForm() {
         )}
       </button>
 
-      {/* FOOTER LINK (Amb Locale) */}
+      {/* FOOTER LINK - MOLT MÉS NET */}
       <div className="text-center mt-6 text-sm text-slate-500">
         {t('login.no_account')}{' '}
         <Link 
-          href={`/${locale}/register`} 
+          href="/register" 
           className="text-blue-400 hover:text-blue-300 font-medium hover:underline transition-colors"
         >
           {t('login.register_link')}

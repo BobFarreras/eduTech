@@ -8,7 +8,23 @@ export default {
     check: "Check",
     next: "Next",
     finish: "Finish",
-    loading: "Loading..."
+    loading: "Loading...",
+    arena: {
+      loading: "Saving your progress...",
+      progress: "Progress",
+      construction: "Under construction...",
+      skip: "Skip",
+      unauthorized_title: "Log in",
+      unauthorized_desc: "You need an account to save your progress and level up.",
+      error_title: "Oops! Something went wrong",
+      login_btn: "Log in",
+      retry_btn: "Retry",
+      lesson_complete: "Lesson Completed!",
+      xp_earned: "XP Earned",
+      dashboard_btn: "Back to Dashboard",
+      level_up: "LEVEL UP!"
+    }
+
   },
   dashboard: {
     availableTopics: "Learning Paths",

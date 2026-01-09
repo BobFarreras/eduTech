@@ -1,13 +1,10 @@
 // filepath: src/proxy.ts
 import createMiddleware from 'next-intl/middleware';
-import { locales } from './i18n';
+import { routing } from './routing';
  
-export default createMiddleware({
-  locales: locales,
-  defaultLocale: 'ca'
-});
- 
+export default createMiddleware(routing);
+
 export const config = {
-  // Matcher per ignorar fitxers interns i API
+  // Matcher: Ignora rutes internes de Next.js i fitxers estàtics
   matcher: ['/', '/(ca|es|en)/:path*']
 };

@@ -38,16 +38,45 @@ Aquesta taula permet afegir "Supabase", "Python", "Vercel" sense tocar codi.
     * `color_theme` (text): Hex o Tailwind class ('bg-blue-500') per diferenciar temes visuals.
     * `parent_topic_id` (uuid, opcional): Per crear subtemes (ex: 'React' dins de 'Frontend').
 
-### 3.2 Entitat: `Challenge` (El Repte)
-Ara el repte no té un "Enum", sinó que pertany a un `Topic` de la BD.
+// filepath: docs/DATA_MODEL.md
+
+## 3.2 Entitat: `Challenge` (El Repte)
 
 * **Taula:** `challenges`
 * **Camps:**
-    * `id` (uuid).
-    * `topic_id` (uuid, FK -> `topics.id`). **Clau del canvi.**
-    * `difficulty_tier` (int): 1-10.
-    * `type` (enum): 'QUIZ', 'CODE_FIX', 'TERMINAL', etc.
-    * `content` (JSONB): Dades específiques del repte.
+    * `id` (uuid, PK)
+    * `topic_id` (uuid, FK -> topics.id)
+    * `difficulty_tier` (int): 1-10
+    * `type` (enum): 'QUIZ', 'CODE_FIX', 'TERMINAL'
+    * `content` (JSONB): Estructura i18n rica.
+
+#### Esquema JSONB per a `content` (Tipus QUIZ):
+
+```json
+{
+  "question": {
+    "ca": "Pregunta en Català?",
+    "en": "Question in English?",
+    "es": "Pregunta en Español?"
+  },
+  "explanation": {
+    "ca": "Explicació...",
+    "en": "Explanation...",
+    "es": "Explicación..."
+  },
+  "options": [
+    {
+      "id": "uuid-v4",
+      "text": {
+        "ca": "Opció A",
+        "en": "Option A",
+        "es": "Opción A"
+      }
+    }
+  ],
+  "correctOptionIndex": 0
+}
+```
 
 ### 3.3 Entitat: `UserProfile` (Matriu d'Habilitats Dinàmica)
 El progrés es guarda referenciant l'ID del tema.

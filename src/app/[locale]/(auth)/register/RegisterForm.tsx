@@ -4,13 +4,15 @@
 import { useActionState } from 'react';
 import { authAction } from '@/presentation/actions/auth/auth.action';
 import { Loader2 } from 'lucide-react';
-import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
+
+// 1. IMPORTACIÓ CORRECTA
+import { Link } from '@/navigation';
 
 export function RegisterForm() {
   const t = useTranslations('auth');
-  const locale = useLocale();
-  
+  // 2. HEM ELIMINAT 'const locale = useLocale();'
+
   const [state, action, isPending] = useActionState(authAction, {});
 
   return (
@@ -46,16 +48,14 @@ export function RegisterForm() {
         />
       </div>
 
-      {/* MISSATGES (Error i Èxit) */}
+      {/* MISSATGES */}
       {state?.errorKey && (
         <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
-        
           ⚠️ {t(state.errorKey)}
         </div>
       )}
       {state?.messageKey && (
         <div className="p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400 text-sm">
- 
           ✅ {t(state.messageKey)}
         </div>
       )}
@@ -68,11 +68,11 @@ export function RegisterForm() {
         {isPending ? <Loader2 className="animate-spin" /> : t('register.submit_button')}
       </button>
 
-      {/* FOOTER */}
+      {/* FOOTER - SENSE LOCALE MANUAL */}
       <div className="text-center mt-4 text-sm text-slate-500">
         {t('register.have_account')}{' '}
         <Link 
-          href={`/${locale}/login`} 
+          href="/login" 
           className="text-blue-400 hover:underline"
         >
           {t('register.login_link')}
