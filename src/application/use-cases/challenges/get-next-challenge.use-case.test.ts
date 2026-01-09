@@ -7,11 +7,8 @@ import { TopicNotFoundError } from '@/core/errors/topic.errors';
 import { Topic } from '@/core/entities/topic.entity';
 import { Challenge } from '@/core/entities/challenge.entity';
 
-// 1. Definim els Mocks parcials de forma segura
-// Utilitzem 'as unknown as ...' per dir-li a TS: "Això és un mock, confia en mi", sense usar 'any'.
 const mockTopicRepo = {
   findBySlug: vi.fn(),
-  // Afegim la resta de mètodes obligatoris de la interfície per evitar errors de tipat al constructor
   findAllActive: vi.fn(),
   findAll: vi.fn(),
   findById: vi.fn(),
@@ -20,8 +17,7 @@ const mockTopicRepo = {
 } as unknown as ITopicRepository;
 
 const mockChallengeRepo = {
-  findNextForUser: vi.fn(),
-  // Mètodes obligatoris restants
+  findNextForUser: vi.fn(), // Ara retorna Promise<Challenge[]>
   findByTopicId: vi.fn(),
   findById: vi.fn(),
 } as unknown as IChallengeRepository;
@@ -31,9 +27,8 @@ describe('GetNextChallengeUseCase', () => {
     vi.clearAllMocks();
   });
 
-  it('should return a challenge when topic exists', async () => {
+  it('should return a list of challenges when topic exists', async () => {
     // ARRANGE
-    // Creem objectes parcials però tipats de forma segura per al test
     const mockTopic = { 
       id: 'topic-123', 
       slug: 'react' 
@@ -44,8 +39,11 @@ describe('GetNextChallengeUseCase', () => {
       type: 'QUIZ' 
     } as unknown as Challenge;
 
+    // CONFIGURACIÓ DEL MOCK:
     vi.mocked(mockTopicRepo.findBySlug).mockResolvedValue(mockTopic);
-    vi.mocked(mockChallengeRepo.findNextForUser).mockResolvedValue(mockChallenge);
+    
+    // CORRECCIÓ AQUÍ: Retornem un Array [mockChallenge] enlloc de l'objecte sol
+    vi.mocked(mockChallengeRepo.findNextForUser).mockResolvedValue([mockChallenge]);
 
     const useCase = new GetNextChallengeUseCase(mockTopicRepo, mockChallengeRepo);
 
@@ -55,16 +53,15 @@ describe('GetNextChallengeUseCase', () => {
     // ASSERT
     expect(mockTopicRepo.findBySlug).toHaveBeenCalledWith('react');
     expect(mockChallengeRepo.findNextForUser).toHaveBeenCalledWith('topic-123', 'user-1');
-    expect(result).toEqual(mockChallenge);
+    
+    // CORRECCIÓ AQUÍ: Esperem rebre l'array
+    expect(result).toEqual([mockChallenge]);
   });
 
   it('should throw TopicNotFoundError if topic slug is invalid', async () => {
-    // ARRANGE
     vi.mocked(mockTopicRepo.findBySlug).mockResolvedValue(null);
     const useCase = new GetNextChallengeUseCase(mockTopicRepo, mockChallengeRepo);
 
-    // ACT & ASSERT
-    // Verifiquem que llança l'error de domini correcte
     await expect(useCase.execute('invalid-slug', 'user-1'))
       .rejects
       .toThrow(TopicNotFoundError);
