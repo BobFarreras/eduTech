@@ -1,28 +1,45 @@
 // filepath: src/app/[locale]/page.tsx
-import { useTranslations } from 'next-intl';
+import { getTopicsAction } from '@/presentation/actions/topics/get-topics.action';
+import { TopicCard } from '@/presentation/components/features/topics/TopicCard';
+import { getTranslations } from 'next-intl/server';
 
-export default function HomePage() {
-  const t = useTranslations('app');
-  const tGame = useTranslations('game');
+export default async function HomePage() {
+  const t = await getTranslations('app');
+  const tDash = await getTranslations('dashboard');
+
+  // Cridem a la Server Action directament (és codi de servidor)
+  const response = await getTopicsAction();
+  
+  const topics = response.success ? response.data : [];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-slate-900 text-white">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold text-blue-500 mb-4">
+    <main className="flex min-h-screen flex-col items-center p-8 bg-slate-900 text-white">
+      <div className="z-10 max-w-5xl w-full flex flex-col items-center">
+        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-12">
           {t('name')}
         </h1>
-      </div>
 
-      <div className="mt-10 border border-slate-700 p-10 rounded-xl bg-slate-800">
-        <p className="text-xl mb-6">Benvingut al futur de l'aprenentatge.</p>
-        
-        <button className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-bold transition-all">
-          {tGame('start')}
-        </button>
-      </div>
+        <div className="w-full">
+          <h2 className="text-2xl font-semibold mb-6 text-slate-200">
+            {tDash('availableTopics')}
+          </h2>
 
-      <div className="mt-10 text-slate-400">
-        <p>Ruta actual: /src/app/[locale]/page.tsx</p>
+          {!response.success && (
+             <div className="p-4 bg-red-900/50 border border-red-500 rounded text-red-200">
+                {response.error}
+             </div>
+          )}
+
+          {topics.length === 0 && response.success ? (
+            <p className="text-slate-400 italic">No hi ha temes actius en aquest moment.</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              {topics.map((topic) => (
+                <TopicCard key={topic.id} topic={topic} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
