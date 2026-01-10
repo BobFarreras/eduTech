@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Challenge, QuizContent } from '@/core/entities/challenge.entity';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
-import { useTranslations } from 'next-intl';
+
 
 interface QuizViewProps {
   challenge: Challenge;
@@ -117,8 +117,8 @@ export function QuizView({ challenge, onNext }: QuizViewProps) {
         <div className={clsx(
             "rounded-2xl p-1 animate-in slide-in-from-bottom-2 duration-300 overflow-hidden shadow-2xl",
              isCorrectAnswer 
-                ? "bg-gradient-to-r from-green-500 to-emerald-600" 
-                : "bg-gradient-to-r from-red-500 to-rose-600"
+                ? "bg-linear-to-r from-green-500 to-emerald-600" 
+                : "bg-linear-to-r from-red-500 to-rose-600"
         )}>
            <div className="bg-slate-950 rounded-xl p-5">
                <div className="flex items-start gap-4 mb-4">

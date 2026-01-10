@@ -1,6 +1,7 @@
 // filepath: src/application/use-cases/topics/get-topic-path.use-case.ts
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { LevelNodeDTO, LevelStatus } from '@/application/dto/level-node.dto';
+import { ChallengeType } from '@/core/entities/challenge.entity';
 
 export class GetTopicPathUseCase {
 
@@ -10,7 +11,8 @@ export class GetTopicPathUseCase {
     const stats = await this.topicRepo.getTopicProgressSummary(topicId, userId);
     const levels: LevelNodeDTO[] = [];
 
-    // Cas buit
+    // CAS 1: L'usuari mai ha tocat aquest tema (Array buit)
+    // Retornem el nivell 1 desbloquejat per defecte.
     if (stats.length === 0) {
       return {
         levels: [{
@@ -19,7 +21,7 @@ export class GetTopicPathUseCase {
           label: 'Inici',
           totalXp: 0,
           isCurrentPosition: true,
-          predominantType: 'QUIZ', 
+          predominantType: 'QUIZ' as ChallengeType, // ✅ Forcem el tipus aquí també
         }],
         totalXp: 0
       };
@@ -27,6 +29,7 @@ export class GetTopicPathUseCase {
 
     let isPreviousLevelCompleted = true;
 
+    // CAS 2: Iterem sobre l'històric real
     for (let i = 0; i < stats.length; i++) {
       const stat = stats[i];
       let status: LevelStatus = 'LOCKED';
@@ -37,11 +40,12 @@ export class GetTopicPathUseCase {
         status = 'COMPLETED';
       } else if (isPreviousLevelCompleted) {
         status = 'ACTIVE';
-        isPreviousLevelCompleted = false;
+        isPreviousLevelCompleted = false; // Ja tenim un actiu, el següent serà locked
       } else {
         status = 'LOCKED';
       }
 
+      // Lògica per saber on posar el ninotet "You are here"
       const isCurrentPosition = status === 'ACTIVE' || (status === 'COMPLETED' && !stats[i + 1]);
 
       levels.push({
@@ -51,8 +55,10 @@ export class GetTopicPathUseCase {
         totalXp: stat.completedChallenges,
         isCurrentPosition: isCurrentPosition, 
         
-        // ✅ CORRECCIÓ 1: Dins del bucle, usem la dada real de la BD
-        predominantType: stat.mostCommonType 
+        // ✅ CORRECCIÓ CLAU:
+        // 1. Fem 'as ChallengeType' per calmar TypeScript.
+        // 2. Afegim '|| 'QUIZ'' per seguretat si la BD retorna null.
+        predominantType: (stat.mostCommonType as ChallengeType) || 'QUIZ'
       });
 
       if (status === 'COMPLETED') {
@@ -60,7 +66,8 @@ export class GetTopicPathUseCase {
       }
     }
 
-    // Nivell Extra (Infinit)
+    // CAS 3: Nivell Següent (Future Level)
+    // Si l'últim nivell conegut està completat, n'obrim un de nou buit.
     const lastLevel = levels[levels.length - 1];
     if (lastLevel && lastLevel.status === 'COMPLETED') {
       levels.push({
@@ -69,10 +76,7 @@ export class GetTopicPathUseCase {
         label: '???',
         totalXp: 0,
         isCurrentPosition: true,
-        
-        // ✅ CORRECCIÓ 2: Fora del bucle, 'stat' no existeix. 
-        // Posem 'QUIZ' per defecte al nivell futur.
-        predominantType: 'QUIZ' 
+        predominantType: 'QUIZ' as ChallengeType // Per defecte el futur és QUIZ fins que es descobreix
       });
     }
 
@@ -82,6 +86,6 @@ export class GetTopicPathUseCase {
 
   private getLevelLabel(tier: number): string {
     const labels = ["Fonaments", "Conceptes Clau", "Pràctica", "Avançat", "Expert", "Mestre", "Llegenda"];
-    return labels[tier - 1] || `Secció ${tier}`;
+    return labels[tier - 1] || `Nivell ${tier}`;
   }
 }
