@@ -1,107 +1,97 @@
-// filepath: src/infrastructure/repositories/supabase/challenge.repository.real.test.ts
-
-// --- 1. CARREGAR VARIABLES D'ENTORN MANUALMENT ---
-import { config } from 'dotenv';
-config({ path: '.env.test' });
-
-import { describe, it, expect, beforeEach, beforeAll, vi } from 'vitest';
-// Importem el client 'vanilla' de la llibreria oficial (el que no usa cookies)
-import { createClient as createVanillaClient } from '@supabase/supabase-js'; 
+// filepath: src/infrastructure/repositories/supabase/challenge.repository.test.ts
+import { describe, it, expect, vi } from 'vitest';
 import { SupabaseChallengeRepository } from './challenge.repository';
 import { QuizContent } from '@/core/entities/challenge.entity';
+// Importem el client "RAW" de l'SDK oficial, no el nostre wrapper de Next.js
+import { createClient as createRawSupabaseClient } from '@supabase/supabase-js';
 
-// --- CONSTANTS ---
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+// --- 1. CONFIGURACIÓ DE L'ENTORN DE TEST ---
 
+// Necessitem l'URL i la Key. En test, solem usar la SERVICE_ROLE_KEY per saltar-nos les RLS i poder crear/esborrar dades lliurement.
+// Si no tens SERVICE_ROLE_KEY al .env.test, usa l'ANON_KEY, però assegura't que les RLS permeten escriptura.
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
-const shouldRun = SUPABASE_URL && SERVICE_ROLE_KEY;
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.test');
+}
 
-// --- 2. MOCK DEL CONTEXT DE NEXT.JS (La solució a l'error de cookies) ---
-// Interceptem la importació de 'utils/supabase/server'.
-// En lloc d'usar cookies(), retornem un client estàndard connectat a local.
-vi.mock('@/infrastructure/utils/supabase/server', () => {
-  return {
-    createClient: async () => {
-      // Retornem un client REAL, però creat de forma "tonta" (sense cookies).
-      // Usem la clau SERVICE_ROLE per evitar problemes d'autenticació en el test d'integració,
-      // ja que en aquest test volem validar SQL i Mapeig, no Auth.
-      if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-        throw new Error("Falten variables d'entorn al Mock");
-      }
-      return createVanillaClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_KEY,
-        { auth: { persistSession: false } }
-      );
-    }
-  };
+// Creem un client real que funciona en Node (sense cookies)
+const testClient = createRawSupabaseClient(SUPABASE_URL, SUPABASE_KEY, {
+  auth: {
+    persistSession: false, // No volem guardar sessió en disc durant els tests
+  }
 });
 
+// --- 2. MOCK MÀGIC (DEPENDENCY INJECTION) ---
+// Aquí diem: "Quan algú importi '@/infrastructure/utils/supabase/server',
+// NO executis el codi real (que peta per les cookies).
+// Retorna aquest objecte en el seu lloc."
+vi.mock('@/infrastructure/utils/supabase/server', () => ({
+  createClient: async () => testClient
+}));
+
+// --- 3. EL TEST ---
+
 describe('SupabaseChallengeRepository (REAL DB INTEGRATION)', () => {
-  if (!shouldRun) {
-    it.skip('Skipping integration tests: Missing keys', () => {});
-    return;
-  }
-
-  // Client ADMIN per preparar l'escenari
-  const adminClient = createVanillaClient(SUPABASE_URL!, SERVICE_ROLE_KEY!, {
-    auth: { persistSession: false, autoRefreshToken: false }
-  });
-
-  let repository: SupabaseChallengeRepository;
-  
-  const TEST_TOPIC_ID = '11111111-1111-1111-1111-111111111111';
-  const TEST_CHALLENGE_ID = '22222222-2222-2222-2222-222222222222';
-  const TEST_USER_ID = '33333333-3333-3333-3333-333333333333';
-
-  beforeAll(async () => {
-    // Setup Topic
-    await adminClient.from('topics').upsert({
-      id: TEST_TOPIC_ID,
-      slug: 'integration-test-topic',
-      name_key: 'topic.test',
-      icon_name: 'test-icon',
-      color_theme: 'bg-test',
-      active: true
-    });
-  });
-
-  beforeEach(async () => {
-    // Inicialitzem el repo (que ara usarà el nostre Mock internament)
-    repository = new SupabaseChallengeRepository();
-    // Neteja
-    await adminClient.from('challenges').delete().eq('id', TEST_CHALLENGE_ID);
-  });
+  // El repositori farà servir internament el nostre 'testClient' gràcies al mock
+  const repository = new SupabaseChallengeRepository();
 
   it('should store and retrieve a localized JSONB challenge correctly', async () => {
-    // ARRANGE: Inserim dades REALS
-    const { error: insertError } = await adminClient.from('challenges').insert({
-      id: TEST_CHALLENGE_ID,
-      topic_id: TEST_TOPIC_ID,
+    // A. SETUP: Creem les dades usant el client de test directament
+    const topicId = '11111111-1111-4111-8111-111111111111';
+    const challengeId = '22222222-2222-4222-8222-222222222222';
+    const testSlug = 'integration-test-topic'; // Constant per evitar typos
+    const userId = 'user-test-123';
+
+    // 🔥 NETEJA AGRESSIVA (Idempotència)
+    // Esborrem primer pel conflicte únic (slug) i després per ID.
+    // Això garanteix que la taula està neta abans de començar, passi el que passi.
+    await testClient.from('challenges').delete().eq('id', challengeId);
+    await testClient.from('topics').delete().eq('slug', testSlug);
+    await testClient.from('topics').delete().eq('id', topicId);
+
+    // Crear Tema
+    const { error: topicError } = await testClient.from('topics').insert({
+      id: topicId,
+      slug: 'integration-test-topic',
+      name_key: 'test',
+      icon_name: 'test',
+      color_theme: 'red',
+      is_active: true
+    });
+    if (topicError) throw new Error(`Error creating topic: ${topicError.message}`);
+
+    // Crear Repte
+    const { error: challengeError } = await testClient.from('challenges').insert({
+      id: challengeId,
+      topic_id: topicId,
       difficulty_tier: 1,
       type: 'QUIZ',
       content: {
-        question: { ca: "Hola Món", en: "Hello World" },
-        explanation: { ca: "Prova", en: "Test" },
-        correctOptionIndex: 0,
-        options: [
-          { id: "opt1", text: { ca: "Opció A", en: "Option A" } }
-        ]
-      }
+        question: { en: 'Hello?', ca: 'Hola?' },
+        explanation: { en: 'Yes', ca: 'Si' },
+        options: [{ id: '1', text: { en: 'A', ca: 'A' } }],
+        correctOptionIndex: 0
+      },
+      created_at: new Date().toISOString()
     });
+    if (challengeError) throw new Error(`Error creating challenge: ${challengeError.message}`);
 
-    if (insertError) throw new Error(`Insert failed: ${insertError.message}`);
+    // B. ACT: Provem el Repositori
+    // Aquesta crida internament farà `await createClient()` que retornarà el nostre `testClient`
+    const result = await repository.findNextForUser(topicId, userId, 'en', 1);
 
-    // ACT: El Repositori fa la consulta REAL a Postgres
-    const result = await repository.findNextForUser(TEST_TOPIC_ID, TEST_USER_ID, 'ca');
-
-    // ASSERT
+    // C. ASSERT
     expect(result).toHaveLength(1);
-    const content = result[0].content as QuizContent;
-    
-    // Si això passa, vol dir que hem llegit JSONB real de la BD
-    expect(content.question).toBe("Hola Món"); 
-    expect(content.options[0].text).toBe("Opció A");
+    const challenge = result[0];
+    const content = challenge.content as QuizContent;
+
+    expect(challenge.id).toBe(challengeId);
+    expect(content.question).toBe('Hello?');
+
+    // D. CLEANUP
+    await testClient.from('challenges').delete().eq('id', challengeId);
+    await testClient.from('topics').delete().eq('id', topicId);
   });
 });

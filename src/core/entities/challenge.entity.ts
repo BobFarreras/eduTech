@@ -1,7 +1,8 @@
 // filepath: src/core/entities/challenge.entity.ts
 
 // 1. Definim tots els tipus de joc que suportarà el sistema
-export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'MATCHING' | 'TERMINAL';
+
+export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'MATCHING' | 'TERMINAL' | 'LOGIC_ORDER';
 
 // --- COMPONENTS REUTILITZABLES ---
 
@@ -12,52 +13,71 @@ export interface ChallengeOption {
 
 // --- CONTINGUTS ESPECÍFICS PER A CADA JOC ---
 
-// A. Tipus Test (El que ja tens)
 export interface QuizContent {
   question: string;
   explanation: string;
   options: ChallengeOption[]; 
   correctOptionIndex: number;
 }
+
 export interface CodeFixOption {
   id: string;
-  code: string;     // El text que es mostrarà a la carta (ex: "useState")
+  code: string;
   isCorrect: boolean;
 }
-// B. Tipus "Arregla el Codi" (El teu, molt potent)
+
 export interface CodeFixContent {
   description: string;
   initialCode: string;
-  solution: string; // La solució correcta (per validar o mostrar)
-  hint: string; // 👈 Cambiat de 'hints?: string[]' a 'hint: string'
-  tests: { input: string; output: string }[]; // Casos de prova per validar l'execució
-  options: CodeFixOption[]; // Les 3 opcions
+  solution: string;
+  hint: string;
+  tests: { input: string; output: string }[];
+  options: CodeFixOption[];
 }
 
-// C. Tipus "Relacionar Conceptes" (Nou requisit: sinònims, conceptes)
 export interface MatchingContent {
-  instruction: string; // Ex: "Relaciona cada hook amb la seva funció"
+  instruction: string;
   pairs: { 
     left: ChallengeOption; 
     right: ChallengeOption 
   }[];
 }
 
+// ✅ NOU: Contingut per a TERMINAL
+export interface TerminalContent {
+  instruction: string;      // Ex: "Llista els fitxers inclosos els ocults"
+  initialCommand?: string;  // Ex: "ls " (per ajudar)
+  validCommands: string[];  // Ex: ["ls -la", "ls -a -l", "ls -al"]
+  hint: string;             // Ex: "Usa el flag -a"
+  explanation: string;      // Ex: "El flag -a mostra arxius que comencen per punt."
+  outputParams: {
+    success: string;        // Ex: ". .. .git .env app.ts"
+    error: string;          // Ex: "command not found"
+  };
+}
+// ✅ NOU: Contingut per a LOGIC_ORDER
+export interface LogicOrderContent {
+  description: string;    // Ex: "Ordena els passos per crear una imatge Docker"
+  items: ChallengeOption[]; // Els items que arribaran DESORDENATS al client
+  // Nota: No enviem l'ordre correcte aquí si volem ser 100% segurs (validació al server),
+  // però per UX immediata sovint s'envia o es valida en una Server Action separada.
+  // Per simplicitat en aquesta fase, assumirem que el 'Action' de validació té la solució.
+}
 // --- UNION TYPE (POLIMORFISME) ---
-// Això permet que TypeScript sàpiga automàticament quins camps tens
-// si comproves el 'type'.
 export type ChallengeContent = 
   | QuizContent 
   | CodeFixContent 
-  | MatchingContent;
-  // | TerminalContent (Futur)
+  | MatchingContent
+  | TerminalContent // 👈 Afegit aquí
+  | LogicOrderContent; // 👈 AFEGIT
 
 // --- ENTITAT PRINCIPAL ---
 export interface Challenge {
   id: string;
   topicId: string;
   difficultyTier: number;
-  type: ChallengeType;       // El discriminador
-  content: ChallengeContent; // Contingut dinàmic
+  type: ChallengeType;
+  content: ChallengeContent;
   createdAt: Date;
 }
+

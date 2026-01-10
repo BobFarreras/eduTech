@@ -23,8 +23,43 @@ export default {
       xp_earned: "XP Guanyada",
       dashboard_btn: "Tornar al Dashboard",
       level_up: "NIVELL SUPERAT!",
-      continue_btn: "Continuar" // <--- AFEGIR
+      continue_btn: "Continuar",
+      quit: "Sortir"
+    },
+    modes: {
+      logic_order: {
+        label: "Ordre Lògic",
+        your_answer: "La teva resposta",
+        placeholder: "Arrossega els elements aquí",
+        empty_options: "Tot col·locat ✨",
+        drag_hint: "Clica o arrossega"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "usuari",
+        placeholder: "Escriu la comanda...",
+        session_closed: "--- Sessió finalitzada ---"
+      }
+    },
+    actions: {
+      check: "Comprovar",
+      verify: "Verificar",
+      continue: "Continuar",
+      reset: "Reiniciar",
+      retry: "Tornar a provar"
+    },
+    feedback: {
+      correct: "Correcte!",
+      incorrect: "Incorrecte",
+      solution: "Solució",
+      hint: "Pista"
+    },
+    level_node: {
+      level: "NIVELL",
+      locked: "Bloquejat",
+      completed: "Completat"
     }
+
   },
   // AFEGEIX AIXÒ:
   dashboard: {
@@ -38,7 +73,7 @@ export default {
     supabase: { title: "Supabase i SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguretat OWASP" },
-    docker: { title: "Contenidors Docker" }
+    docker_basics: { title: "Contenidors Docker" }
   },
 
   // --- NOVA SECCIÓ AUTH ---

@@ -4,7 +4,7 @@ export default {
     name: "TechMastery"
   },
   game: {
-    start: "Empezar",
+    start: "Comenzar",
     check: "Comprobar",
     next: "Siguiente",
     finish: "Finalizar",
@@ -23,10 +23,44 @@ export default {
       xp_earned: "XP ganada",
       dashboard_btn: "Volver al Dashboard",
       level_up: "¡NIVEL SUPERADO!",
-      continue_btn: "Continuar" // <--- AFEGIR
+      continue_btn: "Continuar",
+      quit: "Salir"
+    },
+    modes: {
+      logic_order: {
+        label: "Orden lógico",
+        your_answer: "Tu respuesta",
+        placeholder: "Arrastra los elementos aquí",
+        empty_options: "Todo colocado ✨",
+        drag_hint: "Haz clic o arrastra"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "usuario",
+        placeholder: "Escribe el comando...",
+        session_closed: "--- Sesión finalizada ---"
+      }
+    },
+    actions: {
+      check: "Comprobar",
+      verify: "Verificar",
+      continue: "Continuar",
+      reset: "Reiniciar",
+      retry: "Volver a intentar"
+    },
+    feedback: {
+      correct: "¡Correcto!",
+      incorrect: "Incorrecto",
+      solution: "Solución",
+      hint: "Pista"
+    },
+    level_node: {
+      level: "NIVEL",
+      locked: "Bloqueado",
+      completed: "Completado"
     }
-
   },
+
   dashboard: {
     welcome_title: "Hola de nuevo",
     subtitle: "¿Qué tecnología quieres dominar hoy?",
@@ -38,7 +72,7 @@ export default {
     supabase: { title: "Supabase y SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguridad OWASP" },
-    docker: { title: "Contenedores Docker" }
+    docker_basics: { title: "Contenedores Docker" }
   },
   auth: {
     login: {

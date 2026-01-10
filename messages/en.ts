@@ -23,10 +23,44 @@ export default {
       xp_earned: "XP Earned",
       dashboard_btn: "Back to Dashboard",
       level_up: "LEVEL UP!",
-      continue_btn: "Continue" // <--- AFEGIR
+      continue_btn: "Continue",
+      quit: "Quit"
+    },
+    modes: {
+      logic_order: {
+        label: "Logical Order",
+        your_answer: "Your answer",
+        placeholder: "Drag items here",
+        empty_options: "All set ✨",
+        drag_hint: "Click or drag"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "user",
+        placeholder: "Type the command...",
+        session_closed: "--- Session ended ---"
+      }
+    },
+    actions: {
+      check: "Check",
+      verify: "Verify",
+      continue: "Continue",
+      reset: "Reset",
+      retry: "Try again"
+    },
+    feedback: {
+      correct: "Correct!",
+      incorrect: "Incorrect",
+      solution: "Solution",
+      hint: "Hint"
+    },
+    level_node: {
+      level: "LEVEL",
+      locked: "Locked",
+      completed: "Completed"
     }
-
   },
+
   dashboard: {
     welcome_title: "Welcome back",
     subtitle: "What technology do you want to master today?",
@@ -38,7 +72,7 @@ export default {
     supabase: { title: "Supabase & SQL" },
     legacy: { title: "Legacy PHP" }, // Encara que estigui desactivat
     security: { title: "OWASP Top 10" }, // Exemple extra
-    docker: { title: "Docker Containers" }
+    docker_basics: { title: "Docker Containers" }
   },
   auth: {
     login: {

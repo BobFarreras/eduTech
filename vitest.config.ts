@@ -11,6 +11,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom', // Necessari per testejar components de React més endavant
     globals: true,
-    setupFiles: [], // Aquí posarem setups globals si cal
+    setupFiles: ['./src/test/setup.ts'],
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 });

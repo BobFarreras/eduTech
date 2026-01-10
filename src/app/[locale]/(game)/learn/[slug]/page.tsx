@@ -38,7 +38,7 @@ export default async function TopicMapPage({ params }: TopicPageProps) {
     <div className="min-h-screen bg-slate-950 flex flex-col items-center pb-20 relative overflow-hidden">
       
       {/* HEADER FLOTANT */}
-      <header className="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 p-4 flex items-center justify-between">
+      <header className="sticky top-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 p-4 flex items-center justify-between">
          <Link href="/dashboard" className="text-slate-400 hover:text-white transition-colors">
             <ArrowLeft className="w-6 h-6" />
          </Link>

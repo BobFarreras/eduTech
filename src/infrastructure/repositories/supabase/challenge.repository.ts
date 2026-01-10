@@ -1,52 +1,10 @@
 // filepath: src/infrastructure/repositories/supabase/challenge.repository.ts
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, ChallengeContent } from '@/core/entities/challenge.entity';
+import { Challenge, ChallengeType } from '@/core/entities/challenge.entity';
+import { parseJsonContent } from '@/infrastructure/mappers/mapper.utils';
+import { ChallengeMapperFactory } from '@/infrastructure/mappers/challenge.mappers';
 
-// --- 1. DEFINICIÓ DE TIPUS DE LA BASE DE DADES (RAW JSON) ---
-
-type LocalizedString = Record<string, string>;
-
-// Estructura JSON per a MATCHING a la BD
-type RawMatchingContent = {
-  instruction: LocalizedString;
-  pairs: Array<{
-    left: { id: string; text: LocalizedString };
-    right: { id: string; text: LocalizedString };
-  }>;
-};
-
-// Estructura JSON per a CODE_FIX a la BD
-type RawCodeFixContent = {
-  description: LocalizedString;
-  initialCode: string;
-  solution: string;
-  tests?: Array<{ input: string; output: string }>;
-  hint: LocalizedString; // <--- NOU
-  options: Array<{       // <--- NOU
-    id: string;
-    code: string;
-    isCorrect: boolean
-  }>;
-};
-
-// Estructura JSON per a QUIZ a la BD (Format Nou)
-type RawQuizContent = {
-  question: LocalizedString;
-  explanation: LocalizedString;
-  options: Array<{ id: string; text: LocalizedString }>;
-  correctOptionIndex: number;
-};
-
-// Estructura JSON per a QUIZ a la BD (Legacy / Fallback)
-type LegacyRawContent = {
-  question?: string;
-  explanation?: string;
-  options?: string[];
-  correctOptionIndex?: number;
-};
-
-// Tipus de la fila SQL (content és unknown fins que el validem)
 type ChallengeRow = {
   id: string;
   topic_id: string;
@@ -58,134 +16,30 @@ type ChallengeRow = {
 
 export class SupabaseChallengeRepository implements IChallengeRepository {
 
-  // --- PRIVATE HELPERS ---
-
-  private translate(field: LocalizedString | string | unknown, locale: string): string {
-    if (typeof field === 'string') return field;
-    if (!field || typeof field !== 'object') return '';
-
-    const localized = field as LocalizedString;
-    return localized[locale] || localized['ca'] || localized['en'] || Object.values(localized)[0] || '';
-  }
-
+  // Aquesta funció ara és super neta gràcies al patró Strategy
   private mapToEntity(row: ChallengeRow, locale: string): Challenge {
-    const challengeType = row.type as ChallengeType;
-
-    // 1. Processar el JSON (pot venir com string o objecte)
-    let rawData = row.content;
-    if (typeof rawData === 'string') {
-      try {
-        rawData = JSON.parse(rawData);
-      } catch (e) {
-        console.error(`Error parsing JSON for challenge ${row.id}`, e);
-        rawData = {};
-      }
-    }
-
-    let localizedContent: ChallengeContent;
-
-    // --- LOGICA POLIMÒRFICA STRICTA (SENSE ANY) ---
-    switch (challengeType) {
-
-      // CAS 1: MATCHING
-      case 'MATCHING': {
-        // Fem un cast al tipus RAW específic
-        const content = rawData as RawMatchingContent;
-
-        localizedContent = {
-          instruction: this.translate(content.instruction, locale),
-          pairs: Array.isArray(content.pairs)
-            ? content.pairs.map(p => ({
-              left: {
-                id: p.left.id,
-                text: this.translate(p.left.text, locale)
-              },
-              right: {
-                id: p.right.id,
-                text: this.translate(p.right.text, locale)
-              }
-            }))
-            : []
-        };
-        break;
-      }
-
-      // CAS 2: CODE_FIX
-      case 'CODE_FIX': {
-        const content = rawData as RawCodeFixContent;
-
-        localizedContent = {
-          description: this.translate(content.description, locale),
-          initialCode: content.initialCode || '',
-          solution: content.solution || '',
-          // ✅ Assignem la traducció a 'hint' (singular)
-          hint: this.translate(content.hint, locale),
-          tests: content.tests || [],
-          options: Array.isArray(content.options) ? content.options.map(opt => ({
-            id: opt.id,
-            code: opt.code,
-            isCorrect: opt.isCorrect
-          })) : []
-        };
-        break;
-      }
-
-      // CAS 3: QUIZ
-      case 'QUIZ':
-      default: {
-        // Type Guard per detectar format nou
-        const quizObj = rawData as Partial<RawQuizContent>;
-        const isNewFormat =
-          quizObj &&
-          'options' in quizObj &&
-          Array.isArray(quizObj.options) &&
-          quizObj.options.length > 0 &&
-          typeof quizObj.options[0] === 'object';
-
-        if (isNewFormat) {
-          const content = rawData as RawQuizContent;
-          localizedContent = {
-            question: this.translate(content.question, locale),
-            explanation: this.translate(content.explanation, locale),
-            correctOptionIndex: content.correctOptionIndex,
-            options: content.options.map(opt => ({
-              id: opt.id,
-              text: this.translate(opt.text, locale)
-            }))
-          };
-        } else {
-          // Legacy
-          const content = rawData as LegacyRawContent;
-          const oldOptions = Array.isArray(content.options) ? content.options : [];
-          localizedContent = {
-            question: String(content.question || ''),
-            explanation: String(content.explanation || ''),
-            correctOptionIndex: content.correctOptionIndex || 0,
-            options: oldOptions.map((txt, idx) => ({
-              id: `opt-${idx}`,
-              text: String(txt)
-            }))
-          };
-        }
-        break;
-      }
-    }
+    const rawData = parseJsonContent(row.content);
+    const mapper = ChallengeMapperFactory.getMapper(row.type);
+    
+    // Deleguem la complexitat al mapper específic
+    const localizedContent = mapper.map(rawData, locale);
 
     return {
       id: row.id,
       topicId: row.topic_id,
       difficultyTier: row.difficulty_tier,
-      type: challengeType,
+      type: row.type as ChallengeType,
       content: localizedContent,
       createdAt: new Date(row.created_at),
     };
   }
 
-  // --- PUBLIC METHODS ---
+  // --- PUBLIC METHODS (Iguals que abans, però més nets) ---
 
   async findNextForUser(topicId: string, userId: string, locale: string, difficulty: number): Promise<Challenge[]> {
     const supabase = await createClient();
 
+    // 1. Obtenir IDs completats
     const { data: completed } = await supabase
       .from('user_progress')
       .select('challenge_id')
@@ -194,6 +48,7 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
 
     const completedIds = completed?.map(c => c.challenge_id) || [];
 
+    // 2. Buscar reptes no completats
     let query = supabase
       .from('challenges')
       .select('*')
@@ -210,7 +65,7 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
       return newChallenges.map(row => this.mapToEntity(row as ChallengeRow, locale));
     }
 
-    // Fallback Mode Repàs
+    // 3. Fallback: Mode Repàs
     const { data: reviewChallenges } = await supabase
       .from('challenges')
       .select('*')

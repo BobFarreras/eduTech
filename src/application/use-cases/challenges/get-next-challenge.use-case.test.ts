@@ -26,16 +26,17 @@ describe('GetNextChallengeUseCase', () => {
     const topicSlug = 'react-basics';
     const userId = 'user-123';
     const topicId = 'topic-abc';
+    const difficulty = 1;
 
-    // 1. Simulem que trobem el tema (AMB LA NOVA ESTRUCTURA CORRECTA)
+    // 1. Simulem que trobem el tema
     const mockTopic: Topic = {
       id: topicId,
       slug: topicSlug,
-      // CORRECCIÓ: Usem les propietats de la teva interfície
-      nameKey: 'topic.react.title', 
-      iconName: 'brand-react',      
-      colorTheme: 'bg-blue-500', 
-      isActive: true,               
+      nameKey: 'topic.react.title',
+      description: 'Test Description', // 👈 AFEGIT (soluciona l'error TS)
+      iconName: 'brand-react',     
+      colorTheme: 'bg-blue-500',
+      isActive: true,              
       createdAt: new Date(),
       updatedAt: new Date()
     };
@@ -47,7 +48,7 @@ describe('GetNextChallengeUseCase', () => {
       {
         id: 'c1',
         topicId: topicId,
-        difficultyTier: 1,
+        difficultyTier: difficulty,
         type: 'QUIZ' as ChallengeType,
         content: {
           question: 'Question in English',
@@ -64,15 +65,14 @@ describe('GetNextChallengeUseCase', () => {
     const useCase = new GetNextChallengeUseCase(mockTopicRepo, mockChallengeRepo);
 
     // ACT
-    const result = await useCase.execute(topicSlug, userId, locale);
+    const result = await useCase.execute(topicSlug, userId, locale, difficulty);
 
     // ASSERT
     expect(mockTopicRepo.findBySlug).toHaveBeenCalledWith(topicSlug);
-    expect(mockChallengeRepo.findNextForUser).toHaveBeenCalledWith(topicId, userId, locale);
+    expect(mockChallengeRepo.findNextForUser).toHaveBeenCalledWith(topicId, userId, locale, difficulty);
     
     expect(result).toHaveLength(1);
     
-    // Type narrowing per accedir a les propietats de QuizContent
     const content = result[0].content as QuizContent;
     expect(content.question).toBe('Question in English');
   });
