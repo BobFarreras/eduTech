@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { clsx } from 'clsx';
 import { LevelStatus } from '@/application/dto/level-node.dto';
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 import { useTranslations } from 'next-intl';
 
 interface LevelNodeProps {

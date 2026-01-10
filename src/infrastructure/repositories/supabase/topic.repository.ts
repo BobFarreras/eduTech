@@ -4,7 +4,7 @@ import { ITopicRepository, TierProgressStats } from '@/core/repositories/topic.r
 import { Topic, CreateTopicInput } from '@/core/entities/topic.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
 import { createClient } from '@/infrastructure/utils/supabase/server'; // El teu helper
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 // 1. Definim el tipus exacte de la fila a la BD (Lectura)
 type TopicRow = {
   id: string;

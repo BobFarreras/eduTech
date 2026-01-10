@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Challenge, QuizContent } from '@/core/entities/challenge.entity';
+import { Challenge, QuizContent } from '@/core/entities/challenges/challenge.entity';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
 

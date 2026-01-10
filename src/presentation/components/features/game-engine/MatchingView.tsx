@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Challenge, MatchingContent } from '@/core/entities/challenge.entity';
+import { Challenge, MatchingContent } from '@/core/entities/challenges/challenge.entity';
 import { Check, ArrowRight, Puzzle } from 'lucide-react';
 import { clsx } from 'clsx';
 

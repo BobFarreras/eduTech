@@ -1,7 +1,7 @@
 // filepath: src/application/use-cases/topics/get-topic-path.use-case.ts
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { LevelNodeDTO, LevelStatus } from '@/application/dto/level-node.dto';
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 
 export class GetTopicPathUseCase {
 

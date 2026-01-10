@@ -1,5 +1,5 @@
 // filepath: src/infrastructure/mappers/challenge.mappers.ts
-import { ChallengeContent } from '@/core/entities/challenge.entity';
+import { ChallengeContent } from '@/core/entities/challenges/challenge.entity';
 import { translate, LocalizedString } from './mapper.utils';
 
 // --- DEFINICIONS DE DADES "RAW" (Així és com ve el JSON de BD) ---

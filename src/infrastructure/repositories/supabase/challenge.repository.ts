@@ -1,7 +1,7 @@
 // filepath: src/infrastructure/repositories/supabase/challenge.repository.ts
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType } from '@/core/entities/challenge.entity';
+import { Challenge, ChallengeType } from '@/core/entities/challenges/challenge.entity';
 import { parseJsonContent } from '@/infrastructure/mappers/mapper.utils';
 import { ChallengeMapperFactory } from '@/infrastructure/mappers/challenge.mappers';
 

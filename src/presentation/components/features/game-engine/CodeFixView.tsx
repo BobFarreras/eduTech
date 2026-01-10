@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Challenge, CodeFixContent } from '@/core/entities/challenge.entity';
+import { Challenge, CodeFixContent } from '@/core/entities/challenges/challenge.entity';
 import { Terminal, Play, ArrowRight } from 'lucide-react';
 import { CodeWindow } from './code-fix/CodeWindow';
 import { SolutionDeck } from './code-fix/SolutionDeck';

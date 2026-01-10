@@ -1,5 +1,5 @@
 // filepath: src/presentation/components/features/game-engine/ChallengeRenderer.tsx
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { QuizView } from './QuizView';
 import { MatchingView } from './MatchingView';
 import { CodeFixView } from './CodeFixView';

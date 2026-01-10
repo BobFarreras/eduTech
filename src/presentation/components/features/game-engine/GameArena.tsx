@@ -1,7 +1,7 @@
 // filepath: src/presentation/components/features/game-engine/GameArena.tsx
 'use client';
 
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { useGameSession } from '@/presentation/hooks/game/useGameSession';
 import { ChallengeRenderer } from './ChallengeRenderer';
 import { GameResult } from './GameResult';

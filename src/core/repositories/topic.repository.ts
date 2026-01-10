@@ -1,6 +1,6 @@
 // filepath: src/core/repositories/topic.repository.ts
 import { Topic, CreateTopicInput } from '../entities/topic.entity';
-import { ChallengeType } from '../entities/challenge.entity'; // Importa el tipus
+import { ChallengeType } from '../entities/challenges/challenge.entity'; // Importa el tipus
 export interface TierProgressStats {
   tier: number;
   totalChallenges: number;

@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Challenge, LogicOrderContent, ChallengeOption } from '@/core/entities/challenge.entity';
+import { Challenge, LogicOrderContent, ChallengeOption } from '@/core/entities/challenges/challenge.entity';
 import { RotateCcw, GripVertical, X } from 'lucide-react';
 import { clsx } from 'clsx';
 import { Reorder, AnimatePresence, motion, LayoutGroup } from 'framer-motion';

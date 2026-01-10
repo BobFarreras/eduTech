@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Challenge, TerminalContent } from '@/core/entities/challenge.entity';
+import { Challenge, TerminalContent } from '@/core/entities/challenges/challenge.entity';
 import { Terminal as TerminalIcon, ArrowRight, CheckCircle2, Command, X as CloseIcon } from 'lucide-react';
 import { HintPanel } from './code-fix/HintPanel';
 import { GameSessionLayout } from './layout/GameSessionLayout';

@@ -1,5 +1,5 @@
 // filepath: src/core/repositories/challenge.repository.ts
-import { Challenge } from '../entities/challenge.entity';
+import { Challenge } from '../entities/challenges/challenge.entity';
 
 export interface IChallengeRepository {
   /**

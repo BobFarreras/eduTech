@@ -1,5 +1,5 @@
 // filepath: src/presentation/components/features/game-engine/code-fix/SolutionDeck.tsx
-import { CodeFixOption } from '@/core/entities/challenge.entity';
+import { CodeFixOption } from '@/core/entities/challenges/challenge.entity';
 import { clsx } from 'clsx';
 
 interface SolutionDeckProps {

@@ -1,6 +1,6 @@
 // filepath: src/presentation/hooks/game/useGameSession.ts
 import { useState, useEffect } from 'react';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { submitSessionAction } from '@/presentation/actions/gamification/submit-session.action';
 import { SessionResultDTO } from '@/application/dto/session-result.dto';
 

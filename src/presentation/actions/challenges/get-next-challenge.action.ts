@@ -4,7 +4,7 @@
 import { GetNextChallengeUseCase } from '@/application/use-cases/challenges/get-next-challenge.use-case';
 import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
 import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { getLocale } from 'next-intl/server';
 import { createClient } from '@/infrastructure/utils/supabase/server'; // <--- Necessari per user real
 

@@ -1,7 +1,7 @@
 // filepath: src/application/use-cases/challenges/get-next-challenge.use-case.ts
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
 
 export class GetNextChallengeUseCase {

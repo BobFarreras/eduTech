@@ -1,7 +1,7 @@
 // filepath: src/infrastructure/mappers/__tests__/TerminalMapper.test.ts
 import { describe, it, expect } from 'vitest';
 import { ChallengeMapperFactory } from '../challenge.mappers';
-import { TerminalContent } from '@/core/entities/challenge.entity';
+import { TerminalContent } from '@/core/entities/challenges/challenge.entity';
 
 describe('TerminalMapper', () => {
     const mapper = ChallengeMapperFactory.getMapper('TERMINAL');
