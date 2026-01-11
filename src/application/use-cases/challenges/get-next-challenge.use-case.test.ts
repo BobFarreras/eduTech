@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { GetNextChallengeUseCase } from './get-next-challenge.use-case';
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenges/challenge.entity';
+import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenges/index';
 import { Topic } from '@/core/entities/topic.entity';
 
 // Mocks

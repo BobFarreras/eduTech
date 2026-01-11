@@ -52,7 +52,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 00
 │   │   │   └── 4145cddf3f9db91b57b9cb596683c8eb420862
 │   │   ├── 01
-│   │   │   └── 0eef23e3ed3e7876206ffad64bf4494c6ef227
+│   │   │   ├── 0eef23e3ed3e7876206ffad64bf4494c6ef227
+│   │   │   └── 5d48bb6db79a89418e9f358fe66de69fd65d80
 │   │   ├── 02
 │   │   │   ├── 7b19c3168ca82e0a98846f809ef8081b8faf12
 │   │   │   ├── d74d7a73523ae654ee7996075a9c19d3272621
@@ -60,20 +61,28 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 04
 │   │   │   ├── 0b8f194987501ed51710f784f9755cc5e7cb75
 │   │   │   ├── 636a1498fd827392f5f0865a26ba2dabe92c2d
-│   │   │   └── b967fbfcdfb1eea0c0a650e157cb6a0bbf5eef
+│   │   │   ├── b967fbfcdfb1eea0c0a650e157cb6a0bbf5eef
+│   │   │   └── bba9ece5910fc4423e33dcc66c97304d30dfb8
 │   │   ├── 05
 │   │   │   ├── 6fb6fc9c03efba3460d94879c1706390cde238
 │   │   │   ├── 70397c440de7a8f3235d04daff14aa20d375ef
+│   │   │   ├── adaf33d6627beab311fb925cd7c5f7e1276f6e
 │   │   │   └── e726d1b4201bc8c7716d2b058279676582e8c0
+│   │   ├── 06
+│   │   │   └── de34e06752cc4541ecf84592fdb51dbe5eb2cd
 │   │   ├── 07
+│   │   │   ├── b44284fc13dc40728613f85e40e6e77710f094
 │   │   │   └── f479fe404dfe2d68e7173384701197c0b176a6
 │   │   ├── 08
 │   │   │   ├── 18b631e0b42052ced52fdff1485d28d61cc57c
+│   │   │   ├── 4574ea613c0a038c8b873df74da6d8017f9781
 │   │   │   ├── ccaed9a63a41f56e6093a60168c20d00361d5c
 │   │   │   └── f86f50b63dfd3dbe7d9c6c2541c177f010ef88
 │   │   ├── 0a
-│   │   │   └── b593262f0c4e6c7413096389842c7bd5cb2ddf
+│   │   │   ├── b593262f0c4e6c7413096389842c7bd5cb2ddf
+│   │   │   └── bccc9ba9da2cb89682c1e9300c9784dc9c6e8c
 │   │   ├── 0b
+│   │   │   ├── 13009f75033f238a46de000826d890d0479b16
 │   │   │   └── d69f6e23d4ad3740241f397554e8bac8744487
 │   │   ├── 0c
 │   │   │   └── 1f99ab34c339c2ea2d1a435a356118b4ff274b
@@ -83,10 +92,13 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── ca57ff408f6ff3f3f9dd3e8438514a1d9175ad
 │   │   ├── 0e
 │   │   │   └── 4d12127f3e7b2e2d8f83ce171ab9b5a8472dc0
+│   │   ├── 0f
+│   │   │   └── 94900c5ede38da9333b59d70605cb22ac2c56b
 │   │   ├── 10
 │   │   │   ├── 574cf7398601760c6979b2d86e6ab3e6bae418
 │   │   │   ├── 61a3ae36856f48e9098c4043ab0525f502a3b2
 │   │   │   ├── 9299c2486a080e055f57352eddca7902041411
+│   │   │   ├── b25b6ae1faa4aaad56c6671d0551f27d3a95ad
 │   │   │   └── ce8354c2e9a574f67e7ced1f1236a5d83c5c00
 │   │   ├── 11
 │   │   │   ├── 1a4703e992d2e086f64b5b44e7699e1a66ee37
@@ -98,6 +110,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 0a2428b176921e71677d0ae9fe72c2471e62f0
 │   │   │   ├── 239e33c642ebae81dfead9793f6d448c4c3d53
 │   │   │   └── e6698b9cd6ef72606c4c8e46e26459b14c0c28
+│   │   ├── 15
+│   │   │   └── 8eedabf3ed298aa3f60d560cfee6a9f676b60c
 │   │   ├── 16
 │   │   │   ├── 0d71f1d1997fdcb81238ed50462a2a9585220f
 │   │   │   ├── 1a5baa5cc7fa8cebd87f46159a43da7988b632
@@ -106,36 +120,55 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── fb5feeaaef791cdae952849d2745fefb17c61c
 │   │   │   └── fe115375f775a90f6949733f3b23725f7b9ea3
 │   │   ├── 17
+│   │   │   ├── 2534024ac234a6148c27a743c13dec7391e16e
+│   │   │   ├── 601a4ea100588cad36097e4b22f9eb72a7b1ea
 │   │   │   ├── 975f58393f8de813a56bdd14fa617c738918b2
 │   │   │   └── b05bf1e17c6d2338f255fdc91766a0d266a9d7
+│   │   ├── 18
+│   │   │   └── 5963839c4e68d3272c6a99638efae21fa7c372
 │   │   ├── 19
 │   │   │   ├── a064bcb06e714c0b9d82e9c88af2e379ffd506
 │   │   │   ├── c3c9199df07fd38b5f14bb1a613ac88710994c
 │   │   │   └── f1cd7c5a82bd4185760e4cb037bf65550ef2fb
+│   │   ├── 1a
+│   │   │   └── 3c93f2f4c694a3f10671740e274f56b85bd528
 │   │   ├── 1b
+│   │   │   ├── 155791014fdca5fc6f8afb7703330f74d8d155
 │   │   │   ├── 38c4140d843dd5048c7fc01778190a278d5f4f
 │   │   │   └── bdefa03f86d5362e42a17484cb981f35cf9657
+│   │   ├── 1c
+│   │   │   └── e2de9553d3e043e5f664ea0aaf3f03f28388aa
 │   │   ├── 1d
+│   │   │   ├── 06b087f2924c307c6bb65f7f1f50312aaacdc0
 │   │   │   └── 0a646399d463b41f6fb0d7c4b61fc91a88fbb6
 │   │   ├── 1e
 │   │   │   └── 9299edcaaf0d95b04beba9a1fd734ad9efd61c
 │   │   ├── 1f
-│   │   │   └── 1b0d2c58bca49764a3308a108951e0452c5638
+│   │   │   ├── 1b0d2c58bca49764a3308a108951e0452c5638
+│   │   │   ├── 3539f92e16c8e8cde5988867545957539361c8
+│   │   │   └── 7d4da3487c41b868ffa71a1ffbbe9c2653ea2b
 │   │   ├── 20
 │   │   │   └── 04c8a4c68447324ad5c34657703fce95ffd976
 │   │   ├── 21
 │   │   │   ├── 15cf378d7577f78415d621838b573f98aaa2e8
+│   │   │   ├── 197cb054499c1ed27d30ceda94fe55c6b98bb5
 │   │   │   ├── 4acebfb2e59637b8974f757bd321cb72d1e7df
+│   │   │   ├── db4ac5e7d725253baf1fc15431047772c6acca
 │   │   │   ├── de2a25ecb0133617c8662b35c9665af8671e59
 │   │   │   └── ead2c8bae08f5d4ca086cf368710e69c45327c
 │   │   ├── 22
 │   │   │   ├── 3a5c1d5702bf142f9bb8557b4bb0c831ffca78
 │   │   │   ├── 4d0bf38eca17c182142d9a2de8b87a3de1fabd
+│   │   │   ├── a1b5e85f87475df58de8540389891aae8038c7
 │   │   │   └── c16c118afe1205caa5fc80806e2dc3596997f1
+│   │   ├── 23
+│   │   │   └── d1978e03013d339a619f03e4de7595bbdd4b41
 │   │   ├── 24
-│   │   │   └── aff6fb486ebedb9637e2053d08186a5c9e61cc
+│   │   │   ├── aff6fb486ebedb9637e2053d08186a5c9e61cc
+│   │   │   └── ef84f46b9096d61c8da2fa14d388eaac2c7ca7
 │   │   ├── 25
 │   │   │   ├── 620be82adf68408563df8406776739ece50cba
+│   │   │   ├── 85c78eed6c3f92a45db47a2d93d26de3b103d5
 │   │   │   └── 9cb818bbe158d8652b209a09ba3793c7d85164
 │   │   ├── 26
 │   │   │   └── c1ad9bb3f31571028cc2e70efd84b4bc521f94
@@ -152,12 +185,25 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── b180444840fd8115b4d7ad05ab2d3bb3e00410
 │   │   ├── 2c
 │   │   │   ├── 33dae76f776268f9eacf7f9bed0eb7afb79897
+│   │   │   ├── 83f74a34a2404b39d41483302cd218e6e2b616
 │   │   │   ├── a3e961a71678c49e89eb2bb8e1c17c4f367b6c
 │   │   │   └── d7983b1c3542b0765ea7bc182d7b1b8d1a8f37
 │   │   ├── 2d
-│   │   │   └── 72dafbb02d7daf4a151c7c14ee763b190fe60e
+│   │   │   ├── 72dafbb02d7daf4a151c7c14ee763b190fe60e
+│   │   │   └── dee3360ca237036b8054556c22b6dc23deb12a
+│   │   ├── 2e
+│   │   │   ├── 6429aac6ef84dc65772c227d8c60696849400d
+│   │   │   └── 7b63413ccb1ebe40ea1aaa9bc1013f9b708539
+│   │   ├── 2f
+│   │   │   └── 73963b3be265fcb46de5a7017ba78fe3f692e6
 │   │   ├── 30
+│   │   │   ├── 51705602d93af08603a350d45fa8b694f172cc
 │   │   │   └── 64b81e80cf949ad98ace47b0bfdbe51815e34f
+│   │   ├── 32
+│   │   │   ├── 21f6486fbdce0f9df334b4ebdb1712378fdb2e
+│   │   │   └── e55937e08a9e9c6b6668139b800cf00972598c
+│   │   ├── 34
+│   │   │   └── aaad1b55589ee16a460cf745f150e9e3c35238
 │   │   ├── 35
 │   │   │   ├── 00afdf9f09b933f0bc6954f576be9400fc45cb
 │   │   │   └── 2de3757a0aed623e714d2a7ec71eb0c448611b
@@ -166,6 +212,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── f825b06fb9856f2c19966c029ce49480ebfdf6
 │   │   ├── 38
 │   │   │   ├── 0b95186261f56228d4a2ea3f5b775db056ff5a
+│   │   │   ├── 23a190c5162de1543bc055cab8d53d1b72598c
 │   │   │   ├── a2213af2cab025173a2048df9c7892620aac04
 │   │   │   └── de622fe5f0e9413ab31c470caad81e7d04d628
 │   │   ├── 39
@@ -177,27 +224,39 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── dffb2c75f2c2597bc747d64c55028929c1aec5
 │   │   ├── 3b
 │   │   │   └── c1f9cfb261928772ee7db9178d84fb1d6e9861
+│   │   ├── 3c
+│   │   │   └── 9f5a80fbeb07ba3bb268df78f05350c9efc6eb
 │   │   ├── 3d
-│   │   │   └── a9b0adf0c8e4db443baab46b410d177435bdf9
+│   │   │   ├── a9b0adf0c8e4db443baab46b410d177435bdf9
+│   │   │   └── d622fd0e7db324caed1164ed126363b5c25bad
 │   │   ├── 3e
-│   │   │   └── b652e6cc3294e4256523cf995dd0863bf140d4
+│   │   │   ├── b652e6cc3294e4256523cf995dd0863bf140d4
+│   │   │   └── d78237e0d567e13e959b5627ae2190febb68d1
 │   │   ├── 3f
+│   │   │   ├── 0abce9320b2946a2a419106589095411878c18
 │   │   │   ├── 3f1d8815f85f94d581d30a5368f92610823d7f
 │   │   │   └── 795c4719a381185e1d5dde19cc57446a7b92cf
+│   │   ├── 42
+│   │   │   └── 2e226632f46ebf95f8156fdad2429e5c17369d
 │   │   ├── 43
 │   │   │   ├── 15996943841cc3786a79ea7e75da20c3b4c0f5
 │   │   │   └── f752b362a7171fc3082ee213b39a89a77d233e
 │   │   ├── 44
-│   │   │   └── 33a9e2dcf80b5d027852fec66aedc0a4081419
+│   │   │   ├── 33a9e2dcf80b5d027852fec66aedc0a4081419
+│   │   │   ├── d98862904591fdee0ba3849a7e5a18b015c9de
+│   │   │   └── efeedd11a6f664930c8d3ad5ec6147429b0bd0
 │   │   ├── 45
-│   │   │   └── 62a4446e0cfd91a48927f5993f33e4b5a91a2a
+│   │   │   ├── 62a4446e0cfd91a48927f5993f33e4b5a91a2a
+│   │   │   ├── 8a9f9510c2ba91675cff01bbd31a2540a075d0
+│   │   │   └── bdc3e92234b3bec56cdbec2c22b3c2ebc553f7
 │   │   ├── 47
 │   │   │   ├── 0a9f15697716a9333c28aedaa9a27cbf0dd0f9
 │   │   │   └── 5efcb7080478264baf7f470f7010561cc9b82f
 │   │   ├── 48
 │   │   │   └── 51e0ce64b2e9cc2a84534b3a5769121d0d61a2
 │   │   ├── 49
-│   │   │   └── 99f57fcccca993a99a91590d3e67f574958691
+│   │   │   ├── 99f57fcccca993a99a91590d3e67f574958691
+│   │   │   └── fe033835b7a050b0b13908617f24f3e77ac50e
 │   │   ├── 4a
 │   │   │   └── 82067c6393bf10773e3f2bc5c01cb1f5d172a0
 │   │   ├── 4b
@@ -205,7 +264,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 4c
 │   │   │   ├── 274d9941dd1aa01b02d879024f35f8432eaceb
 │   │   │   ├── 59dfb5d468d4900302b3c54d77f79f49cf2ae7
-│   │   │   └── 8169b5975cf154cc5108b4bdfc7f2bb4941783
+│   │   │   ├── 8169b5975cf154cc5108b4bdfc7f2bb4941783
+│   │   │   └── e183a8041940a2e3af71282c402ab4946057af
 │   │   ├── 4d
 │   │   │   ├── 3e60c0ab8df919b259e85ef5dbfeca805f5024
 │   │   │   ├── 72bcc0916491a2d79d8991576ef4cd047e5256
@@ -213,12 +273,14 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── 8ac67ae9af5fac962ad54466be430d83722720
 │   │   ├── 4e
 │   │   │   ├── 1ca65f38f890868fc09edbb416fd56691c4a98
+│   │   │   ├── 22e75671a3be243b539e48efe05d0cf186207a
 │   │   │   ├── 8128c13ee1f30c70773245b478c73d97068834
 │   │   │   └── d0c80be3ce06a7227dd64672065059ee82a46c
 │   │   ├── 4f
 │   │   │   └── e3df39c2b9cfc5412e3f44c96fc52b3a766662
 │   │   ├── 50
 │   │   │   ├── 1681935a10848a742f4734a29e1eb54c3741e0
+│   │   │   ├── cc68a673e7a9d6f75e99661c48a425468aa481
 │   │   │   └── f654f106d61febdd8e3f458595c3d906ad6ee8
 │   │   ├── 51
 │   │   │   ├── 131b825c832aa9eab3694152db63bf82f95cf9
@@ -227,9 +289,11 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 52
 │   │   │   └── 7b05f291fdd7cf1213ff5b485f837b62a7bed4
 │   │   ├── 53
+│   │   │   ├── 358a5c2b94e262aa6dc86e9fb0f72bea850184
 │   │   │   └── bb8bade75b6c3696aeb1a1d3d6062ec22a0fe8
 │   │   ├── 54
 │   │   │   ├── 1fb8ff03f7a96c8aae773953290e5cb3efb8b4
+│   │   │   ├── aa0b7fd7796f2fa4ed685a86c1d2646b9874c2
 │   │   │   └── f703ad0731034831e268a2baf07dcb35630d6a
 │   │   ├── 56
 │   │   │   └── 7f17b0d7c7fb662c16d4357dd74830caf2dccb
@@ -237,10 +301,15 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── ad22ccf8283e658b9faca9e1120b93c8527b28
 │   │   ├── 58
 │   │   │   └── bd66e222ef2690c5141a8d9bb965182ffd755b
+│   │   ├── 59
+│   │   │   └── 762441534360e2f0dacbde4373688c086dcef4
 │   │   ├── 5a
 │   │   │   ├── 1d75d065e5e15ebb4b715d89c33745b2b4fe7b
+│   │   │   ├── ca76ef45874e010a847d03b9f53482c7d00bd1
 │   │   │   └── fabbcc49de92848f355737f448a51be4b77c2c
 │   │   ├── 5b
+│   │   │   ├── 023437294451c67a894df4133787a3639775ba
+│   │   │   ├── 41b477e2fee7389befd3a7ccaa065113cca188
 │   │   │   └── b532756e4e8d66bcc7e3aff713e40f93643587
 │   │   ├── 5c
 │   │   │   └── be8363c0fa0773c1053d24163941d972091f5e
@@ -257,21 +326,25 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 61
 │   │   │   ├── 925ebd9473a5264094d2abfdc540521a9cfdbc
 │   │   │   ├── bd35d411b806c2baf9ae4bc74c9d65af087d99
+│   │   │   ├── c3c08e5a28ac3b8c43b6f788b0a847a98f2f90
 │   │   │   ├── e36849cf7cfa9f1f71b4a3964a4953e3e243d3
 │   │   │   └── e581b98275acc8ea1eb4aed49d69f8aedca80d
 │   │   ├── 62
+│   │   │   ├── 3773613fec6ecc992854196197cc67b0aa0e6a
 │   │   │   ├── b072941ec1d1a263e8236ece19c0449509b708
 │   │   │   ├── c03e7f0e8507413c49d79bb24bf3c25aec797f
 │   │   │   ├── c687561adcaf4f2f55638a5af80236bf5c70ae
 │   │   │   └── fdd33153bb1bb0f61c7820738cb6fc485057c0
 │   │   ├── 63
-│   │   │   └── 7468941006f41bbe515470e69b60ce2756b50c
+│   │   │   ├── 7468941006f41bbe515470e69b60ce2756b50c
+│   │   │   └── 84949d797e98c8cd010d700ee4533a8b8de6d4
 │   │   ├── 64
 │   │   │   └── 6dd9c4a73fadd9e06b216d123b1576e6c9f0fb
 │   │   ├── 65
 │   │   │   ├── b67c55f602d788bbfdc8051307a2083f346e7b
 │   │   │   └── b8bace8f5a2fa3364240b1a24f62b8ec3d04b4
 │   │   ├── 67
+│   │   │   ├── 6a638283b2a9f9de87a0738ffcdc10f4ba38a1
 │   │   │   ├── 7b580ec7e529bf6126a1ab076169c18f2601d5
 │   │   │   └── f2df0015a3ac5252d4b8eef4cb3eae8b2edd82
 │   │   ├── 68
@@ -280,12 +353,15 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 3d40c739d65e11ab90857b9d08c01003dab9d1
 │   │   │   ├── 6c7fac44397c7e0524411e1f6e3c84ede5031c
 │   │   │   ├── 8d402e602c49dedaa37ec5fff294bc00322464
-│   │   │   └── bb98fd900582a80fd8f30f4f6c768ba90b05f8
+│   │   │   ├── bb98fd900582a80fd8f30f4f6c768ba90b05f8
+│   │   │   └── f0089abf6d24bf28b39ff390b28fe53148062c
 │   │   ├── 6a
+│   │   │   ├── 1f6637d1801c39ffdb284f4e4bdb0fa18a3828
 │   │   │   └── c5bdf674999accb0a886a0073a9e8d56c39c31
 │   │   ├── 6b
 │   │   │   └── b148f7ce15bba64bd95c1efe14e275448cc4b0
 │   │   ├── 6c
+│   │   │   ├── 1ac599d84befb016681da8aae64dc6b36cc434
 │   │   │   ├── 6a18573bce17a8c8fd81f8a261224b019e6b53
 │   │   │   ├── 8a26247536aacbd255fdeef489ef96f940242a
 │   │   │   ├── c650b181b8802678414eb38578a5f6fcb378c0
@@ -294,6 +370,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 8528a8aaa9232337743c16c47a47a14a8b90f0
 │   │   │   └── ec08c3288ebb44f1c973ae8378e747bcbd831d
 │   │   ├── 6e
+│   │   │   ├── 4da63431f1a44845fc662abe74abc93fb31833
 │   │   │   ├── 4db68bf040562147487696f7682f0fcaaf38fc
 │   │   │   └── 8b054637d6464bb59541bbfe5e96595b0ac9b0
 │   │   ├── 6f
@@ -322,11 +399,19 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 5afd7191f0a5a263c1406e41fea92d89b68744
 │   │   │   └── e9cf9a49313c468c7a25c39c22eb17260059ed
 │   │   ├── 77
-│   │   │   └── 053960334e2e34dc584dea8019925c3b4ccca9
+│   │   │   ├── 053960334e2e34dc584dea8019925c3b4ccca9
+│   │   │   ├── 1054c7fbfbca8eb1ab50dd1d32f8f9a758b987
+│   │   │   └── 2ac07b104f8b34b3e8fe047ee3253e57cfa903
 │   │   ├── 78
+│   │   │   ├── 0a4a055c11fd0d6ef77951122c7fa2d1304872
+│   │   │   ├── 5f9f0d3fe77f55743d1f4af9331bed0029e0aa
 │   │   │   └── 899f1de8f8620147083721474ce663692aa14f
 │   │   ├── 79
 │   │   │   └── b95ec71a8e1a170c43ae3eac3c573136ec945b
+│   │   ├── 7a
+│   │   │   └── e253db098336a83a72060b75d07c52999fa2d8
+│   │   ├── 7c
+│   │   │   └── 14e3c0bfe4f746e54336e64c1e0268d840c5ef
 │   │   ├── 7e
 │   │   │   ├── 3a3344852b951510c7b37480df7a230ba7d3fc
 │   │   │   ├── 4d45340d501eaaa7d4e6e12a4632ba8fe49500
@@ -346,12 +431,16 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 25971febcb78d372c790dd79ae92bf1dd17114
 │   │   │   └── da5efb62c34058c822cf55e84b2e2e37e512db
 │   │   ├── 85
-│   │   │   └── 9f85ac590a98c1ca6f0141acd0d6fdcd1ce8c6
+│   │   │   ├── 9f85ac590a98c1ca6f0141acd0d6fdcd1ce8c6
+│   │   │   └── cec038c8fbb945227c181948dcc8c407fdb437
 │   │   ├── 87
 │   │   │   ├── 24663871e69a5ddb00260615e14f2c77718cc2
+│   │   │   ├── 56ae3a9e606a10486409e1ba7ecfc940eed223
 │   │   │   ├── 70f254e209aca2304a1e8436a2bb082ceddbec
+│   │   │   ├── acc152028ea38ea04370e75e4eb9e81f9658c5
 │   │   │   └── b57fa1adc8c0c32cb00fa3f558742b473a0b38
 │   │   ├── 88
+│   │   │   ├── 1598005177bd1618b3cbea6488a5ecfc6fb9c1
 │   │   │   ├── 9f96713fc47f964a3b756114e07d25f6067865
 │   │   │   └── d050b1908057b53d38b42702ebc659e3d7f696
 │   │   ├── 89
@@ -360,21 +449,31 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 233efe36b8788b93fb30068ba821d7b25d795b
 │   │   │   ├── 595ce74ddc509cf445afcfdf56a19e46b9adb8
 │   │   │   └── f9b4522d82e78bf661ea7599048bc17050f91f
+│   │   ├── 8b
+│   │   │   └── fc383be5f240cac9abea0bbf38eacba5ea1ad4
 │   │   ├── 8c
 │   │   │   └── 68db77089294cb4f34409f8507dd639ce8aea9
 │   │   ├── 8d
+│   │   │   ├── 2cb87f170efaeeb9ded51c61eb8bb358fdef56
 │   │   │   └── 5adede09c5f7b2a15a10e67a188afd31950770
+│   │   ├── 8e
+│   │   │   └── 37883471f58907aa611d62688bb8f9657d7834
 │   │   ├── 8f
 │   │   │   ├── 1525d8d8d2d073770f0c8af0445641a029dd87
 │   │   │   ├── 5db4f5df8d2f78ad6ed6ee52f4631bb8d06e11
 │   │   │   ├── 80aaaff97a1bfe6b4d753625085944568a1363
+│   │   │   ├── 8735950a6c03bf3ecb571c49c9c4a14b400bf1
 │   │   │   └── c1aa288c105c33a9e6a17f51614b2ae559d9c5
+│   │   ├── 91
+│   │   │   └── b46072ce462dabcaa7cc1c7b02793345470e14
 │   │   ├── 92
 │   │   │   ├── 0d1851956905c031a7b99124fc864a2e0f9eb9
+│   │   │   ├── d6a32bc12ed111c856f56aa08f445fcb2770b2
 │   │   │   └── dc0cf707480e9bf4517198db9b0cb3e8a9d2fa
 │   │   ├── 94
 │   │   │   └── 51a8f3e3588f383bb93711e0772a33bbfcccb0
 │   │   ├── 95
+│   │   │   ├── cebe3192365cf2e8e9f27a0bd19af452f16c16
 │   │   │   └── fcdab10ee521da7fea7417812b63e2566635e7
 │   │   ├── 96
 │   │   │   └── c961613ff1605d56cea4a36cd54bfc32a22162
@@ -385,6 +484,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 9fa6c15c75cfaea7c509843fc7500a4d223056
 │   │   │   └── e515b28b4036300b38267649774650be6fdca1
 │   │   ├── 9a
+│   │   │   ├── 5c043f3fc4c089818ef4fb3406c77724a6fad2
 │   │   │   └── e2ad84233ef97092ffd3fd8e0d0905fecd93b9
 │   │   ├── 9b
 │   │   │   ├── 26ad3414c99b7a31852a97b3026fc90cbd3379
@@ -396,6 +496,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 26dfeeb6e641a33dae4961196235bdb965b21b
 │   │   │   └── 91b6a697269bae99bec2bcdd93b4b625a64564
 │   │   ├── 9f
+│   │   │   ├── 654ccf8d7b5b47bea4dab691093ace0ac2b097
 │   │   │   └── ff0be18a7cc4adbec703370de0699e0e2b8035
 │   │   ├── a0
 │   │   │   ├── 22f5afabf0a1817b50cb3bdf214b2ec24450c6
@@ -417,6 +518,9 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── a6
 │   │   │   ├── 14c93bc6f69d345145c3c542654967bc6a09fd
 │   │   │   └── 94b225a1f288245f4d53944934154f68a09e78
+│   │   ├── a7
+│   │   │   ├── 12b20cabf3b8694ca0320fd2387f17e8a809f4
+│   │   │   └── 2ee82fcb0b296466094dd3d499c6c544503427
 │   │   ├── a8
 │   │   │   ├── 57ac6488fb587d098e0c5427e26a5ed240920c
 │   │   │   ├── bb40b77df91e4d94b01f27dcafd381d064a943
@@ -425,7 +529,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── ad6f9e6e9b2262b043340091540f96d909e849
 │   │   ├── ab
 │   │   │   ├── 35ea493266e71887e89fc54670a8a20762b598
-│   │   │   └── 84d5367e4576533bcace775fc9808d35659b5c
+│   │   │   ├── 84d5367e4576533bcace775fc9808d35659b5c
+│   │   │   └── c42a2a9598506c4618371a37086904c7e5d9ec
 │   │   ├── ac
 │   │   │   ├── 3010aaf318556fb8dad42c2c536c1aed11802b
 │   │   │   ├── 54d8f9dd20d06aa3cb50cd88c9610fef438493
@@ -433,7 +538,10 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 7948fbd8711b8ced7c3393a2731347361c0792
 │   │   │   └── eb6b40bd52da1885bb93ce0376e2e801503e66
 │   │   ├── ae
-│   │   │   └── 4af8a2d462370662d40d21e41e06b38ad5ec6b
+│   │   │   ├── 4af8a2d462370662d40d21e41e06b38ad5ec6b
+│   │   │   └── 8b81d707cc0fbd69fff5bd7a300418bfefb790
+│   │   ├── af
+│   │   │   └── 2f8d71ce3b3d348a9bfd091931f3ecd6c75485
 │   │   ├── b0
 │   │   │   ├── 43215504c26a302f47378a169a7fd92d071809
 │   │   │   └── 9512775e5ac76b11bb1893fc5dfeb8f2b18fa2
@@ -442,13 +550,16 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── b2
 │   │   │   └── b2a44f6ebc70c450043c05a002e7a93ba5d651
 │   │   ├── b3
+│   │   │   ├── 0affec3cccf8d2d576b2dfdc4f887e00575468
 │   │   │   ├── 5ffef1ae46f9e25de64e79e7f5313304f4084b
 │   │   │   └── f6b7d796cc810c477568ce1c3fae6c1fcd6fab
 │   │   ├── b4
 │   │   │   ├── 0d63d590fc272bc2e06ff11dbfc28c9a4eb4be
 │   │   │   └── 31b46901bb358d1cbc1ddfa38eabc5d0ef8e0a
 │   │   ├── b5
-│   │   │   └── c00bffbb624b9f5075c4ec811a3460d07bffb9
+│   │   │   ├── 9b99bbba5d6199cb5661df6c1a8a553223e601
+│   │   │   ├── c00bffbb624b9f5075c4ec811a3460d07bffb9
+│   │   │   └── d42f2d6153c5cfaf9c5d9f79a07e391092f5ee
 │   │   ├── b6
 │   │   │   ├── 807fa1e0255e7564262a1eed638f835461ce98
 │   │   │   ├── a00f96a9ad86187797fb06e59097bc5db83bbd
@@ -464,25 +575,34 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── a62350bdd39491de7f91cb17feff0476aec4ba
 │   │   │   └── aedb04de049fdf8c4b46cd4c86ad21364a3c2e
 │   │   ├── b9
-│   │   │   └── 72a336ac76e2b7561ff089f66be319826cf0f0
+│   │   │   ├── 72a336ac76e2b7561ff089f66be319826cf0f0
+│   │   │   └── f6644009fb6d28a499b3fbb7587b83fb01fe6d
 │   │   ├── ba
 │   │   │   └── 512d945cb5e8ae6480ac980182580583cb1471
 │   │   ├── bc
+│   │   │   ├── b5055dd14f94daf8b4d54426e2a7ac54d8da72
 │   │   │   └── d20d50622030b045c6fafbc9d498f48274054c
 │   │   ├── bd
-│   │   │   └── 8e3ee190e25153dcece1cb7f7d9250a3965cb6
+│   │   │   ├── 8e3ee190e25153dcece1cb7f7d9250a3965cb6
+│   │   │   └── bf82f943c1b3b7403724818b02a1e132de6729
 │   │   ├── be
 │   │   │   └── 7664c777d57a57b2a11a6f43b121ded4445a71
 │   │   ├── bf
 │   │   │   ├── 53897f8dcd7f853a219b86f78e2dc880a4c9e1
 │   │   │   ├── 561a008ee7a1de93a7e72a96367d218acabf1e
 │   │   │   └── 5856c9e06d448c1cbdcf6b336943ddda564377
+│   │   ├── c0
+│   │   │   └── 7cbd1d5e15e7cc2e5aac44ece89f32d8101b17
 │   │   ├── c1
 │   │   │   └── 3ac22293ba01c82e7ea1f82e67208658f85465
 │   │   ├── c2
+│   │   │   ├── a0f573b87d904a96bd74a7bb03b788f2a36e6e
+│   │   │   ├── e366092f989f71220d905088de450abe73816b
 │   │   │   └── e599d835e5cae1bd4032bdfad977a1e8b77680
 │   │   ├── c3
+│   │   │   ├── 1b53f14e7ea500b787f04883762514e7109d8c
 │   │   │   ├── 2f10c10bbbb5c3a7341c115e0304e165ecbbb2
+│   │   │   ├── 5142462549129aa7e715f7ea4159b7ffc0d965
 │   │   │   ├── 7c083502e03911e3a804136bfa2dccf3299fb8
 │   │   │   ├── 916e1cbd113afac45c720518158ff68cb64745
 │   │   │   └── cf3dc879480568aa6b18f55556a7d648c37b56
@@ -492,12 +612,17 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── afcda3cbf287268a5c2532ce4d6b0c141d9397
 │   │   │   ├── b79bbc54166e31cde5b0ff7d8a6449ca02fe80
 │   │   │   └── cebbb656595b7e2689d0fdb6205549cfda6e6a
+│   │   ├── c6
+│   │   │   └── 8f3cfcd0d32fb84c9815afb35398dc50a45942
 │   │   ├── c7
 │   │   │   └── 90ee2159fa8d433c9a9a359329db1830806da8
 │   │   ├── c8
 │   │   │   ├── 3b8bde585180c668610ffd24c36ad0333cc79a
 │   │   │   ├── 8f389de09f418da376598c42e8788d4fb6d172
 │   │   │   └── eebc3b3e73d0d9de9c5d1290cd57c79b8c05a9
+│   │   ├── c9
+│   │   │   ├── b24106a6b73bbc5af45f9c3077aae19d149df5
+│   │   │   └── e8e66d9392e9814068859712cfa9d9be7dd441
 │   │   ├── ca
 │   │   │   └── b8578683fd664da09c17300198ef8c1acc71de
 │   │   ├── cb
@@ -510,27 +635,43 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── cd
 │   │   │   └── 43a3dfb9c40dda769b684e3aa5efbc34c97ee4
 │   │   ├── ce
+│   │   │   ├── 40cfe2f868af6b31274c51c03d228f5fc35606
 │   │   │   ├── 891dfa9c5e080ab2571fcf2c82243db37b7267
 │   │   │   └── e0907b7e7cbc66a82b00933185a67456bd6115
 │   │   ├── cf
+│   │   │   ├── 3aeeb9e008f9c0ea619a013d173f397edf538c
 │   │   │   └── b15609831558e3cf174cdff065fc3849a24a07
 │   │   ├── d0
 │   │   │   ├── 529914c4247adceb9e0efe33b2f5323f976d33
+│   │   │   ├── 8f0a5bf288cdc9c72cf1718d2f8ad1cdf25a57
+│   │   │   ├── 9b5314a8a2ff3af492fcc235f42016ff6035f6
+│   │   │   ├── b375b17ef9cdc2a31b46c8c15ec36b209bbaca
 │   │   │   └── e06523feda206f9001f46cc14970dfe7bb9bc4
+│   │   ├── d1
+│   │   │   └── 319a820cb2e7fb21fc60dbe2b11fa19318c528
 │   │   ├── d2
+│   │   │   ├── 24263a40a8ebac73dfd6b44c656a0652a8193f
 │   │   │   └── 461b41a3257d540e8f2d9751ed664c49a1e8d5
 │   │   ├── d3
+│   │   │   ├── 04b956391e6ee8255017a2973146b6e0591202
+│   │   │   ├── a17686c2628f5a1cf46fef95a48cd00fe3ed66
 │   │   │   └── ebd0a85b17f04b3c14c81a78e31593cfb976e9
 │   │   ├── d4
 │   │   │   ├── 185a631d6561a74de83f1d6471482979747692
+│   │   │   ├── 3225b3d1d62a7ec86b2175a73781d663618755
+│   │   │   ├── c4af3805715167f660a7c11bac58825634b5b2
+│   │   │   ├── ce8e56fbff630654a395d7b7983bcc963bfa8b
 │   │   │   ├── eb1c32f75c809ad2c12d55950f4dd4869ae825
 │   │   │   └── f23458bb690a2b0a9f1c261227d22be92b861e
 │   │   ├── d5
 │   │   │   ├── 0081b62e4fac9753ed2d4432631703cfc06b79
+│   │   │   ├── 561f5939a6d0ba07e1d78d633e61d28c65f7ce
+│   │   │   ├── 5d4b0d5083cd80f48b9b38b313fdf0b94f2346
 │   │   │   └── 98fa265bbb10b06e9e85415a28e0281b920b0f
 │   │   ├── d6
 │   │   │   └── 0fe3c09cbb3feb73af75e2df667d5667ec7567
 │   │   ├── d7
+│   │   │   ├── 9c068facd518e3ded00ce0c1e80c30039ed5ad
 │   │   │   └── a7e233674fa7a1d33557b1661158e1d2a64186
 │   │   ├── d8
 │   │   │   ├── 62d8f80dcf116c148f59aeeaad9e55236cd5be
@@ -539,18 +680,27 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── d9
 │   │   │   ├── 2a30768993ed5daa7dafdf93f91f9cb0f1c581
 │   │   │   ├── 351f4e6fd1a0f974151fe3c4169d86909d688b
+│   │   │   ├── b3230ecef05fafe0f2bf27672bd3d5625fc81d
 │   │   │   ├── c9b360490816fba04aad77d674b8e5454c971b
 │   │   │   └── eecedba03e8cfdc49c57c52ee2468eef4aeb40
 │   │   ├── da
 │   │   │   ├── 249d63ea71614a20a96e85d05fdb920b2b6d7a
 │   │   │   ├── 94a6a6bd9a995b9e723b272b60b0adcd9ce200
 │   │   │   └── a4df17a92bd55571038d8d49de2da1c7adda7b
+│   │   ├── db
+│   │   │   ├── 3db2b73a57f7561c20647da3b25d79fed950fb
+│   │   │   └── 4f79d03b16a5c6f7345591f07e008f04102c50
 │   │   ├── dc
-│   │   │   └── 1b0e86c2a5918154f7b1207ff2ec526b859984
+│   │   │   ├── 1b0e86c2a5918154f7b1207ff2ec526b859984
+│   │   │   └── 7b1ecf579e4f4951a169da64d4b65501c2ae9a
+│   │   ├── dd
+│   │   │   └── d9e02aa63213dcc33f23fb37be1a82ad59d08c
 │   │   ├── de
 │   │   │   └── f9f13c60a07a0fcd269f9cb13e199ec06f99b9
 │   │   ├── df
 │   │   │   └── 6c5ef7a8137627017248132e57f1bb1292bde1
+│   │   ├── e1
+│   │   │   └── 6879c95980e66fd50737d88f4fef4f3524e84b
 │   │   ├── e2
 │   │   │   └── 15bc4ccf138bbc38ad58ad57e92135484b3c0f
 │   │   ├── e5
@@ -561,22 +711,30 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── e9
 │   │   │   ├── 6c4a1785a0b6a994b620c9601c9b38add83e8e
 │   │   │   ├── a5271000d47bb187484a599af3b48c74ba8140
+│   │   │   ├── ab86a4326eeaa67251dda7a2593fa279a035df
 │   │   │   └── ffa3083ad279ecf95fd8eae59cb253e9a539c4
+│   │   ├── ec
+│   │   │   └── 0ae4d77a8368ba13843aee8f1bf0f6725fe0f9
 │   │   ├── ed
 │   │   │   ├── 49d17583eda5134e2339bedfa7455ff01553d5
 │   │   │   └── abd1131859b6172c3de33f678cd1b5ec64dbd0
 │   │   ├── ef
 │   │   │   ├── 0f27144d47fdc9e6736d8afd15e2bf4bda034c
+│   │   │   ├── 14a463734886adbca33cd414c4ce169fb83fc1
 │   │   │   └── a906a3c9129a272b7e6c1a7399caa8dbea2209
 │   │   ├── f0
 │   │   │   ├── 3ee597143c968d01da4a75d93e94224519d8d1
 │   │   │   └── 6c16c4683b441de360ec26358120b5326fc66c
+│   │   ├── f1
+│   │   │   └── 35d299140954410f6f3f25c254d8bf4326deb0
 │   │   ├── f2
 │   │   │   └── a487b6bf0cec284f8cec392e661a2d4002b597
 │   │   ├── f3
 │   │   │   └── bf5269c6d4f70f9ab7df745643cb9ac63d48dd
 │   │   ├── f4
+│   │   │   ├── a16719c17bb88c98551770e84136d313c28f7e
 │   │   │   ├── b82dd18861ecba6910474949825b9ff42b51ab
+│   │   │   ├── df37bb5eb1fe7f7a215e10d2487f5637af2bb8
 │   │   │   └── f09ba5e9061bbd9b5d05c9aed97d7bb09efc1c
 │   │   ├── f6
 │   │   │   └── 5934a5165a8c768442be1381847abdf22052fa
@@ -584,24 +742,31 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── c3b49366c844d323c49b9096dee100847bd2e2
 │   │   │   └── fa87eb875260ed98651bc419c8139b5119e554
 │   │   ├── f8
+│   │   │   ├── 6636571f6946c495ba79193c455861637cd8df
 │   │   │   ├── a22820db6e9db08bc546bb0e4726ccb754c527
 │   │   │   ├── d53d0c7898a7d445c3218699c5d9237c710d7d
 │   │   │   └── de00e530ec82458f0f64d340784c289d5f746f
 │   │   ├── f9
 │   │   │   ├── 54283ad2ea1e8a28d148155be2367063174334
 │   │   │   └── 70366eb8ab2ea9a7c4657e1cecea24ee8d2c00
+│   │   ├── fa
+│   │   │   └── dd9c3b4c78a571ca1c5738c0b5c476fb642776
 │   │   ├── fb
-│   │   │   └── 60711b4a84d47476343658d4b12de639fb9073
+│   │   │   ├── 60711b4a84d47476343658d4b12de639fb9073
+│   │   │   └── 7ab5fea133e3476f86e675686ac26648ec6409
 │   │   ├── fc
 │   │   │   ├── 3d2ee52244729eb953c442e06ff640ed405a65
 │   │   │   ├── 5da66087e6ddd135559b563892998a6eba3512
 │   │   │   ├── 8638fef2619867c737c07e55a3da7bd6e36aa0
-│   │   │   └── da7617f4555c1826cf6e0c3ac1607dd9d9f077
+│   │   │   ├── da7617f4555c1826cf6e0c3ac1607dd9d9f077
+│   │   │   └── e81371e627d3ba1254b6e18a77d3850cfa94f7
 │   │   ├── fd
 │   │   │   └── cbd1aff894f31ebfe9e29331719b5ead3c60bd
 │   │   ├── fe
 │   │   │   └── c93eccc9bfd9142908bf93fdd0d729f7da0c61
 │   │   ├── ff
+│   │   │   ├── 13f68b886af1c25d8a6bc793cf7e8ef1ac1591
+│   │   │   ├── 90bf7d4d9b7fd23ad571c79ae8711c4aec75a8
 │   │   │   ├── b0ceb24de959555afe74dd0fb439f96a20868f
 │   │   │   ├── c9ed7d54ed174ea20ef50f149f1b3487041e3b
 │   │   │   └── efe900c5243fcf63eb76e2b84a5aa3990dbc06
@@ -639,6 +804,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 ├── docs
 │   └── TECH_SPECS.md
 ├── eslint.config.mjs
+├── esquema.sql
 ├── init-structure.js
 ├── merge.js
 ├── messages
@@ -711,8 +877,17 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │           └── README.md
 │   ├── core
 │   │   ├── entities
-│   │   │   ├── challenge.entitiy.test.ts
-│   │   │   ├── challenge.entity.ts
+│   │   │   ├── challenges
+│   │   │   │   ├── challenge.entitiy.test.ts
+│   │   │   │   ├── challenge.entity.ts
+│   │   │   │   ├── definitions
+│   │   │   │   │   ├── code-fix.content.ts
+│   │   │   │   │   ├── logic-order.content.ts
+│   │   │   │   │   ├── matching.content.ts
+│   │   │   │   │   ├── quiz.content.ts
+│   │   │   │   │   ├── shared.ts
+│   │   │   │   │   └── terminal.content.ts
+│   │   │   │   └── index.ts
 │   │   │   └── topic.entity.ts
 │   │   ├── errors
 │   │   │   ├── domain-error.ts
@@ -732,6 +907,12 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── adapters
 │   │   ├── config
 │   │   ├── database
+│   │   ├── mappers
+│   │   │   ├── challenge.mappers.ts
+│   │   │   ├── mapper.utils.ts
+│   │   │   ├── README.md
+│   │   │   └── __tests__
+│   │   │       └── TerminalMapper.test.ts
 │   │   ├── repositories
 │   │   │   └── supabase
 │   │   │       ├── challenge.repository.test.ts
@@ -774,12 +955,19 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   │   │   ├── GameArena.tsx
 │   │   │   │   │   ├── GameError.tsx
 │   │   │   │   │   ├── GameResult.tsx
+│   │   │   │   │   ├── layout
+│   │   │   │   │   │   └── GameSessionLayout.tsx
+│   │   │   │   │   ├── LogicOrderView.tsx
 │   │   │   │   │   ├── MatchingView.tsx
 │   │   │   │   │   ├── QuizView.tsx
-│   │   │   │   │   └── README.md
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── TerminalView.tsx
 │   │   │   │   ├── leaderboard
 │   │   │   │   ├── learning-path
-│   │   │   │   │   └── LevelNode.tsx
+│   │   │   │   │   ├── HorizontalPath.tsx
+│   │   │   │   │   ├── LearningPathOrchestrator.tsx
+│   │   │   │   │   ├── LevelNode.tsx
+│   │   │   │   │   └── VerticalPath.tsx
 │   │   │   │   └── topics
 │   │   │   │       └── TopicCard.tsx
 │   │   │   ├── feedback
@@ -796,12 +984,20 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   └── utils
 │   │       └── icon-mapper.tsx
 │   ├── proxy.ts
-│   └── routing.ts
+│   ├── routing.ts
+│   └── test
+│       └── setup.ts
 ├── supabase
 │   ├── .branches
 │   │   └── _current_branch
 │   ├── .temp
-│   │   └── cli-latest
+│   │   ├── cli-latest
+│   │   ├── gotrue-version
+│   │   ├── pooler-url
+│   │   ├── postgres-version
+│   │   ├── project-ref
+│   │   ├── rest-version
+│   │   └── storage-version
 │   └── snippets
 │       └── Untitled query 908.sql
 ├── tests
@@ -828,6 +1024,292 @@ CONTINGUT DELS FITXERS
   "i18n-ally.pathMatcher": "{locale}.ts",
   "i18n-ally.enabledParsers": ["ts", "js", "json"]
 }
+
+
+// =================== FILE: esquema.sql ===================
+
+
+\restrict 6WeJCegmyC9ovGQ0ZWqr7EFQeFuX8oQpalw1d43BfZHDoi2TYuKvftsnrXspddD
+
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+
+CREATE SCHEMA IF NOT EXISTS "public";
+
+
+ALTER SCHEMA "public" OWNER TO "pg_database_owner";
+
+
+COMMENT ON SCHEMA "public" IS 'standard public schema';
+
+
+
+CREATE TYPE "public"."challenge_type" AS ENUM (
+    'QUIZ',
+    'CODE_FIX',
+    'TERMINAL',
+    'DRAG_DROP',
+    'MATCHING',
+    'LOGIC_ORDER'
+);
+
+
+ALTER TYPE "public"."challenge_type" OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."handle_new_user"() RETURNS "trigger"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO 'public'
+    AS $$
+begin
+  insert into public.profiles (id, username, total_xp, current_level)
+  values (
+    new.id, 
+    coalesce(new.raw_user_meta_data->>'full_name', new.email), -- Agafem el nom o l'email
+    0, -- XP Inicial
+    1  -- Nivell Inicial
+  );
+  return new;
+end;
+$$;
+
+
+ALTER FUNCTION "public"."handle_new_user"() OWNER TO "postgres";
+
+SET default_tablespace = '';
+
+SET default_table_access_method = "heap";
+
+
+CREATE TABLE IF NOT EXISTS "public"."challenges" (
+    "id" "uuid" DEFAULT "extensions"."uuid_generate_v4"() NOT NULL,
+    "topic_id" "uuid" NOT NULL,
+    "difficulty_tier" integer NOT NULL,
+    "type" "public"."challenge_type" NOT NULL,
+    "content" "jsonb" DEFAULT '{}'::"jsonb" NOT NULL,
+    "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    CONSTRAINT "challenges_difficulty_tier_check" CHECK ((("difficulty_tier" >= 1) AND ("difficulty_tier" <= 10)))
+);
+
+
+ALTER TABLE "public"."challenges" OWNER TO "postgres";
+
+
+CREATE TABLE IF NOT EXISTS "public"."profiles" (
+    "id" "uuid" NOT NULL,
+    "username" "text",
+    "total_xp" integer DEFAULT 0 NOT NULL,
+    "current_level" integer DEFAULT 1 NOT NULL,
+    "streak_days" integer DEFAULT 0 NOT NULL,
+    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    "level" integer DEFAULT 1
+);
+
+
+ALTER TABLE "public"."profiles" OWNER TO "postgres";
+
+
+CREATE TABLE IF NOT EXISTS "public"."topics" (
+    "id" "uuid" DEFAULT "extensions"."uuid_generate_v4"() NOT NULL,
+    "slug" "text" NOT NULL,
+    "name_key" "text" NOT NULL,
+    "icon_name" "text" NOT NULL,
+    "color_theme" "text" NOT NULL,
+    "parent_topic_id" "uuid",
+    "is_active" boolean DEFAULT false,
+    "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL
+);
+
+
+ALTER TABLE "public"."topics" OWNER TO "postgres";
+
+
+CREATE TABLE IF NOT EXISTS "public"."user_progress" (
+    "id" "uuid" DEFAULT "extensions"."uuid_generate_v4"() NOT NULL,
+    "user_id" "uuid" NOT NULL,
+    "challenge_id" "uuid" NOT NULL,
+    "topic_id" "uuid" NOT NULL,
+    "completed_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    "xp_earned" integer NOT NULL
+);
+
+
+ALTER TABLE "public"."user_progress" OWNER TO "postgres";
+
+
+ALTER TABLE ONLY "public"."challenges"
+    ADD CONSTRAINT "challenges_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."profiles"
+    ADD CONSTRAINT "profiles_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."topics"
+    ADD CONSTRAINT "topics_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."topics"
+    ADD CONSTRAINT "topics_slug_key" UNIQUE ("slug");
+
+
+
+ALTER TABLE ONLY "public"."user_progress"
+    ADD CONSTRAINT "user_progress_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."user_progress"
+    ADD CONSTRAINT "user_progress_user_id_challenge_id_key" UNIQUE ("user_id", "challenge_id");
+
+
+
+CREATE INDEX "idx_challenges_content" ON "public"."challenges" USING "gin" ("content");
+
+
+
+ALTER TABLE ONLY "public"."challenges"
+    ADD CONSTRAINT "challenges_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "public"."topics"("id") ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY "public"."profiles"
+    ADD CONSTRAINT "profiles_id_fkey" FOREIGN KEY ("id") REFERENCES "auth"."users"("id") ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY "public"."topics"
+    ADD CONSTRAINT "topics_parent_topic_id_fkey" FOREIGN KEY ("parent_topic_id") REFERENCES "public"."topics"("id");
+
+
+
+ALTER TABLE ONLY "public"."user_progress"
+    ADD CONSTRAINT "user_progress_challenge_id_fkey" FOREIGN KEY ("challenge_id") REFERENCES "public"."challenges"("id") ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY "public"."user_progress"
+    ADD CONSTRAINT "user_progress_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "public"."topics"("id");
+
+
+
+ALTER TABLE ONLY "public"."user_progress"
+    ADD CONSTRAINT "user_progress_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."profiles"("id") ON DELETE CASCADE;
+
+
+
+CREATE POLICY "Challenges are viewable by everyone" ON "public"."challenges" FOR SELECT USING (true);
+
+
+
+CREATE POLICY "Dev allow all profiles" ON "public"."profiles" USING (true);
+
+
+
+CREATE POLICY "Dev allow all progress" ON "public"."user_progress" USING (true);
+
+
+
+CREATE POLICY "Public topics are viewable by everyone" ON "public"."topics" FOR SELECT USING (("is_active" = true));
+
+
+
+ALTER TABLE "public"."challenges" ENABLE ROW LEVEL SECURITY;
+
+
+ALTER TABLE "public"."profiles" ENABLE ROW LEVEL SECURITY;
+
+
+ALTER TABLE "public"."topics" ENABLE ROW LEVEL SECURITY;
+
+
+ALTER TABLE "public"."user_progress" ENABLE ROW LEVEL SECURITY;
+
+
+GRANT USAGE ON SCHEMA "public" TO "postgres";
+GRANT USAGE ON SCHEMA "public" TO "anon";
+GRANT USAGE ON SCHEMA "public" TO "authenticated";
+GRANT USAGE ON SCHEMA "public" TO "service_role";
+
+
+
+GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "anon";
+GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."challenges" TO "anon";
+GRANT ALL ON TABLE "public"."challenges" TO "authenticated";
+GRANT ALL ON TABLE "public"."challenges" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."profiles" TO "anon";
+GRANT ALL ON TABLE "public"."profiles" TO "authenticated";
+GRANT ALL ON TABLE "public"."profiles" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."topics" TO "anon";
+GRANT ALL ON TABLE "public"."topics" TO "authenticated";
+GRANT ALL ON TABLE "public"."topics" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."user_progress" TO "anon";
+GRANT ALL ON TABLE "public"."user_progress" TO "authenticated";
+GRANT ALL ON TABLE "public"."user_progress" TO "service_role";
+
+
+
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON SEQUENCES TO "postgres";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON SEQUENCES TO "anon";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON SEQUENCES TO "authenticated";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON SEQUENCES TO "service_role";
+
+
+
+
+
+
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "postgres";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "anon";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "authenticated";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "service_role";
+
+
+
+
+
+
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "postgres";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "anon";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "authenticated";
+ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "service_role";
+
+
+
+
+
+
+\unrestrict 6WeJCegmyC9ovGQ0ZWqr7EFQeFuX8oQpalw1d43BfZHDoi2TYuKvftsnrXspddD
+
+RESET ALL;
 
 
 // =================== FILE: init-structure.js ===================
@@ -1057,8 +1539,43 @@ export default {
       xp_earned: "XP Guanyada",
       dashboard_btn: "Tornar al Dashboard",
       level_up: "NIVELL SUPERAT!",
-      continue_btn: "Continuar" // <--- AFEGIR
+      continue_btn: "Continuar",
+      quit: "Sortir"
+    },
+    modes: {
+      logic_order: {
+        label: "Ordre Lògic",
+        your_answer: "La teva resposta",
+        placeholder: "Arrossega els elements aquí",
+        empty_options: "Tot col·locat ✨",
+        drag_hint: "Clica o arrossega"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "usuari",
+        placeholder: "Escriu la comanda...",
+        session_closed: "--- Sessió finalitzada ---"
+      }
+    },
+    actions: {
+      check: "Comprovar",
+      verify: "Verificar",
+      continue: "Continuar",
+      reset: "Reiniciar",
+      retry: "Tornar a provar"
+    },
+    feedback: {
+      correct: "Correcte!",
+      incorrect: "Incorrecte",
+      solution: "Solució",
+      hint: "Pista"
+    },
+    level_node: {
+      level: "NIVELL",
+      locked: "Bloquejat",
+      completed: "Completat"
     }
+
   },
   // AFEGEIX AIXÒ:
   dashboard: {
@@ -1072,7 +1589,7 @@ export default {
     supabase: { title: "Supabase i SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguretat OWASP" },
-    docker: { title: "Contenidors Docker" }
+    docker_basics: { title: "Contenidors Docker" }
   },
 
   // --- NOVA SECCIÓ AUTH ---
@@ -1147,10 +1664,44 @@ export default {
       xp_earned: "XP Earned",
       dashboard_btn: "Back to Dashboard",
       level_up: "LEVEL UP!",
-      continue_btn: "Continue" // <--- AFEGIR
+      continue_btn: "Continue",
+      quit: "Quit"
+    },
+    modes: {
+      logic_order: {
+        label: "Logical Order",
+        your_answer: "Your answer",
+        placeholder: "Drag items here",
+        empty_options: "All set ✨",
+        drag_hint: "Click or drag"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "user",
+        placeholder: "Type the command...",
+        session_closed: "--- Session ended ---"
+      }
+    },
+    actions: {
+      check: "Check",
+      verify: "Verify",
+      continue: "Continue",
+      reset: "Reset",
+      retry: "Try again"
+    },
+    feedback: {
+      correct: "Correct!",
+      incorrect: "Incorrect",
+      solution: "Solution",
+      hint: "Hint"
+    },
+    level_node: {
+      level: "LEVEL",
+      locked: "Locked",
+      completed: "Completed"
     }
-
   },
+
   dashboard: {
     welcome_title: "Welcome back",
     subtitle: "What technology do you want to master today?",
@@ -1162,7 +1713,7 @@ export default {
     supabase: { title: "Supabase & SQL" },
     legacy: { title: "Legacy PHP" }, // Encara que estigui desactivat
     security: { title: "OWASP Top 10" }, // Exemple extra
-    docker: { title: "Docker Containers" }
+    docker_basics: { title: "Docker Containers" }
   },
   auth: {
     login: {
@@ -1216,7 +1767,7 @@ export default {
     name: "TechMastery"
   },
   game: {
-    start: "Empezar",
+    start: "Comenzar",
     check: "Comprobar",
     next: "Siguiente",
     finish: "Finalizar",
@@ -1235,10 +1786,44 @@ export default {
       xp_earned: "XP ganada",
       dashboard_btn: "Volver al Dashboard",
       level_up: "¡NIVEL SUPERADO!",
-      continue_btn: "Continuar" // <--- AFEGIR
+      continue_btn: "Continuar",
+      quit: "Salir"
+    },
+    modes: {
+      logic_order: {
+        label: "Orden lógico",
+        your_answer: "Tu respuesta",
+        placeholder: "Arrastra los elementos aquí",
+        empty_options: "Todo colocado ✨",
+        drag_hint: "Haz clic o arrastra"
+      },
+      terminal: {
+        label: "Terminal",
+        prompt_user: "usuario",
+        placeholder: "Escribe el comando...",
+        session_closed: "--- Sesión finalizada ---"
+      }
+    },
+    actions: {
+      check: "Comprobar",
+      verify: "Verificar",
+      continue: "Continuar",
+      reset: "Reiniciar",
+      retry: "Volver a intentar"
+    },
+    feedback: {
+      correct: "¡Correcto!",
+      incorrect: "Incorrecto",
+      solution: "Solución",
+      hint: "Pista"
+    },
+    level_node: {
+      level: "NIVEL",
+      locked: "Bloqueado",
+      completed: "Completado"
     }
-
   },
+
   dashboard: {
     welcome_title: "Hola de nuevo",
     subtitle: "¿Qué tecnología quieres dominar hoy?",
@@ -1250,7 +1835,7 @@ export default {
     supabase: { title: "Supabase y SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguridad OWASP" },
-    docker: { title: "Contenedores Docker" }
+    docker_basics: { title: "Contenedores Docker" }
   },
   auth: {
     login: {
@@ -1764,11 +2349,11 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { GetTopicPathUseCase } from '@/application/use-cases/topics/get-topic-path.use-case';
 import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
-import { LevelNode } from '@/presentation/components/features/learning-path/LevelNode';
 import { ArrowLeft } from 'lucide-react';
 import { redirect } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation'; 
+import { LearningPathOrchestrator } from '@/presentation/components/features/learning-path/LearningPathOrchestrator';
 
 interface TopicPageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -1782,63 +2367,31 @@ export default async function TopicMapPage({ params }: TopicPageProps) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect('/login');
 
-  // 1. Instanciem el Repo
   const topicRepo = new SupabaseTopicRepository();
   const topic = await topicRepo.findBySlug(slug);
   
-  if (!topic) {
-    return <div className="text-white text-center pt-20">Tema no trobat 404</div>;
-  }
+  if (!topic) return <div className="text-white text-center pt-20">Tema no trobat (404)</div>;
 
-  // 2. CORRECCIÓ CRÍTICA: Passem 'topicRepo' al constructor
   const pathUseCase = new GetTopicPathUseCase(topicRepo);
-  
-  // 3. CORRECCIÓ: Ja no passem 'supabase' a l'execute
   const { levels, totalXp } = await pathUseCase.execute(user.id, topic.id);
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center pb-20 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center relative overflow-hidden">
       
-      {/* HEADER FLOTANT */}
-      <header className="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 p-4 flex items-center justify-between">
+      {/* HEADER FIX (Comú per a totes les vistes) */}
+      <header className="sticky top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 p-3 md:p-4 flex items-center justify-between z-50 shadow-2xl">
          <Link href="/dashboard" className="text-slate-400 hover:text-white transition-colors">
             <ArrowLeft className="w-6 h-6" />
          </Link>
-         
-         <h1 className="font-bold text-white text-lg tracking-tight">
-            {t(topic.nameKey)}
-         </h1>
-         
-         <div className="text-sm font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full border border-yellow-500/20">
-            {totalXp} / {levels.length > 0 ? '?' : 0} 
-            {/* Petit canvi visual, pots posar el que vulguis aquí */}
+         <h1 className="font-bold text-white text-base md:text-xl tracking-tight">{t(topic.nameKey)}</h1>
+         <div className="text-xs md:text-sm font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full border border-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
+            {totalXp} XP
          </div>
       </header>
 
-      {/* FONS CAMÍ (SVG LINE) */}
-      <div className="absolute top-0 w-full h-full flex justify-center pointer-events-none opacity-20">
-         <svg className="h-full" width="200" height="100%">
-            <line x1="100" y1="0" x2="100" y2="100%" stroke="currentColor" strokeWidth="10" className="text-slate-800" strokeDasharray="20,10" />
-         </svg>
-      </div>
-
-      {/* LLISTA DE NIVELLS (CAMÍ) */}
-      <div className="flex flex-col gap-8 mt-12 w-full max-w-md px-4 relative">
-          {levels.map((level, index) => (
-             <LevelNode 
-                key={level.tier} 
-                tier={level.tier} 
-                status={level.status} 
-                slug={slug}
-                index={index}
-             />
-          ))}
-          
-          <div className="flex justify-center mt-8 opacity-50">
-             <div className="w-32 h-32 border-4 border-dashed border-slate-800 rounded-full flex items-center justify-center text-slate-700 font-black text-2xl">
-                BOSS
-             </div>
-          </div>
+      {/* COMPONENT INTEL·LIGENT DE RUTA */}
+      <div className="w-full flex-1 relative">
+         <LearningPathOrchestrator levels={levels} slug={slug} />
       </div>
     </div>
   );
@@ -2100,7 +2653,7 @@ export interface DashboardTopicDTO extends Topic {
 
 // filepath: src/application/dto/level-node.dto.ts
 
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 export type LevelStatus = 'LOCKED' | 'ACTIVE' | 'COMPLETED';
 export interface LevelNodeDTO {
   tier: number;
@@ -2169,7 +2722,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { GetNextChallengeUseCase } from './get-next-challenge.use-case';
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenge.entity';
+import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenges/challenge.entity';
 import { Topic } from '@/core/entities/topic.entity';
 
 // Mocks
@@ -2192,16 +2745,17 @@ describe('GetNextChallengeUseCase', () => {
     const topicSlug = 'react-basics';
     const userId = 'user-123';
     const topicId = 'topic-abc';
+    const difficulty = 1;
 
-    // 1. Simulem que trobem el tema (AMB LA NOVA ESTRUCTURA CORRECTA)
+    // 1. Simulem que trobem el tema
     const mockTopic: Topic = {
       id: topicId,
       slug: topicSlug,
-      // CORRECCIÓ: Usem les propietats de la teva interfície
-      nameKey: 'topic.react.title', 
-      iconName: 'brand-react',      
-      colorTheme: 'bg-blue-500', 
-      isActive: true,               
+      nameKey: 'topic.react.title',
+      description: 'Test Description', // 👈 AFEGIT (soluciona l'error TS)
+      iconName: 'brand-react',     
+      colorTheme: 'bg-blue-500',
+      isActive: true,              
       createdAt: new Date(),
       updatedAt: new Date()
     };
@@ -2213,7 +2767,7 @@ describe('GetNextChallengeUseCase', () => {
       {
         id: 'c1',
         topicId: topicId,
-        difficultyTier: 1,
+        difficultyTier: difficulty,
         type: 'QUIZ' as ChallengeType,
         content: {
           question: 'Question in English',
@@ -2230,15 +2784,14 @@ describe('GetNextChallengeUseCase', () => {
     const useCase = new GetNextChallengeUseCase(mockTopicRepo, mockChallengeRepo);
 
     // ACT
-    const result = await useCase.execute(topicSlug, userId, locale);
+    const result = await useCase.execute(topicSlug, userId, locale, difficulty);
 
     // ASSERT
     expect(mockTopicRepo.findBySlug).toHaveBeenCalledWith(topicSlug);
-    expect(mockChallengeRepo.findNextForUser).toHaveBeenCalledWith(topicId, userId, locale);
+    expect(mockChallengeRepo.findNextForUser).toHaveBeenCalledWith(topicId, userId, locale, difficulty);
     
     expect(result).toHaveLength(1);
     
-    // Type narrowing per accedir a les propietats de QuizContent
     const content = result[0].content as QuizContent;
     expect(content.question).toBe('Question in English');
   });
@@ -2249,7 +2802,7 @@ describe('GetNextChallengeUseCase', () => {
 // filepath: src/application/use-cases/challenges/get-next-challenge.use-case.ts
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
 
 export class GetNextChallengeUseCase {
@@ -2507,6 +3060,7 @@ export class GetActiveTopicsUseCase {
 // filepath: src/application/use-cases/topics/get-topic-path.use-case.ts
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { LevelNodeDTO, LevelStatus } from '@/application/dto/level-node.dto';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 
 export class GetTopicPathUseCase {
 
@@ -2516,7 +3070,8 @@ export class GetTopicPathUseCase {
     const stats = await this.topicRepo.getTopicProgressSummary(topicId, userId);
     const levels: LevelNodeDTO[] = [];
 
-    // Cas buit
+    // CAS 1: L'usuari mai ha tocat aquest tema (Array buit)
+    // Retornem el nivell 1 desbloquejat per defecte.
     if (stats.length === 0) {
       return {
         levels: [{
@@ -2525,7 +3080,7 @@ export class GetTopicPathUseCase {
           label: 'Inici',
           totalXp: 0,
           isCurrentPosition: true,
-          predominantType: 'QUIZ', 
+          predominantType: 'QUIZ' as ChallengeType, // ✅ Forcem el tipus aquí també
         }],
         totalXp: 0
       };
@@ -2533,6 +3088,7 @@ export class GetTopicPathUseCase {
 
     let isPreviousLevelCompleted = true;
 
+    // CAS 2: Iterem sobre l'històric real
     for (let i = 0; i < stats.length; i++) {
       const stat = stats[i];
       let status: LevelStatus = 'LOCKED';
@@ -2543,11 +3099,12 @@ export class GetTopicPathUseCase {
         status = 'COMPLETED';
       } else if (isPreviousLevelCompleted) {
         status = 'ACTIVE';
-        isPreviousLevelCompleted = false;
+        isPreviousLevelCompleted = false; // Ja tenim un actiu, el següent serà locked
       } else {
         status = 'LOCKED';
       }
 
+      // Lògica per saber on posar el ninotet "You are here"
       const isCurrentPosition = status === 'ACTIVE' || (status === 'COMPLETED' && !stats[i + 1]);
 
       levels.push({
@@ -2557,8 +3114,10 @@ export class GetTopicPathUseCase {
         totalXp: stat.completedChallenges,
         isCurrentPosition: isCurrentPosition, 
         
-        // ✅ CORRECCIÓ 1: Dins del bucle, usem la dada real de la BD
-        predominantType: stat.mostCommonType 
+        // ✅ CORRECCIÓ CLAU:
+        // 1. Fem 'as ChallengeType' per calmar TypeScript.
+        // 2. Afegim '|| 'QUIZ'' per seguretat si la BD retorna null.
+        predominantType: (stat.mostCommonType as ChallengeType) || 'QUIZ'
       });
 
       if (status === 'COMPLETED') {
@@ -2566,7 +3125,8 @@ export class GetTopicPathUseCase {
       }
     }
 
-    // Nivell Extra (Infinit)
+    // CAS 3: Nivell Següent (Future Level)
+    // Si l'últim nivell conegut està completat, n'obrim un de nou buit.
     const lastLevel = levels[levels.length - 1];
     if (lastLevel && lastLevel.status === 'COMPLETED') {
       levels.push({
@@ -2575,10 +3135,7 @@ export class GetTopicPathUseCase {
         label: '???',
         totalXp: 0,
         isCurrentPosition: true,
-        
-        // ✅ CORRECCIÓ 2: Fora del bucle, 'stat' no existeix. 
-        // Posem 'QUIZ' per defecte al nivell futur.
-        predominantType: 'QUIZ' 
+        predominantType: 'QUIZ' as ChallengeType // Per defecte el futur és QUIZ fins que es descobreix
       });
     }
 
@@ -2588,16 +3145,18 @@ export class GetTopicPathUseCase {
 
   private getLevelLabel(tier: number): string {
     const labels = ["Fonaments", "Conceptes Clau", "Pràctica", "Avançat", "Expert", "Mestre", "Llegenda"];
-    return labels[tier - 1] || `Secció ${tier}`;
+    return labels[tier - 1] || `Nivell ${tier}`;
   }
 }
 
-// =================== FILE: src/core/entities/challenge.entitiy.test.ts ===================
+// =================== FILE: src/core/entities/challenges/challenge.entitiy.test.ts ===================
 
-// filepath: src/core/entities/challenge.entity.test.ts
+// filepath: src/core/entities/challenges/challenge.entity.test.ts
 import { describe, it, expect } from 'vitest';
-// 1. IMPORT CORRECTE
-import { Challenge, CodeFixContent } from './challenge.entity'; 
+
+// ✅ CORRECCIÓ 1: Importem des del './index' (Barrel File)
+// Aquest fitxer agrupa totes les exportacions de la carpeta 'challenges'
+import { Challenge, CodeFixContent } from './index'; 
 
 describe('Challenge Entity Polymorphism', () => {
   
@@ -2610,17 +3169,22 @@ describe('Challenge Entity Polymorphism', () => {
       type: 'CODE_FIX',
       createdAt: new Date(),
       content: {
-        description: 'Completa el hook', // 2. Nom Correcte
-        initialCode: 'const [val, setVal] = ___(0);', // 3. Nom Correcte
-        solution: 'useState', // 4. Nom Correcte
-        tests: []
+        description: 'Completa el hook',
+        initialCode: 'const [val, setVal] = ___(0);',
+        solution: 'useState',
+        tests: [],
+        // ✅ CORRECCIÓ 2: Afegim camps obligatoris definits a la interfície
+        hint: 'Pensa en el hook d\'estat',
+        options: [] 
       } as CodeFixContent
     };
 
     // Act & Assert
     if (codeChallenge.type === 'CODE_FIX') {
+        // TypeScript ara sap segur que és CodeFixContent gràcies a l'import correcte
         const content = codeChallenge.content as CodeFixContent;
-        expect(content.initialCode).toContain('___'); // 5. Nom Correcte
+        
+        expect(content.initialCode).toContain('___');
         expect(content.solution).toBe('useState');
     } else {
         throw new Error('Type guard failed');
@@ -2628,71 +3192,128 @@ describe('Challenge Entity Polymorphism', () => {
   });
 });
 
-// =================== FILE: src/core/entities/challenge.entity.ts ===================
+// =================== FILE: src/core/entities/challenges/challenge.entity.ts ===================
 
-// filepath: src/core/entities/challenge.entity.ts
+// filepath: src/core/entities/challenges/challenge.entity.ts
+import { QuizContent } from './definitions/quiz.content';
+import { CodeFixContent } from './definitions/code-fix.content';
+import { MatchingContent } from './definitions/matching.content';
+import { TerminalContent } from './definitions/terminal.content';
+import { LogicOrderContent } from './definitions/logic-order.content';
 
-// 1. Definim tots els tipus de joc que suportarà el sistema
-export type ChallengeType = 'QUIZ' | 'CODE_FIX' | 'MATCHING' | 'TERMINAL';
+// 1. Tipus de Repte (Enum strings)
+export type ChallengeType = 
+  | 'QUIZ' 
+  | 'CODE_FIX' 
+  | 'MATCHING' 
+  | 'TERMINAL' 
+  | 'LOGIC_ORDER';
 
-// --- COMPONENTS REUTILITZABLES ---
+// 2. Unió Discriminada (Polimorfisme)
+export type ChallengeContent = 
+  | QuizContent 
+  | CodeFixContent 
+  | MatchingContent
+  | TerminalContent 
+  | LogicOrderContent;
 
-export interface ChallengeOption {
+// 3. Entitat de Domini
+export interface Challenge {
   id: string;
-  text: string;
+  topicId: string;
+  difficultyTier: number;
+  type: ChallengeType;
+  content: ChallengeContent;
+  createdAt: Date;
 }
 
-// --- CONTINGUTS ESPECÍFICS PER A CADA JOC ---
+// =================== FILE: src/core/entities/challenges/definitions/code-fix.content.ts ===================
 
-// A. Tipus Test (El que ja tens)
-export interface QuizContent {
-  question: string;
-  explanation: string;
-  options: ChallengeOption[]; 
-  correctOptionIndex: number;
-}
+// filepath: src/core/entities/challenges/definitions/code-fix.content.ts
 export interface CodeFixOption {
   id: string;
-  code: string;     // El text que es mostrarà a la carta (ex: "useState")
+  code: string;
   isCorrect: boolean;
 }
-// B. Tipus "Arregla el Codi" (El teu, molt potent)
+
 export interface CodeFixContent {
   description: string;
   initialCode: string;
-  solution: string; // La solució correcta (per validar o mostrar)
-  hint: string; // 👈 Cambiat de 'hints?: string[]' a 'hint: string'
-  tests: { input: string; output: string }[]; // Casos de prova per validar l'execució
-  options: CodeFixOption[]; // Les 3 opcions
+  solution: string;
+  hint: string;
+  tests: { input: string; output: string }[];
+  options: CodeFixOption[];
 }
 
-// C. Tipus "Relacionar Conceptes" (Nou requisit: sinònims, conceptes)
+// =================== FILE: src/core/entities/challenges/definitions/logic-order.content.ts ===================
+
+// filepath: src/core/entities/challenges/definitions/logic-order.content.ts
+import { ChallengeOption } from './shared';
+
+export interface LogicOrderContent {
+  description: string;    
+  items: ChallengeOption[]; // Els items que arribaran DESORDENATS al client
+}
+
+// =================== FILE: src/core/entities/challenges/definitions/matching.content.ts ===================
+
+// filepath: src/core/entities/challenges/definitions/matching.content.ts
+import { ChallengeOption } from './shared';
+
 export interface MatchingContent {
-  instruction: string; // Ex: "Relaciona cada hook amb la seva funció"
+  instruction: string;
   pairs: { 
     left: ChallengeOption; 
     right: ChallengeOption 
   }[];
 }
 
-// --- UNION TYPE (POLIMORFISME) ---
-// Això permet que TypeScript sàpiga automàticament quins camps tens
-// si comproves el 'type'.
-export type ChallengeContent = 
-  | QuizContent 
-  | CodeFixContent 
-  | MatchingContent;
-  // | TerminalContent (Futur)
+// =================== FILE: src/core/entities/challenges/definitions/quiz.content.ts ===================
 
-// --- ENTITAT PRINCIPAL ---
-export interface Challenge {
-  id: string;
-  topicId: string;
-  difficultyTier: number;
-  type: ChallengeType;       // El discriminador
-  content: ChallengeContent; // Contingut dinàmic
-  createdAt: Date;
+// filepath: src/core/entities/challenges/definitions/quiz.content.ts
+import { ChallengeOption } from './shared';
+
+export interface QuizContent {
+  question: string;
+  explanation: string;
+  options: ChallengeOption[]; 
+  correctOptionIndex: number;
 }
+
+// =================== FILE: src/core/entities/challenges/definitions/shared.ts ===================
+
+// filepath: src/core/entities/challenges/definitions/shared.ts
+export interface ChallengeOption {
+  id: string;
+  text: string;
+}
+
+// =================== FILE: src/core/entities/challenges/definitions/terminal.content.ts ===================
+
+// filepath: src/core/entities/challenges/definitions/terminal.content.ts
+export interface TerminalContent {
+  instruction: string;      
+  initialCommand?: string;  
+  validCommands: string[];  
+  hint: string;             
+  explanation: string;      
+  outputParams: {
+    success: string;        
+    error: string;          
+  };
+}
+
+// =================== FILE: src/core/entities/challenges/index.ts ===================
+
+// filepath: src/core/entities/challenges/index.ts
+export * from './definitions/shared';
+export * from './definitions/quiz.content';
+export * from './definitions/code-fix.content';
+export * from './definitions/matching.content';
+export * from './definitions/terminal.content';
+export * from './definitions/logic-order.content';
+
+export * from './challenge.entity';
 
 // =================== FILE: src/core/entities/topic.entity.ts ===================
 
@@ -2762,7 +3383,7 @@ export class UserNotFoundError extends Error {
 // =================== FILE: src/core/repositories/challenge.repository.ts ===================
 
 // filepath: src/core/repositories/challenge.repository.ts
-import { Challenge } from '../entities/challenge.entity';
+import { Challenge } from '../entities/challenges/challenge.entity';
 
 export interface IChallengeRepository {
   /**
@@ -2780,7 +3401,7 @@ export interface IChallengeRepository {
 
 // filepath: src/core/repositories/topic.repository.ts
 import { Topic, CreateTopicInput } from '../entities/topic.entity';
-import { ChallengeType } from '../entities/challenge.entity'; // Importa el tipus
+import { ChallengeType } from '../entities/challenges/challenge.entity'; // Importa el tipus
 export interface TierProgressStats {
   tier: number;
   totalChallenges: number;
@@ -2906,113 +3527,405 @@ export default getRequestConfig(async ({ requestLocale }) => {
   };
 });
 
-// =================== FILE: src/infrastructure/repositories/supabase/challenge.repository.test.ts ===================
+// =================== FILE: src/infrastructure/mappers/challenge.mappers.ts ===================
 
-// filepath: src/infrastructure/repositories/supabase/challenge.repository.real.test.ts
+// filepath: src/infrastructure/mappers/challenge.mappers.ts
+import { ChallengeContent } from '@/core/entities/challenges/challenge.entity';
+import { translate, LocalizedString } from './mapper.utils';
 
-// --- 1. CARREGAR VARIABLES D'ENTORN MANUALMENT ---
-import { config } from 'dotenv';
-config({ path: '.env.test' });
+// --- DEFINICIONS DE DADES "RAW" (Així és com ve el JSON de BD) ---
 
-import { describe, it, expect, beforeEach, beforeAll, vi } from 'vitest';
-// Importem el client 'vanilla' de la llibreria oficial (el que no usa cookies)
-import { createClient as createVanillaClient } from '@supabase/supabase-js'; 
-import { SupabaseChallengeRepository } from './challenge.repository';
-import { QuizContent } from '@/core/entities/challenge.entity';
+interface RawOption {
+  id: string;
+  text: LocalizedString;
+}
 
-// --- CONSTANTS ---
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+interface RawQuizContent {
+  question: LocalizedString;
+  explanation: LocalizedString;
+  options: RawOption[];
+  correctOptionIndex: number;
+}
+// 1. DEFINICIÓ RAW (Com ve de la BD)
+interface RawLogicOrderContent {
+  description: LocalizedString;
+  items: Array<{ id: string; text: LocalizedString }>;
+}
+// Suport per a dades antigues (Legacy)
+interface LegacyRawQuizContent {
+  question?: string;
+  explanation?: string;
+  options?: string[];
+  correctOptionIndex?: number;
+}
 
+interface RawMatchingContent {
+  instruction: LocalizedString;
+  pairs: Array<{
+    left: { id: string; text: LocalizedString };
+    right: { id: string; text: LocalizedString };
+  }>;
+}
 
-const shouldRun = SUPABASE_URL && SERVICE_ROLE_KEY;
+interface RawCodeFixContent {
+  description: LocalizedString;
+  initialCode: string;
+  solution: string;
+  hint: LocalizedString;
+  tests?: Array<{ input: string; output: string }>;
+  options: Array<{
+    id: string;
+    code: string;
+    isCorrect: boolean;
+  }>;
+}
 
-// --- 2. MOCK DEL CONTEXT DE NEXT.JS (La solució a l'error de cookies) ---
-// Interceptem la importació de 'utils/supabase/server'.
-// En lloc d'usar cookies(), retornem un client estàndard connectat a local.
-vi.mock('@/infrastructure/utils/supabase/server', () => {
-  return {
-    createClient: async () => {
-      // Retornem un client REAL, però creat de forma "tonta" (sense cookies).
-      // Usem la clau SERVICE_ROLE per evitar problemes d'autenticació en el test d'integració,
-      // ja que en aquest test volem validar SQL i Mapeig, no Auth.
-      if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-        throw new Error("Falten variables d'entorn al Mock");
-      }
-      return createVanillaClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_KEY,
-        { auth: { persistSession: false } }
-      );
-    }
+interface RawTerminalContent {
+  instruction: LocalizedString;
+  initialCommand?: string;
+  validCommands: string[];
+  hint: LocalizedString;
+  explanation: LocalizedString;
+  outputParams: {
+    success: string;
+    error: string;
   };
+}
+
+// --- INTERFÍCIE D'ESTRATÈGIA ---
+interface ContentMapperStrategy {
+  // L'entrada és 'unknown' perquè ve de la BD/JSON. No assumim res fins a validar.
+  map(rawData: unknown, locale: string): ChallengeContent;
+}
+
+// --- 1. QUIZ MAPPER ---
+class QuizMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    // 1. Intentem tractar-lo com a format nou
+    const content = rawData as Partial<RawQuizContent>;
+    const legacyContent = rawData as Partial<LegacyRawQuizContent>;
+
+    // Type Guard simple: Si té 'options' i és un array d'objectes -> Format Nou
+    const isNewFormat = 
+      content.options && 
+      Array.isArray(content.options) && 
+      content.options.length > 0 &&
+      typeof content.options[0] === 'object';
+
+    if (isNewFormat) {
+      // Ara TypeScript sap que 'content' és compatible amb RawQuizContent en aquest bloc
+      const validContent = content as RawQuizContent;
+      
+      return {
+        question: translate(validContent.question, locale),
+        explanation: translate(validContent.explanation, locale),
+        correctOptionIndex: validContent.correctOptionIndex,
+        options: validContent.options.map((opt) => ({
+          id: opt.id,
+          text: translate(opt.text, locale)
+        }))
+      };
+    } else {
+      // Legacy handling
+      const opts = legacyContent.options || [];
+      return {
+        question: String(legacyContent.question || ''),
+        explanation: String(legacyContent.explanation || ''),
+        correctOptionIndex: legacyContent.correctOptionIndex || 0,
+        options: Array.isArray(opts) ? opts.map((txt, idx) => ({
+          id: `opt-${idx}`,
+          text: String(txt)
+        })) : []
+      }; // No cal cast a 'any', ja retorna ChallengeContent (QuizContent)
+    }
+  }
+}
+
+// --- 2. MATCHING MAPPER ---
+class MatchingMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawMatchingContent;
+
+    return {
+      instruction: translate(content.instruction, locale),
+      pairs: Array.isArray(content.pairs)
+        ? content.pairs.map((p) => ({
+            left: { id: p.left.id, text: translate(p.left.text, locale) },
+            right: { id: p.right.id, text: translate(p.right.text, locale) }
+          }))
+        : []
+    };
+  }
+}
+
+// --- 3. CODE FIX MAPPER ---
+class CodeFixMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawCodeFixContent;
+
+    return {
+      description: translate(content.description, locale),
+      initialCode: content.initialCode || '',
+      solution: content.solution || '',
+      hint: translate(content.hint, locale),
+      tests: content.tests || [],
+      options: Array.isArray(content.options) ? content.options.map((opt) => ({
+        id: opt.id,
+        code: opt.code,
+        isCorrect: opt.isCorrect
+      })) : []
+    };
+  }
+}
+
+// --- 4. TERMINAL MAPPER ---
+class TerminalMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawTerminalContent;
+
+    return {
+      instruction: translate(content.instruction, locale),
+      initialCommand: content.initialCommand || '',
+      validCommands: Array.isArray(content.validCommands) ? content.validCommands : [],
+      hint: translate(content.hint, locale),
+      explanation: translate(content.explanation, locale),
+      outputParams: {
+        success: content.outputParams?.success || 'OK',
+        error: content.outputParams?.error || 'Error'
+      }
+    };
+  }
+}
+
+
+// 2. LOGIC ORDER MAPPER (NOU)
+class LogicOrderMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawLogicOrderContent;
+
+    return {
+      description: translate(content.description, locale),
+      items: Array.isArray(content.items)
+        ? content.items.map(item => ({
+            id: item.id,
+            text: translate(item.text, locale)
+          }))
+        : []
+    };
+  }
+}
+
+// --- FACTORY ---
+export const ChallengeMapperFactory = {
+  getMapper(type: string): ContentMapperStrategy {
+    switch (type) {
+      case 'QUIZ': return new QuizMapper();
+      case 'MATCHING': return new MatchingMapper();
+      case 'CODE_FIX': return new CodeFixMapper();
+      case 'TERMINAL': return new TerminalMapper();
+      case 'LOGIC_ORDER': return new LogicOrderMapper();
+      default:
+        console.warn(`Unknown challenge type: ${type}. Fallback to Quiz.`);
+        return new QuizMapper();
+    }
+  }
+};
+
+// =================== FILE: src/infrastructure/mappers/mapper.utils.ts ===================
+
+// filepath: src/infrastructure/mappers/mapper.utils.ts
+
+export type LocalizedString = Record<string, string>;
+
+/**
+ * Tradueix un camp que pot ser string, objecte localitzat o null/unknown.
+ */
+export function translate(field: unknown, locale: string): string {
+  if (typeof field === 'string') return field;
+  
+  if (!field || typeof field !== 'object') return '';
+
+  // Fem un cast segur perquè sabem que és un objecte, 
+  // però accedim amb comprovació de claus
+  const localized = field as Record<string, unknown>;
+  
+  const val = localized[locale] || localized['ca'] || localized['en'] || Object.values(localized)[0];
+  
+  return typeof val === 'string' ? val : '';
+}
+
+/**
+ * Parsea el JSON de forma segura retornant 'unknown' en lloc de 'any'.
+ * Això obliga a qui ho usi a definir el tipus esperat.
+ */
+export function parseJsonContent(content: unknown): unknown {
+  if (typeof content === 'string') {
+    try {
+      return JSON.parse(content);
+    } catch (e) {
+      console.error('Error parsing JSON content', e);
+      return {};
+    }
+  }
+  return content || {};
+}
+
+// =================== FILE: src/infrastructure/mappers/__tests__/TerminalMapper.test.ts ===================
+
+// filepath: src/infrastructure/mappers/__tests__/TerminalMapper.test.ts
+import { describe, it, expect } from 'vitest';
+import { ChallengeMapperFactory } from '../challenge.mappers';
+import { TerminalContent } from '@/core/entities/challenges/challenge.entity';
+
+describe('TerminalMapper', () => {
+    const mapper = ChallengeMapperFactory.getMapper('TERMINAL');
+
+    it('hauria de mapejar un JSON complet correctament al català', () => {
+        const rawData = {
+            instruction: { ca: 'Fes això', en: 'Do this' },
+            initialCommand: 'docker',
+            validCommands: ['docker ps', 'docker ls'],
+            hint: { ca: 'Pista', en: 'Hint' },
+            explanation: { ca: 'Explicació', en: 'Expl' },
+            outputParams: { success: 'Ok', error: 'Fail' }
+        };
+
+        const result = mapper.map(rawData, 'ca') as TerminalContent;
+
+        expect(result).toEqual({
+            instruction: 'Fes això',
+            initialCommand: 'docker',
+            validCommands: ['docker ps', 'docker ls'],
+            hint: 'Pista',
+            explanation: 'Explicació',
+            outputParams: { success: 'Ok', error: 'Fail' }
+        });
+    });
+
+    it('hauria de fer fallback a langlès o valors per defecte si falta traducció', () => {
+        const rawData = {
+            instruction: { en: 'Do this' }, // No hi ha 'ca'
+            
+            // CORRECCIÓ: Posem comandes reals. Si posem null, el mapper retornarà [], no 2.
+            // Volem provar que SI hi ha comandes, es mantenen encara que falti la traducció.
+            validCommands: ['ls -la', 'ls -l -a'], 
+            
+            outputParams: {}
+        };
+
+        const result = mapper.map(rawData, 'ca') as TerminalContent;
+
+        // Ara sí que té sentit esperar 2 comandes
+        expect(result.validCommands).toHaveLength(2); 
+        expect(result.instruction).toBe('Do this'); // Fallback a anglès
+        expect(result.validCommands[0]).toBe('ls -la');
+    });
+
+    it('hauria de gestionar inputs corruptes sense llançar excepció', () => {
+        const rawCorrupt = "Això no és un objecte";
+        const result = mapper.map(rawCorrupt, 'ca');
+        expect(result).toBeDefined();
+        expect(result).toHaveProperty('instruction');
+    });
 });
 
-describe('SupabaseChallengeRepository (REAL DB INTEGRATION)', () => {
-  if (!shouldRun) {
-    it.skip('Skipping integration tests: Missing keys', () => {});
-    return;
+// =================== FILE: src/infrastructure/repositories/supabase/challenge.repository.test.ts ===================
+
+// filepath: src/infrastructure/repositories/supabase/challenge.repository.test.ts
+import { describe, it, expect, vi } from 'vitest';
+import { SupabaseChallengeRepository } from './challenge.repository';
+import { QuizContent } from '@/core/entities/challenges/challenge.entity';
+// Importem el client "RAW" de l'SDK oficial, no el nostre wrapper de Next.js
+import { createClient as createRawSupabaseClient } from '@supabase/supabase-js';
+
+// --- 1. CONFIGURACIÓ DE L'ENTORN DE TEST ---
+
+// Necessitem l'URL i la Key. En test, solem usar la SERVICE_ROLE_KEY per saltar-nos les RLS i poder crear/esborrar dades lliurement.
+// Si no tens SERVICE_ROLE_KEY al .env.test, usa l'ANON_KEY, però assegura't que les RLS permeten escriptura.
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.test');
+}
+
+// Creem un client real que funciona en Node (sense cookies)
+const testClient = createRawSupabaseClient(SUPABASE_URL, SUPABASE_KEY, {
+  auth: {
+    persistSession: false, // No volem guardar sessió en disc durant els tests
   }
+});
 
-  // Client ADMIN per preparar l'escenari
-  const adminClient = createVanillaClient(SUPABASE_URL!, SERVICE_ROLE_KEY!, {
-    auth: { persistSession: false, autoRefreshToken: false }
-  });
+// --- 2. MOCK MÀGIC (DEPENDENCY INJECTION) ---
+// Aquí diem: "Quan algú importi '@/infrastructure/utils/supabase/server',
+// NO executis el codi real (que peta per les cookies).
+// Retorna aquest objecte en el seu lloc."
+vi.mock('@/infrastructure/utils/supabase/server', () => ({
+  createClient: async () => testClient
+}));
 
-  let repository: SupabaseChallengeRepository;
-  
-  const TEST_TOPIC_ID = '11111111-1111-1111-1111-111111111111';
-  const TEST_CHALLENGE_ID = '22222222-2222-2222-2222-222222222222';
-  const TEST_USER_ID = '33333333-3333-3333-3333-333333333333';
+// --- 3. EL TEST ---
 
-  beforeAll(async () => {
-    // Setup Topic
-    await adminClient.from('topics').upsert({
-      id: TEST_TOPIC_ID,
-      slug: 'integration-test-topic',
-      name_key: 'topic.test',
-      icon_name: 'test-icon',
-      color_theme: 'bg-test',
-      active: true
-    });
-  });
-
-  beforeEach(async () => {
-    // Inicialitzem el repo (que ara usarà el nostre Mock internament)
-    repository = new SupabaseChallengeRepository();
-    // Neteja
-    await adminClient.from('challenges').delete().eq('id', TEST_CHALLENGE_ID);
-  });
+describe('SupabaseChallengeRepository (REAL DB INTEGRATION)', () => {
+  // El repositori farà servir internament el nostre 'testClient' gràcies al mock
+  const repository = new SupabaseChallengeRepository();
 
   it('should store and retrieve a localized JSONB challenge correctly', async () => {
-    // ARRANGE: Inserim dades REALS
-    const { error: insertError } = await adminClient.from('challenges').insert({
-      id: TEST_CHALLENGE_ID,
-      topic_id: TEST_TOPIC_ID,
+    // A. SETUP: Creem les dades usant el client de test directament
+    const topicId = '11111111-1111-4111-8111-111111111111';
+    const challengeId = '22222222-2222-4222-8222-222222222222';
+    const testSlug = 'integration-test-topic'; // Constant per evitar typos
+    const userId = 'user-test-123';
+
+    // 🔥 NETEJA AGRESSIVA (Idempotència)
+    // Esborrem primer pel conflicte únic (slug) i després per ID.
+    // Això garanteix que la taula està neta abans de començar, passi el que passi.
+    await testClient.from('challenges').delete().eq('id', challengeId);
+    await testClient.from('topics').delete().eq('slug', testSlug);
+    await testClient.from('topics').delete().eq('id', topicId);
+
+    // Crear Tema
+    const { error: topicError } = await testClient.from('topics').insert({
+      id: topicId,
+      slug: 'integration-test-topic',
+      name_key: 'test',
+      icon_name: 'test',
+      color_theme: 'red',
+      is_active: true
+    });
+    if (topicError) throw new Error(`Error creating topic: ${topicError.message}`);
+
+    // Crear Repte
+    const { error: challengeError } = await testClient.from('challenges').insert({
+      id: challengeId,
+      topic_id: topicId,
       difficulty_tier: 1,
       type: 'QUIZ',
       content: {
-        question: { ca: "Hola Món", en: "Hello World" },
-        explanation: { ca: "Prova", en: "Test" },
-        correctOptionIndex: 0,
-        options: [
-          { id: "opt1", text: { ca: "Opció A", en: "Option A" } }
-        ]
-      }
+        question: { en: 'Hello?', ca: 'Hola?' },
+        explanation: { en: 'Yes', ca: 'Si' },
+        options: [{ id: '1', text: { en: 'A', ca: 'A' } }],
+        correctOptionIndex: 0
+      },
+      created_at: new Date().toISOString()
     });
+    if (challengeError) throw new Error(`Error creating challenge: ${challengeError.message}`);
 
-    if (insertError) throw new Error(`Insert failed: ${insertError.message}`);
+    // B. ACT: Provem el Repositori
+    // Aquesta crida internament farà `await createClient()` que retornarà el nostre `testClient`
+    const result = await repository.findNextForUser(topicId, userId, 'en', 1);
 
-    // ACT: El Repositori fa la consulta REAL a Postgres
-    const result = await repository.findNextForUser(TEST_TOPIC_ID, TEST_USER_ID, 'ca');
-
-    // ASSERT
+    // C. ASSERT
     expect(result).toHaveLength(1);
-    const content = result[0].content as QuizContent;
-    
-    // Si això passa, vol dir que hem llegit JSONB real de la BD
-    expect(content.question).toBe("Hola Món"); 
-    expect(content.options[0].text).toBe("Opció A");
+    const challenge = result[0];
+    const content = challenge.content as QuizContent;
+
+    expect(challenge.id).toBe(challengeId);
+    expect(content.question).toBe('Hello?');
+
+    // D. CLEANUP
+    await testClient.from('challenges').delete().eq('id', challengeId);
+    await testClient.from('topics').delete().eq('id', topicId);
   });
 });
 
@@ -3021,52 +3934,10 @@ describe('SupabaseChallengeRepository (REAL DB INTEGRATION)', () => {
 // filepath: src/infrastructure/repositories/supabase/challenge.repository.ts
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, ChallengeContent } from '@/core/entities/challenge.entity';
+import { Challenge, ChallengeType } from '@/core/entities/challenges/challenge.entity';
+import { parseJsonContent } from '@/infrastructure/mappers/mapper.utils';
+import { ChallengeMapperFactory } from '@/infrastructure/mappers/challenge.mappers';
 
-// --- 1. DEFINICIÓ DE TIPUS DE LA BASE DE DADES (RAW JSON) ---
-
-type LocalizedString = Record<string, string>;
-
-// Estructura JSON per a MATCHING a la BD
-type RawMatchingContent = {
-  instruction: LocalizedString;
-  pairs: Array<{
-    left: { id: string; text: LocalizedString };
-    right: { id: string; text: LocalizedString };
-  }>;
-};
-
-// Estructura JSON per a CODE_FIX a la BD
-type RawCodeFixContent = {
-  description: LocalizedString;
-  initialCode: string;
-  solution: string;
-  tests?: Array<{ input: string; output: string }>;
-  hint: LocalizedString; // <--- NOU
-  options: Array<{       // <--- NOU
-    id: string;
-    code: string;
-    isCorrect: boolean
-  }>;
-};
-
-// Estructura JSON per a QUIZ a la BD (Format Nou)
-type RawQuizContent = {
-  question: LocalizedString;
-  explanation: LocalizedString;
-  options: Array<{ id: string; text: LocalizedString }>;
-  correctOptionIndex: number;
-};
-
-// Estructura JSON per a QUIZ a la BD (Legacy / Fallback)
-type LegacyRawContent = {
-  question?: string;
-  explanation?: string;
-  options?: string[];
-  correctOptionIndex?: number;
-};
-
-// Tipus de la fila SQL (content és unknown fins que el validem)
 type ChallengeRow = {
   id: string;
   topic_id: string;
@@ -3078,134 +3949,30 @@ type ChallengeRow = {
 
 export class SupabaseChallengeRepository implements IChallengeRepository {
 
-  // --- PRIVATE HELPERS ---
-
-  private translate(field: LocalizedString | string | unknown, locale: string): string {
-    if (typeof field === 'string') return field;
-    if (!field || typeof field !== 'object') return '';
-
-    const localized = field as LocalizedString;
-    return localized[locale] || localized['ca'] || localized['en'] || Object.values(localized)[0] || '';
-  }
-
+  // Aquesta funció ara és super neta gràcies al patró Strategy
   private mapToEntity(row: ChallengeRow, locale: string): Challenge {
-    const challengeType = row.type as ChallengeType;
-
-    // 1. Processar el JSON (pot venir com string o objecte)
-    let rawData = row.content;
-    if (typeof rawData === 'string') {
-      try {
-        rawData = JSON.parse(rawData);
-      } catch (e) {
-        console.error(`Error parsing JSON for challenge ${row.id}`, e);
-        rawData = {};
-      }
-    }
-
-    let localizedContent: ChallengeContent;
-
-    // --- LOGICA POLIMÒRFICA STRICTA (SENSE ANY) ---
-    switch (challengeType) {
-
-      // CAS 1: MATCHING
-      case 'MATCHING': {
-        // Fem un cast al tipus RAW específic
-        const content = rawData as RawMatchingContent;
-
-        localizedContent = {
-          instruction: this.translate(content.instruction, locale),
-          pairs: Array.isArray(content.pairs)
-            ? content.pairs.map(p => ({
-              left: {
-                id: p.left.id,
-                text: this.translate(p.left.text, locale)
-              },
-              right: {
-                id: p.right.id,
-                text: this.translate(p.right.text, locale)
-              }
-            }))
-            : []
-        };
-        break;
-      }
-
-      // CAS 2: CODE_FIX
-      case 'CODE_FIX': {
-        const content = rawData as RawCodeFixContent;
-
-        localizedContent = {
-          description: this.translate(content.description, locale),
-          initialCode: content.initialCode || '',
-          solution: content.solution || '',
-          // ✅ Assignem la traducció a 'hint' (singular)
-          hint: this.translate(content.hint, locale),
-          tests: content.tests || [],
-          options: Array.isArray(content.options) ? content.options.map(opt => ({
-            id: opt.id,
-            code: opt.code,
-            isCorrect: opt.isCorrect
-          })) : []
-        };
-        break;
-      }
-
-      // CAS 3: QUIZ
-      case 'QUIZ':
-      default: {
-        // Type Guard per detectar format nou
-        const quizObj = rawData as Partial<RawQuizContent>;
-        const isNewFormat =
-          quizObj &&
-          'options' in quizObj &&
-          Array.isArray(quizObj.options) &&
-          quizObj.options.length > 0 &&
-          typeof quizObj.options[0] === 'object';
-
-        if (isNewFormat) {
-          const content = rawData as RawQuizContent;
-          localizedContent = {
-            question: this.translate(content.question, locale),
-            explanation: this.translate(content.explanation, locale),
-            correctOptionIndex: content.correctOptionIndex,
-            options: content.options.map(opt => ({
-              id: opt.id,
-              text: this.translate(opt.text, locale)
-            }))
-          };
-        } else {
-          // Legacy
-          const content = rawData as LegacyRawContent;
-          const oldOptions = Array.isArray(content.options) ? content.options : [];
-          localizedContent = {
-            question: String(content.question || ''),
-            explanation: String(content.explanation || ''),
-            correctOptionIndex: content.correctOptionIndex || 0,
-            options: oldOptions.map((txt, idx) => ({
-              id: `opt-${idx}`,
-              text: String(txt)
-            }))
-          };
-        }
-        break;
-      }
-    }
+    const rawData = parseJsonContent(row.content);
+    const mapper = ChallengeMapperFactory.getMapper(row.type);
+    
+    // Deleguem la complexitat al mapper específic
+    const localizedContent = mapper.map(rawData, locale);
 
     return {
       id: row.id,
       topicId: row.topic_id,
       difficultyTier: row.difficulty_tier,
-      type: challengeType,
+      type: row.type as ChallengeType,
       content: localizedContent,
       createdAt: new Date(row.created_at),
     };
   }
 
-  // --- PUBLIC METHODS ---
+  // --- PUBLIC METHODS (Iguals que abans, però més nets) ---
 
   async findNextForUser(topicId: string, userId: string, locale: string, difficulty: number): Promise<Challenge[]> {
     const supabase = await createClient();
 
+    // 1. Obtenir IDs completats
     const { data: completed } = await supabase
       .from('user_progress')
       .select('challenge_id')
@@ -3214,6 +3981,7 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
 
     const completedIds = completed?.map(c => c.challenge_id) || [];
 
+    // 2. Buscar reptes no completats
     let query = supabase
       .from('challenges')
       .select('*')
@@ -3230,7 +3998,7 @@ export class SupabaseChallengeRepository implements IChallengeRepository {
       return newChallenges.map(row => this.mapToEntity(row as ChallengeRow, locale));
     }
 
-    // Fallback Mode Repàs
+    // 3. Fallback: Mode Repàs
     const { data: reviewChallenges } = await supabase
       .from('challenges')
       .select('*')
@@ -3276,7 +4044,7 @@ import { ITopicRepository, TierProgressStats } from '@/core/repositories/topic.r
 import { Topic, CreateTopicInput } from '@/core/entities/topic.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
 import { createClient } from '@/infrastructure/utils/supabase/server'; // El teu helper
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 // 1. Definim el tipus exacte de la fila a la BD (Lectura)
 type TopicRow = {
   id: string;
@@ -3705,7 +4473,7 @@ export async function logoutAction() {
 import { GetNextChallengeUseCase } from '@/application/use-cases/challenges/get-next-challenge.use-case';
 import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
 import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { getLocale } from 'next-intl/server';
 import { createClient } from '@/infrastructure/utils/supabase/server'; // <--- Necessari per user real
 
@@ -3932,48 +4700,73 @@ export function TopicCard({ topic, translatedTitle }: TopicCardProps) {
 
 // =================== FILE: src/presentation/components/features/game-engine/ChallengeRenderer.tsx ===================
 
-import { Challenge } from '@/core/entities/challenge.entity';
+// filepath: src/presentation/components/features/game-engine/ChallengeRenderer.tsx
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { QuizView } from './QuizView';
-import { MatchingView } from './MatchingView'; // <--- IMPORTAR
-import { CodeFixView } from './CodeFixView';   // <--- IMPORTAR
+import { MatchingView } from './MatchingView';
+import { CodeFixView } from './CodeFixView';
+import { TerminalView } from './TerminalView';
+import { LogicOrderView } from './LogicOrderView';
+
+// Definició de les dades de sessió (Tipatge estricte)
+export interface SessionData {
+  progress: number;
+  currentIndex: number;
+  totalChallenges: number;
+  topicSlug: string;
+}
 
 interface ChallengeRendererProps {
   challenge: Challenge;
   onNext: (isCorrect: boolean) => void;
+  sessionData: SessionData; // 👈 Aquesta prop és OBLIGATÒRIA
 }
 
-export function ChallengeRenderer({ challenge, onNext }: ChallengeRendererProps) {
-  
+export function ChallengeRenderer({ challenge, onNext, sessionData }: ChallengeRendererProps) {
+
   switch (challenge.type) {
+    // ----------------------------------------------------------------------
+    // ⚠️ NOTES D'ARQUITECTURA:
+    // Els jocs QUIZ, MATCHING i CODE_FIX encara no usen el nou 'GameSessionLayout'.
+    // Per això no els passem 'sessionData'.
+    // Si en el futur els actualitzes al nou disseny, hauràs d'afegir la prop aquí.
+    // ----------------------------------------------------------------------
+
     case 'QUIZ':
-      return (
-        <QuizView 
-          key={challenge.id}
-          challenge={challenge} 
-          onNext={onNext} 
-        />
-      );
-    
+      return <QuizView key={challenge.id} challenge={challenge} onNext={onNext} />;
+
     case 'MATCHING':
-      return (
-         <MatchingView 
-            key={challenge.id}
-            challenge={challenge} 
-            onNext={onNext} 
-         />
-      );
+      return <MatchingView key={challenge.id} challenge={challenge} onNext={onNext} />;
 
     case 'CODE_FIX':
-       return (
-          <CodeFixView 
-             key={challenge.id}
-             challenge={challenge}
-             onNext={onNext}
-          />
-       );
+      return <CodeFixView key={challenge.id} challenge={challenge} onNext={onNext} />;
+
+    // ----------------------------------------------------------------------
+    // ✅ JOCS ACTUALITZATS AL NOU LAYOUT RESPONSIVE (AMB HEADER/FOOTER)
+    // ----------------------------------------------------------------------
+
+    case 'TERMINAL':
+      return (
+        <TerminalView 
+          key={challenge.id} 
+          challenge={challenge} 
+          onNext={onNext} 
+          sessionData={sessionData} // 👈 AFEGIT: Soluciona l'error TS2741
+        />
+      );
+
+    case 'LOGIC_ORDER':
+      return (
+        <LogicOrderView 
+          key={challenge.id} 
+          challenge={challenge} 
+          onNext={onNext} 
+          sessionData={sessionData} 
+        />
+      );
 
     default:
-      return <div className="text-red-500">Tipus de joc no suportat: {challenge.type}</div>;
+      return <div className="text-red-500 p-4">Tipus no suportat: {challenge.type}</div>;
   }
 }
 
@@ -4122,9 +4915,12 @@ export function HintPanel({ hintText }: HintPanelProps) {
 
 // =================== FILE: src/presentation/components/features/game-engine/code-fix/SolutionDeck.tsx ===================
 
-// filepath: src/presentation/components/features/game-engine/code-fix/SolutionDeck.tsx
-import { CodeFixOption } from '@/core/entities/challenge.entity';
+// filepath: src/presentation/components/features/game/code-fix/SolutionDeck.tsx
+'use client';
+
+import { CodeFixOption } from '@/core/entities/challenges';
 import { clsx } from 'clsx';
+import { CheckCircle2, Circle } from 'lucide-react';
 
 interface SolutionDeckProps {
   options: CodeFixOption[];
@@ -4135,23 +4931,44 @@ interface SolutionDeckProps {
 
 export function SolutionDeck({ options, selectedId, onSelect, isSubmitted }: SolutionDeckProps) {
   return (
-    <div className="grid grid-cols-3 gap-4 mt-6">
-      {options.map((opt) => {
-        const isSelected = selectedId === opt.id;
-        
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+      {options.map((option) => {
+        const isSelected = selectedId === option.id;
+
         return (
           <button
-            key={opt.id}
-            onClick={() => onSelect(opt.id)}
-            disabled={isSubmitted && isSelected} // Bloquegem només si ja hem enviat
+            key={option.id}
+            onClick={() => !isSubmitted && onSelect(option.id)}
+            disabled={isSubmitted}
             className={clsx(
-              "p-4 rounded-xl border-2 font-mono text-sm transition-all duration-200 shadow-lg hover:-translate-y-1",
-              isSelected 
-                ? "bg-blue-600 border-blue-400 text-white ring-2 ring-blue-400/50" 
-                : "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-750"
+              "relative group text-left p-4 rounded-xl border-2 transition-all duration-300 w-full",
+              // Estats de color
+              isSelected
+                ? "border-blue-500 bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                : "border-slate-800 bg-slate-900/50 hover:border-slate-600 hover:bg-slate-800",
+              
+              isSubmitted && isSelected && "border-green-500 bg-green-500/10"
             )}
           >
-            {opt.code}
+            {/* Checkbox Icon UI */}
+            <div className={clsx(
+                "absolute top-4 right-4 transition-colors",
+                isSelected ? "text-blue-400" : "text-slate-600 group-hover:text-slate-400"
+            )}>
+                {isSelected ? <CheckCircle2 className="w-5 h-5" /> : <Circle className="w-5 h-5" />}
+            </div>
+
+            {/* Codi Polimòrfic (Responsive) */}
+            <div className="pr-8"> {/* Padding right per no trepitjar la icona */}
+                <code className={clsx(
+                    "block font-mono text-xs md:text-sm leading-relaxed",
+                    "text-slate-300",
+                    // ✨ MÀGIA DISNEY PER EVITAR DESBORDAMENT ✨
+                    "break-all whitespace-pre-wrap word-break-break-word"
+                )}>
+                    {option.code}
+                </code>
+            </div>
           </button>
         );
       })}
@@ -4161,10 +4978,12 @@ export function SolutionDeck({ options, selectedId, onSelect, isSubmitted }: Sol
 
 // =================== FILE: src/presentation/components/features/game-engine/CodeFixView.tsx ===================
 
+// filepath: src/presentation/components/features/game/code-fix/CodeFixView.tsx
 'use client';
 
 import { useState } from 'react';
-import { Challenge, CodeFixContent } from '@/core/entities/challenge.entity';
+// ✅ FIX: Importem des del 'index' de la carpeta (Barrel File), no del fitxer intern
+import { Challenge, CodeFixContent } from '@/core/entities/challenges'; 
 import { Terminal, Play, ArrowRight } from 'lucide-react';
 import { CodeWindow } from './code-fix/CodeWindow';
 import { SolutionDeck } from './code-fix/SolutionDeck';
@@ -4177,6 +4996,7 @@ interface CodeFixViewProps {
 }
 
 export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
+  // Ara TypeScript sap perfectament què és CodeFixContent
   const content = challenge.content as CodeFixContent;
   
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -4185,16 +5005,14 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
   const handleCheck = () => {
     if (!selectedId) return;
 
+    // ✅ FIX: Ara 'opt' ja no és 'any', TS sap que és un 'CodeFixOption'
     const selectedOption = content.options.find(opt => opt.id === selectedId);
     
     if (selectedOption?.isCorrect) {
        setStatus('SUCCESS');
-       // Donem temps per veure l'animació d'èxit abans de passar
-       // No fem onNext automàtic, deixem que l'usuari cliqui "Continuar" o automàtic després de delay
        setTimeout(() => onNext(true), 1500); 
     } else {
        setStatus('ERROR');
-       // Reset de l'error després d'un moment
        setTimeout(() => setStatus('IDLE'), 1000);
     }
   };
@@ -4211,14 +5029,14 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
          <div className="p-2 bg-blue-500/10 rounded-lg">
             <Terminal className="w-5 h-5 text-blue-400" />
          </div>
-         <h2 className="font-mono font-bold text-lg text-white">DEBUG_MODE</h2>
+         <h2 className="font-mono font-bold text-lg text-white tracking-wider">DEBUG_MODE</h2>
       </div>
       
-      <p className="text-slate-400 text-sm mb-6 ml-12">
+      <p className="text-slate-400 text-sm mb-6 pl-12 border-l-2 border-slate-800">
          {content.description}
       </p>
 
-      {/* COMPONENT VISUAL 1: Editor */}
+      {/* EDITOR */}
       <CodeWindow 
          initialCode={content.initialCode} 
          selectedCode={currentCode}
@@ -4226,7 +5044,7 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
          isSuccess={status === 'SUCCESS'}
       />
 
-      {/* COMPONENT VISUAL 2: Cartes */}
+      {/* TARGETES D'OPCIONS (Aquí és on aplicarem el disseny Disney) */}
       <SolutionDeck 
          options={content.options} 
          selectedId={selectedId} 
@@ -4237,22 +5055,22 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
          isSubmitted={status === 'SUCCESS'}
       />
 
-      {/* COMPONENT VISUAL 3: Pista */}
+      {/* PISTA */}
       <HintPanel hintText={content.hint} />
 
-      {/* ACCIÓ PRINCIPAL */}
+      {/* BOTÓ D'ACCIÓ */}
       <div className="mt-8 flex justify-end border-t border-slate-800 pt-6">
          <button
             onClick={handleCheck}
             disabled={!selectedId || status === 'SUCCESS'}
             className={clsx(
-               "px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all shadow-lg",
+               "px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all shadow-lg transform active:scale-95",
                !selectedId ? "bg-slate-800 text-slate-500 cursor-not-allowed" :
-               status === 'SUCCESS' ? "bg-green-600 text-white hover:scale-105" :
-               "bg-blue-600 hover:bg-blue-500 text-white hover:scale-105"
+               status === 'SUCCESS' ? "bg-green-600 text-white hover:bg-green-500" :
+               "bg-blue-600 hover:bg-blue-500 text-white hover:scale-105 shadow-blue-900/20"
             )}
          >
-            {status === 'SUCCESS' ? 'CODI ARREGLAT!' : 'EXECUTAR CODI'} 
+            {status === 'SUCCESS' ? 'SISTEMA RESTAURAT' : 'EXECUTAR PATCH'} 
             {status === 'SUCCESS' ? <ArrowRight className="w-5 h-5" /> : <Play className="w-4 h-4 fill-current" />}
          </button>
       </div>
@@ -4266,14 +5084,22 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
 // filepath: src/presentation/components/features/game-engine/GameArena.tsx
 'use client';
 
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { useGameSession } from '@/presentation/hooks/game/useGameSession';
-// ❌ ELIMINA: import { QuizView } from './QuizView'; (Ja no cal aquí)
-import { ChallengeRenderer } from './ChallengeRenderer'; // ✅ AQUEST ÉS EL BO
+import { ChallengeRenderer } from './ChallengeRenderer';
 import { GameResult } from './GameResult';
 import { GameError } from './GameError';
-import { Loader2 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Loader2} from 'lucide-react';
+
+
+// NO importis el layout aquí directament si vols que cada joc tingui el seu footer propi.
+// Però per mantenir consistència, podem passar el footer des del ChallengeRenderer.
+// REVISIÓ: El GameArena només proveeix el context. El layout el controlarà el fill.
+
+// MIRA BÉ EL CANVI D'ESTRATÈGIA: 
+// Passem el control del layout al component específic (LogicOrderView) 
+// perquè ell sap quin botó necessita (Verificar, Continuar...).
+// GameArena només retorna el contingut pur.
 
 interface GameArenaProps {
   challenges: Challenge[];
@@ -4281,79 +5107,36 @@ interface GameArenaProps {
 }
 
 export function GameArena({ challenges, topicSlug }: GameArenaProps) {
-  const t = useTranslations('game.arena');
-  
-  const { 
-    currentChallenge, 
-    currentIndex, 
-    totalChallenges, 
-    progress, 
-    status, 
-    result, 
-    error, 
-    handleNext, 
-    handleRetry 
+  const {
+    currentChallenge, currentIndex, totalChallenges, progress,
+    status, result, error, handleNext, handleRetry
   } = useGameSession(challenges);
 
-  // 1. ESTAT: CARREGANT
-  if (status === 'SUBMITTING') {
-    return (
-      <div className="flex flex-col items-center justify-center h-64">
-        <Loader2 className="w-10 h-10 text-blue-500 animate-spin mb-4" />
-        <p className="text-slate-400 animate-pulse">{t('loading')}</p>
-      </div>
-    );
-  }
+  // Estats globals (Càrrega/Error) - Ocupen tota la pantalla
+  if (status === 'SUBMITTING') return <FullScreenMsg><Loader2 className="w-12 h-12 animate-spin text-blue-500" /></FullScreenMsg>;
+  if (status === 'SUCCESS' && result) return <GameResult xpEarned={result.xpEarned} newLevel={result.newLevel} leveledUp={result.leveledUp} topicSlug={topicSlug} />;
+  if (status === 'ERROR' && error) return <GameError message={error} onRetry={handleRetry} />;
 
-  // 2. ESTAT: ÈXIT
-  if (status === 'SUCCESS' && result) {
-    return (
-        <GameResult 
-            xpEarned={result.xpEarned} 
-            newLevel={result.newLevel} 
-            leveledUp={result.leveledUp} 
-            topicSlug={topicSlug}
-        />
-    );
-  }
-
-  // 3. ESTAT: ERROR
-  if (status === 'ERROR' && error) {
-    return <GameError message={error} onRetry={handleRetry} />;
-  }
-
-  // 4. ESTAT: JUGANT
+  // Renderitzem el joc actual.
+  // Passem les dades de sessió (progress, etc.) com a props al Renderer 
+  // perquè el component final (LogicOrderView) pugui muntar el GameSessionLayout complet.
   return (
-    <div className="w-full max-w-3xl mx-auto">
-      {/* BARRA DE PROGRÉS */}
-      <div className="mb-8 px-4">
-        <div className="flex justify-between text-xs text-slate-400 mb-2 uppercase font-bold tracking-wider">
-          <span>{t('progress')}</span>
-          <span>{currentIndex + 1} / {totalChallenges}</span>
-        </div>
-        <div className="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-          <div 
-            className="bg-blue-500 h-full transition-all duration-500"
-            style={{ width: `${progress}%` }} 
-          />
-        </div>
-      </div>
-
-      {/* ZONA DE JOC */}
-      <div className="animate-in slide-in-from-right-8 duration-300">
-        
-        {/* 🛑 ASSEGURA'T QUE NOMÉS TENS AIXÒ! 
-            Si tens un 'if (type === QUIZ)' aquí a sobre, ESBORRA'L.
-        */}
-        
-        <ChallengeRenderer 
-           challenge={currentChallenge}
-           onNext={handleNext}
-        />
-
-      </div>
-    </div>
+    <ChallengeRenderer
+      challenge={currentChallenge}
+      onNext={handleNext}
+      // 👇 Aquest objecte ha de coincidir amb la interfície SessionData
+      sessionData={{
+        progress,
+        currentIndex,
+        totalChallenges,
+        topicSlug
+      }}
+    />
   );
+}
+
+function FullScreenMsg({ children }: { children: React.ReactNode }) {
+  return <div className="fixed inset-0 flex items-center justify-center bg-slate-950 z-50">{children}</div>;
 }
 
 // =================== FILE: src/presentation/components/features/game-engine/GameError.tsx ===================
@@ -4457,12 +5240,226 @@ export function GameResult({ xpEarned, newLevel, leveledUp, topicSlug }: GameRes
   );
 }
 
+// =================== FILE: src/presentation/components/features/game-engine/layout/GameSessionLayout.tsx ===================
+
+// filepath: src/presentation/components/features/game-engine/layout/GameSessionLayout.tsx
+'use client';
+
+import { ReactNode } from 'react';
+import { clsx } from 'clsx';
+
+interface GameSessionLayoutProps {
+  header: ReactNode;
+  children: ReactNode; // La zona de joc
+  footer: ReactNode;   // El botó de verificar
+  className?: string;
+}
+
+export function GameSessionLayout({ header, children, footer, className }: GameSessionLayoutProps) {
+  return (
+    // CONTENIDOR MESTRE: Fixat a la pantalla, sense scroll global.
+    // 'fixed inset-0' garanteix que ocupa tota la pantalla i tapa la UI de sota.
+    <div className="fixed inset-0 z-50 flex flex-col bg-slate-950 h-dvh w-screen overflow-hidden">
+      
+      {/* 1. HEADER (Fix) */}
+      <header className="shrink-0 px-4 py-3 bg-slate-950/95 backdrop-blur z-20 border-b border-white/5">
+        {header}
+      </header>
+
+      {/* 2. ZONA DE JOC (Flexible) */}
+      {/* 'flex-1' l'obliga a ocupar tot l'espai disponible.
+          'min-h-0' és vital per permetre scroll intern en fills flex.
+          'relative' crea un context per a posicionaments absoluts interns. */}
+      <main className={clsx("flex-1 min-h-0 relative w-full max-w-3xl mx-auto", className)}>
+        {/* Wrapper intern per centrar i donar padding sense trencar el scroll */}
+        <div className="h-full w-full flex flex-col px-4 py-2 overflow-hidden">
+           {children}
+        </div>
+      </main>
+
+      {/* 3. FOOTER (Fix i Segur) */}
+      {/* 'pb-safe' (si tens la utilitat de Tailwind configurada) o un padding generós */}
+      <footer className="shrink-0 px-4 pt-3 pb-6 bg-slate-950/95 backdrop-blur z-20 border-t border-white/5 w-full max-w-3xl mx-auto">
+        {footer}
+      </footer>
+
+    </div>
+  );
+}
+
+// =================== FILE: src/presentation/components/features/game-engine/LogicOrderView.tsx ===================
+
+// filepath: src/presentation/components/features/game-engine/LogicOrderView.tsx
+'use client';
+
+import { useState } from 'react';
+import { Challenge, LogicOrderContent, ChallengeOption } from '@/core/entities/challenges/challenge.entity';
+import { RotateCcw, GripVertical, X } from 'lucide-react';
+import { clsx } from 'clsx';
+import { Reorder, AnimatePresence, motion, LayoutGroup } from 'framer-motion';
+import { GameSessionLayout } from './layout/GameSessionLayout';
+import { Link } from '@/navigation';
+import { X as CloseIcon } from 'lucide-react';
+// 1. IMPORTAR HOOK DE TRADUCCIÓ
+import { useTranslations } from 'next-intl';
+
+interface LogicOrderViewProps {
+  challenge: Challenge;
+  onNext: (isCorrect: boolean) => void;
+  sessionData: { progress: number; currentIndex: number; totalChallenges: number; topicSlug: string };
+}
+
+export function LogicOrderView({ challenge, onNext, sessionData }: LogicOrderViewProps) {
+  // 2. INICIALITZAR HOOK
+  const t = useTranslations('game');
+  
+  const content = challenge.content as LogicOrderContent;
+  const [available, setAvailable] = useState<ChallengeOption[]>(content.items);
+  const [selected, setSelected] = useState<ChallengeOption[]>([]);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+
+  const handleSelect = (item: ChallengeOption) => {
+    if (hasSubmitted) return;
+    setAvailable(prev => prev.filter(i => i.id !== item.id));
+    setSelected(prev => [...prev, item]);
+  };
+  const handleDeselect = (item: ChallengeOption) => {
+    if (hasSubmitted) return;
+    setSelected(prev => prev.filter(i => i.id !== item.id));
+    setAvailable(prev => [...prev, item]); 
+  };
+  const handleReset = () => {
+    setAvailable(content.items); setSelected([]); setHasSubmitted(false); setIsCorrect(null);
+  };
+  const handleSubmit = () => {
+    if (hasSubmitted) return;
+    const currentOrder = selected.map(s => s.id);
+    const correctOrder = [...content.items].map(i => i.id).sort(); 
+    const correct = JSON.stringify(currentOrder) === JSON.stringify(correctOrder);
+    setIsCorrect(correct); setHasSubmitted(true);
+    if (correct) setTimeout(() => onNext(true), 1500);
+  };
+
+  const Header = (
+    <div className="flex items-center gap-4 w-full">
+        <Link href={`/learn/${sessionData.topicSlug}`} className="text-slate-400 hover:text-white p-1">
+           <CloseIcon className="w-6 h-6" />
+        </Link>
+        <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+            <div 
+              className="bg-blue-500 h-full transition-all duration-500 ease-out"
+              style={{ width: `${sessionData.progress}%` }} 
+            />
+        </div>
+    </div>
+  );
+
+  const Footer = (
+    <div className="flex gap-3 w-full">
+       <button 
+          onClick={handleReset}
+          className="p-4 rounded-xl bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors border border-slate-700"
+          title={t('actions.reset')} // Accessibilitat
+       >
+          <RotateCcw className="w-6 h-6" />
+       </button>
+       <button
+          onClick={handleSubmit}
+          disabled={selected.length === 0 || hasSubmitted}
+          className={clsx(
+             "flex-1 p-4 rounded-xl font-black text-lg uppercase tracking-wider transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2",
+             hasSubmitted 
+                ? (isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white")
+                : selected.length === 0 
+                    ? "bg-slate-800 text-slate-600 border-slate-700 cursor-not-allowed"
+                    : "bg-blue-600 text-white border-b-4 border-blue-800 shadow-blue-500/20"
+          )}
+       >
+          {/* 3. ÚS DE CLAUS DE TRADUCCIÓ */}
+          {hasSubmitted ? (
+             isCorrect ? t('feedback.correct') : t('feedback.incorrect')
+          ) : t('actions.check')}
+       </button>
+    </div>
+  );
+
+  return (
+    <GameSessionLayout header={Header} footer={Footer}>
+      <LayoutGroup>
+        <div className="flex flex-col h-full gap-2">
+          
+          <div className="shrink-0 text-center pb-2">
+             <h2 className="text-lg font-bold text-white leading-tight">{content.description}</h2>
+             {/* Subtítol opcional amb el nom del mode */}
+             <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">
+                {t('modes.logic_order.label')}
+             </div>
+          </div>
+
+          <div className="flex-1 min-h-0 flex flex-col gap-2">
+             
+             <div className="flex-1 bg-slate-900/50 rounded-xl border-2 border-dashed border-slate-700 p-2 overflow-y-auto relative min-h-25">
+                <span className="absolute top-2 right-2 text-[9px] text-slate-500 uppercase font-bold tracking-widest pointer-events-none">
+                    {t('modes.logic_order.your_answer')}
+                </span>
+                
+                {selected.length === 0 && (
+                   <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600 pointer-events-none">
+                      <GripVertical className="w-6 h-6 mb-1 opacity-50" />
+                      <span className="text-xs">{t('modes.logic_order.placeholder')}</span>
+                   </div>
+                )}
+
+                <Reorder.Group axis="y" values={selected} onReorder={setSelected} className="flex flex-col gap-2 w-full pb-8">
+                   <AnimatePresence mode='popLayout'>
+                     {selected.map((item, index) => (
+                       <Reorder.Item key={item.id} value={item} dragListener={!hasSubmitted} layoutId={item.id}
+                         className="relative p-3 rounded-lg border bg-slate-800 border-slate-600 flex items-center gap-3 select-none touch-none"
+                       >
+                          <span className="w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center text-[10px] font-bold">{index + 1}</span>
+                          <span className="flex-1 text-sm font-medium">{item.text}</span>
+                          {!hasSubmitted && <button onClick={() => handleDeselect(item)}><X className="w-4 h-4 text-slate-500" /></button>}
+                       </Reorder.Item>
+                     ))}
+                   </AnimatePresence>
+                </Reorder.Group>
+             </div>
+
+             <div className="shrink-0 h-auto max-h-[40%] overflow-y-auto bg-slate-950/30 rounded-xl border border-slate-800 p-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                   <AnimatePresence mode='popLayout'>
+                      {available.map((item) => (
+                         <motion.button
+                            layoutId={item.id} key={item.id} onClick={() => handleSelect(item)} disabled={hasSubmitted}
+                            className="p-3 rounded-lg bg-slate-800 border-b-2 border-slate-900 text-slate-300 text-xs font-medium text-left flex justify-between items-center group"
+                         >
+                            <span className="line-clamp-2">{item.text}</span>
+                            <span className="text-blue-500 font-bold">+</span>
+                         </motion.button>
+                      ))}
+                   </AnimatePresence>
+                   {available.length === 0 && (
+                       <div className="text-center text-xs text-slate-600 py-2">
+                           {t('modes.logic_order.empty_options')}
+                       </div>
+                   )}
+                </div>
+             </div>
+
+          </div>
+        </div>
+      </LayoutGroup>
+    </GameSessionLayout>
+  );
+}
+
 // =================== FILE: src/presentation/components/features/game-engine/MatchingView.tsx ===================
 
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Challenge, MatchingContent } from '@/core/entities/challenge.entity';
+import { Challenge, MatchingContent } from '@/core/entities/challenges/challenge.entity';
 import { Check, ArrowRight, Puzzle } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -4653,10 +5650,10 @@ export function MatchingView({ challenge, onNext }: MatchingViewProps) {
 'use client';
 
 import { useState } from 'react';
-import { Challenge, QuizContent } from '@/core/entities/challenge.entity';
+import { Challenge, QuizContent } from '@/core/entities/challenges/challenge.entity';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
-import { useTranslations } from 'next-intl';
+
 
 interface QuizViewProps {
   challenge: Challenge;
@@ -4768,8 +5765,8 @@ export function QuizView({ challenge, onNext }: QuizViewProps) {
         <div className={clsx(
             "rounded-2xl p-1 animate-in slide-in-from-bottom-2 duration-300 overflow-hidden shadow-2xl",
              isCorrectAnswer 
-                ? "bg-gradient-to-r from-green-500 to-emerald-600" 
-                : "bg-gradient-to-r from-red-500 to-rose-600"
+                ? "bg-linear-to-r from-green-500 to-emerald-600" 
+                : "bg-linear-to-r from-red-500 to-rose-600"
         )}>
            <div className="bg-slate-950 rounded-xl p-5">
                <div className="flex items-start gap-4 mb-4">
@@ -4807,14 +5804,370 @@ export function QuizView({ challenge, onNext }: QuizViewProps) {
   );
 }
 
+// =================== FILE: src/presentation/components/features/game-engine/TerminalView.tsx ===================
+
+// filepath: src/presentation/components/features/game-engine/TerminalView.tsx
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { Challenge, TerminalContent } from '@/core/entities/challenges/challenge.entity';
+import { Terminal as TerminalIcon, ArrowRight, CheckCircle2, Command, X as CloseIcon } from 'lucide-react';
+import { HintPanel } from './code-fix/HintPanel';
+import { GameSessionLayout } from './layout/GameSessionLayout';
+import { Link } from '@/navigation';
+import { SessionData } from './ChallengeRenderer';
+// 1. IMPORTEM EL HOOK DE TRADUCCIÓ
+import { useTranslations } from 'next-intl';
+
+interface TerminalViewProps {
+  challenge: Challenge;
+  onNext: (isCorrect: boolean) => void;
+  sessionData: SessionData;
+}
+
+type LogLine = {
+  type: 'command' | 'output-success' | 'output-error';
+  text: string;
+};
+
+export function TerminalView({ challenge, onNext, sessionData }: TerminalViewProps) {
+  // 2. INICIALITZEM EL HOOK (Namespace 'game')
+  const t = useTranslations('game');
+  
+  const content = challenge.content as TerminalContent;
+  
+  const [input, setInput] = useState(content.initialCommand || '');
+  const [history, setHistory] = useState<LogLine[]>([]);
+  const [isCompleted, setIsCompleted] = useState(false);
+  
+  const inputRef = useRef<HTMLInputElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [history]);
+
+  // Focus
+  useEffect(() => {
+    if (!isCompleted) {
+        setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  }, [history, isCompleted]);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !isCompleted && input.trim()) {
+      executeCommand();
+    }
+  };
+
+  const executeCommand = () => {
+    const cmd = input.trim();
+    const newHistory: LogLine[] = [...history, { type: 'command', text: cmd }];
+
+    const normalizedInput = cmd.replace(/\s+/g, ' ').trim();
+    const isValid = content.validCommands.some(vc => vc.replace(/\s+/g, ' ').trim() === normalizedInput);
+
+    if (isValid) {
+      newHistory.push({ type: 'output-success', text: content.outputParams.success });
+      setHistory(newHistory);
+      setIsCompleted(true);
+      setInput('');
+    } else {
+      newHistory.push({ type: 'output-error', text: `${cmd}: ${content.outputParams.error}` });
+      setHistory(newHistory);
+      setInput('');
+    }
+  };
+
+  // --- HEADER ---
+  const Header = (
+    <div className="flex items-center gap-4 w-full">
+        <Link href={`/learn/${sessionData.topicSlug}`} className="text-slate-400 hover:text-white p-1">
+           <CloseIcon className="w-6 h-6" />
+        </Link>
+        <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+            <div 
+              className="bg-blue-500 h-full transition-all duration-500 ease-out"
+              style={{ width: `${sessionData.progress}%` }} 
+            />
+        </div>
+    </div>
+  );
+
+  // --- FOOTER ---
+  const Footer = isCompleted ? (
+    <div className="animate-in slide-in-from-bottom-4 duration-500 w-full">
+        <div className="bg-green-900/20 border border-green-500/30 rounded-xl p-4 flex flex-col gap-3 backdrop-blur-md">
+            <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
+                <div>
+                    {/* Traducció: "Correcte!" */}
+                    <h3 className="text-green-400 font-bold text-sm">{t('feedback.correct')}</h3>
+                    <p className="text-slate-300 text-xs leading-relaxed line-clamp-3">
+                        {content.explanation}
+                    </p>
+                </div>
+            </div>
+            <button 
+                onClick={() => onNext(true)}
+                className="w-full py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95"
+            >
+                {/* Traducció: "CONTINUAR" */}
+                {t('actions.continue')} <ArrowRight className="w-5 h-5" />
+            </button>
+        </div>
+    </div>
+  ) : (
+    content.hint ? <div className="w-full"><HintPanel hintText={content.hint} /></div> : <div className="h-4" />
+  );
+
+  return (
+    <GameSessionLayout header={Header} footer={Footer}>
+      <div className="flex flex-col h-full gap-2">
+        
+        {/* TITOL (Fixe) */}
+        <div className="shrink-0 flex items-start gap-3 px-1 pb-2">
+           <div className="p-2 bg-slate-800 rounded-lg shrink-0 border border-slate-700 shadow-sm">
+              <TerminalIcon className="w-5 h-5 text-green-400" />
+           </div>
+           <div className="min-w-0">
+              {/* Traducció: "Terminal" */}
+              <h2 className="font-bold text-white text-base leading-tight truncate">{t('modes.terminal.label')}</h2>
+              <p className="text-slate-400 text-xs leading-snug mt-0.5 line-clamp-2">{content.instruction}</p>
+           </div>
+        </div>
+
+        {/* TERMINAL */}
+        <div 
+          className="flex-1 min-h-0 bg-[#0c0c0c] rounded-xl overflow-hidden border border-slate-700 shadow-2xl font-mono text-sm relative flex flex-col"
+          onClick={() => !isCompleted && inputRef.current?.focus()}
+        >
+          {/* Top Bar */}
+          <div className="bg-[#1f1f1f] px-3 py-1.5 flex items-center gap-2 border-b border-[#333] shrink-0">
+            <div className="flex gap-1.5">
+               <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+               <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+            </div>
+            <div className="text-slate-500 text-[10px] ml-2 flex items-center gap-1 opacity-60">
+               {/* Traducció: "usuari@edutech:~" */}
+               <Command className="w-3 h-3" /> {t('modes.terminal.prompt_user')}@edutech:~
+            </div>
+          </div>
+
+          {/* Logs Area */}
+          <div 
+            ref={scrollRef}
+            className="flex-1 overflow-y-auto p-3 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent space-y-1"
+          >
+            {history.map((line, i) => (
+              <div key={i} className="wrap-break-word leading-relaxed text-xs md:text-sm">
+                {line.type === 'command' && (
+                  <div className="text-white mt-2">
+                    <span className="text-green-500 mr-2 font-bold">➜</span>
+                    <span className="text-blue-400 mr-2 font-bold">~</span>
+                    {line.text}
+                  </div>
+                )}
+                {line.type === 'output-success' && (
+                  <div className="text-emerald-400/90 whitespace-pre-wrap pl-4 border-l-2 border-emerald-500/30 ml-1 mt-1 font-medium pb-2">
+                    {line.text}
+                  </div>
+                )}
+                {line.type === 'output-error' && (
+                  <div className="text-red-400 pl-4 mt-1 bg-red-500/5 p-1 rounded-sm inline-block">
+                    {line.text}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Input Actiu */}
+            {!isCompleted && (
+              <div className="flex items-center text-white animate-in fade-in pt-1 pb-10">
+                <span className="text-green-500 mr-2 shrink-0 font-bold">➜</span>
+                <span className="text-blue-400 mr-2 shrink-0 font-bold">~</span>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  // Afegim placeholder traduït
+                  placeholder={t('modes.terminal.placeholder')}
+                  className="bg-transparent border-none outline-none flex-1 text-white placeholder-slate-700 font-mono caret-green-500 p-0 m-0"
+                  autoComplete="off"
+                  spellCheck="false"
+                  autoFocus
+                />
+              </div>
+            )}
+            
+            {/* Missatge Final */}
+            {isCompleted && (
+               <div className="mt-4 text-slate-500 italic text-xs border-t border-slate-800 pt-2">
+                  {/* Traducció: "--- Sessió finalitzada ---" */}
+                  {t('modes.terminal.session_closed')}
+               </div>
+            )}
+          </div>
+        </div>
+
+      </div>
+    </GameSessionLayout>
+  );
+}
+
+// =================== FILE: src/presentation/components/features/learning-path/HorizontalPath.tsx ===================
+
+// filepath: src/presentation/components/features/learning-path/HorizontalPath.tsx
+'use client';
+
+import { LevelNodeDTO } from '@/application/dto/level-node.dto';
+import { LevelNode } from './LevelNode';
+import { useRef, useEffect } from 'react';
+
+interface PathProps {
+  levels: LevelNodeDTO[];
+  slug: string;
+}
+
+export function HorizontalPath({ levels, slug }: PathProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll fins al nivell actual quan carregui la pàgina
+  useEffect(() => {
+    if (containerRef.current) {
+        const activeNode = containerRef.current.querySelector('[data-active="true"]');
+        if (activeNode) {
+            activeNode.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'center' });
+        }
+    }
+  }, []);
+
+  // CONFIGURACIÓ ESCRIPTORI
+  const AMPLITUDE_Y = 60; // Quant puja i baixa la corba
+  const HORIZONTAL_GAP = 160; // Espai entre nodes
+  const INITIAL_X = 100;
+
+  // Amplada total necessària per al SVG
+  const totalWidth = (levels.length * HORIZONTAL_GAP) + 300;
+
+  return (
+    <div 
+        ref={containerRef}
+        className="w-full h-[80vh] overflow-x-auto overflow-y-hidden relative custom-scrollbar flex items-center"
+        style={{ scrollBehavior: 'smooth' }}
+    >
+        <div className="relative h-full flex items-center" style={{ minWidth: `${totalWidth}px` }}>
+            
+            {/* SVG HORITZONTAL (Ona sinusoïdal lateral) */}
+            <svg className="absolute left-0 w-full h-full pointer-events-none opacity-20" style={{ zIndex: 0 }}>
+                <path 
+                d={`M ${INITIAL_X} 50% ${levels.map((_, i) => {
+                    const yOffset = Math.sin(i) * AMPLITUDE_Y; 
+                    // Aquí la lògica és inversa: Avancem en X, oscil·lem en Y
+                    return `L ${INITIAL_X + (i * HORIZONTAL_GAP)}px calc(50% + ${yOffset}px)`;
+                }).join(' ')}`}
+                fill="none" 
+                stroke="#64748b" 
+                strokeWidth="4" 
+                strokeDasharray="12,12"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                />
+            </svg>
+
+            {/* NODES HORITZONTALS */}
+            {levels.map((level, index) => {
+                const yOffset = Math.sin(index) * AMPLITUDE_Y;
+                const leftPos = INITIAL_X + (index * HORIZONTAL_GAP);
+
+                return (
+                    <div 
+                        key={level.tier}
+                        data-active={level.isCurrentPosition}
+                        className="absolute transition-all duration-500 hover:z-50"
+                        style={{ 
+                            left: `${leftPos}px`,
+                            // Centrem verticalment (50%) i apliquem l'oscil·lació
+                            top: `calc(50% + ${yOffset}px - 48px)` // -48px és la meitat de l'alçada del node (96px/2) per centrar-lo
+                        }}
+                    >
+                        <LevelNode 
+                            {...level}
+                            slug={slug}
+                            index={index}
+                        />
+                    </div>
+                );
+            })}
+
+            {/* BOSS FINAL */}
+             <div 
+                className="absolute opacity-40"
+                style={{ 
+                    left: `${INITIAL_X + (levels.length * HORIZONTAL_GAP)}px`,
+                    top: `calc(50% - 64px)` 
+                }}
+             >
+                 <div className="w-32 h-32 border-4 border-dashed border-slate-700 rounded-full flex items-center justify-center text-slate-500 font-black text-xl bg-slate-900/50">
+                    BOSS
+                 </div>
+             </div>
+
+        </div>
+    </div>
+  );
+}
+
+// =================== FILE: src/presentation/components/features/learning-path/LearningPathOrchestrator.tsx ===================
+
+// filepath: src/presentation/components/features/learning-path/LearningPathOrchestrator.tsx
+'use client';
+
+import { LevelNodeDTO } from '@/application/dto/level-node.dto';
+import { VerticalPath } from './VerticalPath';
+import { HorizontalPath } from './HorizontalPath';
+
+interface OrchestratorProps {
+  levels: LevelNodeDTO[];
+  slug: string;
+}
+
+export function LearningPathOrchestrator({ levels, slug }: OrchestratorProps) {
+  return (
+    <>
+      {/* VERSIÓ MÒBIL: Visible fins a md, després s'amaga */}
+      <div className="block md:hidden w-full pb-32">
+        <VerticalPath levels={levels} slug={slug} />
+      </div>
+
+      {/* VERSIÓ ESCRIPTORI: Oculta fins a md, després es mostra */}
+      <div className="hidden md:block w-full h-full min-h-[80vh]">
+        <HorizontalPath levels={levels} slug={slug} />
+      </div>
+    </>
+  );
+}
+
 // =================== FILE: src/presentation/components/features/learning-path/LevelNode.tsx ===================
 
 // filepath: src/presentation/components/features/learning-path/LevelNode.tsx
+'use client';
+
 import Link from 'next/link';
-import { Check, Lock, Terminal, Puzzle, Brain, User } from 'lucide-react'; 
+import {
+  Check, Lock, Puzzle, Brain,
+  ArrowDownUp, SquareTerminal, Wrench
+} from 'lucide-react';
 import { clsx } from 'clsx';
 import { LevelStatus } from '@/application/dto/level-node.dto';
-import { ChallengeType } from '@/core/entities/challenge.entity';
+import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
+
 
 interface LevelNodeProps {
   tier: number;
@@ -4825,70 +6178,172 @@ interface LevelNodeProps {
   isCurrentPosition?: boolean;
 }
 
-// ✅ HELPER EXTERN (Net i eficient)
-function getIcon(status: string, type: string) {
-  if (status === 'LOCKED') return <Lock className="w-8 h-8" />;
-  if (status === 'COMPLETED') return <Check className="w-10 h-10 stroke-3" />;
-
+// ✅ HELPER EXTERN NETEJAR
+// Ara aquesta funció NOMÉS retorna el tipus de joc. No es preocupa de l'estat.
+function getGameIcon(type: string) {
   switch (type) {
-    case 'CODE_FIX': return <Terminal className="w-8 h-8" />;
-    case 'MATCHING': return <Puzzle className="w-8 h-8" />;
-    default: return <Brain className="w-8 h-8" />;
+    case 'TERMINAL':
+      return <SquareTerminal className="w-8 h-8" />;
+    case 'LOGIC_ORDER':
+      return <ArrowDownUp className="w-8 h-8" />;
+    case 'CODE_FIX':
+      return <Wrench className="w-8 h-8" />;
+    case 'MATCHING':
+      return <Puzzle className="w-8 h-8" />;
+    case 'QUIZ':
+    default:
+      return <Brain className="w-8 h-8" />;
   }
 }
 
 export function LevelNode({ tier, status, slug, index, predominantType = 'QUIZ', isCurrentPosition }: LevelNodeProps) {
-  const offsetClass = index % 2 === 0 ? '-translate-x-8' : 'translate-x-8';
+  // const t = useTranslations('game.level_node');
 
-  const baseStyles = "relative w-24 h-24 rounded-full flex flex-col items-center justify-center border-b-8 transition-all duration-300 z-10";
-  
+
+  // 🎨 CANVIS DE DISSENY:
+  // 1. w-16 h-16 (64px) per mòbil -> w-24 h-24 (96px) per escriptori
+  // 2. border-b-4 (més subtil en mòbil)
+  const baseStyles = "relative w-16 h-16 md:w-24 md:h-24 rounded-full flex flex-col items-center justify-center border-b-4 md:border-b-[6px] transition-all duration-300 z-10 active:border-b-0 active:translate-y-[4px]";
   const statusStyles = {
-    LOCKED: "bg-slate-800 border-slate-950 text-slate-600 cursor-not-allowed grayscale",
-    COMPLETED: "bg-emerald-500 border-emerald-700 text-white hover:scale-105",
-    ACTIVE: "bg-blue-600 border-blue-800 text-white hover:scale-110 shadow-[0_0_30px_rgba(37,99,235,0.6)]"
+    // LOCKED: Gris fosc, icona apagada
+    LOCKED: "bg-slate-800 border-slate-950 text-slate-500 cursor-not-allowed",
+    // COMPLETED: Verd maragda
+    COMPLETED: "bg-emerald-500 border-emerald-700 text-white shadow-lg shadow-emerald-900/20",
+    // ACTIVE: Blau elèctric
+    ACTIVE: "bg-blue-600 border-blue-800 text-white shadow-[0_0_40px_rgba(37,99,235,0.4)] ring-4 ring-blue-500/20"
   };
 
   const content = (
-    <div className="relative">
-        {/* EFECTE ONADES (Només si és ACTIVE) */}
-        {status === 'ACTIVE' && (
-            <span className="absolute inset-0 rounded-full animate-ping bg-blue-500 opacity-20 duration-1000 scale-150 pointer-events-none"></span>
-        )}
+    <div className="relative group">
 
-        {/* CERCLE PRINCIPAL (Aquí és on aplicaven els estils que et fallaven) */}
-        <div className={clsx(baseStyles, statusStyles[status], "group")}>
-            
-            {/* ICONA */}
-            {getIcon(status, predominantType)}
-            
-            {/* ETIQUETA NIVEL */}
-            <div className="absolute -bottom-8 bg-slate-900 text-slate-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-700 whitespace-nowrap">
-                NIVELL {tier}
-            </div>
+      {/* INDICADOR "START" (Només si és la posició actual) */}
+      {isCurrentPosition && (
+        <div className="absolute -top-16 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce z-30 pointer-events-none">
+          <div className="bg-white text-blue-600 px-3 py-1 rounded-lg font-bold text-xs shadow-xl mb-1 uppercase tracking-wider border-2 border-blue-100">
+            START
+          </div>
+          <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-8 border-t-white"></div>
+        </div>
+      )}
+
+      {/* CERCLE PRINCIPAL */}
+      <div className={clsx(baseStyles, statusStyles[status])}>
+
+        {/* ICONA CENTRAL */}
+        <div className={clsx(
+          "transition-transform duration-300",
+          status === 'ACTIVE' ? "scale-110" : "group-hover:scale-110",
+          // Si està bloquejat, fem la icona una mica més transparent/grisa
+          status === 'LOCKED' && "opacity-40 grayscale"
+        )}>
+          {/* 🟢 ARA SEMPRE MOSTREM LA ICONA DEL JOC, FINS I TOT BLOQUEJAT */}
+          {getGameIcon(predominantType)}
         </div>
 
-        {/* INDICADOR "ESTÀS AQUÍ" */}
-        {isCurrentPosition && (
-            <div className="absolute -top-12 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce-subtle z-20">
-                <div className="bg-white text-blue-900 p-1.5 rounded-full border-2 border-blue-500 shadow-lg">
-                    <User className="w-5 h-5 fill-current" />
-                </div>
-                <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-8 border-t-blue-500 -mt-0.5"></div>
-            </div>
+        {/* BADGE: COMPLETAT (Check) */}
+        {status === 'COMPLETED' && (
+          <div className="absolute -right-2 -top-2 bg-yellow-400 text-yellow-900 rounded-full p-1.5 border-4 border-slate-950 shadow-sm z-20 animate-in zoom-in">
+            <Check className="w-4 h-4 stroke-4" />
+          </div>
         )}
+
+        {/* BADGE: BLOQUEJAT (Cadenat petit) */}
+        {status === 'LOCKED' && (
+          <div className="absolute -right-1 -bottom-1 bg-slate-700 text-slate-400 rounded-full p-1.5 border-4 border-slate-950 z-20">
+            <Lock className="w-3 h-3" />
+          </div>
+        )}
+      </div>
+
+      {/* TEXT NIVELL (A sota) */}
+      <div className={clsx(
+        "absolute -bottom-10 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border text-[10px] font-bold whitespace-nowrap shadow-md transition-colors",
+        status === 'ACTIVE' ? "bg-blue-600 border-blue-400 text-white" : "bg-slate-900 border-slate-700 text-slate-400"
+      )}>
+        NIVELL {tier}
+      </div>
     </div>
   );
 
+  // Si està bloquejat, no posem Link
   if (status === 'LOCKED') {
-    return <div className={clsx("flex justify-center py-6", offsetClass)}>{content}</div>;
+    return <div className="flex justify-center py-4">{content}</div>;
   }
 
+  // Si està actiu o completat, és clicable
   return (
-    <div className={clsx("flex justify-center py-6", offsetClass)}>
-      <Link href={`/learn/${slug}/play?tier=${tier}`}>
+    <div className="flex justify-center py-4">
+      <Link href={`/learn/${slug}/play?tier=${tier}`} aria-label={`Nivell ${tier}`}>
         {content}
       </Link>
     </div>
+  );
+}
+
+// =================== FILE: src/presentation/components/features/learning-path/VerticalPath.tsx ===================
+
+// filepath: src/presentation/components/features/learning-path/VerticalPath.tsx
+'use client';
+
+import { LevelNodeDTO } from '@/application/dto/level-node.dto';
+import { LevelNode } from './LevelNode';
+
+interface PathProps {
+  levels: LevelNodeDTO[];
+  slug: string;
+}
+
+export function VerticalPath({ levels, slug }: PathProps) {
+  // CONFIGURACIÓ MÒBIL
+  const AMPLITUDE = 75; 
+  const VERTICAL_GAP = 88; 
+  const INITIAL_Y = 40;
+
+  return (
+      <div className="relative mt-8 w-full flex flex-col items-center">
+         
+         {/* SVG MÒBIL */}
+         <svg className="absolute top-0 w-full h-full pointer-events-none opacity-30" style={{ zIndex: 0 }}>
+            <path 
+              d={`M 50% ${INITIAL_Y} ${levels.map((_, i) => {
+                 const xOffset = Math.sin(i) * AMPLITUDE; 
+                 return `L calc(50% + ${xOffset}px) ${i * VERTICAL_GAP + INITIAL_Y}`;
+              }).join(' ')}`}
+              fill="none" 
+              stroke="#475569" 
+              strokeWidth="6" 
+              strokeDasharray="8,8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+         </svg>
+
+         {/* NODES MÒBIL */}
+         <div className="flex flex-col gap-6 w-full relative z-10 items-center">
+             {levels.map((level, index) => {
+                 const xOffset = Math.sin(index) * AMPLITUDE; 
+                 return (
+                    <div 
+                      key={level.tier} 
+                      style={{ transform: `translateX(${xOffset}px)` }}
+                      className="transition-transform duration-500"
+                    >
+                       <LevelNode 
+                          {...level}
+                          slug={slug}
+                          index={index}
+                       />
+                    </div>
+                 );
+             })}
+             
+             <div className="flex justify-center mt-8 opacity-40">
+                 <div className="w-24 h-24 border-4 border-dashed border-slate-700 rounded-full flex items-center justify-center text-slate-600 font-black text-sm bg-slate-900/50">
+                    BOSS
+                 </div>
+             </div>
+         </div>
+      </div>
   );
 }
 
@@ -5008,7 +6463,6 @@ export function DesktopNavbar({ isLoggedIn }: DesktopNavbarProps) {
 // filepath: src/presentation/components/layout/MobileBottomBar.tsx
 'use client';
 
-// IMPORTANT: Importem Link i usePathname des de @/navigation
 import { Link, usePathname } from '@/navigation';
 import { Home, Zap, User, LogIn } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -5018,32 +6472,24 @@ interface MobileBottomBarProps {
 }
 
 export function MobileBottomBar({ isLoggedIn }: MobileBottomBarProps) {
-  // Aquest pathname ja ve "net" (ex: '/learn' encara que estiguis a '/ca/learn')
   const pathname = usePathname();
 
+  // 🛑 LOGICA D'ARQUITECTE: SI ESTEM JUGANT, NO MOSTREM LA BARRA
+  // Això dóna tota la pantalla al joc (100dvh real)
+  if (pathname.includes('/play') || pathname.includes('/arena')) {
+    return null;
+  }
+
   const navItems = [
-    { 
-      label: 'Inici', 
-      href: '/', 
-      icon: Home 
-    },
-    { 
-      label: 'Aprendre', 
-      href: '/learn', 
-      icon: Zap 
-    },
-    { 
-      label: isLoggedIn ? 'Perfil' : 'Entrar', 
-      href: isLoggedIn ? '/profile' : '/login', 
-      icon: isLoggedIn ? User : LogIn 
-    }
+    { label: 'Inici', href: '/', icon: Home },
+    { label: 'Aprendre', href: '/learn', icon: Zap },
+    { label: isLoggedIn ? 'Perfil' : 'Entrar', href: isLoggedIn ? '/profile' : '/login', icon: isLoggedIn ? User : LogIn }
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-slate-900 border-t-2 border-slate-800 px-6 py-2 md:hidden z-40 pb-safe">
+    <div className="fixed bottom-0 left-0 w-full bg-slate-950/90 backdrop-blur-md border-t border-slate-800 px-6 py-3 md:hidden z-50 pb-safe">
       <div className="flex justify-between items-center max-w-sm mx-auto">
         {navItems.map((item) => {
-          // Comparació directa i neta
           const isActive = pathname === item.href;
           const Icon = item.icon;
           
@@ -5052,22 +6498,12 @@ export function MobileBottomBar({ isLoggedIn }: MobileBottomBarProps) {
               key={item.href} 
               href={item.href}
               className={clsx(
-                "flex flex-col items-center gap-1 p-2 transition-all active:scale-90",
+                "flex flex-col items-center gap-1 transition-all active:scale-90",
                 isActive ? "text-blue-400" : "text-slate-500 hover:text-slate-300"
               )}
             >
-              <div className={clsx(
-                "p-2 rounded-xl border-2 transition-all",
-                isActive 
-                  ? "bg-blue-500/20 border-blue-500/50 -translate-y-2 shadow-[0_4px_0_0_rgba(59,130,246,0.5)]" 
-                  : "border-transparent"
-              )}>
-                <Icon className={clsx("w-6 h-6", isActive && "stroke-[3px]")} />
-              </div>
-              
-              <span className="text-xs font-bold tracking-wide uppercase">
-                {item.label}
-              </span>
+              <Icon className={clsx("w-6 h-6", isActive && "fill-current")} />
+              <span className="text-[10px] font-bold tracking-wide uppercase">{item.label}</span>
             </Link>
           );
         })}
@@ -5192,7 +6628,7 @@ export function LanguageSwitcher() {
 
 // filepath: src/presentation/hooks/game/useGameSession.ts
 import { useState, useEffect } from 'react';
-import { Challenge } from '@/core/entities/challenge.entity';
+import { Challenge } from '@/core/entities/challenges/challenge.entity';
 import { submitSessionAction } from '@/presentation/actions/gamification/submit-session.action';
 import { SessionResultDTO } from '@/application/dto/session-result.dto';
 
@@ -5356,6 +6792,22 @@ export const routing = defineRouting({
 // Exportem tipus per a usar-los al codi
 export type Locale = (typeof routing.locales)[number];
 
+// =================== FILE: src/test/setup.ts ===================
+
+// filepath: src/test/setup.ts
+import dotenv from 'dotenv';
+import path from 'path';
+
+// Carreguem explícitament el fitxer .env.test
+dotenv.config({ path: path.resolve(process.cwd(), '.env.test') });
+
+// Opcional: Si no troba el .env.test, prova amb .env.local per desenvolupament local
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
+}
+
+console.log('🧪 Test Environment Loaded. Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? '✅ Found' : '❌ Missing');
+
 // =================== FILE: supabase/snippets/Untitled query 908.sql ===================
 
 -- 1. TAULA TOPICS
@@ -5461,6 +6913,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom', // Necessari per testejar components de React més endavant
     globals: true,
-    setupFiles: [], // Aquí posarem setups globals si cal
+    setupFiles: ['./src/test/setup.ts'],
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
   },
 });

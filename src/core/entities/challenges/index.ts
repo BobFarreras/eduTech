@@ -5,5 +5,5 @@ export * from './definitions/code-fix.content';
 export * from './definitions/matching.content';
 export * from './definitions/terminal.content';
 export * from './definitions/logic-order.content';
-
+export * from './definitions/binary.content'; // 👈 AFEGIT
 export * from './challenge.entity';

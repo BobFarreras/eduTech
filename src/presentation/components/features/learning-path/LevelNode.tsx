@@ -9,7 +9,7 @@ import {
 import { clsx } from 'clsx';
 import { LevelStatus } from '@/application/dto/level-node.dto';
 import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
-import { useTranslations } from 'next-intl';
+
 
 interface LevelNodeProps {
   tier: number;
@@ -85,7 +85,7 @@ export function LevelNode({ tier, status, slug, index, predominantType = 'QUIZ',
         {/* BADGE: COMPLETAT (Check) */}
         {status === 'COMPLETED' && (
           <div className="absolute -right-2 -top-2 bg-yellow-400 text-yellow-900 rounded-full p-1.5 border-4 border-slate-950 shadow-sm z-20 animate-in zoom-in">
-            <Check className="w-4 h-4 stroke-[4]" />
+            <Check className="w-4 h-4 stroke-4" />
           </div>
         )}
 

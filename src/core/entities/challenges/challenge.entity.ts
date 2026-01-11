@@ -4,6 +4,7 @@ import { CodeFixContent } from './definitions/code-fix.content';
 import { MatchingContent } from './definitions/matching.content';
 import { TerminalContent } from './definitions/terminal.content';
 import { LogicOrderContent } from './definitions/logic-order.content';
+import { BinaryContent } from './definitions/binary.content';
 
 // 1. Tipus de Repte (Enum strings)
 export type ChallengeType = 
@@ -11,6 +12,7 @@ export type ChallengeType =
   | 'CODE_FIX' 
   | 'MATCHING' 
   | 'TERMINAL' 
+  | 'BINARY_DECISION'
   | 'LOGIC_ORDER';
 
 // 2. Unió Discriminada (Polimorfisme)
@@ -19,7 +21,8 @@ export type ChallengeContent =
   | CodeFixContent 
   | MatchingContent
   | TerminalContent 
-  | LogicOrderContent;
+  | LogicOrderContent
+  | BinaryContent;
 
 // 3. Entitat de Domini
 export interface Challenge {

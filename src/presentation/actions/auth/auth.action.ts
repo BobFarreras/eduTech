@@ -5,7 +5,7 @@ import { createClient } from '@/infrastructure/utils/supabase/server';
 import { redirect } from 'next/navigation';
 
 export type AuthState = {
-  errorKey?: string; // <--- Canviem 'error' (text) per 'errorKey' (clau i18n)
+  errorKey?: string;
   messageKey?: string;
 };
 
@@ -24,21 +24,22 @@ export async function authAction(prevState: AuthState, formData: FormData): Prom
     });
 
     if (error) {
-      // Mapeig d'errors bàsic
-      if (error.message.includes('already registered')) return { errorKey: 'auth.errors.user_already_exists' };
-      if (error.message.includes('Password')) return { errorKey: 'auth.errors.weak_password' };
-      return { errorKey: 'auth.errors.generic' };
+      // ✅ FIX: Retornem claus relatives, sense "auth." al principi
+      if (error.message.includes('already registered')) return { errorKey: 'errors.user_already_exists' };
+      if (error.message.includes('Password')) return { errorKey: 'errors.weak_password' };
+      return { errorKey: 'errors.generic' };
     }
 
-    return { messageKey: 'auth.success.check_email' };
+    // ✅ FIX: Clau relativa
+    return { messageKey: 'success.check_email' };
   } 
   
   else {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
-      // Supabase sol retornar "Invalid login credentials" per seguretat
-      return { errorKey: 'auth.errors.invalid_credentials' };
+       // ✅ FIX: Clau relativa
+      return { errorKey: 'errors.invalid_credentials' };
     }
 
     redirect('/');

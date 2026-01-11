@@ -26,7 +26,9 @@ describe('GetActiveTopicsUseCase', () => {
         colorTheme: 'blue', 
         isActive: true, 
         createdAt: new Date(), 
-        updatedAt: new Date() 
+        updatedAt: new Date() ,
+        description: 'Test Description'
+        
       }
     ];
     

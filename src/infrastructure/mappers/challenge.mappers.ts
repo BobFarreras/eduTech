@@ -1,8 +1,8 @@
 // filepath: src/infrastructure/mappers/challenge.mappers.ts
-import { ChallengeContent } from '@/core/entities/challenges/challenge.entity';
+import { ChallengeContent } from '@/core/entities/challenges'; // Assegura't d'importar des del barrel
 import { translate, LocalizedString } from './mapper.utils';
 
-// --- DEFINICIONS DE DADES "RAW" (Així és com ve el JSON de BD) ---
+// --- DEFINICIONS DE DADES "RAW" (JSON de la BD) ---
 
 interface RawOption {
   id: string;
@@ -15,12 +15,7 @@ interface RawQuizContent {
   options: RawOption[];
   correctOptionIndex: number;
 }
-// 1. DEFINICIÓ RAW (Com ve de la BD)
-interface RawLogicOrderContent {
-  description: LocalizedString;
-  items: Array<{ id: string; text: LocalizedString }>;
-}
-// Suport per a dades antigues (Legacy)
+
 interface LegacyRawQuizContent {
   question?: string;
   explanation?: string;
@@ -61,20 +56,31 @@ interface RawTerminalContent {
   };
 }
 
+interface RawLogicOrderContent {
+  description: LocalizedString;
+  items: Array<{ id: string; text: LocalizedString }>;
+}
+
+// ✅ 1. NOVA INTERFÍCIE RAW PER A BINARY
+interface RawBinaryContent {
+  statement: LocalizedString;
+  isTrue: boolean;
+  explanation: LocalizedString;
+  variant?: 'HOT_OR_NOT' | 'TRUE_FALSE';
+}
+
 // --- INTERFÍCIE D'ESTRATÈGIA ---
 interface ContentMapperStrategy {
-  // L'entrada és 'unknown' perquè ve de la BD/JSON. No assumim res fins a validar.
   map(rawData: unknown, locale: string): ChallengeContent;
 }
 
-// --- 1. QUIZ MAPPER ---
+// --- MAPPERS EXISTENTS ---
+
 class QuizMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
-    // 1. Intentem tractar-lo com a format nou
     const content = rawData as Partial<RawQuizContent>;
     const legacyContent = rawData as Partial<LegacyRawQuizContent>;
 
-    // Type Guard simple: Si té 'options' i és un array d'objectes -> Format Nou
     const isNewFormat = 
       content.options && 
       Array.isArray(content.options) && 
@@ -82,20 +88,17 @@ class QuizMapper implements ContentMapperStrategy {
       typeof content.options[0] === 'object';
 
     if (isNewFormat) {
-      // Ara TypeScript sap que 'content' és compatible amb RawQuizContent en aquest bloc
       const validContent = content as RawQuizContent;
-      
       return {
         question: translate(validContent.question, locale),
         explanation: translate(validContent.explanation, locale),
-        correctOptionIndex: validContent.correctOptionIndex,
+        correctOptionIndex: validContent.correctOptionIndex || 0,
         options: validContent.options.map((opt) => ({
           id: opt.id,
           text: translate(opt.text, locale)
         }))
       };
     } else {
-      // Legacy handling
       const opts = legacyContent.options || [];
       return {
         question: String(legacyContent.question || ''),
@@ -105,16 +108,14 @@ class QuizMapper implements ContentMapperStrategy {
           id: `opt-${idx}`,
           text: String(txt)
         })) : []
-      }; // No cal cast a 'any', ja retorna ChallengeContent (QuizContent)
+      };
     }
   }
 }
 
-// --- 2. MATCHING MAPPER ---
 class MatchingMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawMatchingContent;
-
     return {
       instruction: translate(content.instruction, locale),
       pairs: Array.isArray(content.pairs)
@@ -127,11 +128,9 @@ class MatchingMapper implements ContentMapperStrategy {
   }
 }
 
-// --- 3. CODE FIX MAPPER ---
 class CodeFixMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawCodeFixContent;
-
     return {
       description: translate(content.description, locale),
       initialCode: content.initialCode || '',
@@ -147,11 +146,9 @@ class CodeFixMapper implements ContentMapperStrategy {
   }
 }
 
-// --- 4. TERMINAL MAPPER ---
 class TerminalMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawTerminalContent;
-
     return {
       instruction: translate(content.instruction, locale),
       initialCommand: content.initialCommand || '',
@@ -166,12 +163,9 @@ class TerminalMapper implements ContentMapperStrategy {
   }
 }
 
-
-// 2. LOGIC ORDER MAPPER (NOU)
 class LogicOrderMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawLogicOrderContent;
-
     return {
       description: translate(content.description, locale),
       items: Array.isArray(content.items)
@@ -180,6 +174,21 @@ class LogicOrderMapper implements ContentMapperStrategy {
             text: translate(item.text, locale)
           }))
         : []
+    };
+  }
+}
+
+// ✅ 2. NOU MAPPER PER A BINARY
+class BinaryMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawBinaryContent;
+    
+    // Aquí és on passa la màgia: 'translate' agafa l'objecte {ca, en} i retorna un STRING net
+    return {
+      statement: translate(content.statement, locale),
+      explanation: translate(content.explanation, locale),
+      isTrue: content.isTrue,
+      variant: content.variant || 'TRUE_FALSE'
     };
   }
 }
@@ -193,6 +202,10 @@ export const ChallengeMapperFactory = {
       case 'CODE_FIX': return new CodeFixMapper();
       case 'TERMINAL': return new TerminalMapper();
       case 'LOGIC_ORDER': return new LogicOrderMapper();
+      
+      // ✅ 3. REGISTREM EL NOU TIPUS
+      case 'BINARY_DECISION': return new BinaryMapper();
+      
       default:
         console.warn(`Unknown challenge type: ${type}. Fallback to Quiz.`);
         return new QuizMapper();

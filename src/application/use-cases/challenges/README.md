@@ -1,41 +1,43 @@
-# ⚔️ Challenges Module (Game Engine)
+// filepath: src/application/use-cases/challenges/README.md
 
-Aquest mòdul és el cor de l'aplicació. Gestiona la recuperació, validació i presentació dels reptes educatius.
+# ⚔️ Challenges Module (Application Layer)
+
+Aquest mòdul és el cor de l'aplicació. Gestiona la recuperació, orquestració i lògica de negoci dels reptes educatius.
 
 ## 🧠 Lògica de Negoci
 
-### Estructura del Contingut
-El contingut és **Polimòrfic**. La base de dades guarda un JSONB, però el Domini el converteix en tipus estrictes:
-* `QUIZ`: Pregunta + 4 opcions + resposta correcta.
-* `CODE_FIX` (Futur): Codi trencat + Solució regex.
-* `TERMINAL` (Futur): Comanda esperada.
+### Estructura del Contingut (Polimorfisme)
+El Domini converteix el JSONB de la base de dades en estructures de dades tipades estrictament:
+* **`QUIZ`**: Pregunta + Opcions + Solució.
+* **`CODE_FIX`**: Editor de codi + Snippets de reparació.
+* **`TERMINAL`**: Simulador de consola + Validació de comandes.
+* **`MATCHING`**: Parelles de conceptes.
 
-### Sessions d'Aprenentatge
-L'usuari no demana 1 repte, sinó una **Sessió** (Batch).
-* Actualment: Es recuperen els següents 5 reptes disponibles del tema.
-* Ordre: Basat en `difficulty_tier`.
+### Sessions d'Aprenentatge (Batching)
+L'usuari juga per nivells de dificultat (`difficultyTier`).
+* El sistema recupera un conjunt de reptes filtrats per `topicId` i `difficulty`.
+* Això permet càrrega optimitzada (no fem una petició per cada pregunta).
 
 ---
 
-## ⚙️ Flux de Dades
+## ⚙️ Flux de Dades (Clean Architecture)
 
-1.  **Game Page (`/learn/[slug]`):**
-    * Releva l'slug de la URL i crida `getNextChallengeAction`.
+1.  **UI (`/learn/[slug]`):**
+    * L'usuari entra a un nivell específic.
+    * Es dispara `GetNextChallengeUseCase` passant el `difficulty` seleccionat.
 2.  **Use Case (`GetNextChallengeUseCase`):**
-    * Tradueix `slug` -> `topicId`.
-    * Busca reptes a `SupabaseChallengeRepository`.
-    * Retorna una llista `Challenge[]`.
-3.  **Frontend Engine (`GameArena`):**
-    * Rep la llista i gestiona l'estat local (índex actual).
-    * No torna a contactar amb el servidor fins que s'acaba la llista (per optimitzar latència).
+    * Valida que el tema existeix (`TopicRepository`).
+    * Demana els reptes al `ChallengeRepository` amb els filtres adequats.
+    * Retorna `Challenge[]` (Entitats pures).
+3.  **Presentation (`GameArena`):**
+    * Rep les entitats i utilitza el `ChallengeRenderer` per pintar la vista corresponent segons el `type`.
 
 ---
 
 ## 🛠️ Components Clau
 
-| Component | Tipus | Responsabilitat |
+| Component | Capa | Responsabilitat |
 | :--- | :--- | :--- |
 | `GetNextChallengeUseCase` | Application | Orquestració de la càrrega de sessió. |
-| `Challenge` | Entity | Defineix els tipus `QuizContent`, etc. |
-| `GameArena` | Presentation | **Client Component**. Gestiona el bucle de joc i la UI interactiva. |
-| `QuizView` | Presentation | Renderitza un repte tipus test i valida visualment la resposta. |
+| `Challenge` | Entity | Defineix els contractes de dades (Quiz, Terminal, etc.). |
+| `IChallengeRepository` | Domain | Interfície que defineix com accedir a les dades. |
