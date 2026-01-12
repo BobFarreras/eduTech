@@ -22,7 +22,7 @@ export const BOSS_CONFIG: Record<number, BossConfig> = {
     color: "bg-purple-600 shadow-purple-600/50", // Lila Arquitecte
     iconName: "crown"
   },
-  40: {
+  41: {
     titleKey: "milestones.legend",
     color: "bg-yellow-500 shadow-yellow-500/50", // Daurat CTO
     iconName: "rocket"

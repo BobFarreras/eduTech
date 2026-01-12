@@ -73,7 +73,10 @@ export default {
     supabase: { title: "Supabase i SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguretat OWASP" },
-    docker_basics: { title: "Contenidors Docker" }
+    docker_basics: { title: "Contenidors Docker" },
+    owasp: {
+      title: "Ciberseguretat (OWASP Top 10)"
+    }
   },
 
   // --- NOVA SECCIÓ AUTH ---

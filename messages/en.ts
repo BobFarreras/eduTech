@@ -72,7 +72,11 @@ export default {
     supabase: { title: "Supabase & SQL" },
     legacy: { title: "Legacy PHP" }, // Encara que estigui desactivat
     security: { title: "OWASP Top 10" }, // Exemple extra
-    docker_basics: { title: "Docker Containers" }
+    docker_basics: { title: "Docker Containers" },
+
+    owasp: {
+      title: "Cybersecurity (OWASP Top 10)"
+    }
   },
   auth: {
     login: {

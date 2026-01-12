@@ -72,72 +72,73 @@ export default {
     supabase: { title: "Supabase y SQL" },
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguridad OWASP" },
-    docker_basics: { title: "Contenedores Docker" }
-  },
-  auth: {
-    login: {
-      title: "Bienvenido a eduTech 🚀",
-      subtitle: "Inicia sesión para seguir aprendiendo.",
-      submit_button: "Iniciar sesión",
-      forgot_password: "¿Olvidaste tu contraseña?",
-      no_account: "¿No tienes una cuenta?",
-      register_link: "Crear cuenta gratis"
+    docker_basics: { title: "Contenedores Docker" },
+    owasp: {title: "Ciberseguridad (OWASP Top 10)"}
     },
-    register: {
-      title: "Únete a eduTech",
-      subtitle: "Empieza a aprender hoy.",
-      submit_button: "Crear cuenta",
-      have_account: "¿Ya tienes una cuenta?",
-      login_link: "Iniciar sesión"
+    auth: {
+      login: {
+        title: "Bienvenido a eduTech 🚀",
+        subtitle: "Inicia sesión para seguir aprendiendo.",
+        submit_button: "Iniciar sesión",
+        forgot_password: "¿Olvidaste tu contraseña?",
+        no_account: "¿No tienes una cuenta?",
+        register_link: "Crear cuenta gratis"
+      },
+      register: {
+        title: "Únete a eduTech",
+        subtitle: "Empieza a aprender hoy.",
+        submit_button: "Crear cuenta",
+        have_account: "¿Ya tienes una cuenta?",
+        login_link: "Iniciar sesión"
+      },
+      fields: {
+        email: "Correo electrónico",
+        email_placeholder: "usuario@ejemplo.com",
+        password: "Contraseña",
+        password_placeholder: "••••••••"
+      },
+      errors: {
+        generic: "Ocurrió un error inesperado.",
+        invalid_credentials: "Correo electrónico o contraseña incorrectos.",
+        user_already_exists: "El correo electrónico ya está registrado.",
+        weak_password: "La contraseña debe tener al menos 6 caracteres."
+      },
+      success: {
+        check_email: "¡Cuenta creada! Revisa tu correo electrónico."
+      },
+      logout: "Cerrar sesión"
     },
-    fields: {
-      email: "Correo electrónico",
-      email_placeholder: "usuario@ejemplo.com",
-      password: "Contraseña",
-      password_placeholder: "••••••••"
+    landing: {
+      badge: "Aprende programación jugando",
+      title_prefix: "Conviértete en",
+      title_highlight: "Senior Developer",
+      description: "Domina React, Docker y Ciberseguridad con retos interactivos. Sin vídeos aburridos. Solo práctica real.",
+      cta_primary: "EMPEZAR GRATIS",
+      cta_secondary: "SABER MÁS",
+      login_button: "ENTRAR"
     },
-    errors: {
-      generic: "Ocurrió un error inesperado.",
-      invalid_credentials: "Correo electrónico o contraseña incorrectos.",
-      user_already_exists: "El correo electrónico ya está registrado.",
-      weak_password: "La contraseña debe tener al menos 6 caracteres."
+    milestones: {
+      junior: "Desarrollador Junior",
+      senior: "Ingeniero Senior",
+      architect: "Arquitecto Tech Lead",
+      legend: "Leyenda del Código"
     },
-    success: {
-      check_email: "¡Cuenta creada! Revisa tu correo electrónico."
-    },
-    logout: "Cerrar sesión"
-  },
-  landing: {
-    badge: "Aprende programación jugando",
-    title_prefix: "Conviértete en",
-    title_highlight: "Senior Developer",
-    description: "Domina React, Docker y Ciberseguridad con retos interactivos. Sin vídeos aburridos. Solo práctica real.",
-    cta_primary: "EMPEZAR GRATIS",
-    cta_secondary: "SABER MÁS",
-    login_button: "ENTRAR"
-  },
-  milestones: {
-    junior: "Desarrollador Junior",
-    senior: "Ingeniero Senior",
-    architect: "Arquitecto Tech Lead",
-    legend: "Leyenda del Código"
-  },
-  Admin: {
-    Challenges: {
-      title: "Crear Nuevo Reto",
-      form: {
-        topicLabel: "Tema",
-        topicPlaceholder: "Selecciona un tema...",
-        difficultyLabel: "Dificultad (1-5)",
-        typeLabel: "Tipo de Reto",
-        questionLabel: "Enunciado / Pregunta",
-        submitButton: "Crear Reto",
-        saving: "Guardando...",
-        success: "¡Reto creado correctamente!",
-        error: "Error al crear el reto."
+    Admin: {
+      Challenges: {
+        title: "Crear Nuevo Reto",
+        form: {
+          topicLabel: "Tema",
+          topicPlaceholder: "Selecciona un tema...",
+          difficultyLabel: "Dificultad (1-5)",
+          typeLabel: "Tipo de Reto",
+          questionLabel: "Enunciado / Pregunta",
+          submitButton: "Crear Reto",
+          saving: "Guardando...",
+          success: "¡Reto creado correctamente!",
+          error: "Error al crear el reto."
+        }
       }
     }
-  }
 
 
-} as const;
+  } as const;

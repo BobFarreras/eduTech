@@ -5,26 +5,29 @@ import { MatchingContent } from './definitions/matching.content';
 import { TerminalContent } from './definitions/terminal.content';
 import { LogicOrderContent } from './definitions/logic-order.content';
 import { BinaryContent } from './definitions/binary.content';
-
-// 1. Tipus de Repte (Enum strings)
+// 1. IMPORTEM EL NOU TIPUS
+import { TheoryContent } from './definitions/theory.content';
+import { CtfContent } from './definitions/ctf.content'; // 👈 IMPORTAR
 export type ChallengeType = 
+  | 'THEORY' // Assegura't que està aquí
   | 'QUIZ' 
   | 'CODE_FIX' 
   | 'MATCHING' 
   | 'TERMINAL' 
   | 'BINARY_DECISION'
+  | 'CTF' // 👈 AFEGIR
   | 'LOGIC_ORDER';
 
-// 2. Unió Discriminada (Polimorfisme)
 export type ChallengeContent = 
   | QuizContent 
   | CodeFixContent 
   | MatchingContent
   | TerminalContent 
   | LogicOrderContent
-  | BinaryContent;
+  | BinaryContent
+  | TheoryContent // 2. L'AFEGIM AQUI
+  | CtfContent; // 👈 AFEGIR
 
-// 3. Entitat de Domini
 export interface Challenge {
   id: string;
   topicId: string;
