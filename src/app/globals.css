@@ -22,6 +22,30 @@
     0%, 100% { transform: scale(1); }
     50% { transform: scale(0.95); }
   }
+
+
+
+  /* Girar molt lent (per anells d'energia) */
+  --animate-spin-slow: spin 10s linear infinite;
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Girar lent al revés */
+  --animate-spin-reverse: spin-reverse 25s linear infinite;
+  @keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  /* Pols de llum (Glow) */
+  --animate-pulse-glow: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; filter: brightness(1.2); }
+    50% { opacity: .7; filter: brightness(1); }
+  }
+
 }
 
 @layer components {
@@ -57,4 +81,6 @@
   .input-game {
     @apply w-full p-4 bg-slate-800 border-2 border-slate-700 rounded-xl text-white font-bold placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:bg-slate-900 transition-all;
   }
+
+  
 }

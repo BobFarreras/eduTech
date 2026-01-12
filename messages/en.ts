@@ -115,5 +115,29 @@ export default {
     cta_primary: "START FOR FREE",
     cta_secondary: "LEARN MORE",
     login_button: "LOGIN"
+  },
+  milestones: {
+    junior: "Junior Developer",
+    senior: "Senior Engineer",
+    architect: "Tech Lead Architect",
+    legend: "Code Legend"
+  },
+  Admin: {
+    Challenges: {
+      title: "Create New Challenge",
+      form: {
+        topicLabel: "Topic",
+        topicPlaceholder: "Select a topic...",
+        difficultyLabel: "Difficulty (1-5)",
+        typeLabel: "Challenge Type",
+        questionLabel: "Prompt / Question",
+        submitButton: "Create Challenge",
+        saving: "Saving...",
+        success: "Challenge created successfully!",
+        error: "Error creating the challenge."
+      }
+    }
   }
+
+
 } as const;

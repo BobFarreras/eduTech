@@ -1,11 +1,11 @@
 // filepath: src/infrastructure/repositories/supabase/topic.repository.ts
-
 import { ITopicRepository, TierProgressStats } from '@/core/repositories/topic.repository';
 import { Topic, CreateTopicInput } from '@/core/entities/topic.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
-import { createClient } from '@/infrastructure/utils/supabase/server'; // El teu helper
+import { createClient } from '@/infrastructure/utils/supabase/server';
 import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
-// 1. Definim el tipus exacte de la fila a la BD (Lectura)
+
+// Tipus intern de la BD (Snake Case)
 type TopicRow = {
   id: string;
   slug: string;
@@ -19,7 +19,6 @@ type TopicRow = {
   description?: string;
 };
 
-// 2. Definim el tipus per a Escriptura (Insert/Update)
 type TopicPersistencePayload = {
   slug?: string;
   name_key?: string;
@@ -31,9 +30,7 @@ type TopicPersistencePayload = {
 
 export class SupabaseTopicRepository implements ITopicRepository {
 
-  // ❌ ESBORRAT: No podem tenir una propietat 'supabase' aquí perquè el client és async.
-  // private supabase = ...
-
+  // Aquest mètode és la clau per evitar duplicar lògica de mapeig
   private mapToEntity(row: TopicRow): Topic {
     return {
       id: row.id,
@@ -50,68 +47,78 @@ export class SupabaseTopicRepository implements ITopicRepository {
   }
 
   async findAllActive(): Promise<Topic[]> {
-    // ✅ CORRECCIÓ: Instanciem el client DINS del mètode
     const supabase = await createClient();
 
     const { data, error } = await supabase
       .from('topics')
       .select('*')
-      .eq('is_active', true)
-      .returns<TopicRow[]>();
+      .eq('is_active', true);
 
     if (error) throw new Error(`Supabase Error: ${error.message}`);
 
-    return data.map((row) => this.mapToEntity(row));
+    const rows = data as TopicRow[];
+    return rows.map((row) => this.mapToEntity(row));
   }
 
+  // CORRECCIÓ PRINCIPAL AQUÍ:
   async findAll(): Promise<Topic[]> {
-    const supabase = await createClient(); // ✅ Instancia local
+    const supabase = await createClient();
 
     const { data, error } = await supabase
       .from('topics')
       .select('*')
-      .returns<TopicRow[]>();
+      // Ordenem per clau de nom per defecte
+      .order('name_key', { ascending: true }); 
 
-    if (error) throw new Error(error.message);
-    return data.map((row) => this.mapToEntity(row));
+    if (error) {
+      console.error('Error fetching topics:', error);
+      throw new Error('Could not fetch topics');
+    }
+
+    // Convertim les dades crues al tipus TopicRow
+    const rows = data as TopicRow[];
+
+    // Usem el mètode centralitzat per convertir a Entitat de Domini
+    // Això garanteix que camps com 'nameKey', 'iconName' i 'isActive' existeixin.
+    return rows.map((row) => this.mapToEntity(row));
   }
 
   async findById(id: string): Promise<Topic | null> {
-    const supabase = await createClient(); // ✅ Instancia local
+    const supabase = await createClient();
 
     const { data, error } = await supabase
       .from('topics')
       .select('*')
       .eq('id', id)
-      .single<TopicRow>();
+      .single();
 
     if (error) {
       if (error.code === 'PGRST116') return null;
       throw new Error(error.message);
     }
 
-    return this.mapToEntity(data);
+    return this.mapToEntity(data as TopicRow);
   }
 
   async findBySlug(slug: string): Promise<Topic | null> {
-    const supabase = await createClient(); // ✅ Instancia local
+    const supabase = await createClient();
 
     const { data, error } = await supabase
       .from('topics')
       .select('*')
       .eq('slug', slug)
-      .single<TopicRow>();
+      .single();
 
     if (error) {
       if (error.code === 'PGRST116') return null;
       throw new Error(error.message);
     }
 
-    return this.mapToEntity(data);
+    return this.mapToEntity(data as TopicRow);
   }
 
   async create(input: CreateTopicInput): Promise<Topic> {
-    const supabase = await createClient(); // ✅ Instancia local
+    const supabase = await createClient();
 
     const dbPayload: TopicPersistencePayload = {
       slug: input.slug,
@@ -126,14 +133,14 @@ export class SupabaseTopicRepository implements ITopicRepository {
       .from('topics')
       .insert(dbPayload)
       .select()
-      .single<TopicRow>();
+      .single();
 
     if (error) throw new Error(error.message);
-    return this.mapToEntity(data);
+    return this.mapToEntity(data as TopicRow);
   }
 
   async update(id: string, input: Partial<CreateTopicInput>): Promise<Topic> {
-    const supabase = await createClient(); // ✅ Instancia local
+    const supabase = await createClient();
 
     const dbPayload: TopicPersistencePayload = {};
 
@@ -149,7 +156,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
       .update(dbPayload)
       .eq('id', id)
       .select()
-      .single<TopicRow>();
+      .single();
 
     if (error) {
       if (error.code === 'PGRST116') {
@@ -158,22 +165,20 @@ export class SupabaseTopicRepository implements ITopicRepository {
       throw new Error(error.message);
     }
 
-    return this.mapToEntity(data);
+    return this.mapToEntity(data as TopicRow);
   }
 
   async getTopicProgressSummary(topicId: string, userId: string): Promise<TierProgressStats[]> {
     const supabase = await createClient();
 
-    // 1. Obtenir reptes amb el seu TIPUS
     const { data: challenges, error: chalError } = await supabase
       .from('challenges')
-      .select('id, difficulty_tier, type') // <--- AFEGIM 'type'
+      .select('id, difficulty_tier, type')
       .eq('topic_id', topicId);
 
     if (chalError) throw new Error(chalError.message);
-    if (!challenges) return [];
+    if (!challenges || challenges.length === 0) return [];
 
-    // 2. Obtenir el progrés de l'usuari en aquest tema
     const { data: progress, error: progError } = await supabase
       .from('user_progress')
       .select('challenge_id')
@@ -182,34 +187,42 @@ export class SupabaseTopicRepository implements ITopicRepository {
 
     if (progError) throw new Error(progError.message);
 
-    // 3. Càlculs (Igual que abans)
     const completedSet = new Set(progress?.map(p => p.challenge_id));
-   const statsMap = new Map<number, TierProgressStats>();
+    const statsMap = new Map<number, TierProgressStats>();
 
-    challenges.forEach(c => {
+    for (const c of challenges) {
       const tier = c.difficulty_tier;
-      
-      // ✅ CORRECCIÓ 3: Cast segur al nostre tipus (ChallengeType) en lloc de 'any'
-      // Supabase retorna string, nosaltres li diem a TS que confiem que és un dels nostres tipus.
-      const type = c.type as ChallengeType; 
+      const type = c.type as ChallengeType;
 
       if (!statsMap.has(tier)) {
         statsMap.set(tier, {
           tier,
           totalChallenges: 0,
           completedChallenges: 0,
-          mostCommonType: type // Usem la variable tipada
+          mostCommonType: type
         });
       }
+
       const stat = statsMap.get(tier)!;
       stat.totalChallenges++;
+
       if (completedSet.has(c.id)) {
         stat.completedChallenges++;
       }
-    });
+    }
 
     return Array.from(statsMap.values()).sort((a, b) => a.tier - b.tier);
   }
 
-  
+  async delete(id: string): Promise<void> {
+    const supabase = await createClient();
+    const { error } = await supabase
+      .from('topics')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      throw new Error(`Error eliminant el topic: ${error.message}`);
+    }
+  }
 }

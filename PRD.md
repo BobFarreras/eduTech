@@ -154,15 +154,18 @@ El sistema ha de suportar múltiples modalitats de joc. L'arquitectura ha de per
 
 ## 6. EXPERIÈNCIA D'USUARI (UX FLOW)
 
-### 6.1 Dashboard (World Select)
-* Vista tipus graella de tots els temes disponibles.
-* Cada targeta mostra: Icona, Nom, Barra de progrés global del tema.
-
 ### 6.2 Learning Path (Topic View)
 * Vista vertical amb "scroll infinit" cap amunt o avall.
-* Representació visual d'un camí (Path).
-* Els nodes del camí representen nivells de dificultat (`difficulty_tier`).
-* **Bloqueig de Progrés:** L'usuari no pot accedir al Tier 2 fins que no hagi superat el Tier 1 (o hagi fet un examen de nivell).
+* **Nodes del Camí:**
+    * **Nivells Normals:** Cercles amb icona del tipus predominant (Quiz, Codi, Tutorial).
+    * **Nivells Boss (Milestones):** * Apareixen cada X nivells (Configurable: Tiers 3, 5, 10...).
+        * Visualment distintius (més grans, amb vora animada o color especial).
+        * Representen una fita de coneixement.
+* **Estats dels Nodes:**
+    * 🔒 **Locked:** Gris, no interactuable.
+    * ▶️ **Active:** Color, amb efecte "pulse". És el següent repte a fer.
+    * ✅ **Completed:** Color sòlid + Checkmark. Rejugable.
+...
 
 ### 6.3 Game Mode
 * Interfície immersiva (sense header/footer de navegació).

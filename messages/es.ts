@@ -115,5 +115,29 @@ export default {
     cta_primary: "EMPEZAR GRATIS",
     cta_secondary: "SABER MÁS",
     login_button: "ENTRAR"
+  },
+  milestones: {
+    junior: "Desarrollador Junior",
+    senior: "Ingeniero Senior",
+    architect: "Arquitecto Tech Lead",
+    legend: "Leyenda del Código"
+  },
+  Admin: {
+    Challenges: {
+      title: "Crear Nuevo Reto",
+      form: {
+        topicLabel: "Tema",
+        topicPlaceholder: "Selecciona un tema...",
+        difficultyLabel: "Dificultad (1-5)",
+        typeLabel: "Tipo de Reto",
+        questionLabel: "Enunciado / Pregunta",
+        submitButton: "Crear Reto",
+        saving: "Guardando...",
+        success: "¡Reto creado correctamente!",
+        error: "Error al crear el reto."
+      }
+    }
   }
+
+
 } as const;

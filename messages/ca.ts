@@ -118,5 +118,27 @@ export default {
     cta_primary: "COMENÇAR GRATIS",
     cta_secondary: "SABER-NE MÉS",
     login_button: "ENTRAR"
+  },
+  milestones: {
+    junior: "Desenvolupador Junior",
+    senior: "Enginyer Senior",
+    architect: "Tech Lead Architect",
+    legend: "Llegenda del Codi"
+  },
+  Admin: {
+    Challenges: {
+      title: "Crear Nou Repte",
+      form: {
+        topicLabel: "Tema",
+        topicPlaceholder: "Selecciona un tema...",
+        difficultyLabel: "Dificultat (1-5)",
+        typeLabel: "Tipus de Repte",
+        questionLabel: "Enunciat / Pregunta",
+        submitButton: "Crear Repte",
+        saving: "Guardant...",
+        success: "Repte creat correctament!",
+        error: "Error al crear el repte."
+      }
+    }
   }
 } as const;

@@ -34,6 +34,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │       ├── heads
 │   │       │   ├── develop
 │   │       │   ├── feature
+│   │       │   │   ├── crear-admin
 │   │       │   │   ├── disseny
 │   │       │   │   ├── guia-landing-dashbaord-temas
 │   │       │   │   └── intro
@@ -50,6 +51,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │               └── main
 │   ├── objects
 │   │   ├── 00
+│   │   │   ├── 38258cf4b674e4556ea03c4cef1e1f33890ba9
 │   │   │   └── 4145cddf3f9db91b57b9cb596683c8eb420862
 │   │   ├── 01
 │   │   │   ├── 0eef23e3ed3e7876206ffad64bf4494c6ef227
@@ -85,13 +87,15 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 13009f75033f238a46de000826d890d0479b16
 │   │   │   └── d69f6e23d4ad3740241f397554e8bac8744487
 │   │   ├── 0c
-│   │   │   └── 1f99ab34c339c2ea2d1a435a356118b4ff274b
+│   │   │   ├── 1f99ab34c339c2ea2d1a435a356118b4ff274b
+│   │   │   └── fda66e6fa084a1bf9ec5cc6f8bec8305ac6a6a
 │   │   ├── 0d
 │   │   │   ├── 61fc3145757dff109ec9f6e6881e8274b6fbcd
 │   │   │   ├── b39bab6cdcaac3727db5c9917123f8b34797b9
 │   │   │   └── ca57ff408f6ff3f3f9dd3e8438514a1d9175ad
 │   │   ├── 0e
-│   │   │   └── 4d12127f3e7b2e2d8f83ce171ab9b5a8472dc0
+│   │   │   ├── 4d12127f3e7b2e2d8f83ce171ab9b5a8472dc0
+│   │   │   └── 9d82be1a9774d511da749193426a5a5c982946
 │   │   ├── 0f
 │   │   │   └── 94900c5ede38da9333b59d70605cb22ac2c56b
 │   │   ├── 10
@@ -103,10 +107,13 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 11
 │   │   │   ├── 1a4703e992d2e086f64b5b44e7699e1a66ee37
 │   │   │   └── 3ff51874a0c194cabf16238facf1606639b430
+│   │   ├── 12
+│   │   │   └── c5482caa8f6500ca4f22b644792b12510484f7
 │   │   ├── 13
 │   │   │   ├── 37c09f5b5c6afbc222872e76b15f45ce8afde4
 │   │   │   └── fd6ef1df7a3a04a7b9ac2109d583a577a01c41
 │   │   ├── 14
+│   │   │   ├── 0433e4057d6a089b64f36e5e8ea60cbf44ee59
 │   │   │   ├── 0a2428b176921e71677d0ae9fe72c2471e62f0
 │   │   │   ├── 239e33c642ebae81dfead9793f6d448c4c3d53
 │   │   │   └── e6698b9cd6ef72606c4c8e46e26459b14c0c28
@@ -137,6 +144,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 38c4140d843dd5048c7fc01778190a278d5f4f
 │   │   │   └── bdefa03f86d5362e42a17484cb981f35cf9657
 │   │   ├── 1c
+│   │   │   ├── 702c66ddf00c0430e6e3d7c5ac42571ae4def8
 │   │   │   └── e2de9553d3e043e5f664ea0aaf3f03f28388aa
 │   │   ├── 1d
 │   │   │   ├── 06b087f2924c307c6bb65f7f1f50312aaacdc0
@@ -168,24 +176,30 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── ef84f46b9096d61c8da2fa14d388eaac2c7ca7
 │   │   ├── 25
 │   │   │   ├── 620be82adf68408563df8406776739ece50cba
+│   │   │   ├── 80ee9ab8043c8dd5d0cb4219cac35ce597663d
 │   │   │   ├── 85c78eed6c3f92a45db47a2d93d26de3b103d5
-│   │   │   └── 9cb818bbe158d8652b209a09ba3793c7d85164
+│   │   │   ├── 9cb818bbe158d8652b209a09ba3793c7d85164
+│   │   │   └── b9e53df0195a5795cb59c1ae9391d2ae8d8485
 │   │   ├── 26
 │   │   │   └── c1ad9bb3f31571028cc2e70efd84b4bc521f94
 │   │   ├── 28
 │   │   │   ├── 3755f6a4baa82f78345123acb23ceea1e38b8c
 │   │   │   ├── d949ca0826d217ff324d737ff58ed654d667c9
-│   │   │   └── df353e961d46630a57d7a8ea7b6a6f54f7bd88
+│   │   │   ├── df353e961d46630a57d7a8ea7b6a6f54f7bd88
+│   │   │   └── fb7b926b6ba9ffc729d5383c38c07968428ba3
 │   │   ├── 29
 │   │   │   ├── 5f8fdf14fcfe6cccaa832133037157521b1890
 │   │   │   ├── b31ab112cf6500423b77898317dd139f59d5b3
 │   │   │   ├── bf102ba89b603bf873441d557f7580fbd941a6
 │   │   │   └── ed011bba0f49f19aa1b2f970c6849754cf69eb
+│   │   ├── 2a
+│   │   │   └── 3691384e34f9b6b52e63f40fb2dfd734b2003b
 │   │   ├── 2b
 │   │   │   └── b180444840fd8115b4d7ad05ab2d3bb3e00410
 │   │   ├── 2c
 │   │   │   ├── 33dae76f776268f9eacf7f9bed0eb7afb79897
 │   │   │   ├── 83f74a34a2404b39d41483302cd218e6e2b616
+│   │   │   ├── 910247388164df97fb5159a77f503799f769b8
 │   │   │   ├── a3e961a71678c49e89eb2bb8e1c17c4f367b6c
 │   │   │   └── d7983b1c3542b0765ea7bc182d7b1b8d1a8f37
 │   │   ├── 2d
@@ -201,11 +215,15 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── 64b81e80cf949ad98ace47b0bfdbe51815e34f
 │   │   ├── 32
 │   │   │   ├── 21f6486fbdce0f9df334b4ebdb1712378fdb2e
+│   │   │   ├── 6843c80c537128e2219bf4d8ccb81df5300ce1
 │   │   │   └── e55937e08a9e9c6b6668139b800cf00972598c
+│   │   ├── 33
+│   │   │   └── cf8c7ee53e3886380268b04adc8d1f7bf48677
 │   │   ├── 34
 │   │   │   └── aaad1b55589ee16a460cf745f150e9e3c35238
 │   │   ├── 35
 │   │   │   ├── 00afdf9f09b933f0bc6954f576be9400fc45cb
+│   │   │   ├── 2043678b242b1f0b160e7eff00e37722cd057c
 │   │   │   └── 2de3757a0aed623e714d2a7ec71eb0c448611b
 │   │   ├── 36
 │   │   │   ├── f345740d5cfe4a662e5976e288e062251ef0cd
@@ -225,9 +243,12 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 3b
 │   │   │   └── c1f9cfb261928772ee7db9178d84fb1d6e9861
 │   │   ├── 3c
+│   │   │   ├── 1297478b736510a00a0a97ae2e68f5d9687950
 │   │   │   └── 9f5a80fbeb07ba3bb268df78f05350c9efc6eb
 │   │   ├── 3d
+│   │   │   ├── a09def916a54bf29d33d9829f201e4406a2c91
 │   │   │   ├── a9b0adf0c8e4db443baab46b410d177435bdf9
+│   │   │   ├── c41f465bc85f597bc512a7a9728edc66ccb951
 │   │   │   └── d622fd0e7db324caed1164ed126363b5c25bad
 │   │   ├── 3e
 │   │   │   ├── b652e6cc3294e4256523cf995dd0863bf140d4
@@ -236,10 +257,13 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 0abce9320b2946a2a419106589095411878c18
 │   │   │   ├── 3f1d8815f85f94d581d30a5368f92610823d7f
 │   │   │   └── 795c4719a381185e1d5dde19cc57446a7b92cf
+│   │   ├── 40
+│   │   │   └── bcab5e2d43bbc3e299efd7123ebcb0a6ec5789
 │   │   ├── 42
 │   │   │   └── 2e226632f46ebf95f8156fdad2429e5c17369d
 │   │   ├── 43
 │   │   │   ├── 15996943841cc3786a79ea7e75da20c3b4c0f5
+│   │   │   ├── c48d5fe5623316ab6e51a31ac44ab36cdb1452
 │   │   │   └── f752b362a7171fc3082ee213b39a89a77d233e
 │   │   ├── 44
 │   │   │   ├── 33a9e2dcf80b5d027852fec66aedc0a4081419
@@ -270,13 +294,15 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 3e60c0ab8df919b259e85ef5dbfeca805f5024
 │   │   │   ├── 72bcc0916491a2d79d8991576ef4cd047e5256
 │   │   │   ├── 7f5f66f495830e43b101040ee4119ee778b13d
-│   │   │   └── 8ac67ae9af5fac962ad54466be430d83722720
+│   │   │   ├── 8ac67ae9af5fac962ad54466be430d83722720
+│   │   │   └── e7aea12c55874127f6554c890deb49d23eba57
 │   │   ├── 4e
 │   │   │   ├── 1ca65f38f890868fc09edbb416fd56691c4a98
 │   │   │   ├── 22e75671a3be243b539e48efe05d0cf186207a
 │   │   │   ├── 8128c13ee1f30c70773245b478c73d97068834
 │   │   │   └── d0c80be3ce06a7227dd64672065059ee82a46c
 │   │   ├── 4f
+│   │   │   ├── cc2c343e6e54cfd1bf378625ecc9818ef5a427
 │   │   │   └── e3df39c2b9cfc5412e3f44c96fc52b3a766662
 │   │   ├── 50
 │   │   │   ├── 1681935a10848a742f4734a29e1eb54c3741e0
@@ -287,6 +313,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 4fa32bdfba678418e8257935069d9b99176e61
 │   │   │   └── 74b28c565c285e3e312ec5178be64fbeca8398
 │   │   ├── 52
+│   │   │   ├── 0365b5f68380c5adc7347d9d73d97ed25bcbfb
+│   │   │   ├── 69471159b90c61a4174527f9e9dd6c556fb5a3
 │   │   │   └── 7b05f291fdd7cf1213ff5b485f837b62a7bed4
 │   │   ├── 53
 │   │   │   ├── 358a5c2b94e262aa6dc86e9fb0f72bea850184
@@ -302,9 +330,11 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 58
 │   │   │   └── bd66e222ef2690c5141a8d9bb965182ffd755b
 │   │   ├── 59
+│   │   │   ├── 4d036ad73620d9e644264ceea3735623f3fa92
 │   │   │   └── 762441534360e2f0dacbde4373688c086dcef4
 │   │   ├── 5a
 │   │   │   ├── 1d75d065e5e15ebb4b715d89c33745b2b4fe7b
+│   │   │   ├── 41722d9c382c91aeec8c7cfb0b38d220980feb
 │   │   │   ├── ca76ef45874e010a847d03b9f53482c7d00bd1
 │   │   │   └── fabbcc49de92848f355737f448a51be4b77c2c
 │   │   ├── 5b
@@ -322,7 +352,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── 5f
 │   │   │   └── 9338e1e57273fcc15065c07ba742e7d85cd21a
 │   │   ├── 60
-│   │   │   └── 3529b3ff040734310385de5d6e10a43f7825f2
+│   │   │   ├── 3529b3ff040734310385de5d6e10a43f7825f2
+│   │   │   └── 3d37f003bc27092c7429b57567bdbf0df40a94
 │   │   ├── 61
 │   │   │   ├── 925ebd9473a5264094d2abfdc540521a9cfdbc
 │   │   │   ├── bd35d411b806c2baf9ae4bc74c9d65af087d99
@@ -367,6 +398,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── c650b181b8802678414eb38578a5f6fcb378c0
 │   │   │   └── cdd16acbe992989fd60f86fce7572fbc2b8457
 │   │   ├── 6d
+│   │   │   ├── 106da23fec791e1f886644e4339fff6c14de32
 │   │   │   ├── 8528a8aaa9232337743c16c47a47a14a8b90f0
 │   │   │   └── ec08c3288ebb44f1c973ae8378e747bcbd831d
 │   │   ├── 6e
@@ -383,7 +415,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 53ebdab5909131d942fe35697a7748b6d6f37a
 │   │   │   ├── 6e59b6b961a3a6fc0cf8f2ea1a1de27b995c07
 │   │   │   ├── 84550fcb65e233aaa8d7f1e8079ee4d0f90899
-│   │   │   └── e776f2ae54982fd8091152aa8d941a95cf5cec
+│   │   │   ├── e776f2ae54982fd8091152aa8d941a95cf5cec
+│   │   │   └── f016b620e59adde8df270868c719a75ddac7d2
 │   │   ├── 71
 │   │   │   ├── 08a7455ac3521cfb2dc6f65dcf1099e219c2da
 │   │   │   ├── 8d6fea4835ec2d246af9800eddb7ffb276240c
@@ -393,6 +426,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── 91eaf9c03a77276ff7c6bc0fa0fd76c41193fb
 │   │   ├── 73
 │   │   │   └── df25bfa4202bdd9e126c1125fc19e18af8e49d
+│   │   ├── 74
+│   │   │   └── f825ffc02dab1f1926bcab63c957997410f7fb
 │   │   ├── 75
 │   │   │   └── 0fbf3bd2034fc0339e00137bd1aa625ecc2550
 │   │   ├── 76
@@ -407,6 +442,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 5f9f0d3fe77f55743d1f4af9331bed0029e0aa
 │   │   │   └── 899f1de8f8620147083721474ce663692aa14f
 │   │   ├── 79
+│   │   │   ├── 6e1b5f3d12743a8b0e89c30409f02b302121e4
 │   │   │   └── b95ec71a8e1a170c43ae3eac3c573136ec945b
 │   │   ├── 7a
 │   │   │   └── e253db098336a83a72060b75d07c52999fa2d8
@@ -421,19 +457,23 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── a60dcec011d7fe07df55a3460f54144693c715
 │   │   ├── 80
 │   │   │   ├── 307e031220d9287df6c8210b145f1bc11b3c82
+│   │   │   ├── 34c5e9a4ea1890291502bbdcb903cb59378ba6
 │   │   │   └── d9a039a54ad64e04b96a461c973f3810c9468c
 │   │   ├── 82
 │   │   │   ├── 0c7bfa7f19058c55dc962f54619019f6076d14
 │   │   │   └── e150d81b28a737f8f05ae89267770c60c7faaa
 │   │   ├── 83
-│   │   │   └── 0208aa3b69ea36173970f13b56128a201da103
+│   │   │   ├── 0208aa3b69ea36173970f13b56128a201da103
+│   │   │   └── bf87d9236238cd7b21be8a2241e7cd25359703
 │   │   ├── 84
 │   │   │   ├── 25971febcb78d372c790dd79ae92bf1dd17114
 │   │   │   └── da5efb62c34058c822cf55e84b2e2e37e512db
 │   │   ├── 85
 │   │   │   ├── 9f85ac590a98c1ca6f0141acd0d6fdcd1ce8c6
-│   │   │   └── cec038c8fbb945227c181948dcc8c407fdb437
+│   │   │   ├── cec038c8fbb945227c181948dcc8c407fdb437
+│   │   │   └── fedc470740f8382f87b59da681789b2dcb7a9c
 │   │   ├── 87
+│   │   │   ├── 0505d2f47cd8c37bbe09d1afbc694aa62ed845
 │   │   │   ├── 24663871e69a5ddb00260615e14f2c77718cc2
 │   │   │   ├── 56ae3a9e606a10486409e1ba7ecfc940eed223
 │   │   │   ├── 70f254e209aca2304a1e8436a2bb082ceddbec
@@ -457,6 +497,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 2cb87f170efaeeb9ded51c61eb8bb358fdef56
 │   │   │   └── 5adede09c5f7b2a15a10e67a188afd31950770
 │   │   ├── 8e
+│   │   │   ├── 167f316e288efa8717f1a8169f2f3a2eb131a0
 │   │   │   └── 37883471f58907aa611d62688bb8f9657d7834
 │   │   ├── 8f
 │   │   │   ├── 1525d8d8d2d073770f0c8af0445641a029dd87
@@ -479,6 +520,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── c961613ff1605d56cea4a36cd54bfc32a22162
 │   │   ├── 97
 │   │   │   └── 3df98d62fa9c685a6fab5633ab794cee53ece8
+│   │   ├── 98
+│   │   │   └── bde270b7c95ee0bf77872990db8d02395059ab
 │   │   ├── 99
 │   │   │   ├── 2428cd58c0cf84de0b8c8e5157c7f7f5675924
 │   │   │   ├── 9fa6c15c75cfaea7c509843fc7500a4d223056
@@ -488,7 +531,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── e2ad84233ef97092ffd3fd8e0d0905fecd93b9
 │   │   ├── 9b
 │   │   │   ├── 26ad3414c99b7a31852a97b3026fc90cbd3379
-│   │   │   └── 317fff1b90f99f948bdeff9ac806c35b1b8957
+│   │   │   ├── 317fff1b90f99f948bdeff9ac806c35b1b8957
+│   │   │   └── a2233ab7331e98bf7a9c0710a5c960b7acf6a1
 │   │   ├── 9c
 │   │   │   ├── 76c60214d033f75d9d9460463d9ccf67acf9fd
 │   │   │   └── f1a7fc2f312b8eb5a48675ad21041de50fc5e4
@@ -506,6 +550,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── c9b38cd3933c6f42e652b63149a5e71d17caa1
 │   │   │   └── f1371cbd80f4b87c71a4c5a8d1ca3098d11369
 │   │   ├── a2
+│   │   │   ├── 2322b0be7d5d9faa76b9f3ba7fb23f1148c7bd
 │   │   │   ├── 6a0f6774d196847097b42a7b1fb209198b5311
 │   │   │   └── dc41ecee5ec435200fe7cba2bde4107f823774
 │   │   ├── a3
@@ -517,6 +562,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── 6967e5f6925a30da01bf8a2fd2b4d3c90212d5
 │   │   ├── a6
 │   │   │   ├── 14c93bc6f69d345145c3c542654967bc6a09fd
+│   │   │   ├── 57b8b11da139ee091dc1534cd7ca7189f01d67
 │   │   │   └── 94b225a1f288245f4d53944934154f68a09e78
 │   │   ├── a7
 │   │   │   ├── 12b20cabf3b8694ca0320fd2387f17e8a809f4
@@ -526,6 +572,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── bb40b77df91e4d94b01f27dcafd381d064a943
 │   │   │   └── c364ef11cf6287217c3893da5a6bc74110285c
 │   │   ├── aa
+│   │   │   ├── 104a119ab589cf1313f0d66b8ca27b2de19f1e
+│   │   │   ├── 243b733e704c4a55f2a5681cbad0f63278aec9
 │   │   │   └── ad6f9e6e9b2262b043340091540f96d909e849
 │   │   ├── ab
 │   │   │   ├── 35ea493266e71887e89fc54670a8a20762b598
@@ -571,6 +619,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── 27122a52b9685eb556f43eb18f3ec03d9364c2
 │   │   │   ├── 29e25000fb383298f9ecf9410d67b64e8b39e9
 │   │   │   ├── 3c1a95cf725f54b89989cec9aaa72b5b13e9dd
+│   │   │   ├── 3e19d7baa65158a046dda96cc45b0213afb3b1
 │   │   │   ├── 60f2f1e5e356e8161ca7b31d23664903d03286
 │   │   │   ├── a62350bdd39491de7f91cb17feff0476aec4ba
 │   │   │   └── aedb04de049fdf8c4b46cd4c86ad21364a3c2e
@@ -583,16 +632,21 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── b5055dd14f94daf8b4d54426e2a7ac54d8da72
 │   │   │   └── d20d50622030b045c6fafbc9d498f48274054c
 │   │   ├── bd
+│   │   │   ├── 5f0fb3cfd5658463eb830f753c1a5ff5bbc197
 │   │   │   ├── 8e3ee190e25153dcece1cb7f7d9250a3965cb6
 │   │   │   └── bf82f943c1b3b7403724818b02a1e132de6729
 │   │   ├── be
 │   │   │   └── 7664c777d57a57b2a11a6f43b121ded4445a71
 │   │   ├── bf
+│   │   │   ├── 098ff79155bbf4eda618e058d423c3760cbfca
 │   │   │   ├── 53897f8dcd7f853a219b86f78e2dc880a4c9e1
 │   │   │   ├── 561a008ee7a1de93a7e72a96367d218acabf1e
-│   │   │   └── 5856c9e06d448c1cbdcf6b336943ddda564377
+│   │   │   ├── 5856c9e06d448c1cbdcf6b336943ddda564377
+│   │   │   └── 64423f33d2f1e21d70c0cef45c1a555155fda2
 │   │   ├── c0
-│   │   │   └── 7cbd1d5e15e7cc2e5aac44ece89f32d8101b17
+│   │   │   ├── 7cbd1d5e15e7cc2e5aac44ece89f32d8101b17
+│   │   │   ├── 8cc6ae59148fb2691c5354bd16ea0af345da74
+│   │   │   └── c775974a514b1cef0414e7839a877991458c4b
 │   │   ├── c1
 │   │   │   └── 3ac22293ba01c82e7ea1f82e67208658f85465
 │   │   ├── c2
@@ -637,8 +691,10 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── ce
 │   │   │   ├── 40cfe2f868af6b31274c51c03d228f5fc35606
 │   │   │   ├── 891dfa9c5e080ab2571fcf2c82243db37b7267
-│   │   │   └── e0907b7e7cbc66a82b00933185a67456bd6115
+│   │   │   ├── e0907b7e7cbc66a82b00933185a67456bd6115
+│   │   │   └── edd4f14ebc59c467ca0025e944db77c758b798
 │   │   ├── cf
+│   │   │   ├── 15e0de86306dee1c6a495239bfce0be64270d0
 │   │   │   ├── 3aeeb9e008f9c0ea619a013d173f397edf538c
 │   │   │   └── b15609831558e3cf174cdff065fc3849a24a07
 │   │   ├── d0
@@ -648,8 +704,10 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── b375b17ef9cdc2a31b46c8c15ec36b209bbaca
 │   │   │   └── e06523feda206f9001f46cc14970dfe7bb9bc4
 │   │   ├── d1
-│   │   │   └── 319a820cb2e7fb21fc60dbe2b11fa19318c528
+│   │   │   ├── 319a820cb2e7fb21fc60dbe2b11fa19318c528
+│   │   │   └── bf79b5b5b3b96efe4ca20235d89d949b5a2db1
 │   │   ├── d2
+│   │   │   ├── 20639d88e34d86347f70900b5b0281fe80c2cf
 │   │   │   ├── 24263a40a8ebac73dfd6b44c656a0652a8193f
 │   │   │   └── 461b41a3257d540e8f2d9751ed664c49a1e8d5
 │   │   ├── d3
@@ -671,10 +729,12 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── d6
 │   │   │   └── 0fe3c09cbb3feb73af75e2df667d5667ec7567
 │   │   ├── d7
+│   │   │   ├── 7e63a1c84e40a09031e69e0efffc829d2e9600
 │   │   │   ├── 9c068facd518e3ded00ce0c1e80c30039ed5ad
 │   │   │   └── a7e233674fa7a1d33557b1661158e1d2a64186
 │   │   ├── d8
 │   │   │   ├── 62d8f80dcf116c148f59aeeaad9e55236cd5be
+│   │   │   ├── 7f553651c168afd6d1c81a60b573af5f5729ba
 │   │   │   ├── d0be3730dc9be49a0568b506a6064d64d3fa3a
 │   │   │   └── f7ddc7a7cf8faa797a9f0fd2b1e56f43089dce
 │   │   ├── d9
@@ -696,25 +756,34 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   ├── dd
 │   │   │   └── d9e02aa63213dcc33f23fb37be1a82ad59d08c
 │   │   ├── de
+│   │   │   ├── 3eb5d0ef215158aa3fd9965e0d55fdee88c985
 │   │   │   └── f9f13c60a07a0fcd269f9cb13e199ec06f99b9
 │   │   ├── df
+│   │   │   ├── 401e3226488334424dd298e4ad5252c8bd5b76
 │   │   │   └── 6c5ef7a8137627017248132e57f1bb1292bde1
 │   │   ├── e1
 │   │   │   └── 6879c95980e66fd50737d88f4fef4f3524e84b
 │   │   ├── e2
 │   │   │   └── 15bc4ccf138bbc38ad58ad57e92135484b3c0f
+│   │   ├── e3
+│   │   │   └── 59f40453d2432a60a7ede804d60c0a4940b575
+│   │   ├── e4
+│   │   │   └── de6701b3eaf3e6206271045aae706af6f0af83
 │   │   ├── e5
 │   │   │   ├── 44750e7fa925893d524e318fc8aa0075f8fa9f
 │   │   │   └── ed42749de21f0c22f9a7f0360671f5171e7c20
 │   │   ├── e6
 │   │   │   └── 4cf6e3cbd001069367388c82ae42c9d68a53d4
+│   │   ├── e7
+│   │   │   └── 5515deb20f6ff1853f032fd85d4fde5edc5d84
 │   │   ├── e9
 │   │   │   ├── 6c4a1785a0b6a994b620c9601c9b38add83e8e
 │   │   │   ├── a5271000d47bb187484a599af3b48c74ba8140
 │   │   │   ├── ab86a4326eeaa67251dda7a2593fa279a035df
 │   │   │   └── ffa3083ad279ecf95fd8eae59cb253e9a539c4
 │   │   ├── ec
-│   │   │   └── 0ae4d77a8368ba13843aee8f1bf0f6725fe0f9
+│   │   │   ├── 0ae4d77a8368ba13843aee8f1bf0f6725fe0f9
+│   │   │   └── 11b24b2559e03cae487aa2fc41a09e06d295a6
 │   │   ├── ed
 │   │   │   ├── 49d17583eda5134e2339bedfa7455ff01553d5
 │   │   │   └── abd1131859b6172c3de33f678cd1b5ec64dbd0
@@ -766,6 +835,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   └── c93eccc9bfd9142908bf93fdd0d729f7da0c61
 │   │   ├── ff
 │   │   │   ├── 13f68b886af1c25d8a6bc793cf7e8ef1ac1591
+│   │   │   ├── 36667911ebb61df19fa6901761173c7c18822a
+│   │   │   ├── 8321b92852b05ccdd037e2ed670feafa8848f5
 │   │   │   ├── 90bf7d4d9b7fd23ad571c79ae8711c4aec75a8
 │   │   │   ├── b0ceb24de959555afe74dd0fb439f96a20868f
 │   │   │   ├── c9ed7d54ed174ea20ef50f149f1b3487041e3b
@@ -777,6 +848,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │       ├── heads
 │       │   ├── develop
 │       │   ├── feature
+│       │   │   ├── crear-admin
 │       │   │   ├── disseny
 │       │   │   ├── guia-landing-dashbaord-temas
 │       │   │   └── intro
@@ -854,7 +926,6 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   ├── dashboard-topic.dto.ts
 │   │   │   ├── level-node.dto.ts
 │   │   │   └── session-result.dto.ts
-│   │   ├── README.md
 │   │   └── use-cases
 │   │       ├── auth
 │   │       │   ├── logout.use-case.test.ts
@@ -881,6 +952,7 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   │   ├── challenge.entitiy.test.ts
 │   │   │   │   ├── challenge.entity.ts
 │   │   │   │   ├── definitions
+│   │   │   │   │   ├── binary.content.ts
 │   │   │   │   │   ├── code-fix.content.ts
 │   │   │   │   │   ├── logic-order.content.ts
 │   │   │   │   │   ├── matching.content.ts
@@ -945,17 +1017,21 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │   │   ├── dashboard
 │   │   │   │   │   └── TopicCard.tsx
 │   │   │   │   ├── game-engine
+│   │   │   │   │   ├── binary
+│   │   │   │   │   │   └── BinaryView.tsx
 │   │   │   │   │   ├── ChallengeRenderer.tsx
 │   │   │   │   │   ├── challenges
 │   │   │   │   │   ├── code-fix
 │   │   │   │   │   │   ├── CodeWindow.tsx
 │   │   │   │   │   │   ├── HintPanel.tsx
+│   │   │   │   │   │   ├── SmartTerminal.tsx
 │   │   │   │   │   │   └── SolutionDeck.tsx
 │   │   │   │   │   ├── CodeFixView.tsx
 │   │   │   │   │   ├── GameArena.tsx
 │   │   │   │   │   ├── GameError.tsx
 │   │   │   │   │   ├── GameResult.tsx
 │   │   │   │   │   ├── layout
+│   │   │   │   │   │   ├── GameHeader.tsx
 │   │   │   │   │   │   └── GameSessionLayout.tsx
 │   │   │   │   │   ├── LogicOrderView.tsx
 │   │   │   │   │   ├── MatchingView.tsx
@@ -978,6 +1054,8 @@ ESTRUCTURA DEL PROJECTE (./src)
 │   │   │       └── gamified
 │   │   │           ├── Button3D.tsx
 │   │   │           └── LanguagerSwitcher.tsx
+│   │   ├── context
+│   │   │   └── GameSessionContext.tsx
 │   │   ├── hooks
 │   │   │   └── game
 │   │   │       └── useGameSession.ts
@@ -2722,7 +2800,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { GetNextChallengeUseCase } from './get-next-challenge.use-case';
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { IChallengeRepository } from '@/core/repositories/challenge.repository';
-import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenges/challenge.entity';
+import { Challenge, ChallengeType, QuizContent } from '@/core/entities/challenges/index';
 import { Topic } from '@/core/entities/topic.entity';
 
 // Mocks
@@ -3008,7 +3086,9 @@ describe('GetActiveTopicsUseCase', () => {
         colorTheme: 'blue', 
         isActive: true, 
         createdAt: new Date(), 
-        updatedAt: new Date() 
+        updatedAt: new Date() ,
+        description: 'Test Description'
+        
       }
     ];
     
@@ -3200,6 +3280,7 @@ import { CodeFixContent } from './definitions/code-fix.content';
 import { MatchingContent } from './definitions/matching.content';
 import { TerminalContent } from './definitions/terminal.content';
 import { LogicOrderContent } from './definitions/logic-order.content';
+import { BinaryContent } from './definitions/binary.content';
 
 // 1. Tipus de Repte (Enum strings)
 export type ChallengeType = 
@@ -3207,6 +3288,7 @@ export type ChallengeType =
   | 'CODE_FIX' 
   | 'MATCHING' 
   | 'TERMINAL' 
+  | 'BINARY_DECISION'
   | 'LOGIC_ORDER';
 
 // 2. Unió Discriminada (Polimorfisme)
@@ -3215,7 +3297,8 @@ export type ChallengeContent =
   | CodeFixContent 
   | MatchingContent
   | TerminalContent 
-  | LogicOrderContent;
+  | LogicOrderContent
+  | BinaryContent;
 
 // 3. Entitat de Domini
 export interface Challenge {
@@ -3225,6 +3308,17 @@ export interface Challenge {
   type: ChallengeType;
   content: ChallengeContent;
   createdAt: Date;
+}
+
+// =================== FILE: src/core/entities/challenges/definitions/binary.content.ts ===================
+
+// filepath: src/core/entities/challenges/definitions/binary.content.ts
+export interface BinaryContent {
+  // Ara acceptem string (legacy) o Record (multidioma)
+  statement: string | Record<string, string>; 
+  isTrue: boolean;
+  explanation: string | Record<string, string>;
+  variant?: 'HOT_OR_NOT' | 'TRUE_FALSE';
 }
 
 // =================== FILE: src/core/entities/challenges/definitions/code-fix.content.ts ===================
@@ -3312,7 +3406,7 @@ export * from './definitions/code-fix.content';
 export * from './definitions/matching.content';
 export * from './definitions/terminal.content';
 export * from './definitions/logic-order.content';
-
+export * from './definitions/binary.content'; // 👈 AFEGIT
 export * from './challenge.entity';
 
 // =================== FILE: src/core/entities/topic.entity.ts ===================
@@ -3530,10 +3624,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
 // =================== FILE: src/infrastructure/mappers/challenge.mappers.ts ===================
 
 // filepath: src/infrastructure/mappers/challenge.mappers.ts
-import { ChallengeContent } from '@/core/entities/challenges/challenge.entity';
+import { ChallengeContent } from '@/core/entities/challenges'; // Assegura't d'importar des del barrel
 import { translate, LocalizedString } from './mapper.utils';
 
-// --- DEFINICIONS DE DADES "RAW" (Així és com ve el JSON de BD) ---
+// --- DEFINICIONS DE DADES "RAW" (JSON de la BD) ---
 
 interface RawOption {
   id: string;
@@ -3546,12 +3640,7 @@ interface RawQuizContent {
   options: RawOption[];
   correctOptionIndex: number;
 }
-// 1. DEFINICIÓ RAW (Com ve de la BD)
-interface RawLogicOrderContent {
-  description: LocalizedString;
-  items: Array<{ id: string; text: LocalizedString }>;
-}
-// Suport per a dades antigues (Legacy)
+
 interface LegacyRawQuizContent {
   question?: string;
   explanation?: string;
@@ -3592,20 +3681,31 @@ interface RawTerminalContent {
   };
 }
 
+interface RawLogicOrderContent {
+  description: LocalizedString;
+  items: Array<{ id: string; text: LocalizedString }>;
+}
+
+// ✅ 1. NOVA INTERFÍCIE RAW PER A BINARY
+interface RawBinaryContent {
+  statement: LocalizedString;
+  isTrue: boolean;
+  explanation: LocalizedString;
+  variant?: 'HOT_OR_NOT' | 'TRUE_FALSE';
+}
+
 // --- INTERFÍCIE D'ESTRATÈGIA ---
 interface ContentMapperStrategy {
-  // L'entrada és 'unknown' perquè ve de la BD/JSON. No assumim res fins a validar.
   map(rawData: unknown, locale: string): ChallengeContent;
 }
 
-// --- 1. QUIZ MAPPER ---
+// --- MAPPERS EXISTENTS ---
+
 class QuizMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
-    // 1. Intentem tractar-lo com a format nou
     const content = rawData as Partial<RawQuizContent>;
     const legacyContent = rawData as Partial<LegacyRawQuizContent>;
 
-    // Type Guard simple: Si té 'options' i és un array d'objectes -> Format Nou
     const isNewFormat = 
       content.options && 
       Array.isArray(content.options) && 
@@ -3613,20 +3713,17 @@ class QuizMapper implements ContentMapperStrategy {
       typeof content.options[0] === 'object';
 
     if (isNewFormat) {
-      // Ara TypeScript sap que 'content' és compatible amb RawQuizContent en aquest bloc
       const validContent = content as RawQuizContent;
-      
       return {
         question: translate(validContent.question, locale),
         explanation: translate(validContent.explanation, locale),
-        correctOptionIndex: validContent.correctOptionIndex,
+        correctOptionIndex: validContent.correctOptionIndex || 0,
         options: validContent.options.map((opt) => ({
           id: opt.id,
           text: translate(opt.text, locale)
         }))
       };
     } else {
-      // Legacy handling
       const opts = legacyContent.options || [];
       return {
         question: String(legacyContent.question || ''),
@@ -3636,16 +3733,14 @@ class QuizMapper implements ContentMapperStrategy {
           id: `opt-${idx}`,
           text: String(txt)
         })) : []
-      }; // No cal cast a 'any', ja retorna ChallengeContent (QuizContent)
+      };
     }
   }
 }
 
-// --- 2. MATCHING MAPPER ---
 class MatchingMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawMatchingContent;
-
     return {
       instruction: translate(content.instruction, locale),
       pairs: Array.isArray(content.pairs)
@@ -3658,11 +3753,9 @@ class MatchingMapper implements ContentMapperStrategy {
   }
 }
 
-// --- 3. CODE FIX MAPPER ---
 class CodeFixMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawCodeFixContent;
-
     return {
       description: translate(content.description, locale),
       initialCode: content.initialCode || '',
@@ -3678,11 +3771,9 @@ class CodeFixMapper implements ContentMapperStrategy {
   }
 }
 
-// --- 4. TERMINAL MAPPER ---
 class TerminalMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawTerminalContent;
-
     return {
       instruction: translate(content.instruction, locale),
       initialCommand: content.initialCommand || '',
@@ -3697,12 +3788,9 @@ class TerminalMapper implements ContentMapperStrategy {
   }
 }
 
-
-// 2. LOGIC ORDER MAPPER (NOU)
 class LogicOrderMapper implements ContentMapperStrategy {
   map(rawData: unknown, locale: string): ChallengeContent {
     const content = rawData as RawLogicOrderContent;
-
     return {
       description: translate(content.description, locale),
       items: Array.isArray(content.items)
@@ -3711,6 +3799,21 @@ class LogicOrderMapper implements ContentMapperStrategy {
             text: translate(item.text, locale)
           }))
         : []
+    };
+  }
+}
+
+// ✅ 2. NOU MAPPER PER A BINARY
+class BinaryMapper implements ContentMapperStrategy {
+  map(rawData: unknown, locale: string): ChallengeContent {
+    const content = rawData as RawBinaryContent;
+    
+    // Aquí és on passa la màgia: 'translate' agafa l'objecte {ca, en} i retorna un STRING net
+    return {
+      statement: translate(content.statement, locale),
+      explanation: translate(content.explanation, locale),
+      isTrue: content.isTrue,
+      variant: content.variant || 'TRUE_FALSE'
     };
   }
 }
@@ -3724,6 +3827,10 @@ export const ChallengeMapperFactory = {
       case 'CODE_FIX': return new CodeFixMapper();
       case 'TERMINAL': return new TerminalMapper();
       case 'LOGIC_ORDER': return new LogicOrderMapper();
+      
+      // ✅ 3. REGISTREM EL NOU TIPUS
+      case 'BINARY_DECISION': return new BinaryMapper();
+      
       default:
         console.warn(`Unknown challenge type: ${type}. Fallback to Quiz.`);
         return new QuizMapper();
@@ -4405,7 +4512,7 @@ import { createClient } from '@/infrastructure/utils/supabase/server';
 import { redirect } from 'next/navigation';
 
 export type AuthState = {
-  errorKey?: string; // <--- Canviem 'error' (text) per 'errorKey' (clau i18n)
+  errorKey?: string;
   messageKey?: string;
 };
 
@@ -4424,21 +4531,22 @@ export async function authAction(prevState: AuthState, formData: FormData): Prom
     });
 
     if (error) {
-      // Mapeig d'errors bàsic
-      if (error.message.includes('already registered')) return { errorKey: 'auth.errors.user_already_exists' };
-      if (error.message.includes('Password')) return { errorKey: 'auth.errors.weak_password' };
-      return { errorKey: 'auth.errors.generic' };
+      // ✅ FIX: Retornem claus relatives, sense "auth." al principi
+      if (error.message.includes('already registered')) return { errorKey: 'errors.user_already_exists' };
+      if (error.message.includes('Password')) return { errorKey: 'errors.weak_password' };
+      return { errorKey: 'errors.generic' };
     }
 
-    return { messageKey: 'auth.success.check_email' };
+    // ✅ FIX: Clau relativa
+    return { messageKey: 'success.check_email' };
   } 
   
   else {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
-      // Supabase sol retornar "Invalid login credentials" per seguretat
-      return { errorKey: 'auth.errors.invalid_credentials' };
+       // ✅ FIX: Clau relativa
+      return { errorKey: 'errors.invalid_credentials' };
     }
 
     redirect('/');
@@ -4698,6 +4806,168 @@ export function TopicCard({ topic, translatedTitle }: TopicCardProps) {
   );
 }
 
+// =================== FILE: src/presentation/components/features/game-engine/binary/BinaryView.tsx ===================
+
+// filepath: src/presentation/components/features/game-engine/binary/BinaryView.tsx
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Challenge, BinaryContent } from '@/core/entities/challenges';
+import { Check, X, ArrowRight, CheckCircle2, XCircle, Zap } from 'lucide-react';
+import { clsx } from 'clsx';
+import { GameSessionLayout } from '../layout/GameSessionLayout';
+import { GameHeader } from '../layout/GameHeader';
+import { useTranslations, useLocale } from 'next-intl';
+
+interface BinaryViewProps {
+  challenge: Challenge;
+  onNext: (isCorrect: boolean) => void;
+}
+
+export function BinaryView({ challenge, onNext }: BinaryViewProps) {
+  const t = useTranslations('game');
+  const locale = useLocale(); 
+  const content = challenge.content as BinaryContent;
+
+  // 1. ESTAT INICIAL (Sempre net perquè el component es recrea de zero)
+  const [status, setStatus] = useState<'IDLE' | 'CORRECT' | 'WRONG'>('IDLE');
+  
+  // 2. GHOST CLICK PROTECTION
+  // Comencem bloquejats per evitar clics accidentals de la pantalla anterior
+  const [isInteractive, setIsInteractive] = useState(false);
+
+  // Aquest Effect només s'executa 1 cop quan el component "neix" (Mount)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setIsInteractive(true);
+    }, 500); // 0.5 segons de "cooldown"
+
+    return () => clearTimeout(timer);
+  }, []); // Array buit = Només al muntar. No depèn de challenge.id
+
+  // --- HELPER TEXT ---
+  const getLocalizedText = (text: string | Record<string, string> | undefined) => {
+    if (!text) return '';
+    if (typeof text === 'string') return text;
+    return text[locale] || text['ca'] || text['en'] || Object.values(text)[0] || '';
+  };
+
+  if (!content) return null;
+
+  const handleDecision = (userSaysTrue: boolean) => {
+    // Si encara estem en "cooldown" o ja hem contestat, ignorem el clic
+    if (!isInteractive || status !== 'IDLE') return;
+
+    const isCorrect = userSaysTrue === content.isTrue;
+    setStatus(isCorrect ? 'CORRECT' : 'WRONG');
+  };
+
+  const handleManualNext = () => {
+    onNext(status === 'CORRECT');
+  };
+
+  // --- FOOTER ---
+  const Footer = (
+    <div className={clsx(
+        "w-full transition-all duration-300 ease-out transform z-50",
+        status === 'IDLE' ? "translate-y-full opacity-0 h-0" : "translate-y-0 opacity-100"
+    )}>
+       {status !== 'IDLE' && (
+        <div className={clsx(
+            "p-6 pb-8 flex flex-col gap-4 backdrop-blur-xl border-t-4 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)]",
+            status === 'CORRECT' ? "bg-green-950/90 border-green-500" : "bg-red-950/90 border-red-500"
+        )}>
+            <div className="flex items-start gap-4">
+               <div className={clsx(
+                   "p-3 rounded-full shrink-0 shadow-lg animate-in zoom-in", 
+                   status === 'CORRECT' ? "bg-green-500 text-white" : "bg-red-500 text-white"
+               )}>
+                  {status === 'CORRECT' ? <CheckCircle2 className="w-8 h-8" /> : <XCircle className="w-8 h-8" />}
+               </div>
+               <div className="flex-1 space-y-1">
+                   <h3 className={clsx("font-black text-xl tracking-tight", status === 'CORRECT' ? "text-green-400" : "text-red-400")}>
+                       {status === 'CORRECT' ? t('feedback.correct') : t('feedback.incorrect')}
+                   </h3>
+                   <p className="text-slate-200 text-sm md:text-base leading-relaxed font-medium">
+                       {getLocalizedText(content.explanation)}
+                   </p>
+               </div>
+            </div>
+            
+            <button 
+                onClick={handleManualNext}
+                className={clsx(
+                    "w-full py-4 font-bold text-lg rounded-2xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-xl mt-2 animate-in slide-in-from-bottom-2 fade-in duration-500",
+                    status === 'CORRECT' ? "bg-green-600 text-white" : "bg-red-600 text-white"
+                )}
+            >
+                {t('arena.continue_btn')} <ArrowRight className="w-6 h-6" />
+            </button>
+        </div>
+       )}
+    </div>
+  );
+
+  return (
+    <GameSessionLayout header={<GameHeader />} footer={Footer}>
+      <div className="w-full max-w-lg mx-auto flex flex-col h-full px-4 py-4 md:py-8 gap-4 md:gap-8">
+        
+        {/* TARGETA */}
+        <div className="flex-1 flex flex-col justify-center min-h-0 relative"> 
+            <div className={clsx(
+              "relative w-full h-full max-h-125 rounded-4xl border-4 shadow-2xl flex flex-col items-center justify-center p-6 md:p-10 text-center transition-all duration-500 transform overflow-hidden bg-slate-800",
+              status === 'CORRECT' && "border-green-500 bg-green-900/20 shadow-green-500/20",
+              status === 'WRONG' && "border-red-500 bg-red-900/20 shadow-red-500/20",
+              status === 'IDLE' && "border-slate-700 shadow-black/50"
+            )}>
+              <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent pointer-events-none" />
+
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 z-0"
+                   style={{ opacity: status !== 'IDLE' ? 0.2 : 0 }}>
+                  {status === 'CORRECT' ? <Check className="w-64 h-64 text-green-500" /> : status === 'WRONG' ? <X className="w-64 h-64 text-red-500" /> : null}
+              </div>
+
+              <div className={clsx("relative z-10 transition-all duration-300 flex flex-col gap-6 items-center w-full", status !== 'IDLE' && "scale-95")}>
+                  <div className="inline-flex items-center justify-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-1.5 rounded-full border border-blue-500/20 shadow-inner">
+                      <Zap className="w-4 h-4 fill-current" />
+                      <span className="font-bold tracking-widest text-[10px] uppercase">RÀPID</span>
+                  </div>
+                  <h2 className="text-xl md:text-3xl font-black text-white leading-snug select-none text-balance">
+                      {getLocalizedText(content.statement)}
+                  </h2>
+              </div>
+            </div>
+        </div>
+
+        {/* BOTONS */}
+        <div className={clsx(
+            "grid grid-cols-2 gap-4 w-full transition-all duration-500",
+            status !== 'IDLE' ? "opacity-0 translate-y-20 pointer-events-none h-0" : "opacity-100 translate-y-0 h-auto pb-4",
+            !isInteractive && "opacity-50 grayscale" // Feedback visual del cooldown
+        )}>
+           <button
+              onClick={() => handleDecision(false)}
+              disabled={!isInteractive} 
+              className="group relative bg-red-600/10 hover:bg-red-600 active:bg-red-700 border-2 border-red-600/40 hover:border-red-500 rounded-2xl py-6 md:py-8 flex flex-col items-center justify-center gap-2 transition-all active:scale-90 touch-manipulation shadow-lg disabled:cursor-not-allowed"
+           >
+              <X className="w-8 h-8 md:w-10 md:h-10 text-red-500 group-hover:text-white transition-colors" />
+              <span className="font-bold uppercase tracking-widest text-xs md:text-sm text-red-400 group-hover:text-white transition-colors">Fals</span>
+           </button>
+
+           <button
+              onClick={() => handleDecision(true)}
+              disabled={!isInteractive} 
+              className="group relative bg-green-600/10 hover:bg-green-600 active:bg-green-700 border-2 border-green-600/40 hover:border-green-500 rounded-2xl py-6 md:py-8 flex flex-col items-center justify-center gap-2 transition-all active:scale-90 touch-manipulation shadow-lg disabled:cursor-not-allowed"
+           >
+              <Check className="w-8 h-8 md:w-10 md:h-10 text-green-500 group-hover:text-white transition-colors" />
+              <span className="font-bold uppercase tracking-widest text-xs md:text-sm text-green-400 group-hover:text-white transition-colors">Cert</span>
+           </button>
+        </div>
+      </div>
+    </GameSessionLayout>
+  );
+}
+
 // =================== FILE: src/presentation/components/features/game-engine/ChallengeRenderer.tsx ===================
 
 // filepath: src/presentation/components/features/game-engine/ChallengeRenderer.tsx
@@ -4707,89 +4977,68 @@ import { MatchingView } from './MatchingView';
 import { CodeFixView } from './CodeFixView';
 import { TerminalView } from './TerminalView';
 import { LogicOrderView } from './LogicOrderView';
-
+import { BinaryView } from './binary/BinaryView'; // 👈 Importem
 // Definició de les dades de sessió (Tipatge estricte)
-export interface SessionData {
-  progress: number;
-  currentIndex: number;
-  totalChallenges: number;
-  topicSlug: string;
-}
 
 interface ChallengeRendererProps {
   challenge: Challenge;
   onNext: (isCorrect: boolean) => void;
-  sessionData: SessionData; // 👈 Aquesta prop és OBLIGATÒRIA
 }
 
-export function ChallengeRenderer({ challenge, onNext, sessionData }: ChallengeRendererProps) {
+export function ChallengeRenderer({ challenge, onNext }: ChallengeRendererProps) {
+  // ⚠️ AFEGIM key={challenge.id} A TOTS ELS COMPONENTS
+  // Això reseteja l'estat (useState) i les animacions CSS quan canvia el repte.
 
   switch (challenge.type) {
-    // ----------------------------------------------------------------------
-    // ⚠️ NOTES D'ARQUITECTURA:
-    // Els jocs QUIZ, MATCHING i CODE_FIX encara no usen el nou 'GameSessionLayout'.
-    // Per això no els passem 'sessionData'.
-    // Si en el futur els actualitzes al nou disseny, hauràs d'afegir la prop aquí.
-    // ----------------------------------------------------------------------
-
     case 'QUIZ':
       return <QuizView key={challenge.id} challenge={challenge} onNext={onNext} />;
-
-    case 'MATCHING':
-      return <MatchingView key={challenge.id} challenge={challenge} onNext={onNext} />;
-
+      
     case 'CODE_FIX':
       return <CodeFixView key={challenge.id} challenge={challenge} onNext={onNext} />;
-
-    // ----------------------------------------------------------------------
-    // ✅ JOCS ACTUALITZATS AL NOU LAYOUT RESPONSIVE (AMB HEADER/FOOTER)
-    // ----------------------------------------------------------------------
-
+      
     case 'TERMINAL':
-      return (
-        <TerminalView 
-          key={challenge.id} 
-          challenge={challenge} 
-          onNext={onNext} 
-          sessionData={sessionData} // 👈 AFEGIT: Soluciona l'error TS2741
-        />
-      );
+      return <TerminalView key={challenge.id} challenge={challenge} onNext={onNext} />;
+      
+    case 'MATCHING':
+       return <MatchingView key={challenge.id} challenge={challenge} onNext={onNext} />;
 
     case 'LOGIC_ORDER':
-      return (
-        <LogicOrderView 
-          key={challenge.id} 
-          challenge={challenge} 
-          onNext={onNext} 
-          sessionData={sessionData} 
-        />
-      );
+       return <LogicOrderView key={challenge.id} challenge={challenge} onNext={onNext} />;
+
+    case 'BINARY_DECISION':
+       return <BinaryView key={challenge.id} challenge={challenge} onNext={onNext} />;
 
     default:
-      return <div className="text-red-500 p-4">Tipus no suportat: {challenge.type}</div>;
+      return <div>Tipus desconegut</div>;
   }
 }
 
 // =================== FILE: src/presentation/components/features/game-engine/code-fix/CodeWindow.tsx ===================
 
+// filepath: src/presentation/components/features/game/code-fix/CodeWindow.tsx
 import { clsx } from 'clsx';
 
-// Motor de sintaxi optimitzat
 const SyntaxHighlighter = ({ code }: { code: string }) => {
-  const parts = code.split(/(\s+|[(){}[\]<>=;])/g);
+  if (!code) return null;
+  // Regex millorada per tokenitzar millor símbols
+  const parts = code.split(/(\s+|[(){}[\]<>=;:"'`.,])/g);
+  
   return (
-    <span className="font-mono text-sm md:text-base leading-relaxed">
+    <span className="font-mono leading-relaxed whitespace-pre">
       {parts.map((part, i) => {
-        if (['function', 'const', 'let', 'var', 'return', 'if', 'else', 'export', 'default'].includes(part)) 
-          return <span key={i} className="text-pink-500">{part}</span>;
-        if (['useState', 'useEffect', 'useContext', 'useMemo'].includes(part)) 
-          return <span key={i} className="text-yellow-300 font-medium">{part}</span>;
-        if (part.startsWith('<') || part.startsWith('</') || part.endsWith('>')) 
-          return <span key={i} className="text-blue-400">{part}</span>;
-        if (part.match(/^[A-Z]/) && !['A', 'B', 'C'].includes(part)) 
-          return <span key={i} className="text-yellow-400">{part}</span>;
-        if (['=', '=>', '==='].includes(part)) 
+        if (['function', 'const', 'let', 'var', 'return', 'if', 'else', 'import', 'from', 'export', 'default', 'async', 'await'].includes(part)) 
+          return <span key={i} className="text-pink-400 font-semibold">{part}</span>;
+        if (['useState', 'useEffect', 'console', 'log'].includes(part)) 
+          return <span key={i} className="text-yellow-300">{part}</span>;
+        if (part.match(/^[A-Z][a-zA-Z0-9]*$/)) // Components/Classes
+          return <span key={i} className="text-yellow-200">{part}</span>;
+        if (['=', '=>', '{', '}', '<', '>', '(', ')', '[', ']', '.', ';'].includes(part)) 
           return <span key={i} className="text-blue-300">{part}</span>;
+        if (part.startsWith('"') || part.startsWith("'") || part.startsWith('`'))
+           return <span key={i} className="text-green-300">{part}</span>;
+        if (!isNaN(Number(part)) && part.trim() !== '')
+           return <span key={i} className="text-purple-300">{part}</span>;
+
         return <span key={i} className="text-blue-100/90">{part}</span>;
       })}
     </span>
@@ -4799,78 +5048,81 @@ const SyntaxHighlighter = ({ code }: { code: string }) => {
 interface CodeWindowProps {
   initialCode: string;
   selectedCode?: string | null;
-  isError?: boolean;
-  isSuccess?: boolean;
+  status: 'IDLE' | 'RUNNING' | 'SUCCESS' | 'ERROR';
 }
 
-export function CodeWindow({ initialCode, selectedCode, isError, isSuccess }: CodeWindowProps) {
-  // Calculem les línies totals per als números de línia
+export function CodeWindow({ initialCode, selectedCode, status }: CodeWindowProps) {
   const lines = initialCode.split('\n');
-  
-  // Dividim el codi pel marcador per saber en quina línia cau el "forat"
-  const parts = initialCode.split('???');
-  const preCode = parts[0];
-  const postCode = parts[1] || '';
 
   return (
-    <div className="bg-[#1e1e1e] rounded-xl overflow-hidden shadow-2xl border border-slate-700 ring-4 ring-black/20 mt-4">
-      
-      {/* 1. BARRA DE TÍTOL (VSCODE STYLE) */}
-      <div className="bg-[#252526] px-4 py-2 flex items-center gap-2 border-b border-[#333]">
-        <div className="flex gap-1.5 mr-4">
-          <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-        </div>
-        
-        {/* Pestanya activa */}
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-[#1e1e1e] rounded-t-md text-[11px] text-blue-300 font-mono border-t border-x border-[#333] -mb-[9px] z-10">
-          <span className="text-yellow-500 text-[10px] font-bold">JS</span> 
-          Solution.jsx
-        </div>
-      </div>
-
-      {/* 2. AREA DE CODI AMB NÚMEROS DE LÍNIA */}
-      <div className="flex relative min-h-[160px]">
-        
-        {/* Columna de números */}
-        <div className="bg-[#1e1e1e] w-12 py-6 flex flex-col items-end pr-4 text-slate-600 font-mono text-xs select-none border-r border-[#333]">
-          {lines.map((_, i) => (
-            <div key={i} className="leading-relaxed h-[1.5rem]">{i + 1}</div>
-          ))}
-        </div>
-
-        {/* Editor de codi */}
-        <div className="flex-1 p-6 py-6 font-mono overflow-x-auto bg-[#1e1e1e]/50">
-          <div className="whitespace-pre">
-            <SyntaxHighlighter code={preCode} />
+    <div className="bg-[#1e1e1e] relative shadow-inner w-full">
+      {/* Scroll Horitzontal per al codi */}
+      <div className="overflow-x-auto custom-scrollbar">
+          <div className="flex flex-col font-mono text-[11px] sm:text-xs md:text-sm py-4 min-w-fit">
             
-            {/* EL "FORAT" INTERACTIU */}
-            <span className={clsx(
-              "px-3 py-1 rounded-md mx-1 font-bold transition-all duration-300 inline-block min-w-20 text-center",
-              "border-b-2 shadow-inner",
-              !selectedCode ? "bg-slate-800 text-slate-500 border-slate-600 animate-pulse italic text-sm" :
-              isSuccess ? "bg-green-500/20 text-green-400 border-green-500 scale-110 shadow-[0_0_15px_rgba(34,197,94,0.2)]" :
-              isError ? "bg-red-500/20 text-red-400 border-red-500 shake-animation" :
-              "bg-blue-500/20 text-blue-300 border-blue-500"
-            )}>
-              {selectedCode || "???"}
-            </span>
+            {lines.map((lineContent, index) => {
+              const hasGap = lineContent.includes('???');
+              let preGap = '', postGap = '';
 
-            <SyntaxHighlighter code={postCode} />
+              if (hasGap) {
+                const parts = lineContent.split('???');
+                preGap = parts[0];
+                postGap = parts[1] || '';
+              }
+
+              return (
+                <div 
+                  key={index} 
+                  className={clsx(
+                    "group flex hover:bg-[#2a2a2b] transition-colors w-full min-w-max", // min-w-max assegura que la línia no es trenqui
+                    hasGap && "bg-blue-900/10"
+                  )}
+                >
+                  {/* Números de línia */}
+                  <div className="w-8 sm:w-10 shrink-0 text-right pr-3 select-none text-[#5a5a5a] border-r border-[#333] group-hover:text-slate-400 bg-[#1e1e1e] sticky left-0 z-10">
+                    {index + 1}
+                  </div>
+
+                  {/* Codi */}
+                  <div className="pl-3 sm:pl-4 pr-4 whitespace-pre">
+                    {hasGap ? (
+                      <div className="inline-block">
+                        <SyntaxHighlighter code={preGap} />
+                        
+                        {/* INPUT BOX */}
+                        <span className={clsx(
+                          "inline-flex items-center justify-center px-1.5 py-0.5 mx-1 rounded-sm align-middle",
+                          "font-bold text-[10px] sm:text-xs min-w-10 transition-all duration-300",
+                          "border border-dashed shadow-sm",
+                          !selectedCode 
+                            ? "bg-slate-800 border-slate-600 text-slate-500 animate-pulse" 
+                            : status === 'SUCCESS' 
+                              ? "bg-green-500/20 border-green-500 text-green-400 scale-105" 
+                              : status === 'ERROR' 
+                                ? "bg-red-500/20 border-red-500 text-red-400" 
+                                : "bg-blue-500/20 border-blue-400 text-blue-300"
+                        )}>
+                           {selectedCode || "?"}
+                        </span>
+
+                        <SyntaxHighlighter code={postGap} />
+                      </div>
+                    ) : (
+                      <SyntaxHighlighter code={lineContent} />
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
       </div>
-
-      {/* 3. FOOTER DE L'EDITOR */}
-      <div className="bg-[#252526] px-4 py-1 border-t border-[#333] flex justify-between items-center text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-        <div className="flex gap-4">
-          <span>Ln {lines.length}, Col 1</span>
-          <span>Spaces: 2</span>
-        </div>
-        <div className="flex gap-2 items-center">
-          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-          <span>JavaScript JSX</span>
+      
+      {/* Footer Info */}
+      <div className="bg-[#252526] px-3 py-1 text-[10px] text-slate-500 flex justify-between items-center border-t border-[#333]">
+        <span className="uppercase tracking-wider">ReadOnly</span>
+        <div className="flex gap-2">
+            <span>Ln {lines.length}</span>
+            <span>TSX</span>
         </div>
       </div>
     </div>
@@ -4913,6 +5165,93 @@ export function HintPanel({ hintText }: HintPanelProps) {
   );
 }
 
+// =================== FILE: src/presentation/components/features/game-engine/code-fix/SmartTerminal.tsx ===================
+
+// filepath: src/presentation/components/features/game/code-fix/SmartTerminal.tsx
+'use client';
+
+import { FileText, Lightbulb } from 'lucide-react';
+import { clsx } from 'clsx';
+
+interface SmartTerminalProps {
+  language: string;
+  fileName: string;
+  activeTab: 'CODE' | 'MISSION' | 'HINT';
+  onTabChange: (tab: 'CODE' | 'MISSION' | 'HINT') => void;
+}
+
+export function SmartTerminal({ 
+  language, 
+  fileName, 
+  activeTab,
+  onTabChange 
+}: SmartTerminalProps) {
+
+  return (
+    <div className="bg-[#252526] flex items-center border-b border-[#333] select-none overflow-x-auto no-scrollbar">
+      
+      {/* 1. TAB: EDITOR (Fitxer) */}
+      <button
+        onClick={() => onTabChange('CODE')}
+        className={clsx(
+           "flex items-center gap-2 px-4 py-2.5 text-xs font-medium border-r border-[#333] transition-colors min-w-fit",
+           activeTab === 'CODE' 
+             ? "bg-[#1e1e1e] text-slate-200 border-t-2 border-t-blue-500" 
+             : "bg-[#2d2d2d] text-slate-500 hover:bg-[#2a2a2a] hover:text-slate-400 border-t-2 border-t-transparent"
+        )}
+      >
+         {/* Icona de llenguatge (TS/JS/PY) */}
+         <span className={clsx(
+             "font-bold text-[10px]",
+             language === 'typescript' ? "text-blue-400" : "text-yellow-400"
+         )}>
+             {language === 'typescript' ? 'TS' : 'JS'}
+         </span>
+         <span>{fileName}</span>
+      </button>
+
+      {/* 2. TAB: MISSION (Instruccions) */}
+      <button
+        onClick={() => onTabChange('MISSION')}
+        className={clsx(
+           "flex items-center gap-2 px-4 py-2.5 text-xs font-medium border-r border-[#333] transition-colors min-w-fit",
+           activeTab === 'MISSION' 
+             ? "bg-[#1e1e1e] text-slate-200 border-t-2 border-t-purple-500" 
+             : "bg-[#2d2d2d] text-slate-500 hover:bg-[#2a2a2a] hover:text-slate-400 border-t-2 border-t-transparent"
+        )}
+      >
+         <FileText className="w-3.5 h-3.5" />
+         <span>Brief</span>
+      </button>
+
+      {/* 3. TAB: HINT (Pista) */}
+      <button
+        onClick={() => onTabChange('HINT')}
+        className={clsx(
+           "flex items-center gap-2 px-4 py-2.5 text-xs font-medium border-r border-[#333] transition-colors min-w-fit",
+           activeTab === 'HINT' 
+             ? "bg-[#1e1e1e] text-yellow-400 border-t-2 border-t-yellow-500" 
+             : "bg-[#2d2d2d] text-slate-500 hover:bg-[#2a2a2a] hover:text-slate-400 border-t-2 border-t-transparent"
+        )}
+      >
+         <Lightbulb className="w-3.5 h-3.5" />
+         <span>Hint</span>
+      </button>
+
+      {/* Espai buit restant (Estètica IDE) */}
+      <div className="flex-1 bg-[#252526] h-full" />
+      
+      {/* Botons de finestra (Decoració Mac) */}
+      <div className="hidden xs:flex gap-1.5 px-3 opacity-50">
+         <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+         <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+         <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+      </div>
+
+    </div>
+  );
+}
+
 // =================== FILE: src/presentation/components/features/game-engine/code-fix/SolutionDeck.tsx ===================
 
 // filepath: src/presentation/components/features/game/code-fix/SolutionDeck.tsx
@@ -4931,7 +5270,8 @@ interface SolutionDeckProps {
 
 export function SolutionDeck({ options, selectedId, onSelect, isSubmitted }: SolutionDeckProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+    // Grid: 1 columna en mòbil, 2 en tablet+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
       {options.map((option) => {
         const isSelected = selectedId === option.id;
 
@@ -4941,30 +5281,28 @@ export function SolutionDeck({ options, selectedId, onSelect, isSubmitted }: Sol
             onClick={() => !isSubmitted && onSelect(option.id)}
             disabled={isSubmitted}
             className={clsx(
-              "relative group text-left p-4 rounded-xl border-2 transition-all duration-300 w-full",
-              // Estats de color
+              "relative group text-left p-3 rounded-lg border-2 transition-all duration-200 w-full active:scale-[0.98]",
+              "min-h-15 flex items-center",
               isSelected
-                ? "border-blue-500 bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.3)]"
-                : "border-slate-800 bg-slate-900/50 hover:border-slate-600 hover:bg-slate-800",
-              
+                ? "border-blue-500 bg-blue-500/10 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+                : "border-slate-800 bg-[#1e1e1e] hover:border-slate-600",
               isSubmitted && isSelected && "border-green-500 bg-green-500/10"
             )}
           >
-            {/* Checkbox Icon UI */}
+            {/* Checkbox */}
             <div className={clsx(
-                "absolute top-4 right-4 transition-colors",
-                isSelected ? "text-blue-400" : "text-slate-600 group-hover:text-slate-400"
+                "absolute right-3 top-1/2 -translate-y-1/2",
+                isSelected ? "text-blue-400" : "text-slate-700"
             )}>
                 {isSelected ? <CheckCircle2 className="w-5 h-5" /> : <Circle className="w-5 h-5" />}
             </div>
 
-            {/* Codi Polimòrfic (Responsive) */}
-            <div className="pr-8"> {/* Padding right per no trepitjar la icona */}
+            {/* Code Snippet */}
+            <div className="pr-8 w-full"> 
                 <code className={clsx(
-                    "block font-mono text-xs md:text-sm leading-relaxed",
-                    "text-slate-300",
-                    // ✨ MÀGIA DISNEY PER EVITAR DESBORDAMENT ✨
-                    "break-all whitespace-pre-wrap word-break-break-word"
+                    "block font-mono text-[11px] md:text-xs leading-tight text-slate-300",
+                    // Assegurem que el codi trenqui línies si és molt llarg
+                    "break-all whitespace-pre-wrap" 
                 )}>
                     {option.code}
                 </code>
@@ -4982,12 +5320,14 @@ export function SolutionDeck({ options, selectedId, onSelect, isSubmitted }: Sol
 'use client';
 
 import { useState } from 'react';
-// ✅ FIX: Importem des del 'index' de la carpeta (Barrel File), no del fitxer intern
-import { Challenge, CodeFixContent } from '@/core/entities/challenges'; 
-import { Terminal, Play, ArrowRight } from 'lucide-react';
+import { Challenge, CodeFixContent } from '@/core/entities/challenges';
+import { SmartTerminal } from './code-fix/SmartTerminal'; 
 import { CodeWindow } from './code-fix/CodeWindow';
 import { SolutionDeck } from './code-fix/SolutionDeck';
-import { HintPanel } from './code-fix/HintPanel';
+import { GameSessionLayout } from '@/presentation/components/features/game-engine/layout/GameSessionLayout';
+import { GameHeader } from '@/presentation/components/features/game-engine/layout/GameHeader';
+import { useTranslations } from 'next-intl';
+import { Play, ArrowRight, Loader2 } from 'lucide-react';
 import { clsx } from 'clsx';
 
 interface CodeFixViewProps {
@@ -4996,24 +5336,28 @@ interface CodeFixViewProps {
 }
 
 export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
-  // Ara TypeScript sap perfectament què és CodeFixContent
+  const t = useTranslations('game');
   const content = challenge.content as CodeFixContent;
   
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE');
+  const [status, setStatus] = useState<'IDLE' | 'RUNNING' | 'SUCCESS' | 'ERROR'>('IDLE');
+  
+  // NOU ESTAT: Quina pestanya estem veient a la terminal? ('CODE', 'MISSION', 'HINT')
+  const [activeTab, setActiveTab] = useState<'CODE' | 'MISSION' | 'HINT'>('CODE');
 
-  const handleCheck = () => {
+  const handleRun = async () => {
     if (!selectedId) return;
-
-    // ✅ FIX: Ara 'opt' ja no és 'any', TS sap que és un 'CodeFixOption'
-    const selectedOption = content.options.find(opt => opt.id === selectedId);
+    setStatus('RUNNING');
+    // Forcem veure el codi quan s'executa per veure l'efecte visual
+    setActiveTab('CODE');
+    await new Promise(resolve => setTimeout(resolve, 800));
     
+    const selectedOption = content.options.find(opt => opt.id === selectedId);
     if (selectedOption?.isCorrect) {
        setStatus('SUCCESS');
-       setTimeout(() => onNext(true), 1500); 
     } else {
        setStatus('ERROR');
-       setTimeout(() => setStatus('IDLE'), 1000);
+       setTimeout(() => setStatus('IDLE'), 2000);
     }
   };
 
@@ -5021,61 +5365,118 @@ export function CodeFixView({ challenge, onNext }: CodeFixViewProps) {
     ? content.options.find(o => o.id === selectedId)?.code 
     : null;
 
-  return (
-    <div className="w-full max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
-      {/* HEADER */}
-      <div className="flex items-center gap-3 mb-2 text-slate-300">
-         <div className="p-2 bg-blue-500/10 rounded-lg">
-            <Terminal className="w-5 h-5 text-blue-400" />
-         </div>
-         <h2 className="font-mono font-bold text-lg text-white tracking-wider">DEBUG_MODE</h2>
-      </div>
-      
-      <p className="text-slate-400 text-sm mb-6 pl-12 border-l-2 border-slate-800">
-         {content.description}
-      </p>
-
-      {/* EDITOR */}
-      <CodeWindow 
-         initialCode={content.initialCode} 
-         selectedCode={currentCode}
-         isError={status === 'ERROR'}
-         isSuccess={status === 'SUCCESS'}
-      />
-
-      {/* TARGETES D'OPCIONS (Aquí és on aplicarem el disseny Disney) */}
-      <SolutionDeck 
-         options={content.options} 
-         selectedId={selectedId} 
-         onSelect={(id) => {
-             setSelectedId(id);
-             setStatus('IDLE');
-         }}
-         isSubmitted={status === 'SUCCESS'}
-      />
-
-      {/* PISTA */}
-      <HintPanel hintText={content.hint} />
-
-      {/* BOTÓ D'ACCIÓ */}
-      <div className="mt-8 flex justify-end border-t border-slate-800 pt-6">
-         <button
-            onClick={handleCheck}
-            disabled={!selectedId || status === 'SUCCESS'}
-            className={clsx(
-               "px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all shadow-lg transform active:scale-95",
-               !selectedId ? "bg-slate-800 text-slate-500 cursor-not-allowed" :
-               status === 'SUCCESS' ? "bg-green-600 text-white hover:bg-green-500" :
-               "bg-blue-600 hover:bg-blue-500 text-white hover:scale-105 shadow-blue-900/20"
-            )}
-         >
-            {status === 'SUCCESS' ? 'SISTEMA RESTAURAT' : 'EXECUTAR PATCH'} 
-            {status === 'SUCCESS' ? <ArrowRight className="w-5 h-5" /> : <Play className="w-4 h-4 fill-current" />}
-         </button>
-      </div>
-
+  // --- FOOTER (Botó d'acció) ---
+  const Footer = (
+    <div className="w-full px-4 py-3 md:pb-6 bg-slate-950/80 backdrop-blur-md border-t border-slate-800">
+        {status === 'SUCCESS' ? (
+            <button
+                onClick={() => onNext(true)}
+                className="w-full py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-green-900/20 active:scale-95 transition-all"
+            >
+                {t('arena.continue_btn')} <ArrowRight className="w-5 h-5" />
+            </button>
+        ) : (
+            <button
+                onClick={handleRun}
+                disabled={!selectedId || status === 'RUNNING'}
+                className={clsx(
+                    "w-full py-4 font-bold rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95",
+                    !selectedId 
+                        ? "bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700"
+                        : status === 'ERROR'
+                        ? "bg-red-600 text-white animate-shake"
+                        : "bg-blue-600 hover:bg-blue-500 text-white shadow-blue-900/20"
+                )}
+            >
+                {status === 'RUNNING' ? <Loader2 className="w-5 h-5 animate-spin" /> : <Play className="w-5 h-5 fill-current" />}
+                <span className="uppercase tracking-wide text-xs md:text-sm ml-2">
+                    {status === 'RUNNING' ? t('loading') : status === 'ERROR' ? t('feedback.incorrect') : t('actions.verify')}
+                </span>
+            </button>
+        )}
     </div>
+  );
+
+  return (
+    <GameSessionLayout header={<GameHeader />} footer={Footer}>
+      
+      {/* CONTENIDOR PRINCIPAL (Flex column per ocupar alçada i ajustar-se) */}
+      <div className="flex flex-col w-full h-full gap-4">
+        
+        {/* 1. SMART TERMINAL INTEGRADA (Tabs + Contingut) */}
+        <div className="w-full rounded-xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col bg-[#1e1e1e]">
+            
+            {/* Header amb Pestanyes estil VSCode */}
+            <SmartTerminal 
+               language="typescript" // Això podria venir del topic
+               fileName="Solution.tsx"
+               activeTab={activeTab}
+               onTabChange={setActiveTab}
+            />
+
+            {/* Contingut Canviant segons la pestanya */}
+            <div className="relative min-h-50">
+                
+                {/* VISTA 1: EDITOR DE CODI (Per defecte) */}
+                <div className={clsx("transition-opacity duration-300", activeTab === 'CODE' ? "block" : "hidden")}>
+                    <CodeWindow 
+                       initialCode={content.initialCode}
+                       selectedCode={currentCode}
+                       status={status}
+                    />
+                </div>
+
+                {/* VISTA 2: INSTRUCCIONS (MISSION) */}
+                {activeTab === 'MISSION' && (
+                    <div className="p-6 text-slate-300 text-sm leading-relaxed animate-in fade-in slide-in-from-top-2">
+                        <h3 className="text-blue-400 font-bold uppercase tracking-widest text-xs mb-4 border-b border-slate-700 pb-2">
+                            Mission Briefing
+                        </h3>
+                        {content.description}
+                    </div>
+                )}
+
+                {/* VISTA 3: PISTA (HINT) */}
+                {activeTab === 'HINT' && (
+                    <div className="p-6 animate-in fade-in slide-in-from-top-2">
+                        <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
+                            <h3 className="text-yellow-500 font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
+                                Developer Hint
+                            </h3>
+                            <p className="text-yellow-100/80 text-sm italic">
+                                {content.hint}
+                            </p>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+
+        {/* 2. OPCIONS (Sempre visibles a sota, scrollable si cal) */}
+        <div className="flex-1 pb-4">
+           <div className="flex justify-between items-end mb-2 px-1">
+              <h3 className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">
+                  Available Patches
+              </h3>
+           </div>
+
+           <SolutionDeck 
+              options={content.options} 
+              selectedId={selectedId} 
+              onSelect={(id) => { 
+                 if (status !== 'SUCCESS') { 
+                    setSelectedId(id); 
+                    setStatus('IDLE'); 
+                    // Opcional: Si cliques una opció, et tornem al codi automàticament
+                    setActiveTab('CODE');
+                 } 
+              }} 
+              isSubmitted={status === 'SUCCESS'} 
+           />
+        </div>
+
+      </div>
+    </GameSessionLayout>
   );
 }
 
@@ -5089,17 +5490,9 @@ import { useGameSession } from '@/presentation/hooks/game/useGameSession';
 import { ChallengeRenderer } from './ChallengeRenderer';
 import { GameResult } from './GameResult';
 import { GameError } from './GameError';
-import { Loader2} from 'lucide-react';
-
-
-// NO importis el layout aquí directament si vols que cada joc tingui el seu footer propi.
-// Però per mantenir consistència, podem passar el footer des del ChallengeRenderer.
-// REVISIÓ: El GameArena només proveeix el context. El layout el controlarà el fill.
-
-// MIRA BÉ EL CANVI D'ESTRATÈGIA: 
-// Passem el control del layout al component específic (LogicOrderView) 
-// perquè ell sap quin botó necessita (Verificar, Continuar...).
-// GameArena només retorna el contingut pur.
+import { Loader2 } from 'lucide-react';
+// 1. Importem el Provider
+import { GameSessionProvider } from '@/presentation/context/GameSessionContext';
 
 interface GameArenaProps {
   challenges: Challenge[];
@@ -5112,26 +5505,25 @@ export function GameArena({ challenges, topicSlug }: GameArenaProps) {
     status, result, error, handleNext, handleRetry
   } = useGameSession(challenges);
 
-  // Estats globals (Càrrega/Error) - Ocupen tota la pantalla
   if (status === 'SUBMITTING') return <FullScreenMsg><Loader2 className="w-12 h-12 animate-spin text-blue-500" /></FullScreenMsg>;
   if (status === 'SUCCESS' && result) return <GameResult xpEarned={result.xpEarned} newLevel={result.newLevel} leveledUp={result.leveledUp} topicSlug={topicSlug} />;
   if (status === 'ERROR' && error) return <GameError message={error} onRetry={handleRetry} />;
 
-  // Renderitzem el joc actual.
-  // Passem les dades de sessió (progress, etc.) com a props al Renderer 
-  // perquè el component final (LogicOrderView) pugui muntar el GameSessionLayout complet.
+  // 2. EMBOLCALLEM EL JOC AMB EL CONTEXT
+  // Ara tots els components fills poden accedir a 'progress' sense passar-ho per props.
   return (
-    <ChallengeRenderer
-      challenge={currentChallenge}
-      onNext={handleNext}
-      // 👇 Aquest objecte ha de coincidir amb la interfície SessionData
-      sessionData={{
-        progress,
-        currentIndex,
-        totalChallenges,
-        topicSlug
-      }}
-    />
+    <GameSessionProvider value={{ 
+        progress, 
+        currentIndex, 
+        totalChallenges, 
+        topicSlug 
+    }}>
+        <ChallengeRenderer
+            challenge={currentChallenge}
+            onNext={handleNext}
+            // JA NO PASSEM sessionData AQUÍ!
+        />
+    </GameSessionProvider>
   );
 }
 
@@ -5240,6 +5632,62 @@ export function GameResult({ xpEarned, newLevel, leveledUp, topicSlug }: GameRes
   );
 }
 
+// =================== FILE: src/presentation/components/features/game-engine/layout/GameHeader.tsx ===================
+
+// filepath: src/presentation/components/features/game-engine/layout/GameHeader.tsx
+'use client';
+
+import { X } from 'lucide-react';
+import { Link } from '@/navigation';
+import { useGameSessionContext } from '@/presentation/context/GameSessionContext';
+import { useTranslations } from 'next-intl'; // 1. Importem hook
+
+interface GameHeaderProps {
+  rightContent?: React.ReactNode;
+}
+
+export function GameHeader({ rightContent }: GameHeaderProps) {
+  const t = useTranslations('game'); // 2. Namespace 'game'
+  const { progress, currentIndex, totalChallenges, topicSlug } = useGameSessionContext();
+
+  const visualProgress = Math.max(progress, 5);
+
+  return (
+    <div className="flex items-center gap-4 w-full h-full max-w-5xl mx-auto">
+      <Link 
+        href={`/learn/${topicSlug}`} 
+        className="text-slate-400 hover:text-white p-2 transition-colors hover:bg-white/10 rounded-xl"
+        aria-label={t('arena.quit')} // Accesibilitat
+      >
+        <X className="w-6 h-6" />
+      </Link>
+
+      <div className="flex-1 flex flex-col justify-center gap-2">
+         <div className="flex justify-between text-[10px] uppercase font-bold text-slate-400 tracking-widest px-1">
+            {/* 3. Usem la clau correcta */}
+            <span>{t('arena.progress')}</span>
+            <span>{currentIndex + 1} / {totalChallenges}</span>
+         </div>
+
+         <div className="h-3 bg-slate-800/80 rounded-full overflow-hidden border border-slate-700/50 relative backdrop-blur-sm">
+            <div 
+              className="h-full rounded-full relative overflow-hidden transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1)"
+              style={{ width: `${visualProgress}%` }}
+            >
+               <div className="absolute inset-0 bg-linear-to-r from-blue-600 via-blue-500 to-cyan-400"></div>
+               <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent w-full -translate-x-full animate-[shimmer_2s_infinite]"></div>
+               <div className="absolute right-0 top-0 bottom-0 w-2 bg-white/30 blur-[2px]"></div>
+            </div>
+         </div>
+      </div>
+
+      <div className="w-8 flex justify-end">
+          {rightContent}
+      </div>
+    </div>
+  );
+}
+
 // =================== FILE: src/presentation/components/features/game-engine/layout/GameSessionLayout.tsx ===================
 
 // filepath: src/presentation/components/features/game-engine/layout/GameSessionLayout.tsx
@@ -5250,37 +5698,47 @@ import { clsx } from 'clsx';
 
 interface GameSessionLayoutProps {
   header: ReactNode;
-  children: ReactNode; // La zona de joc
-  footer: ReactNode;   // El botó de verificar
+  children: ReactNode;
+  footer: ReactNode;
   className?: string;
 }
 
 export function GameSessionLayout({ header, children, footer, className }: GameSessionLayoutProps) {
   return (
-    // CONTENIDOR MESTRE: Fixat a la pantalla, sense scroll global.
-    // 'fixed inset-0' garanteix que ocupa tota la pantalla i tapa la UI de sota.
-    <div className="fixed inset-0 z-50 flex flex-col bg-slate-950 h-dvh w-screen overflow-hidden">
+    // Usem 'dvh' (dynamic viewport height) per mòbils.
+    <div className="fixed inset-0 z-50 flex flex-col bg-[#0a0a0a] h-dvh w-screen overflow-hidden text-slate-200">
       
-      {/* 1. HEADER (Fix) */}
-      <header className="shrink-0 px-4 py-3 bg-slate-950/95 backdrop-blur z-20 border-b border-white/5">
+      {/* 1. HEADER (Fix a dalt) */}
+      <header className="shrink-0 px-4 py-3 bg-[#0a0a0a]/90 backdrop-blur-md z-20 border-b border-white/5">
         {header}
       </header>
 
-      {/* 2. ZONA DE JOC (Flexible) */}
-      {/* 'flex-1' l'obliga a ocupar tot l'espai disponible.
-          'min-h-0' és vital per permetre scroll intern en fills flex.
-          'relative' crea un context per a posicionaments absoluts interns. */}
-      <main className={clsx("flex-1 min-h-0 relative w-full max-w-3xl mx-auto", className)}>
-        {/* Wrapper intern per centrar i donar padding sense trencar el scroll */}
-        <div className="h-full w-full flex flex-col px-4 py-2 overflow-hidden">
-           {children}
+      {/* 2. ZONA DE JOC (Flexible i Centrada) */}
+      <main className="flex-1 w-full relative overflow-hidden flex flex-col">
+        {/* Aquest div intern és el que fa la màgia del centrat.
+            - overflow-y-auto: Permet scroll si el contingut és molt alt (com CodeFix).
+            - flex items-center justify-center: Centra continguts petits (com Quiz).
+        */}
+        <div className={clsx(
+            "flex-1 w-full h-full overflow-y-auto overflow-x-hidden",
+            "flex flex-col items-center", // Centrat Horitzontal
+            // Centrat Vertical 'intel·ligent': 
+            // Si hi ha scroll, es queda a dalt. Si no, es centra.
+            "justify-center py-4 px-4 md:px-0" 
+        )}>
+           {/* Wrapper per limitar l'amplada màxima */}
+           <div className={clsx("w-full max-w-3xl animate-in zoom-in-95 duration-300", className)}>
+              {children}
+           </div>
         </div>
       </main>
 
-      {/* 3. FOOTER (Fix i Segur) */}
-      {/* 'pb-safe' (si tens la utilitat de Tailwind configurada) o un padding generós */}
-      <footer className="shrink-0 px-4 pt-3 pb-6 bg-slate-950/95 backdrop-blur z-20 border-t border-white/5 w-full max-w-3xl mx-auto">
-        {footer}
+      {/* 3. FOOTER (Fix a baix) */}
+      {/* 'pb-safe' és crucial per als iPhones moderns (la barra negra de baix) */}
+      <footer className="shrink-0 w-full bg-[#0a0a0a]/90 backdrop-blur-md z-20 border-t border-white/5 pb-safe">
+        <div className="max-w-3xl mx-auto px-4 py-4">
+           {footer}
+        </div>
       </footer>
 
     </div>
@@ -5293,178 +5751,160 @@ export function GameSessionLayout({ header, children, footer, className }: GameS
 'use client';
 
 import { useState } from 'react';
-import { Challenge, LogicOrderContent, ChallengeOption } from '@/core/entities/challenges/challenge.entity';
+import { Challenge, LogicOrderContent, ChallengeOption } from '@/core/entities/challenges/index';
 import { RotateCcw, GripVertical, X } from 'lucide-react';
 import { clsx } from 'clsx';
 import { Reorder, AnimatePresence, motion, LayoutGroup } from 'framer-motion';
 import { GameSessionLayout } from './layout/GameSessionLayout';
-import { Link } from '@/navigation';
-import { X as CloseIcon } from 'lucide-react';
-// 1. IMPORTAR HOOK DE TRADUCCIÓ
+import { GameHeader } from './layout/GameHeader'; // ✅ Header Reutilitzable
 import { useTranslations } from 'next-intl';
 
 interface LogicOrderViewProps {
-  challenge: Challenge;
-  onNext: (isCorrect: boolean) => void;
-  sessionData: { progress: number; currentIndex: number; totalChallenges: number; topicSlug: string };
+   challenge: Challenge;
+   onNext: (isCorrect: boolean) => void;
+   // ❌ sessionData ELIMINAT
 }
 
-export function LogicOrderView({ challenge, onNext, sessionData }: LogicOrderViewProps) {
-  // 2. INICIALITZAR HOOK
-  const t = useTranslations('game');
-  
-  const content = challenge.content as LogicOrderContent;
-  const [available, setAvailable] = useState<ChallengeOption[]>(content.items);
-  const [selected, setSelected] = useState<ChallengeOption[]>([]);
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+export function LogicOrderView({ challenge, onNext }: LogicOrderViewProps) {
+   const t = useTranslations('game');
 
-  const handleSelect = (item: ChallengeOption) => {
-    if (hasSubmitted) return;
-    setAvailable(prev => prev.filter(i => i.id !== item.id));
-    setSelected(prev => [...prev, item]);
-  };
-  const handleDeselect = (item: ChallengeOption) => {
-    if (hasSubmitted) return;
-    setSelected(prev => prev.filter(i => i.id !== item.id));
-    setAvailable(prev => [...prev, item]); 
-  };
-  const handleReset = () => {
-    setAvailable(content.items); setSelected([]); setHasSubmitted(false); setIsCorrect(null);
-  };
-  const handleSubmit = () => {
-    if (hasSubmitted) return;
-    const currentOrder = selected.map(s => s.id);
-    const correctOrder = [...content.items].map(i => i.id).sort(); 
-    const correct = JSON.stringify(currentOrder) === JSON.stringify(correctOrder);
-    setIsCorrect(correct); setHasSubmitted(true);
-    if (correct) setTimeout(() => onNext(true), 1500);
-  };
+   const content = challenge.content as LogicOrderContent;
+   const [available, setAvailable] = useState<ChallengeOption[]>(content.items);
+   const [selected, setSelected] = useState<ChallengeOption[]>([]);
+   const [hasSubmitted, setHasSubmitted] = useState(false);
+   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-  const Header = (
-    <div className="flex items-center gap-4 w-full">
-        <Link href={`/learn/${sessionData.topicSlug}`} className="text-slate-400 hover:text-white p-1">
-           <CloseIcon className="w-6 h-6" />
-        </Link>
-        <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
-            <div 
-              className="bg-blue-500 h-full transition-all duration-500 ease-out"
-              style={{ width: `${sessionData.progress}%` }} 
-            />
-        </div>
-    </div>
-  );
+   // ... (Lògica de handleSelect, handleDeselect, handleReset es manté igual) ...
+   const handleSelect = (item: ChallengeOption) => {
+      if (hasSubmitted) return;
+      setAvailable(prev => prev.filter(i => i.id !== item.id));
+      setSelected(prev => [...prev, item]);
+   };
+   const handleDeselect = (item: ChallengeOption) => {
+      if (hasSubmitted) return;
+      setSelected(prev => prev.filter(i => i.id !== item.id));
+      setAvailable(prev => [...prev, item]);
+   };
+   const handleReset = () => {
+      setAvailable(content.items); setSelected([]); setHasSubmitted(false); setIsCorrect(null);
+   };
+   const handleSubmit = () => {
+      if (hasSubmitted) return;
+      const currentOrder = selected.map(s => s.id);
+      const correctOrder = [...content.items].map(i => i.id).sort();
+      const correct = JSON.stringify(currentOrder) === JSON.stringify(correctOrder);
+      setIsCorrect(correct); setHasSubmitted(true);
+      if (correct) setTimeout(() => onNext(true), 1500);
+   };
 
-  const Footer = (
-    <div className="flex gap-3 w-full">
-       <button 
-          onClick={handleReset}
-          className="p-4 rounded-xl bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors border border-slate-700"
-          title={t('actions.reset')} // Accessibilitat
-       >
-          <RotateCcw className="w-6 h-6" />
-       </button>
-       <button
-          onClick={handleSubmit}
-          disabled={selected.length === 0 || hasSubmitted}
-          className={clsx(
-             "flex-1 p-4 rounded-xl font-black text-lg uppercase tracking-wider transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2",
-             hasSubmitted 
-                ? (isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white")
-                : selected.length === 0 
-                    ? "bg-slate-800 text-slate-600 border-slate-700 cursor-not-allowed"
-                    : "bg-blue-600 text-white border-b-4 border-blue-800 shadow-blue-500/20"
-          )}
-       >
-          {/* 3. ÚS DE CLAUS DE TRADUCCIÓ */}
-          {hasSubmitted ? (
-             isCorrect ? t('feedback.correct') : t('feedback.incorrect')
-          ) : t('actions.check')}
-       </button>
-    </div>
-  );
+   // --- FOOTER ---
+   const Footer = (
+      <div className="flex gap-3 w-full">
+         <button
+            onClick={handleReset}
+            className="p-4 rounded-xl bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors border border-slate-700"
+            title={t('actions.reset')} // "Reiniciar"
+         >
+            <RotateCcw className="w-6 h-6" />
+         </button>
+         <button
+            onClick={handleSubmit}
+            disabled={selected.length === 0 || hasSubmitted}
+            className={clsx(/* ... classes ... */)}
+         >
+            {hasSubmitted ? (
+               isCorrect ? t('feedback.correct') : t('feedback.incorrect')
+            ) : t('actions.check')} {/* "Comprovar" */}
+         </button>
+      </div>
+   );
 
-  return (
-    <GameSessionLayout header={Header} footer={Footer}>
-      <LayoutGroup>
-        <div className="flex flex-col h-full gap-2">
-          
-          <div className="shrink-0 text-center pb-2">
-             <h2 className="text-lg font-bold text-white leading-tight">{content.description}</h2>
-             {/* Subtítol opcional amb el nom del mode */}
-             <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">
-                {t('modes.logic_order.label')}
-             </div>
-          </div>
+   return (
+      // ✅ HEADER AUTOMÀTIC
+      <GameSessionLayout header={<GameHeader />} footer={Footer}>
+         <LayoutGroup>
+            <div className="flex flex-col h-full gap-2">
 
-          <div className="flex-1 min-h-0 flex flex-col gap-2">
-             
-             <div className="flex-1 bg-slate-900/50 rounded-xl border-2 border-dashed border-slate-700 p-2 overflow-y-auto relative min-h-25">
-                <span className="absolute top-2 right-2 text-[9px] text-slate-500 uppercase font-bold tracking-widest pointer-events-none">
-                    {t('modes.logic_order.your_answer')}
-                </span>
-                
-                {selected.length === 0 && (
-                   <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600 pointer-events-none">
-                      <GripVertical className="w-6 h-6 mb-1 opacity-50" />
-                      <span className="text-xs">{t('modes.logic_order.placeholder')}</span>
-                   </div>
-                )}
+               <div className="shrink-0 text-center pb-2">
+                  <h2 className="text-lg font-bold text-white leading-tight">{content.description}</h2>
+                  <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">
+                     {t('modes.logic_order.label')}
+                  </div>
+               </div>
 
-                <Reorder.Group axis="y" values={selected} onReorder={setSelected} className="flex flex-col gap-2 w-full pb-8">
-                   <AnimatePresence mode='popLayout'>
-                     {selected.map((item, index) => (
-                       <Reorder.Item key={item.id} value={item} dragListener={!hasSubmitted} layoutId={item.id}
-                         className="relative p-3 rounded-lg border bg-slate-800 border-slate-600 flex items-center gap-3 select-none touch-none"
-                       >
-                          <span className="w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center text-[10px] font-bold">{index + 1}</span>
-                          <span className="flex-1 text-sm font-medium">{item.text}</span>
-                          {!hasSubmitted && <button onClick={() => handleDeselect(item)}><X className="w-4 h-4 text-slate-500" /></button>}
-                       </Reorder.Item>
-                     ))}
-                   </AnimatePresence>
-                </Reorder.Group>
-             </div>
+               <div className="flex-1 min-h-0 flex flex-col gap-2">
 
-             <div className="shrink-0 h-auto max-h-[40%] overflow-y-auto bg-slate-950/30 rounded-xl border border-slate-800 p-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                   <AnimatePresence mode='popLayout'>
-                      {available.map((item) => (
-                         <motion.button
-                            layoutId={item.id} key={item.id} onClick={() => handleSelect(item)} disabled={hasSubmitted}
-                            className="p-3 rounded-lg bg-slate-800 border-b-2 border-slate-900 text-slate-300 text-xs font-medium text-left flex justify-between items-center group"
-                         >
-                            <span className="line-clamp-2">{item.text}</span>
-                            <span className="text-blue-500 font-bold">+</span>
-                         </motion.button>
-                      ))}
-                   </AnimatePresence>
-                   {available.length === 0 && (
-                       <div className="text-center text-xs text-slate-600 py-2">
-                           {t('modes.logic_order.empty_options')}
-                       </div>
-                   )}
-                </div>
-             </div>
+                  {/* Zona de Resposta (Drop Zone) */}
+                  <div className="flex-1 bg-slate-900/50 rounded-xl border-2 border-dashed border-slate-700 p-2 overflow-y-auto relative min-h-25">
+                     <span className="absolute top-2 right-2 text-[9px] text-slate-500 uppercase font-bold tracking-widest pointer-events-none">
+                        {t('modes.logic_order.your_answer')}
+                     </span>
 
-          </div>
-        </div>
-      </LayoutGroup>
-    </GameSessionLayout>
-  );
+                     {selected.length === 0 && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600 pointer-events-none">
+                           <GripVertical className="w-6 h-6 mb-1 opacity-50" />
+                           <span className="text-xs">{t('modes.logic_order.placeholder')}</span>
+                        </div>
+                     )}
+
+                     <Reorder.Group axis="y" values={selected} onReorder={setSelected} className="flex flex-col gap-2 w-full pb-8">
+                        <AnimatePresence mode='popLayout'>
+                           {selected.map((item, index) => (
+                              <Reorder.Item key={item.id} value={item} dragListener={!hasSubmitted} layoutId={item.id}
+                                 className="relative p-3 rounded-lg border bg-slate-800 border-slate-600 flex items-center gap-3 select-none touch-none"
+                              >
+                                 <span className="w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center text-[10px] font-bold">{index + 1}</span>
+                                 <span className="flex-1 text-sm font-medium">{item.text}</span>
+                                 {!hasSubmitted && <button onClick={() => handleDeselect(item)}><X className="w-4 h-4 text-slate-500" /></button>}
+                              </Reorder.Item>
+                           ))}
+                        </AnimatePresence>
+                     </Reorder.Group>
+                  </div>
+
+                  {/* Banc d'Opcions */}
+                  <div className="shrink-0 h-auto max-h-[40%] overflow-y-auto bg-slate-950/30 rounded-xl border border-slate-800 p-2">
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <AnimatePresence mode='popLayout'>
+                           {available.map((item) => (
+                              <motion.button
+                                 layoutId={item.id} key={item.id} onClick={() => handleSelect(item)} disabled={hasSubmitted}
+                                 className="p-3 rounded-lg bg-slate-800 border-b-2 border-slate-900 text-slate-300 text-xs font-medium text-left flex justify-between items-center group"
+                              >
+                                 <span className="line-clamp-2">{item.text}</span>
+                                 <span className="text-blue-500 font-bold">+</span>
+                              </motion.button>
+                           ))}
+                        </AnimatePresence>
+                        {available.length === 0 && (
+                           <div className="text-center text-xs text-slate-600 py-2">
+                              {t('modes.logic_order.empty_options')}
+                           </div>
+                        )}
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </LayoutGroup>
+      </GameSessionLayout>
+   );
 }
 
 // =================== FILE: src/presentation/components/features/game-engine/MatchingView.tsx ===================
 
+// filepath: src/presentation/components/features/game-engine/MatchingView.tsx
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Challenge, MatchingContent } from '@/core/entities/challenges/challenge.entity';
+import { Challenge, MatchingContent } from '@/core/entities/challenges/index';
 import { Check, ArrowRight, Puzzle } from 'lucide-react';
 import { clsx } from 'clsx';
+import { GameSessionLayout } from './layout/GameSessionLayout';
+import { GameHeader } from './layout/GameHeader';
+import { useTranslations } from 'next-intl';
 
-// --- UTILS ---
-
+// --- UTILS (Es podrien moure a src/core/utils/random.ts) ---
 function pseudoRandom(seed: number) {
   let t = seed += 0x6D2B79F5;
   t = Math.imul(t ^ t >>> 15, t | 1);
@@ -5484,15 +5924,10 @@ function cyrb53(str: string, seed = 0) {
   return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 }
 
-// ✅ CORRECCIÓ 1: Protecció contra arrays nuls o indefinits
 function seededShuffle<T>(array: T[] | undefined | null, seedString: string): T[] {
-  if (!array || !Array.isArray(array)) {
-      console.warn("seededShuffle rebut un array invàlid:", array);
-      return []; 
-  }
+  if (!array || !Array.isArray(array)) return [];
   const copy = [...array];
   let seed = cyrb53(seedString);
-
   for (let i = copy.length - 1; i > 0; i--) {
     const randomFloat = pseudoRandom(seed++);
     const j = Math.floor(randomFloat * (i + 1));
@@ -5509,36 +5944,31 @@ interface MatchingViewProps {
 }
 
 export function MatchingView({ challenge, onNext }: MatchingViewProps) {
+  const t = useTranslations('game');
   const content = challenge.content as MatchingContent;
-  
-  // ESTAT UI
+
   const [selectedLeft, setSelectedLeft] = useState<string | null>(null);
   const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set());
-  const [errorPair, setErrorPair] = useState<{left: string, right: string} | null>(null);
+  const [errorPair, setErrorPair] = useState<{ left: string, right: string } | null>(null);
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // ✅ CORRECCIÓ 2: Protecció dins del useMemo
   const rightOptions = useMemo(() => {
-    // Si no hi ha contingut o no hi ha pairs, retornem buit per evitar l'error
     if (!content || !content.pairs) return [];
-    
     return seededShuffle(content.pairs, challenge.id);
   }, [content, challenge.id]);
 
-  // Si no hi ha parelles carregades, mostrem un error o loader en lloc de petar
   if (!content?.pairs || content.pairs.length === 0) {
-      return <div className="text-center p-10 text-red-400">Error: No s'han trobat parelles per relacionar.</div>;
+    return <div className="text-center p-10 text-red-400">Error: No matching pairs found.</div>;
   }
 
   const handleLeftClick = (id: string) => {
-    if (matchedPairs.has(id)) return; 
+    if (matchedPairs.has(id)) return;
     setSelectedLeft(id);
     setErrorPair(null);
   };
 
   const handleRightClick = (rightId: string) => {
-    if (!selectedLeft) return; 
-
+    if (!selectedLeft) return;
     const pair = content.pairs.find(p => p.left.id === selectedLeft);
 
     if (pair && pair.right.id === rightId) {
@@ -5559,88 +5989,90 @@ export function MatchingView({ challenge, onNext }: MatchingViewProps) {
     }
   };
 
-  return (
-    <div className="w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
-      <div className="text-center mb-8">
-         <div className="inline-flex items-center justify-center p-3 bg-purple-500/10 rounded-full mb-4">
-            <Puzzle className="w-8 h-8 text-purple-400" />
-         </div>
-         <h2 className="text-xl md:text-2xl font-bold text-white">
-            {content.instruction}
-         </h2>
-         <p className="text-slate-400 mt-2 text-sm">Selecciona un element de cada columna per relacionar-los.</p>
-      </div>
-
-      <div className="grid grid-cols-2 gap-8 md:gap-12 relative">
-         
-         {/* COLUMNA ESQUERRA */}
-         <div className="flex flex-col gap-4">
-            {content.pairs.map((pair) => {
-               const isMatched = matchedPairs.has(pair.left.id);
-               const isSelected = selectedLeft === pair.left.id;
-               const isError = errorPair?.left === pair.left.id;
-
-               return (
-                  <button
-                    key={pair.left.id}
-                    onClick={() => handleLeftClick(pair.left.id)}
-                    disabled={isMatched}
-                    className={clsx(
-                       "p-4 rounded-xl border-2 text-left transition-all duration-300 relative select-none",
-                       isMatched ? "bg-green-500/10 border-green-500 text-green-400 opacity-50" :
-                       isError ? "bg-red-500/10 border-red-500 text-red-400 shake-animation" :
-                       isSelected ? "bg-blue-600/20 border-blue-500 text-blue-200 scale-105 shadow-lg shadow-blue-500/20" :
-                       "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-700"
-                    )}
-                  >
-                     {pair.left.text}
-                     {isMatched && <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5" />}
-                  </button>
-               );
-            })}
-         </div>
-
-         {/* COLUMNA DRETA */}
-         <div className="flex flex-col gap-4">
-            {rightOptions.map((pair) => {
-               const originalPair = content.pairs.find(p => p.right.id === pair.right.id);
-               // Safe navigation operator ?. per evitar crash si originalPair no es troba
-               const isMatched = originalPair && matchedPairs.has(originalPair.left.id);
-               const isError = errorPair?.right === pair.right.id;
-
-               return (
-                  <button
-                    key={pair.right.id}
-                    onClick={() => handleRightClick(pair.right.id)}
-                    disabled={isMatched || !selectedLeft}
-                    className={clsx(
-                       "p-4 rounded-xl border-2 text-left transition-all duration-300 relative select-none",
-                       isMatched ? "bg-green-500/10 border-green-500 text-green-400 opacity-50" :
-                       isError ? "bg-red-500/10 border-red-500 text-red-400 shake-animation" :
-                       selectedLeft && !isMatched ? "bg-slate-800 border-slate-600 cursor-pointer hover:border-purple-400 hover:bg-slate-700" :
-                       "bg-slate-800 border-slate-800 text-slate-500 cursor-not-allowed opacity-60"
-                    )}
-                  >
-                     {pair.right.text}
-                  </button>
-               );
-            })}
-         </div>
-      </div>
-
-      {isCompleted && (
-         <div className="mt-8 flex justify-center animate-in zoom-in duration-300">
-            <button
-               onClick={() => onNext(true)}
-               className="px-8 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg hover:scale-105 transition-all"
-            >
-               NIVELL SUPERAT <ArrowRight className="w-5 h-5" />
-            </button>
-         </div>
-      )}
-
+  // --- FOOTER ---
+  const Footer = isCompleted ? (
+    <div className="w-full p-4 animate-in slide-in-from-bottom-2">
+      <button
+        onClick={() => onNext(true)}
+        className="w-full py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-green-900/20 active:scale-95 transition-all"
+      >
+        {/* Traducció: "Continuar" */}
+        {t('arena.continue_btn')} <ArrowRight className="w-5 h-5" />
+      </button>
     </div>
+  ) : <div className="h-4" />;
+
+  return (
+    <GameSessionLayout header={<GameHeader />} footer={Footer}>
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center pt-4 pb-8">
+
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center justify-center p-3 bg-purple-500/10 rounded-full mb-2 border border-purple-500/20">
+            <Puzzle className="w-6 h-6 text-purple-400" />
+          </div>
+          <h2 className="text-lg font-bold text-white leading-tight">
+            {content.instruction}
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 md:gap-12 w-full">
+
+          {/* COLUMNA ESQUERRA */}
+          <div className="flex flex-col gap-3">
+            {content.pairs.map((pair) => {
+              const isMatched = matchedPairs.has(pair.left.id);
+              const isSelected = selectedLeft === pair.left.id;
+              const isError = errorPair?.left === pair.left.id;
+
+              return (
+                <button
+                  key={pair.left.id}
+                  onClick={() => handleLeftClick(pair.left.id)}
+                  disabled={isMatched}
+                  className={clsx(
+                    "p-4 rounded-xl border-2 text-left transition-all duration-300 relative select-none text-sm md:text-base",
+                    isMatched ? "bg-green-500/10 border-green-500 text-green-400 opacity-50" :
+                      isError ? "bg-red-500/10 border-red-500 text-red-400 shake-animation" :
+                        isSelected ? "bg-blue-600/20 border-blue-500 text-blue-200 scale-105 shadow-lg z-10" :
+                          "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-700"
+                  )}
+                >
+                  {pair.left.text}
+                  {isMatched && <Check className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4" />}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* COLUMNA DRETA */}
+          <div className="flex flex-col gap-3">
+            {rightOptions.map((pair) => {
+              const originalPair = content.pairs.find(p => p.right.id === pair.right.id);
+              const isMatched = originalPair && matchedPairs.has(originalPair.left.id);
+              const isError = errorPair?.right === pair.right.id;
+
+              return (
+                <button
+                  key={pair.right.id}
+                  onClick={() => handleRightClick(pair.right.id)}
+                  disabled={isMatched || !selectedLeft}
+                  className={clsx(
+                    "p-4 rounded-xl border-2 text-left transition-all duration-300 relative select-none text-sm md:text-base",
+                    isMatched ? "bg-green-500/10 border-green-500 text-green-400 opacity-50" :
+                      isError ? "bg-red-500/10 border-red-500 text-red-400 shake-animation" :
+                        selectedLeft && !isMatched ? "bg-slate-800 border-slate-600 cursor-pointer hover:border-purple-400 hover:bg-slate-700" :
+                          "bg-slate-800 border-slate-800 text-slate-500 cursor-not-allowed opacity-60"
+                  )}
+                >
+                  {pair.right.text}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+      </div>
+    </GameSessionLayout>
   );
 }
 
@@ -5650,24 +6082,24 @@ export function MatchingView({ challenge, onNext }: MatchingViewProps) {
 'use client';
 
 import { useState } from 'react';
-import { Challenge, QuizContent } from '@/core/entities/challenges/challenge.entity';
+import { Challenge, QuizContent } from '@/core/entities/challenges/index';
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
-
+import { GameSessionLayout } from './layout/GameSessionLayout';
+import { GameHeader } from './layout/GameHeader';
+import { useTranslations } from 'next-intl';
 
 interface QuizViewProps {
   challenge: Challenge;
-  // ✅ CORRECCIÓ 1: La signatura ha de coincidir amb el que envia el pare
   onNext: (isCorrect: boolean) => void;
 }
 
 export function QuizView({ challenge, onNext }: QuizViewProps) {
-  // const t = useTranslations('game.quiz'); 
-  
+  const t = useTranslations('game'); 
+  const content = challenge.content as QuizContent;
+
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const content = challenge.content as QuizContent;
 
   const handleOptionClick = (optionId: string) => {
     if (isSubmitted) return; 
@@ -5675,132 +6107,112 @@ export function QuizView({ challenge, onNext }: QuizViewProps) {
     setIsSubmitted(true);
   };
 
-  // ✅ CORRECCIÓ 2: Funció per gestionar el click a "Continuar"
   const handleContinue = () => {
-    // Calculem si és correcte buscant l'índex de l'ID seleccionat
     const selectedIndex = content.options.findIndex(o => o.id === selectedOptionId);
     const isCorrect = selectedIndex === content.correctOptionIndex;
-    
-    // Avisem al pare amb el resultat
     onNext(isCorrect);
   };
 
+  const selectedIndex = content.options.findIndex(o => o.id === selectedOptionId);
+  const isCorrectAnswer = selectedIndex === content.correctOptionIndex;
+
+  // --- STYLES HELPER ---
   const getOptionStyles = (optionId: string, index: number) => {
     if (!isSubmitted) {
       return "border-slate-700 bg-slate-800/50 hover:bg-slate-700 hover:border-blue-500/50 text-slate-300 cursor-pointer active:scale-[0.98]";
     }
-
     const isCorrect = index === content.correctOptionIndex;
     const isSelected = optionId === selectedOptionId;
 
-    if (isCorrect) {
-      return "border-green-500 bg-green-500/20 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.3)] font-bold";
-    }
-
-    if (isSelected && !isCorrect) {
-      return "border-red-500 bg-red-500/10 text-red-400 opacity-90 shake-animation"; 
-    }
-
+    if (isCorrect) return "border-green-500 bg-green-500/20 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.3)] font-bold";
+    if (isSelected && !isCorrect) return "border-red-500 bg-red-500/10 text-red-400 opacity-90 shake-animation"; 
     return "border-slate-800 bg-slate-900/50 text-slate-600 opacity-40 grayscale";
   };
 
-  // Helpers per determinar l'estat actual visualment
-  const selectedIndex = content.options.findIndex(o => o.id === selectedOptionId);
-  const isCorrectAnswer = selectedIndex === content.correctOptionIndex;
+  // --- FOOTER (FEEDBACK) ---
+  const Footer = isSubmitted ? (
+    <div className={clsx(
+        "w-full animate-in slide-in-from-bottom-4 duration-300",
+        // El fons del footer canvia segons l'encert (feedback visual fort)
+        isCorrectAnswer ? "border-t-4 border-green-500 bg-green-900/20" : "border-t-4 border-red-500 bg-red-900/20"
+    )}>
+       <div className="p-4 flex flex-col gap-4 backdrop-blur-md rounded-t-xl">
+           <div className="flex items-start gap-3">
+              <div className={clsx("p-2 rounded-full shrink-0", isCorrectAnswer ? "bg-green-500 text-white" : "bg-red-500 text-white")}>
+                  {isCorrectAnswer ? <CheckCircle2 className="w-6 h-6" /> : <XCircle className="w-6 h-6" />}
+              </div>
+              <div className="flex-1">
+                  <h3 className={clsx("font-bold text-lg", isCorrectAnswer ? "text-green-400" : "text-red-400")}>
+                      {isCorrectAnswer ? t('feedback.correct') : t('feedback.incorrect')}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed mt-1">
+                      {content.explanation}
+                  </p>
+              </div>
+           </div>
+           
+           <button 
+             onClick={handleContinue}
+             className={clsx(
+                "w-full py-3.5 font-bold rounded-xl transition-transform active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg",
+                isCorrectAnswer 
+                ? "bg-green-600 hover:bg-green-500 text-white shadow-green-900/20"
+                : "bg-red-600 hover:bg-red-500 text-white shadow-red-900/20"
+             )}
+           >
+             {t('actions.continue')} <ArrowRight className="w-5 h-5" />
+           </button>
+       </div>
+    </div>
+  ) : <div className="h-4" />; // Espai buit per mantenir estructura
 
   return (
-    <div className="w-full max-w-2xl mx-auto flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
-      {/* PREGUNTA */}
-      <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 shadow-xl backdrop-blur-sm relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <h2 className="text-xl md:text-2xl font-bold text-white leading-relaxed relative z-10">
-          {content.question}
-        </h2>
-      </div>
-
-      {/* OPCIONS */}
-      <div className="grid gap-3">
-        {content.options.map((option, index) => {
-            const isOptCorrect = index === content.correctOptionIndex;
-            const isOptSelected = option.id === selectedOptionId;
-
-            return (
-              <button
-                key={option.id}
-                onClick={() => handleOptionClick(option.id)}
-                disabled={isSubmitted}
-                className={clsx(
-                  "w-full text-left p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between group relative overflow-hidden",
-                  getOptionStyles(option.id, index)
-                )}
-              >
-                <div className="flex items-center gap-4 z-10 w-full">
-                    {/* Badge A, B, C... */}
-                    <div className={clsx(
-                        "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold border transition-colors",
-                        isSubmitted && isOptCorrect ? "bg-green-500 border-green-500 text-slate-900" :
-                        isSubmitted && isOptSelected ? "bg-red-500 border-red-500 text-white" :
-                        "bg-slate-800 border-slate-600 text-slate-400 group-hover:border-blue-500 group-hover:text-blue-400"
-                    )}>
-                        {String.fromCharCode(65 + index)}
-                    </div>
-                    
-                    <span className="font-medium text-lg flex-1">{option.text}</span>
-
-                    {isSubmitted && isOptCorrect && (
-                        <CheckCircle2 className="w-6 h-6 text-green-400 animate-in zoom-in spin-in-90 duration-300" />
-                    )}
-                    {isSubmitted && isOptSelected && !isOptCorrect && (
-                        <XCircle className="w-6 h-6 text-red-400 animate-in zoom-in duration-300" />
-                    )}
-                </div>
-              </button>
-            );
-        })}
-      </div>
-
-      {/* FEEDBACK & NEXT BUTTON */}
-      {isSubmitted && (
-        <div className={clsx(
-            "rounded-2xl p-1 animate-in slide-in-from-bottom-2 duration-300 overflow-hidden shadow-2xl",
-             isCorrectAnswer 
-                ? "bg-linear-to-r from-green-500 to-emerald-600" 
-                : "bg-linear-to-r from-red-500 to-rose-600"
-        )}>
-           <div className="bg-slate-950 rounded-xl p-5">
-               <div className="flex items-start gap-4 mb-4">
-                  <div className={clsx("p-3 rounded-full shrink-0", 
-                      isCorrectAnswer ? "bg-green-500/20 text-green-400" : "bg-red-500/20 text-red-400"
-                  )}>
-                      {isCorrectAnswer ? <CheckCircle2 className="w-6 h-6" /> : <XCircle className="w-6 h-6" />}
-                  </div>
-                  <div>
-                      <h3 className={clsx("font-bold text-lg mb-1", isCorrectAnswer ? "text-green-400" : "text-red-400")}>
-                          {isCorrectAnswer ? "Correcte!" : "Incorrecte"}
-                      </h3>
-                      <p className="text-slate-300 text-sm leading-relaxed">
-                          {content.explanation}
-                      </p>
-                  </div>
-               </div>
-
-               <button 
-                 // ✅ CORRECCIÓ 3: Cridem al handler que passa el boolean, no directament onNext
-                 onClick={handleContinue}
-                 className={clsx(
-                    "w-full py-3.5 font-bold rounded-lg transition-transform active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg",
-                    isCorrectAnswer 
-                    ? "bg-green-600 hover:bg-green-500 text-white"
-                    : "bg-red-600 hover:bg-red-500 text-white"
-                 )}
-               >
-                 CONTINUAR <ArrowRight className="w-5 h-5" />
-               </button>
-           </div>
+    <GameSessionLayout header={<GameHeader />} footer={Footer}>
+      <div className="w-full max-w-2xl mx-auto flex flex-col gap-6 pt-4">
+        
+        {/* TARGETA DE PREGUNTA */}
+        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 shadow-xl backdrop-blur-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <h2 className="text-xl font-bold text-white leading-relaxed relative z-10">
+            {content.question}
+          </h2>
         </div>
-      )}
-    </div>
+
+        {/* LLISTA D'OPCIONS */}
+        <div className="grid gap-3 pb-8">
+          {content.options.map((option, index) => {
+              const isOptCorrect = index === content.correctOptionIndex;
+              const isOptSelected = option.id === selectedOptionId;
+
+              return (
+                <button
+                  key={option.id}
+                  onClick={() => handleOptionClick(option.id)}
+                  disabled={isSubmitted}
+                  className={clsx(
+                    "w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center justify-between group relative overflow-hidden",
+                    getOptionStyles(option.id, index)
+                  )}
+                >
+                  <div className="flex items-center gap-4 z-10 w-full">
+                      {/* Badge A, B, C... */}
+                      <div className={clsx(
+                          "w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold border transition-colors shrink-0",
+                          isSubmitted && isOptCorrect ? "bg-green-500 border-green-500 text-slate-900" :
+                          isSubmitted && isOptSelected ? "bg-red-500 border-red-500 text-white" :
+                          "bg-slate-800 border-slate-600 text-slate-400 group-hover:border-blue-500 group-hover:text-blue-400"
+                      )}>
+                          {String.fromCharCode(65 + index)}
+                      </div>
+                      
+                      <span className="font-medium text-base md:text-lg flex-1 leading-snug">{option.text}</span>
+                  </div>
+                </button>
+              );
+          })}
+        </div>
+      </div>
+    </GameSessionLayout>
   );
 }
 
@@ -5810,19 +6222,17 @@ export function QuizView({ challenge, onNext }: QuizViewProps) {
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Challenge, TerminalContent } from '@/core/entities/challenges/challenge.entity';
-import { Terminal as TerminalIcon, ArrowRight, CheckCircle2, Command, X as CloseIcon } from 'lucide-react';
+import { Challenge, TerminalContent } from '@/core/entities/challenges/index';
+import { Terminal as TerminalIcon, ArrowRight, CheckCircle2, Command } from 'lucide-react';
 import { HintPanel } from './code-fix/HintPanel';
 import { GameSessionLayout } from './layout/GameSessionLayout';
-import { Link } from '@/navigation';
-import { SessionData } from './ChallengeRenderer';
-// 1. IMPORTEM EL HOOK DE TRADUCCIÓ
+import { GameHeader } from './layout/GameHeader'; // ✅ Importem el Header intel·ligent
 import { useTranslations } from 'next-intl';
 
 interface TerminalViewProps {
   challenge: Challenge;
   onNext: (isCorrect: boolean) => void;
-  sessionData: SessionData;
+  // ❌ sessionData ELIMINAT
 }
 
 type LogLine = {
@@ -5830,10 +6240,8 @@ type LogLine = {
   text: string;
 };
 
-export function TerminalView({ challenge, onNext, sessionData }: TerminalViewProps) {
-  // 2. INICIALITZEM EL HOOK (Namespace 'game')
+export function TerminalView({ challenge, onNext }: TerminalViewProps) {
   const t = useTranslations('game');
-  
   const content = challenge.content as TerminalContent;
   
   const [input, setInput] = useState(content.initialCommand || '');
@@ -5843,14 +6251,13 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll
+  // Auto-scroll i Focus logic (igual que abans)
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [history]);
 
-  // Focus
   useEffect(() => {
     if (!isCompleted) {
         setTimeout(() => inputRef.current?.focus(), 100);
@@ -5882,29 +6289,13 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
     }
   };
 
-  // --- HEADER ---
-  const Header = (
-    <div className="flex items-center gap-4 w-full">
-        <Link href={`/learn/${sessionData.topicSlug}`} className="text-slate-400 hover:text-white p-1">
-           <CloseIcon className="w-6 h-6" />
-        </Link>
-        <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
-            <div 
-              className="bg-blue-500 h-full transition-all duration-500 ease-out"
-              style={{ width: `${sessionData.progress}%` }} 
-            />
-        </div>
-    </div>
-  );
-
-  // --- FOOTER ---
+  // --- FOOTER (Específic d'aquest joc) ---
   const Footer = isCompleted ? (
     <div className="animate-in slide-in-from-bottom-4 duration-500 w-full">
         <div className="bg-green-900/20 border border-green-500/30 rounded-xl p-4 flex flex-col gap-3 backdrop-blur-md">
             <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
                 <div>
-                    {/* Traducció: "Correcte!" */}
                     <h3 className="text-green-400 font-bold text-sm">{t('feedback.correct')}</h3>
                     <p className="text-slate-300 text-xs leading-relaxed line-clamp-3">
                         {content.explanation}
@@ -5915,7 +6306,6 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
                 onClick={() => onNext(true)}
                 className="w-full py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95"
             >
-                {/* Traducció: "CONTINUAR" */}
                 {t('actions.continue')} <ArrowRight className="w-5 h-5" />
             </button>
         </div>
@@ -5925,7 +6315,8 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
   );
 
   return (
-    <GameSessionLayout header={Header} footer={Footer}>
+    // ✅ HEADER AUTOMÀTIC: Només el cridem, no li passem res
+    <GameSessionLayout header={<GameHeader />} footer={Footer}>
       <div className="flex flex-col h-full gap-2">
         
         {/* TITOL (Fixe) */}
@@ -5934,18 +6325,17 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
               <TerminalIcon className="w-5 h-5 text-green-400" />
            </div>
            <div className="min-w-0">
-              {/* Traducció: "Terminal" */}
               <h2 className="font-bold text-white text-base leading-tight truncate">{t('modes.terminal.label')}</h2>
               <p className="text-slate-400 text-xs leading-snug mt-0.5 line-clamp-2">{content.instruction}</p>
            </div>
         </div>
 
-        {/* TERMINAL */}
+        {/* TERMINAL UI */}
         <div 
           className="flex-1 min-h-0 bg-[#0c0c0c] rounded-xl overflow-hidden border border-slate-700 shadow-2xl font-mono text-sm relative flex flex-col"
           onClick={() => !isCompleted && inputRef.current?.focus()}
         >
-          {/* Top Bar */}
+          {/* Top Bar Decoration */}
           <div className="bg-[#1f1f1f] px-3 py-1.5 flex items-center gap-2 border-b border-[#333] shrink-0">
             <div className="flex gap-1.5">
                <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
@@ -5953,7 +6343,6 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
                <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
             </div>
             <div className="text-slate-500 text-[10px] ml-2 flex items-center gap-1 opacity-60">
-               {/* Traducció: "usuari@edutech:~" */}
                <Command className="w-3 h-3" /> {t('modes.terminal.prompt_user')}@edutech:~
             </div>
           </div>
@@ -5996,7 +6385,6 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  // Afegim placeholder traduït
                   placeholder={t('modes.terminal.placeholder')}
                   className="bg-transparent border-none outline-none flex-1 text-white placeholder-slate-700 font-mono caret-green-500 p-0 m-0"
                   autoComplete="off"
@@ -6006,10 +6394,8 @@ export function TerminalView({ challenge, onNext, sessionData }: TerminalViewPro
               </div>
             )}
             
-            {/* Missatge Final */}
             {isCompleted && (
                <div className="mt-4 text-slate-500 italic text-xs border-t border-slate-800 pt-2">
-                  {/* Traducció: "--- Sessió finalitzada ---" */}
                   {t('modes.terminal.session_closed')}
                </div>
             )}
@@ -6624,6 +7010,33 @@ export function LanguageSwitcher() {
   );
 }
 
+// =================== FILE: src/presentation/context/GameSessionContext.tsx ===================
+
+// filepath: src/presentation/context/GameSessionContext.tsx
+'use client';
+
+import { createContext, useContext } from 'react';
+
+// Definim què és la informació de la sessió
+interface GameSessionContextType {
+  progress: number;
+  currentIndex: number;
+  totalChallenges: number;
+  topicSlug: string;
+}
+
+const GameSessionContext = createContext<GameSessionContextType | null>(null);
+
+export function useGameSessionContext() {
+  const context = useContext(GameSessionContext);
+  if (!context) {
+    throw new Error('useGameSessionContext must be used within a GameSessionProvider');
+  }
+  return context;
+}
+
+export const GameSessionProvider = GameSessionContext.Provider;
+
 // =================== FILE: src/presentation/hooks/game/useGameSession.ts ===================
 
 // filepath: src/presentation/hooks/game/useGameSession.ts
@@ -6635,15 +7048,39 @@ import { SessionResultDTO } from '@/application/dto/session-result.dto';
 type GameStatus = 'PLAYING' | 'SUBMITTING' | 'SUCCESS' | 'ERROR';
 
 export function useGameSession(challenges: Challenge[]) {
+  // Obtenim un ID únic per a la sessió actual (basat en el Topic)
+  // Això evita que l'estat de "React" es barregi amb el de "SQL"
+  const topicId = challenges[0]?.topicId || 'unknown_topic';
+  const storageKey = `edutech_progress_${topicId}`;
+
+  // 1. ESTAT INICIAL: Comencem a 0, però permetrem la "hidratació" posterior
   const [currentIndex, setCurrentIndex] = useState(0);
   const [status, setStatus] = useState<GameStatus>('PLAYING');
-  
-  // CORRECCIÓ: Usem el tipus estricte en lloc de 'any'
   const [result, setResult] = useState<SessionResultDTO | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false); // Per evitar salts visuals
+
+  // 2. RECUPERACIÓ (Hydration): Quan el component es munta, mirem si hi ha progrés guardat
+  useEffect(() => {
+    const savedIndex = sessionStorage.getItem(storageKey);
+    if (savedIndex) {
+      const parsedIndex = parseInt(savedIndex, 10);
+      // Validem que l'índex guardat tingui sentit (no sigui major que els reptes actuals)
+      if (!isNaN(parsedIndex) && parsedIndex < challenges.length) {
+        setCurrentIndex(parsedIndex);
+      }
+    }
+    setIsHydrated(true);
+  }, [storageKey, challenges.length]);
+
+  // 3. PERSISTÈNCIA: Cada cop que canvia l'índex, el guardem
+  useEffect(() => {
+    if (isHydrated && status === 'PLAYING') {
+      sessionStorage.setItem(storageKey, currentIndex.toString());
+    }
+  }, [currentIndex, storageKey, isHydrated, status]);
 
   const currentChallenge = challenges[currentIndex];
-  // Validació per evitar NaN si l'array és buit
   const progress = challenges.length > 0 ? ((currentIndex) / challenges.length) * 100 : 0;
 
   const handleNext = () => {
@@ -6659,24 +7096,26 @@ export function useGameSession(challenges: Challenge[]) {
     setStatus('SUBMITTING');
   };
 
+  // Logica de Submit (sense canvis grans, només neteja del storage)
   useEffect(() => {
     if (status === 'SUBMITTING') {
-      let isMounted = true; // Evitem actualitzacions si el component es desmunta
+      let isMounted = true;
 
       const submit = async () => {
         try {
           const challengeIds = challenges.map(c => c.id);
-          const topicId = challenges[0]?.topicId;
-
-          if (!topicId) throw new Error("Topic ID not found");
+          
+          if (!topicId || topicId === 'unknown_topic') throw new Error("Topic ID not found");
 
           const response = await submitSessionAction(challengeIds, topicId);
 
           if (!isMounted) return;
 
           if (response.success) {
-            setResult(response.data); // Ara TypeScript sap que això és SessionResultDTO
+            setResult(response.data);
             setStatus('SUCCESS');
+            // ✅ NETEJA: Si acabem amb èxit, esborrem el progrés guardat
+            sessionStorage.removeItem(storageKey);
           } else {
             setError(response.error);
             setStatus('ERROR');
@@ -6684,7 +7123,7 @@ export function useGameSession(challenges: Challenge[]) {
         } catch (err) {
             if (isMounted) {
                 console.error(err);
-                setError('CONNECTION_ERROR'); // Usem una clau per traduir després
+                setError('CONNECTION_ERROR'); 
                 setStatus('ERROR');
             }
         }
@@ -6694,7 +7133,7 @@ export function useGameSession(challenges: Challenge[]) {
 
       return () => { isMounted = false; };
     }
-  }, [status, challenges]);
+  }, [status, challenges, topicId, storageKey]);
 
   return {
     currentChallenge,
@@ -6705,7 +7144,8 @@ export function useGameSession(challenges: Challenge[]) {
     result,
     error,
     handleNext,
-    handleRetry
+    handleRetry,
+    isHydrated // Opcional: per si vols mostrar un spinner mentre llegeix del disc
   };
 }
 

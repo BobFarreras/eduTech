@@ -1,8 +1,12 @@
-// filepath: src/application/use-cases/topics/get-active-topics.use-case.test.ts
+// filepath: src/application/use-cases/topics/__tests__/get-active-topics.use-case.test.ts
 import { describe, it, expect, vi } from 'vitest';
-import { GetActiveTopicsUseCase } from './get-active-topics.use-case';
+// 🔴 ABANS (MALAMENT): import { GetActiveTopicsUseCase } from "./get-active-topics.use-case";
+// 🟢 ARA (CORRECTE): Pugem un nivell
+import { GetActiveTopicsUseCase } from '../get-active-topics.use-case'; 
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { Topic } from '@/core/entities/topic.entity';
+
+// ... resta del codi igual
 
 // 1. Creem un Mock del Repositori
 const mockTopicRepo = {
