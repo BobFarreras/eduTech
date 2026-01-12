@@ -2,7 +2,7 @@
 import { describe, it, expect, vi } from 'vitest';
 // 🔴 ABANS (MALAMENT): import { GetActiveTopicsUseCase } from "./get-active-topics.use-case";
 // 🟢 ARA (CORRECTE): Pugem un nivell
-import { GetActiveTopicsUseCase } from '../get-active-topics.use-case'; 
+import { GetActiveTopicsUseCase } from '../get-active-topics.use-case';
 import { ITopicRepository } from '@/core/repositories/topic.repository';
 import { Topic } from '@/core/entities/topic.entity';
 
@@ -22,20 +22,34 @@ describe('GetActiveTopicsUseCase', () => {
   it('should return a list of active topics', async () => {
     // ARRANGE (Preparar)
     const mockTopics: Topic[] = [
-      { 
-        id: '123', 
-        slug: 'react', 
-        nameKey: 'topic.react', 
-        iconName: 'react', 
-        colorTheme: 'blue', 
-        isActive: true, 
-        createdAt: new Date(), 
-        updatedAt: new Date() ,
-        description: 'Test Description'
-        
+      {
+        id: '123',
+        slug: 'react',
+
+        // ❌ ELIMINAT: nameKey: 'topic.react', 
+
+        // ✅ NOU: Afegim 'title' com a objecte LocalizedText
+        title: {
+          ca: 'React Basics',
+          es: 'Fundamentos React',
+          en: 'React Basics'
+        },
+
+        // ✅ ACTUALITZAT: 'description' ara és un objecte, no un string
+        description: {
+          ca: 'Descripció de prova',
+          es: 'Descripción de prueba',
+          en: 'Test Description'
+        },
+
+        iconName: 'react',
+        colorTheme: 'blue',
+        isActive: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ];
-    
+
     // Configurem el mock per retornar les dades falses
     vi.mocked(mockTopicRepo.findAllActive).mockResolvedValue(mockTopics);
 
@@ -53,9 +67,9 @@ describe('GetActiveTopicsUseCase', () => {
   it('should return empty list if no topics found', async () => {
     vi.mocked(mockTopicRepo.findAllActive).mockResolvedValue([]);
     const useCase = new GetActiveTopicsUseCase(mockTopicRepo);
-    
+
     const result = await useCase.execute();
-    
+
     expect(result).toEqual([]);
   });
 });

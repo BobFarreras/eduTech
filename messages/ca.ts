@@ -126,7 +126,9 @@ export default {
     junior: "Desenvolupador Junior",
     senior: "Enginyer Senior",
     architect: "Tech Lead Architect",
-    legend: "Llegenda del Codi"
+    legend: "Llegenda del Codi",
+    junior_architect: "Arquitecte Junior", 
+    grandmaster: "Gran Mestre del Sistema"
   },
   Admin: {
     Challenges: {

@@ -1,21 +1,32 @@
-// filepath: src/core/entities/challenges/challenge.entity.ts
+// 1. IMPORTEM I RE-EXPORTEM (Barrel Pattern)
+// Això permet fer: import { TerminalContent } from './challenge.entity'
+export * from './definitions/quiz.content';
+export * from './definitions/code-fix.content';
+export * from './definitions/matching.content';
+export * from './definitions/terminal.content'; // ✅ Això soluciona el teu error
+export * from './definitions/logic-order.content';
+export * from './definitions/binary.content';
+export * from './definitions/theory.content';
+export * from './definitions/ctf.content';
+
+// Importem localment per definir el tipus de la unió
 import { QuizContent } from './definitions/quiz.content';
 import { CodeFixContent } from './definitions/code-fix.content';
 import { MatchingContent } from './definitions/matching.content';
 import { TerminalContent } from './definitions/terminal.content';
 import { LogicOrderContent } from './definitions/logic-order.content';
 import { BinaryContent } from './definitions/binary.content';
-// 1. IMPORTEM EL NOU TIPUS
 import { TheoryContent } from './definitions/theory.content';
-import { CtfContent } from './definitions/ctf.content'; // 👈 IMPORTAR
+import { CtfContent } from './definitions/ctf.content';
+
 export type ChallengeType = 
-  | 'THEORY' // Assegura't que està aquí
+  | 'THEORY' 
   | 'QUIZ' 
   | 'CODE_FIX' 
   | 'MATCHING' 
   | 'TERMINAL' 
   | 'BINARY_DECISION'
-  | 'CTF' // 👈 AFEGIR
+  | 'CTF'
   | 'LOGIC_ORDER';
 
 export type ChallengeContent = 
@@ -25,8 +36,8 @@ export type ChallengeContent =
   | TerminalContent 
   | LogicOrderContent
   | BinaryContent
-  | TheoryContent // 2. L'AFEGIM AQUI
-  | CtfContent; // 👈 AFEGIR
+  | TheoryContent
+  | CtfContent;
 
 export interface Challenge {
   id: string;

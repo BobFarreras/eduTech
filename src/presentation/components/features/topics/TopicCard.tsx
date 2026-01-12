@@ -1,45 +1,32 @@
-// filepath: src/presentation/components/features/topics/TopicCard.tsx
-import { createElement } from 'react';
+'use client';
+
+import { useLocale } from 'next-intl';
 import { Topic } from '@/core/entities/topic.entity';
-import { getTopicIcon } from '@/presentation/utils/icon-mapper';
-import { useTranslations, useLocale } from 'next-intl'; // <--- Importem useLocale
-import Link from 'next/link';
+import { getLocalizedText } from '@/core/utils/i18n-utils';
+import * as Icons from 'lucide-react';
+import { LucideIcon } from 'lucide-react'; // 👈 Importem el tipus
 
-interface TopicCardProps {
-  topic: Topic;
-}
-
-export function TopicCard({ topic }: TopicCardProps) {
-  const t = useTranslations(); 
-  const locale = useLocale(); // <--- Obtenim l'idioma actual ('ca', 'en', etc.)
+export function TopicCard({ topic }: { topic: Topic }) {
+  const locale = useLocale();
   
-  const IconComponent = getTopicIcon(topic.iconName);
+  // ✅ FIX: Fem un cast segur a un Record<string, LucideIcon>
+  // Això diu: "Tracta l'objecte Icons com un diccionari de icones"
+  const iconList = Icons as unknown as Record<string, LucideIcon>;
+  const IconComponent = iconList[topic.iconName] || Icons.Box;
 
   return (
-    <Link 
-      // CORRECCIÓ: Afegim el locale a la ruta
-      href={`/${locale}/learn/${topic.slug}`} 
-      className="group relative block overflow-hidden rounded-xl bg-slate-800 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
-    >
-      <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity ${topic.colorTheme}`} />
-      
-      <div className="p-6">
-        <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${topic.colorTheme} bg-opacity-20 text-white`}>
-          {createElement(IconComponent, { className: "w-6 h-6" })}
-        </div>
-
-        <h3 className="text-xl font-bold text-white mb-2">
-          
-          {t(topic.nameKey)} 
-        </h3>
-        
-        <div className="flex items-center text-sm text-slate-400 group-hover:text-blue-400 transition-colors">
-          <span>{t('dashboard.startTopic')}</span>
-          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
+    <div className={`p-6 rounded-xl border ${topic.isActive ? 'border-slate-200' : 'border-slate-800 opacity-50'}`}>
+      <div className={`${topic.colorTheme} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
+        <IconComponent className="text-white w-6 h-6" />
       </div>
-    </Link>
+      
+      <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+        {getLocalizedText(topic.title, locale)}
+      </h3>
+
+      <p className="text-sm text-slate-500">
+        {getLocalizedText(topic.description, locale)}
+      </p>
+    </div>
   );
 }

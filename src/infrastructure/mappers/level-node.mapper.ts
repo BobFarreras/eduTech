@@ -1,6 +1,5 @@
 // filepath: src/infrastructure/mappers/level-node.mapper.ts
 import { LevelNodeDTO, LevelStatus } from '@/application/dto/level-node.dto';
-import { BOSS_CONFIG } from '@/core/entities/learning-path/milestone.enum';
 import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
 import { TierProgressStats } from '@/core/repositories/topic.repository';
 
@@ -11,14 +10,17 @@ export class LevelNodeMapper {
     isNextPlayable: boolean
   ): LevelNodeDTO {
     
-    // 1. Assegurar tipus
     const tier = Number(stat.tier);
     
-    // 2. Buscar Config
-    const bossConfig = BOSS_CONFIG[tier];
-    const isBoss = !!bossConfig;
+    // ✅ FIX: Eliminem "|| {}" perquè això feia que TypeScript pensés que era un objecte buit.
+    // Simplement accedim a stat.mapConfig directament.
+    const config = stat.mapConfig; 
+    
+    // Si config és null/undefined, l'operador ?. retorna undefined.
+    // !!undefined es converteix en false.
+    const isBoss = !!config?.isBoss;
 
-    // 3. Lògica d'Estat
+    // 2. Lògica d'Estat (Sense canvis)
     let status: LevelStatus = 'LOCKED';
     if (stat.completedChallenges >= stat.totalChallenges && stat.totalChallenges > 0) {
       status = 'COMPLETED';
@@ -29,7 +31,7 @@ export class LevelNodeMapper {
     return {
       tier: tier,
       status: status,
-      label: isBoss ? 'BOSS LEVEL' : `Nivell ${tier}`, // Label genèric, el títol real va a bossTitleKey
+      label: isBoss ? 'BOSS LEVEL' : `Nivell ${tier}`,
       
       totalChallenges: stat.totalChallenges,
       completedChallenges: stat.completedChallenges,
@@ -37,11 +39,12 @@ export class LevelNodeMapper {
       isCurrentPosition: tier === currentTier,
       predominantType: (stat.mostCommonType as ChallengeType) || 'QUIZ',
       
-      // 4. Injectar dades del Boss (i18n ready)
+      // ✅ 3. FIX: Accedim a totes les propietats amb ?. (Optional Chaining)
+      // Si config és null, aquestes propietats seran undefined, que és vàlid per al DTO.
       isBoss: isBoss,
-      bossTitleKey: bossConfig?.titleKey, // Enviem la clau
-      bossColorClass: bossConfig?.color,
-      bossIconName: bossConfig?.iconName
+      bossTitleKey: config?.bossTitle, 
+      bossColorClass: config?.bossColor,
+      bossIconName: config?.bossIcon 
     };
   }
 }

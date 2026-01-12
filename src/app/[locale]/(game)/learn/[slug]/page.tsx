@@ -4,17 +4,19 @@ import { GetTopicPathUseCase } from '@/application/use-cases/topics/get-topic-pa
 import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
 import { ArrowLeft } from 'lucide-react';
 import { redirect } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+// ❌ ELIMINAT: import { getTranslations } from 'next-intl/server'; (ja no cal per al títol)
 import { Link } from '@/navigation'; 
 import { LearningPathOrchestrator } from '@/presentation/components/features/learning-path/LearningPathOrchestrator';
+import { getLocalizedText } from '@/core/utils/i18n-utils'; // ✅ 1. IMPORTAR UTILITAT
 
 interface TopicPageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
 export default async function TopicMapPage({ params }: TopicPageProps) {
-  const { slug } = await params;
-  const t = await getTranslations(); 
+  // ✅ 2. EXTREIEM EL LOCALE DELS PARAMS
+  const { slug, locale } = await params;
+  
   const supabase = await createClient();
 
   const { data: { user } } = await supabase.auth.getUser();
@@ -31,18 +33,23 @@ export default async function TopicMapPage({ params }: TopicPageProps) {
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col items-center relative overflow-hidden">
       
-      {/* HEADER FIX (Comú per a totes les vistes) */}
+      {/* HEADER */}
       <header className="sticky top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 p-3 md:p-4 flex items-center justify-between z-50 shadow-2xl">
          <Link href="/dashboard" className="text-slate-400 hover:text-white transition-colors">
             <ArrowLeft className="w-6 h-6" />
          </Link>
-         <h1 className="font-bold text-white text-base md:text-xl tracking-tight">{t(topic.nameKey)}</h1>
+         
+         {/* ✅ 3. FIX: Títol dinàmic des de la BD */}
+         <h1 className="font-bold text-white text-base md:text-xl tracking-tight">
+            {getLocalizedText(topic.title, locale)}
+         </h1>
+         
          <div className="text-xs md:text-sm font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full border border-yellow-500/20 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
             {totalXp} XP
          </div>
       </header>
 
-      {/* COMPONENT INTEL·LIGENT DE RUTA */}
+      {/* RUTA */}
       <div className="w-full flex-1 relative">
          <LearningPathOrchestrator levels={levels} slug={slug} />
       </div>

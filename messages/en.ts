@@ -124,8 +124,11 @@ export default {
     junior: "Junior Developer",
     senior: "Senior Engineer",
     architect: "Tech Lead Architect",
-    legend: "Code Legend"
-  },
+    legend: "Code Legend",
+    junior_architect: "Junior Architect",
+    grandmaster: "System Grandmaster"
+  }
+  ,
   Admin: {
     Challenges: {
       title: "Create New Challenge",

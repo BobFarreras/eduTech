@@ -1,22 +1,24 @@
 // filepath: src/infrastructure/repositories/supabase/topic.repository.ts
-import { ITopicRepository, TierProgressStats } from '@/core/repositories/topic.repository';
+import { ITopicRepository, TierProgressStats, MapConfig } from '@/core/repositories/topic.repository';
 import { Topic, CreateTopicInput } from '@/core/entities/topic.entity';
 import { TopicNotFoundError } from '@/core/errors/topic.errors';
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { ChallengeType } from '@/core/entities/challenges/challenge.entity';
+import { LocalizedText } from '@/core/entities/topic.entity';
 
 // Tipus intern de la BD (Snake Case)
 type TopicRow = {
   id: string;
   slug: string;
-  name_key: string;
+  title: LocalizedText;
+  
   icon_name: string;
   color_theme: string;
   parent_topic_id: string | null;
   is_active: boolean;
   created_at: string;
   updated_at: string;
-  description?: string;
+  description?: LocalizedText;
 };
 
 type TopicPersistencePayload = {
@@ -35,14 +37,16 @@ export class SupabaseTopicRepository implements ITopicRepository {
     return {
       id: row.id,
       slug: row.slug,
-      nameKey: row.name_key,
+
       iconName: row.icon_name,
       colorTheme: row.color_theme,
       parentTopicId: row.parent_topic_id || undefined,
       isActive: row.is_active,
       createdAt: new Date(row.created_at),
       updatedAt: new Date(row.updated_at),
-      description: row.description || ''
+      // ✅ Mapeig directe del JSONB
+      title: row.title as LocalizedText,
+      description: row.description as LocalizedText,
     };
   }
 
@@ -68,7 +72,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
       .from('topics')
       .select('*')
       // Ordenem per clau de nom per defecte
-      .order('name_key', { ascending: true }); 
+      .order('name_key', { ascending: true });
 
     if (error) {
       console.error('Error fetching topics:', error);
@@ -122,8 +126,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
 
     const dbPayload: TopicPersistencePayload = {
       slug: input.slug,
-      name_key: input.nameKey,
-      icon_name: input.iconName,
+    icon_name: input.iconName,
       color_theme: input.colorTheme,
       parent_topic_id: input.parentTopicId || null,
       is_active: input.isActive
@@ -145,7 +148,7 @@ export class SupabaseTopicRepository implements ITopicRepository {
     const dbPayload: TopicPersistencePayload = {};
 
     if (input.slug !== undefined) dbPayload.slug = input.slug;
-    if (input.nameKey !== undefined) dbPayload.name_key = input.nameKey;
+
     if (input.iconName !== undefined) dbPayload.icon_name = input.iconName;
     if (input.colorTheme !== undefined) dbPayload.color_theme = input.colorTheme;
     if (input.isActive !== undefined) dbPayload.is_active = input.isActive;
@@ -171,9 +174,10 @@ export class SupabaseTopicRepository implements ITopicRepository {
   async getTopicProgressSummary(topicId: string, userId: string): Promise<TierProgressStats[]> {
     const supabase = await createClient();
 
+    // 1. ✅ AFEGIM 'map_config' AL SELECT
     const { data: challenges, error: chalError } = await supabase
       .from('challenges')
-      .select('id, difficulty_tier, type')
+      .select('id, difficulty_tier, type, map_config') // 👈 Aquí!
       .eq('topic_id', topicId);
 
     if (chalError) throw new Error(chalError.message);
@@ -199,12 +203,22 @@ export class SupabaseTopicRepository implements ITopicRepository {
           tier,
           totalChallenges: 0,
           completedChallenges: 0,
-          mostCommonType: type
+          mostCommonType: type,
+          // ✅ INICIALITZEM mapConfig (per defecte null)
+          mapConfig: null
         });
       }
 
       const stat = statsMap.get(tier)!;
       stat.totalChallenges++;
+
+      // ✅ LOGICA DE BOSS:
+      // Si *algun* challenge d'aquest nivell té configuració de boss,
+      // la guardem a l'estadística del nivell.
+      // (Això permet que només un challenge del tier 41 tingui la config i funcioni igualment)
+      if (c.map_config && !stat.mapConfig) {
+        stat.mapConfig = c.map_config as unknown as MapConfig;
+      }
 
       if (completedSet.has(c.id)) {
         stat.completedChallenges++;

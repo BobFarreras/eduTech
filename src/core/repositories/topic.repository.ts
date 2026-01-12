@@ -1,12 +1,20 @@
 // filepath: src/core/repositories/topic.repository.ts
 import { Topic, CreateTopicInput } from '../entities/topic.entity';
 import { ChallengeType } from '../entities/challenges/challenge.entity';
-
+// 1. ✅ DEFINIM EL TIPUS EXPLICIT (Ja no és anònim)
+export interface MapConfig {
+  isBoss: boolean;
+  bossTitle?: string;
+  bossIcon?: string;
+  bossColor?: string;
+}
 export interface TierProgressStats {
   tier: number;
   totalChallenges: number;
   completedChallenges: number;
   mostCommonType: ChallengeType;
+  // 2. ✅ L'USEM AQUÍ
+  mapConfig?: MapConfig | null;
 }
 
 export interface ITopicRepository {
