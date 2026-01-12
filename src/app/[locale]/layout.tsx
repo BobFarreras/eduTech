@@ -1,14 +1,23 @@
 // filepath: src/app/[locale]/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import "../globals.css"; // Assegura't que la ruta és correcta
+import { createClient } from '@/infrastructure/utils/supabase/server'; // Importem el client
+import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Components de Navegació
+import { MobileBottomBar } from "@/presentation/components/layout/MobileBottomBar";
+import { DesktopNavbar } from "@/presentation/components/layout/DesktopNavbar";
+
+const nunito = Nunito({ 
+  subsets: ["latin"],
+  weight: ["400", "700", "800", "900"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
-  title: "TechMastery",
+  title: "EduTech",
   description: "Aprèn tecnologia jugant",
 };
 
@@ -19,17 +28,34 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // En Next.js 15/16 params és una Promise, cal fer await
   const { locale } = await params;
-  
-  // Obtenim els missatges del servidor per passar-los al client
   const messages = await getMessages();
+
+  // 1. COMPROVACIÓ DE SESSIÓ AL SERVIDOR
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const isLoggedIn = !!user; // true si hi ha usuari, false si no
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={`${nunito.variable} font-sans bg-slate-950 text-white antialiased pb-24 md:pb-0 md:pt-20`}>
+        {/* pb-24: Padding inferior al mòbil perquè la barra no tapi contingut.
+            md:pt-20: Padding superior a l'escriptori perquè la navbar no tapi contingut.
+        */}
+
         <NextIntlClientProvider messages={messages}>
-          {children}
+          
+          {/* BARRA SUPERIOR (ESCRIPTORI) */}
+          <DesktopNavbar isLoggedIn={isLoggedIn} />
+
+          {/* CONTINGUT PRINCIPAL */}
+          <main className="min-h-screen relative">
+             {children}
+          </main>
+
+          {/* BARRA INFERIOR (MÒBIL) */}
+          <MobileBottomBar isLoggedIn={isLoggedIn} />
+
         </NextIntlClientProvider>
       </body>
     </html>

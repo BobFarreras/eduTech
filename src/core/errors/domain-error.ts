@@ -1,0 +1,8 @@
+// filepath: src/core/errors/domain-error.ts
+export abstract class DomainError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = this.constructor.name;
+    Object.setPrototypeOf(this, new.target.prototype);
+  }
+}

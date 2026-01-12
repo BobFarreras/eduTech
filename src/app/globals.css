@@ -1,20 +1,86 @@
 /* filepath: src/app/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@theme {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui;
+
+  /* Colors Brand */
+  --color-brand-primary: #3B82F6;
+  --color-brand-primaryDark: #1D4ED8;
+  --color-brand-success: #58CC02;
+  --color-brand-successDark: #46A302;
+  --color-brand-danger: #FF4B4B;
+  --color-brand-dangerDark: #D62F2F;
+  --color-brand-warning: #FFC800;
+  --color-brand-warningDark: #D9AA00;
+  --color-brand-surface: #1E293B;
+  --color-brand-surfaceDark: #0F172A;
+
+  --animate-bounce-sm: bounce-sm 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  @keyframes bounce-sm {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+  }
+
+
+
+  /* Girar molt lent (per anells d'energia) */
+  --animate-spin-slow: spin 10s linear infinite;
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Girar lent al revés */
+  --animate-spin-reverse: spin-reverse 25s linear infinite;
+  @keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  /* Pols de llum (Glow) */
+  --animate-pulse-glow: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; filter: brightness(1.2); }
+    50% { opacity: .7; filter: brightness(1); }
+  }
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  /* TRUC: En lloc de fer @apply btn-game a tot arreu, 
+     apliquem els estils base a TOTS els botons de cop.
+  */
+  .btn-game, 
+  .btn-primary, 
+  .btn-success, 
+  .btn-danger, 
+  .btn-outline {
+    @apply relative w-full py-4 px-6 rounded-2xl font-black text-lg uppercase tracking-wider transition-all active:translate-y-1 active:border-b-0 cursor-pointer flex items-center justify-center gap-2;
+  }
+
+  /* Ara només definim els colors específics per cada variant */
+  .btn-primary {
+    @apply bg-brand-primary text-white border-b-4 border-brand-primaryDark hover:bg-blue-400;
+  }
+  
+  .btn-success {
+    @apply bg-brand-success text-white border-b-4 border-brand-successDark hover:bg-green-400;
+  }
+
+  .btn-danger {
+    @apply bg-brand-danger text-white border-b-4 border-brand-dangerDark hover:bg-red-400;
+  }
+
+  .btn-outline {
+    @apply bg-slate-800 text-slate-300 border-2 border-b-4 border-slate-700 hover:bg-slate-700;
+  }
+
+  /* Inputs */
+  .input-game {
+    @apply w-full p-4 bg-slate-800 border-2 border-slate-700 rounded-xl text-white font-bold placeholder-slate-500 focus:outline-none focus:border-brand-primary focus:bg-slate-900 transition-all;
+  }
+
+  
 }

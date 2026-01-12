@@ -1,23 +1,20 @@
 // filepath: src/i18n.ts
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
-
-// Definim els idiomes suportats i el tipus
-export const locales = ['ca', 'es', 'en'] as const;
-export type Locale = (typeof locales)[number];
+import { routing, type Locale } from './routing';
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  // Aconseguim el locale de la petició
   const locale = await requestLocale;
 
-  // Validació estricta
-  if (!locale || !locales.includes(locale as Locale)) {
-    notFound();
+  // Validació sense 'any':
+  // Convertim routing.locales a llista d'strings genèrics per comprovar
+  if (!locale || !(routing.locales as readonly string[]).includes(locale)) {
+    notFound(); // Ara sí que l'executem si la validació falla
   }
 
   return {
-    locale,
-    // AQUI ESTÀ EL CANVI: Importem el fitxer .ts directament
+    // Aquí ja estem segurs que 'locale' és vàlid, podem fer el cast segur a Locale
+    locale: locale as Locale,
     messages: (await import(`../messages/${locale}.ts`)).default
   };
 });
