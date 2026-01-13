@@ -4,4 +4,5 @@ import { ChallengeOption } from './shared';
 export interface LogicOrderContent {
   description: string;    
   items: ChallengeOption[]; // Els items que arribaran DESORDENATS al client
+  explanation?: string;
 }
