@@ -3,10 +3,15 @@
 
 import { useState } from 'react';
 import { LeaderboardEntry } from '@/core/entities/leaderboard.entity';
-import { getLeaderboardAction } from '@/presentation/actions/leaderboard/leaderboard.actions';
+import { getLeaderboardAction } from '@/presentation/actions/leaderboard/leaderboard.actions'; // Assegura't que la ruta sigui correcta
 import { Trophy, Medal, ChevronDown, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-// --- HELPER FUNCTIONS (FORA DEL COMPONENT) ---
+// 1. DEFINIM EL TIPUS PER A LA FUNCIÓ DE TRADUCCIÓ
+// Això evita l'ús de 'any' i manté TypeScript content.
+type TranslationFn = (key: string) => string;
+
+// --- HELPER FUNCTIONS ---
 const getRankStyle = (rank: number, isMe: boolean) => {
     if (isMe) return 'bg-blue-900/30 border-blue-500/50 text-blue-100 ring-2 ring-blue-500';
     switch (rank) {
@@ -26,24 +31,35 @@ const getRankIcon = (rank: number) => {
     }
 };
 
-// --- SUB-COMPONENT (FORA DEL COMPONENT PRINCIPAL) ---
-const RowItem = ({ entry }: { entry: LeaderboardEntry }) => (
+// --- SUB-COMPONENT RowItem ---
+// 2. CORRECCIÓ: Substituïm 'any' pel tipus definit 'TranslationFn'
+const RowItem = ({ entry, t }: { entry: LeaderboardEntry, t: TranslationFn }) => (
     <div
-        className={`relative flex items-center justify-between p-4 rounded-xl border transition-all ${getRankStyle(entry.rank, entry.isCurrentUser)}`}
+        className={`relative flex items-center justify-between p-3 md:p-4 rounded-xl border transition-all ${getRankStyle(entry.rank, entry.isCurrentUser)}`}
     >
-        <div className="flex items-center gap-4">
-            <div className="flex items-center justify-center w-8 h-8">
+        <div className="flex items-center gap-3 md:gap-4 overflow-hidden">
+            {/* 1. Icona de Posició */}
+            <div className="flex items-center justify-center w-8 h-8 flex-shrink-0">
                 {getRankIcon(entry.rank)}
             </div>
-            <div className="flex flex-col">
-                <span className={`font-bold ${entry.isCurrentUser ? 'text-blue-300' : ''}`}>
-                    {entry.username} {entry.isCurrentUser && '(Tu)'}
+            
+            {/* 2. AVATAR (Emoji) */}
+            <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-slate-900/50 rounded-xl text-xl md:text-2xl border border-white/5 flex-shrink-0">
+                {entry.avatarIcon}
+            </div>
+
+            {/* 3. Informació Usuari */}
+            <div className="flex flex-col min-w-0">
+                <span className={`font-bold truncate ${entry.isCurrentUser ? 'text-blue-300' : 'text-slate-200'}`}>
+                    {entry.username} {entry.isCurrentUser && <span className="text-xs opacity-70 ml-1">{t('you')}</span>}
                 </span>
-                <span className="text-xs opacity-60">Nivell {entry.level}</span>
+                <span className="text-xs opacity-60 truncate">{t('level')} {entry.level}</span>
             </div>
         </div>
-        <div className="font-mono font-bold text-lg text-slate-200">
-            {new Intl.NumberFormat('ca-ES').format(entry.xp)} XP
+
+        {/* 4. XP */}
+        <div className="font-mono font-bold text-base md:text-lg text-slate-200 pl-2 flex-shrink-0">
+            {new Intl.NumberFormat('ca-ES').format(entry.xp)} <span className="text-xs font-normal opacity-50">XP</span>
         </div>
     </div>
 );
@@ -55,16 +71,17 @@ interface Props {
 }
 
 export function LeaderboardContainer({ initialEntries, currentUserRank }: Props) {
+    const t = useTranslations('leaderboard'); 
     const [entries, setEntries] = useState<LeaderboardEntry[]>(initialEntries);
     const [offset, setOffset] = useState(initialEntries.length);
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);
 
-    // Comprovar si l'usuari ja està visible a la llista carregada
     const isUserVisible = entries.some(e => e.isCurrentUser);
 
     const loadMore = async () => {
         setLoading(true);
+        // Assegura't de passar els paràmetres correctes a l'acció
         const result = await getLeaderboardAction({ limit: 10, offset });
 
         if (result.success && result.data) {
@@ -76,25 +93,30 @@ export function LeaderboardContainer({ initialEntries, currentUserRank }: Props)
     };
 
     return (
-        <div className="w-full max-w-2xl mx-auto pb-24">
-
+        <div className="w-full max-w-2xl mx-auto pb-40 md:pb-24">
             {/* LLISTA PRINCIPAL */}
             <div className="flex flex-col gap-3">
-                {entries.map((entry) => (
-                    <RowItem key={entry.userId} entry={entry} />
-                ))}
+                {entries.length === 0 ? (
+                    <div className="text-center py-10 text-slate-500 italic">
+                        {t('empty')}
+                    </div>
+                ) : (
+                    entries.map((entry) => (
+                        <RowItem key={entry.userId} entry={entry} t={t} />
+                    ))
+                )}
             </div>
 
             {/* BOTÓ CARREGAR MÉS */}
-            {hasMore && (
+            {hasMore && entries.length > 0 && (
                 <div className="mt-8 text-center">
                     <button
                         onClick={loadMore}
                         disabled={loading}
-                        className="inline-flex items-center gap-2 px-6 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-full transition-colors disabled:opacity-50"
+                        className="inline-flex items-center gap-2 px-6 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-full transition-colors disabled:opacity-50 text-sm font-bold"
                     >
                         {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <ChevronDown className="w-4 h-4" />}
-                        {loading ? 'Carregant...' : 'Carregar-ne més'}
+                        {loading ? t('loading') : t('load_more')}
                     </button>
                 </div>
             )}
@@ -102,20 +124,14 @@ export function LeaderboardContainer({ initialEntries, currentUserRank }: Props)
             {/* STICKY USER STATS */}
             {currentUserRank && !isUserVisible && (
                 <div className={`
-            fixed 
-            left-1/2 -translate-x-1/2 w-[90%] max-w-2xl z-40 
-            animate-in slide-in-from-bottom-10 fade-in duration-500
-            bottom-24 md:bottom-6  
-        `}>
-                    {/* 👆 EXPLICACIÓ DEL CANVI CSS:
-              - bottom-24: Al mòbil, el posem 6rem (96px) amunt per salvar la Navbar.
-              - md:bottom-6: A l'escriptori, el baixem a 1.5rem perquè no hi ha Navbar.
-          */}
+                    fixed 
+                    left-1/2 -translate-x-1/2 w-[90%] max-w-2xl z-40 
+                    animate-in slide-in-from-bottom-10 fade-in duration-500
+                    bottom-24 md:bottom-6  
+                `}>
                     <div className="bg-slate-900/95 backdrop-blur-md border border-blue-500/50 p-1 rounded-2xl shadow-2xl shadow-black/50">
-                        <div className="text-xs text-center text-blue-400 font-bold uppercase tracking-wider mb-1 pt-1">
-                            La teva posició actual
-                        </div>
-                        <RowItem entry={currentUserRank} />
+                        
+                        <RowItem entry={currentUserRank} t={t} />
                     </div>
                 </div>
             )}

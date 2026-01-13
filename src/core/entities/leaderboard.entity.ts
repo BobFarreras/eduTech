@@ -9,7 +9,7 @@ export interface LeaderboardEntry {
   username: string;
   xp: number;
   level: number;
-  
+  avatarIcon: string; // <--- NOU CAMP OBLIGATORI
   /**
    * La posició al rànquing global.
    * Pot ser null si encara no s'ha calculat.

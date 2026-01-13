@@ -5,17 +5,22 @@ import { LeaderboardContainer } from '@/presentation/components/leaderboard/Lead
 import { LeaderboardEntry } from '@/core/entities/leaderboard.entity';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { getTranslations } from 'next-intl/server'; // <--- IMPORT
 
 export const dynamic = 'force-dynamic';
 
 export default async function LeaderboardPage() {
   const supabase = await createClient();
+  
+  // Fetch paral·lel: Traduccions + Usuari
+  const tPromise = getTranslations('leaderboard');
+  const userPromise = supabase.auth.getUser();
+  
+  const [t, { data: { user } }] = await Promise.all([tPromise, userPromise]);
+
   const { getGlobalLeaderboard, getUserRank } = createLeaderboardService(supabase);
 
-  // Obtenir l'usuari actual per buscar el seu rànquing
-  const { data: { user } } = await supabase.auth.getUser();
-
-  // Execució en paral·lel per a màxima velocitat (Promise.all)
+  // Fetch paral·lel: Dades del Rànquing
   const [leaderboardData, currentUserRank] = await Promise.all([
     getGlobalLeaderboard.execute(10).catch(err => {
         console.error("Error fetching list", err);
@@ -35,16 +40,16 @@ export default async function LeaderboardPage() {
         <Link 
             href="/dashboard" 
             className="absolute left-0 top-1 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-all"
-            title="Tornar al Dashboard"
+            title={t('back_dashboard')}
         >
             <ArrowLeft className="w-6 h-6" />
         </Link>
 
         <h1 className="text-3xl font-black tracking-tight text-white">
-          Saló de la Fama
+          {t('title')}
         </h1>
         <p className="text-slate-400 mt-2">
-          Competició global d'estudiants eduTech.
+          {t('subtitle')}
         </p>
       </header>
 

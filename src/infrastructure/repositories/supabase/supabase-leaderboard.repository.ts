@@ -5,13 +5,13 @@ import { LeaderboardEntry } from '@/core/entities/leaderboard.entity';
 
 export class SupabaseLeaderboardRepository implements ILeaderboardRepository {
   // Injectem el client per suportar tant Server Components com Server Actions
-  constructor(private supabase: SupabaseClient) {}
+  constructor(private supabase: SupabaseClient) { }
 
   async getTopGlobal(limit: number, offset: number = 0): Promise<LeaderboardEntry[]> {
     // 1. Consulta optimitzada a Profiles
     const { data, error } = await this.supabase
       .from('profiles')
-      .select('id, username, total_xp, current_level')
+      .select('id, username, avatar_icon, total_xp, current_level') // <--- AQUI
       .order('total_xp', { ascending: false })
       .range(offset, offset + limit - 1);
 
@@ -31,6 +31,7 @@ export class SupabaseLeaderboardRepository implements ILeaderboardRepository {
       userId: row.id,
       username: row.username || 'Anonymous User', // Fallback de seguretat
       xp: row.total_xp,
+      avatarIcon: row.avatar_icon || '🤖', // <--- MAPPING (Default Robot)
       level: row.current_level,
       // El rànquing és l'offset + índex (base 1)
       rank: offset + index + 1,
@@ -43,7 +44,7 @@ export class SupabaseLeaderboardRepository implements ILeaderboardRepository {
     // A. Primer obtenim les dades de l'usuari
     const { data: profile, error } = await this.supabase
       .from('profiles')
-      .select('id, username, total_xp, current_level')
+      .select('id, username, total_xp, avatar_icon, current_level')
       .eq('id', userId)
       .single();
 
@@ -65,6 +66,7 @@ export class SupabaseLeaderboardRepository implements ILeaderboardRepository {
       userId: profile.id,
       username: profile.username || 'Anonymous',
       xp: profile.total_xp,
+      avatarIcon: profile.avatar_icon || '🤖', // <--- MAPPING
       level: profile.current_level,
       rank: rankPosition,
       isCurrentUser: true

@@ -59,9 +59,7 @@ export default {
       locked: "Bloquejat",
       completed: "Completat"
     }
-
   },
-  // AFEGEIX AIXÒ:
   dashboard: {
     welcome_title: "Hola de nou",
     subtitle: "Quina tecnologia vols dominar avui?",
@@ -78,8 +76,6 @@ export default {
       title: "Ciberseguretat (OWASP Top 10)"
     }
   },
-
-  // --- NOVA SECCIÓ AUTH ---
   auth: {
     login: {
       title: "Benvingut a eduTech 🚀",
@@ -127,7 +123,7 @@ export default {
     senior: "Enginyer Senior",
     architect: "Tech Lead Architect",
     legend: "Llegenda del Codi",
-    junior_architect: "Arquitecte Junior", 
+    junior_architect: "Arquitecte Junior",
     grandmaster: "Gran Mestre del Sistema"
   },
   Admin: {
@@ -145,5 +141,45 @@ export default {
         error: "Error al crear el repte."
       }
     }
+  },
+  // --- SECCIÓ PERFIL (NOVA) ---
+  profile: {
+    title: "El teu Quarter General",
+    subtitle: "Gestiona la teva identitat a eduTech.",
+    stats: {
+      level: "Nivell",
+      total_xp: "XP Total",
+      streak_days: "Dies Rata",
+      member_since: "Membre des de",
+      id_label: "ID"
+    },
+    form: {
+      configuration: "Configuració",
+      configuration_desc: "Personalitza com et veuen els altres jugadors.",
+      avatar_label: "Escull el teu Avatar",
+      username_label: "Àlies (Nickname)",
+      username_placeholder: "Ex: CyberNinja",
+      username_help: "{min}-{max} caràcters. Sigues creatiu!",
+      save_button: "Guardar Canvis",
+      saving_button: "Guardant...",
+      success_message: "Perfil actualitzat correctament!",
+      error_generic: "Error inesperat al servidor."
+    },
+    validation: {
+      username_min: "El nom ha de tenir mínim {min} lletres",
+      username_max: "Màxim {max} caràcters",
+      avatar_invalid: "Emoji invàlid"
+    }
+  },
+  leaderboard: {
+    title: "Saló de la Fama",
+    subtitle: "Competició global d'estudiants eduTech.",
+    empty: "No hi ha dades encara.",
+    load_more: "Carregar-ne més",
+    loading: "Carregant...",
+    you: "(Tu)",
+    rank_label: "La teva posició actual",
+    level: "Nivell",
+    back_dashboard: "Tornar al Dashboard"
   }
 } as const;
