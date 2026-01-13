@@ -1,172 +1,145 @@
-# PRODUCT REQUIREMENTS DOCUMENT (PRD) - TechMastery
+# 📄 PRODUCT REQUIREMENTS DOCUMENT (PRD) - TechMastery
 
 | Atribut | Detall |
 | :--- | :--- |
 | **Projecte** | TechMastery Platform |
-| **Versió** | 1.3.0 (Dynamic Topic Architecture) |
-| **Estat** | APROVAT |
-| **Objectiu** | Crear un motor de joc agnòstic al contingut. |
+| **Versió** | 1.4.0 (Dynamic Architecture & Boss System) |
+| **Estat** | **APROVAT** |
+| **Objectiu** | Motor d'aprenentatge gamificat agnòstic al contingut i multi-idioma natiu. |
 
 ---
 
 ## 1. VISIÓ TÈCNICA I TECNOLOGIES
 
-* **Stack:** Next.js 16, Supabase, React 19, i18n (`next-intl`).
-* **Filosofia:** "Code Once, Serve Anything". El codi no sap què és "React", només sap renderitzar "Temes" i "Reptes".
+* **Stack Principal:** Next.js 16 (App Router), React 19, Supabase (PostgreSQL), TypeScript.
+* **Internacionalització (i18n):** Arquitectura híbrida:
+    * **UI:** Fitxers estàtics (`messages/*.json`) amb `next-intl` per a la interfície.
+    * **Contingut:** Camps JSONB a la BD (`LocalizedText`) per a temes i reptes.
+* **Filosofia:** *"Code Once, Serve Anything"*. El motor de joc no coneix temàtiques específiques; només sap renderitzar estructures de dades definides a la BD.
 
 ---
 
-## 2. ARQUITECTURA (CLEAN ARCH)
+## 2. ARQUITECTURA (CLEAN ARCHITECTURE)
 
-Mantenim l'estructura `src/` definida a `AGENTS.md`. La clau aquí és que el `Core` tractarà els `Topics` com a entitats dinàmiques.
+Seguim els principis de **Clean Architecture** i **Hexagonal Architecture** per garantir la independència de les regles de negoci.
+
+### Estructura de Capes (`src/`)
+1.  **Domain (`core/`):**
+    * Entitats pures (`Topic`, `Challenge`).
+    * Interfícies de Repositori (`ITopicRepository`).
+    * **Regla:** Zero dependències externes (no sap què és React ni Supabase).
+2.  **Application (`application/`):**
+    * Casos d'Ús (`GetTopicPathUseCase`, `GetUserDashboardUseCase`).
+    * DTOs.
+    * **Regla:** Orquestra el flux de dades i aplica lògica de negoci.
+3.  **Infrastructure (`infrastructure/`):**
+    * Implementacions (`SupabaseTopicRepository`).
+    * Mappers (`LevelNodeMapper`).
+    * **Regla:** Connecta amb el món exterior (BD, APIs).
+4.  **Presentation (`presentation/`):**
+    * Components React, Pàgines Next.js.
+    * **Regla:** Només visualització.
 
 ---
 
 ## 3. MODEL DE DADES (ESCALABILITAT INFINITA)
 
-Aquí està el secret per no tenir deute tècnic. Eliminem els Enums hardcoded per als temes.
+Eliminem Enums hardcoded i claus de traducció estàtiques per al contingut. Tot és dinàmic.
 
 ### 3.1 Entitat: `Topic` (La Categoria)
-Aquesta taula permet afegir "Supabase", "Python", "Vercel" sense tocar codi.
-
 * **Taula:** `topics`
+* **Descripció:** Defineix un curs. Permet crear nous cursos (ex: "Rust") des del Backoffice sense fer deploy.
 * **Camps:**
     * `id` (uuid, PK).
-    * `slug` (text, unique): 'python', 'react', 'servers-basics'. (Per a URLs netes: `/learn/python`).
-    * `name_key` (text): Clau de traducció o text directe ('topic.python.title').
-    * `icon_name` (text): Nom de la icona (ex: 'brand-python', 'server', 'git-merge'). El frontend mapeja això dinàmicament.
-    * `color_theme` (text): Hex o Tailwind class ('bg-blue-500') per diferenciar temes visuals.
-    * `parent_topic_id` (uuid, opcional): Per crear subtemes (ex: 'React' dins de 'Frontend').
+    * `slug` (text, unique): Identificador per URL (ex: `docker-basics`).
+    * `title` (JSONB): `{ "ca": "Fonaments", "en": "Basics" }` (Substitueix `name_key`).
+    * `description` (JSONB): Descripció multi-idioma.
+    * `icon_name` (text): Nom de la icona `lucide-react` (ex: `container`, `database`).
+    * `color_theme` (text): Classe Tailwind (ex: `bg-blue-500`).
+    * `is_active` (boolean): Soft-delete.
 
-// filepath: docs/DATA_MODEL.md
-
-## 3.2 Entitat: `Challenge` (El Repte)
-
+### 3.2 Entitat: `Challenge` (El Repte)
 * **Taula:** `challenges`
+* **Descripció:** Unitat mínima de joc.
 * **Camps:**
-    * `id` (uuid, PK)
-    * `topic_id` (uuid, FK -> topics.id)
-    * `difficulty_tier` (int): 1-10
-    * `type` (enum): 'QUIZ', 'CODE_FIX', 'TERMINAL'
-    * `content` (JSONB): Estructura i18n rica.
+    * `id` (uuid, PK).
+    * `topic_id` (uuid, FK).
+    * `difficulty_tier` (int): Nivell (1-100). Agrupa diversos reptes en un node visual.
+    * `type` (enum): `QUIZ`, `CODE_FIX`, `TERMINAL`, `MATCHING`, `CTF`, `THEORY`.
+    * `content` (JSONB): Dades específiques del repte (preguntes, codi, validacions).
+    * **`map_config` (JSONB):** Configuració visual del node al mapa.
+        * **Clau per als Bosses Dinàmics.**
+        * Exemple:
+          ```json
+          {
+            "isBoss": true,
+            "bossIcon": "crown",
+            "bossTitle": "milestones.architect",
+            "bossColor": "bg-purple-600 shadow-purple-600/50"
+          }
+          ```
 
-#### Esquema JSONB per a `content` (Tipus QUIZ):
-
-```json
-{
-  "question": {
-    "ca": "Pregunta en Català?",
-    "en": "Question in English?",
-    "es": "Pregunta en Español?"
-  },
-  "explanation": {
-    "ca": "Explicació...",
-    "en": "Explanation...",
-    "es": "Explicación..."
-  },
-  "options": [
-    {
-      "id": "uuid-v4",
-      "text": {
-        "ca": "Opció A",
-        "en": "Option A",
-        "es": "Opción A"
-      }
-    }
-  ],
-  "correctOptionIndex": 0
-}
-```
-
-### 3.3 Entitat: `UserProfile` (Matriu d'Habilitats Dinàmica)
-El progrés es guarda referenciant l'ID del tema.
-
-* **Taula:** `profiles`
-* **Camps:**
-    * `skills_matrix` (JSONB):
-        ```json
-        {
-          "uuid-del-tema-python": { "level": 3, "xp": 450 },
-          "uuid-del-tema-react": { "level": 1, "xp": 50 }
-        }
-        ```
-    * *Nota:* Usem UUIDs com a claus per si canviem el nom del tema ('React.js' -> 'React 19') no perdem el progrés.
-
----
-### 4.3 Sistema de Progressió (Path Logic)
-El progrés és seqüencial i basat en competència, no en XP acumulada.
-
-**Regla de Desbloqueig (Unlock):**
-- **Nivell 1:** Sempre desbloquejat per defecte.
-- **Nivell N:** Es desbloqueja automàticament quan l'usuari ha completat el **Nivell N-1**.
-
-**Definició de "Nivell Completat":**
-Un nivell es considera completat quan l'usuari ha superat amb èxit un % significatiu dels reptes únics d'aquell nivell (per exemple, el 80% o tots).
-
-**XP (Experiència):**
-L'XP és una mètrica global per a gamificació (rànquings) i no afecta al desbloqueig de rutes.
-
-### 4.4 Tipus de Reptes (Game Modes)
-El sistema ha de suportar múltiples modalitats de joc. L'arquitectura ha de permetre afegir-ne de nous fàcilment.
-
-**Tipus Suportats (MVP):**
-1.  **QUIZ:** Pregunta tipus test (1 correcta de N opcions).
-2.  **CODE_FILL:** Emplenar forats en un fragment de codi.
-3.  **MATCHING:** Relacionar conceptes (Ex: 'useState' -> 'Hook d'Estat').
-
-### 4.5 Feedback Visual al Mapa
-- **Current Position:** L'últim nivell completat ha de mostrar un indicador "Estàs aquí" (Avatar/Icona).
-- **Next Up:** El següent nivell desbloquejat ha de tenir una animació de "pols" o "ones" per convidar a jugar.
-- **Game Icon:** Cada node ha de mostrar una icona representativa del tipus de joc predominant en aquell nivell.
+### 3.3 Entitat: `UserProgress`
+* **Taula:** `user_progress`
+* **Camps:** `user_id`, `challenge_id`, `completed_at`, `score`.
 
 ---
 
-## 4. USER STORIES (GESTIÓ DINÀMICA)
+## 4. SISTEMA DE JOC (GAMEPLAY)
 
-### Feature [ADMIN-02]: Gestor de Temes (CMS)
-**User Story:**
-> **Com a** creador de contingut,
-> **Vull** crear un nou tema anomenat "Supabase" des del panell d'administració, assignar-li una icona verda i començar a afegir preguntes,
-> **Per tal de** llançar un curs nou sense necessitar un programador que faci un "deploy".
+### 4.1 Path Logic (Orquestració)
+El camí es genera dinàmicament agrupant reptes per `difficulty_tier`.
 
-**Requeriments:**
-1.  Interfície `/admin/topics/new`.
-2.  Pujada d'icona o selecció de llibreria (Lucide/React Icons).
-3.  Assignació de color.
+* **Desbloqueig:**
+    * **Tier 1:** Obert per defecte.
+    * **Tier N:** Es desbloqueja (Estat: `ACTIVE`) quan el Tier N-1 està `COMPLETED`.
+* **Càlcul d'XP:** Basat en el total de reptes completats dins del tema.
 
-### Feature [GAME-03]: El "Motor de Temes" (Frontend)
-**User Story:**
-> **Com a** sistema,
-> **He de** renderitzar la llista de temes disponibles basant-me en el que hi ha a la base de dades,
-> **Per tal de** que si demà s'afegeix "Rust", aparegui automàticament al Dashboard.
+### 4.2 Sistema de Bosses (Data-Driven)
+Ja no hi ha lògica hardcoded ("cada 5 nivells és Boss").
+* El Mapper (`LevelNodeMapper`) mira si algun repte del Tier té `map_config`.
+* Si en té, el node es renderitza com a **BossMarker** (visualment diferent).
+* Això permet crear cursos amb ritmes diferents (Bosses al nivell 10, 20, 30... o només al final).
 
-**Implementació:**
-* Component `<TopicGrid />` que fa un `map()` sobre la consulta `SELECT * FROM topics WHERE active = true`.
-
----
-
-## 5. VALIDACIONS I SEGURETAT
-
-1.  **Integritat Referencial:** Si esborres un Tema, què passa amb els reptes? (Configuració `ON DELETE CASCADE` o soft-delete `active: false`). Recomanem `active: false` per no perdre històric.
-2.  **Validació de JSON:** Encara que els temes siguin dinàmics, l'estructura del `content` dins de `challenges` ha de seguir un esquema Zod estricte segons el `type` de repte.
+### 4.3 Tipus de Reptes
+1.  **QUIZ:** Preguntes tipus test.
+2.  **CODE_FIX:** Corregir un snippet de codi.
+3.  **TERMINAL:** Simulador de línia de comandes (validació d'inputs).
+4.  **MATCHING:** Relacionar parelles de conceptes.
+5.  **THEORY:** Blocs de lectura/codi sense avaluació (per introduir temes).
+6.  **CTF (Capture The Flag):** Simulació d'incidents reals (logs, configs) per a nivells avançats.
 
 ---
 
-## 6. EXPERIÈNCIA D'USUARI (UX FLOW)
+## 5. EXPERIÈNCIA D'USUARI (UX)
 
-### 6.2 Learning Path (Topic View)
-* Vista vertical amb "scroll infinit" cap amunt o avall.
-* **Nodes del Camí:**
-    * **Nivells Normals:** Cercles amb icona del tipus predominant (Quiz, Codi, Tutorial).
-    * **Nivells Boss (Milestones):** * Apareixen cada X nivells (Configurable: Tiers 3, 5, 10...).
-        * Visualment distintius (més grans, amb vora animada o color especial).
-        * Representen una fita de coneixement.
-* **Estats dels Nodes:**
-    * 🔒 **Locked:** Gris, no interactuable.
-    * ▶️ **Active:** Color, amb efecte "pulse". És el següent repte a fer.
-    * ✅ **Completed:** Color sòlid + Checkmark. Rejugable.
-...
+### 5.1 Dashboard
+* Mostra les targetes dels temes actius.
+* Ús de `getLocalizedText` per mostrar títols en l'idioma de l'usuari, amb fallback automàtic.
 
-### 6.3 Game Mode
-* Interfície immersiva (sense header/footer de navegació).
-* Feedback immediat.
+### 5.2 Learning Map (El Mapa)
+* **Orchestrator:** Component intel·ligent que decideix si mostrar ruta vertical (mòbil) o horitzontal (escriptori).
+* **Feedback Visual:**
+    * Nodes normals vs Boss Nodes.
+    * Estats: Locked (Gris), Active (Pulse/Color), Completed (Verd/Or).
+
+---
+
+## 6. EINES D'ADMINISTRACIÓ (Backoffice)
+
+### 6.1 Gestor de Reptes (`/sys-ops/challenges`)
+* Editor visual per crear reptes.
+* Previsualització en temps real.
+
+### 6.2 Gestor de Temes (`/sys-ops/topics`)
+* CRUD complet. Permet afegir icones i colors sense tocar codi CSS.
+
+---
+
+## 7. SEGURETAT I VALIDACIONS
+
+1.  **Row Level Security (RLS):** Polítiques de Supabase per protegir les dades d'usuari.
+2.  **Type Safety:** Ús estricte de TypeScript i DTOs per evitar errors de tipus "any".
+3.  **Integració Contínua:** Tests amb Vitest per a Mappers i Use Cases.
+
+---

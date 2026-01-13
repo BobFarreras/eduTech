@@ -1,5 +1,5 @@
 
-\restrict 6WeJCegmyC9ovGQ0ZWqr7EFQeFuX8oQpalw1d43BfZHDoi2TYuKvftsnrXspddD
+\restrict wnl4Es8opMfvLlmWkvGjAJcxLfQphjYkRptR7BpteVMmwQ9TEzKWO9h9jgAgah8
 
 
 SET statement_timeout = 0;
@@ -30,7 +30,10 @@ CREATE TYPE "public"."challenge_type" AS ENUM (
     'TERMINAL',
     'DRAG_DROP',
     'MATCHING',
-    'LOGIC_ORDER'
+    'LOGIC_ORDER',
+    'BINARY_DECISION',
+    'THEORY',
+    'CTF'
 );
 
 
@@ -56,6 +59,27 @@ $$;
 
 ALTER FUNCTION "public"."handle_new_user"() OWNER TO "postgres";
 
+
+CREATE OR REPLACE FUNCTION "public"."update_topic_stats"() RETURNS "trigger"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    AS $$
+BEGIN
+  -- Intentem inserir o actualitzar (UPSERT)
+  INSERT INTO public.user_topic_stats (user_id, topic_id, total_xp, completed_count, last_activity_at)
+  VALUES (NEW.user_id, NEW.topic_id, NEW.xp_earned, 1, NOW())
+  ON CONFLICT (user_id, topic_id) 
+  DO UPDATE SET 
+    total_xp = user_topic_stats.total_xp + NEW.xp_earned,
+    completed_count = user_topic_stats.completed_count + 1,
+    last_activity_at = NOW();
+    
+  RETURN NEW;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."update_topic_stats"() OWNER TO "postgres";
+
 SET default_tablespace = '';
 
 SET default_table_access_method = "heap";
@@ -68,7 +92,8 @@ CREATE TABLE IF NOT EXISTS "public"."challenges" (
     "type" "public"."challenge_type" NOT NULL,
     "content" "jsonb" DEFAULT '{}'::"jsonb" NOT NULL,
     "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
-    CONSTRAINT "challenges_difficulty_tier_check" CHECK ((("difficulty_tier" >= 1) AND ("difficulty_tier" <= 10)))
+    "map_config" "jsonb",
+    CONSTRAINT "challenges_difficulty_tier_check" CHECK ((("difficulty_tier" > 0) AND ("difficulty_tier" <= 100)))
 );
 
 
@@ -98,7 +123,9 @@ CREATE TABLE IF NOT EXISTS "public"."topics" (
     "parent_topic_id" "uuid",
     "is_active" boolean DEFAULT false,
     "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
-    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL
+    "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    "title" "jsonb" DEFAULT '{}'::"jsonb",
+    "description" "jsonb" DEFAULT '{}'::"jsonb"
 );
 
 
@@ -116,6 +143,18 @@ CREATE TABLE IF NOT EXISTS "public"."user_progress" (
 
 
 ALTER TABLE "public"."user_progress" OWNER TO "postgres";
+
+
+CREATE TABLE IF NOT EXISTS "public"."user_topic_stats" (
+    "user_id" "uuid" NOT NULL,
+    "topic_id" "uuid" NOT NULL,
+    "total_xp" integer DEFAULT 0 NOT NULL,
+    "completed_count" integer DEFAULT 0 NOT NULL,
+    "last_activity_at" timestamp with time zone DEFAULT "now"()
+);
+
+
+ALTER TABLE "public"."user_topic_stats" OWNER TO "postgres";
 
 
 ALTER TABLE ONLY "public"."challenges"
@@ -148,7 +187,24 @@ ALTER TABLE ONLY "public"."user_progress"
 
 
 
+ALTER TABLE ONLY "public"."user_topic_stats"
+    ADD CONSTRAINT "user_topic_stats_pkey" PRIMARY KEY ("user_id", "topic_id");
+
+
+
 CREATE INDEX "idx_challenges_content" ON "public"."challenges" USING "gin" ("content");
+
+
+
+CREATE INDEX "idx_user_progress_topic_xp" ON "public"."user_progress" USING "btree" ("topic_id", "xp_earned" DESC);
+
+
+
+CREATE INDEX "idx_user_progress_user_topic" ON "public"."user_progress" USING "btree" ("user_id", "topic_id");
+
+
+
+CREATE OR REPLACE TRIGGER "on_challenge_complete" AFTER INSERT ON "public"."user_progress" FOR EACH ROW EXECUTE FUNCTION "public"."update_topic_stats"();
 
 
 
@@ -182,6 +238,16 @@ ALTER TABLE ONLY "public"."user_progress"
 
 
 
+ALTER TABLE ONLY "public"."user_topic_stats"
+    ADD CONSTRAINT "user_topic_stats_topic_id_fkey" FOREIGN KEY ("topic_id") REFERENCES "public"."topics"("id") ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY "public"."user_topic_stats"
+    ADD CONSTRAINT "user_topic_stats_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "auth"."users"("id") ON DELETE CASCADE;
+
+
+
 CREATE POLICY "Challenges are viewable by everyone" ON "public"."challenges" FOR SELECT USING (true);
 
 
@@ -198,6 +264,18 @@ CREATE POLICY "Public topics are viewable by everyone" ON "public"."topics" FOR 
 
 
 
+CREATE POLICY "Users can insert own progress" ON "public"."user_progress" FOR INSERT WITH CHECK (("auth"."uid"() = "user_id"));
+
+
+
+CREATE POLICY "Users can view own progress" ON "public"."user_progress" FOR SELECT USING (("auth"."uid"() = "user_id"));
+
+
+
+CREATE POLICY "Users can view own stats" ON "public"."user_topic_stats" FOR SELECT USING (("auth"."uid"() = "user_id"));
+
+
+
 ALTER TABLE "public"."challenges" ENABLE ROW LEVEL SECURITY;
 
 
@@ -210,6 +288,9 @@ ALTER TABLE "public"."topics" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "public"."user_progress" ENABLE ROW LEVEL SECURITY;
 
 
+ALTER TABLE "public"."user_topic_stats" ENABLE ROW LEVEL SECURITY;
+
+
 GRANT USAGE ON SCHEMA "public" TO "postgres";
 GRANT USAGE ON SCHEMA "public" TO "anon";
 GRANT USAGE ON SCHEMA "public" TO "authenticated";
@@ -220,6 +301,12 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "anon";
 GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."handle_new_user"() TO "service_role";
+
+
+
+GRANT ALL ON FUNCTION "public"."update_topic_stats"() TO "anon";
+GRANT ALL ON FUNCTION "public"."update_topic_stats"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."update_topic_stats"() TO "service_role";
 
 
 
@@ -244,6 +331,12 @@ GRANT ALL ON TABLE "public"."topics" TO "service_role";
 GRANT ALL ON TABLE "public"."user_progress" TO "anon";
 GRANT ALL ON TABLE "public"."user_progress" TO "authenticated";
 GRANT ALL ON TABLE "public"."user_progress" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."user_topic_stats" TO "anon";
+GRANT ALL ON TABLE "public"."user_topic_stats" TO "authenticated";
+GRANT ALL ON TABLE "public"."user_topic_stats" TO "service_role";
 
 
 
@@ -277,6 +370,6 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TAB
 
 
 
-\unrestrict 6WeJCegmyC9ovGQ0ZWqr7EFQeFuX8oQpalw1d43BfZHDoi2TYuKvftsnrXspddD
+\unrestrict wnl4Es8opMfvLlmWkvGjAJcxLfQphjYkRptR7BpteVMmwQ9TEzKWO9h9jgAgah8
 
 RESET ALL;
