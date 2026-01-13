@@ -1,7 +1,7 @@
 // filepath: src/app/[locale]/(game)/learn/[slug]/page.tsx
 import { createClient } from '@/infrastructure/utils/supabase/server';
 import { GetTopicPathUseCase } from '@/application/use-cases/topics/get-topic-path.use-case';
-import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
+import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/supabase-topic.repository';
 import { ArrowLeft } from 'lucide-react';
 import { redirect } from 'next/navigation';
 // ❌ ELIMINAT: import { getTranslations } from 'next-intl/server'; (ja no cal per al títol)

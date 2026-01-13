@@ -2,8 +2,8 @@
 import Link from 'next/link';
 
 import { assertAdmin } from '@/presentation/utils/auth-guards';
-import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
-import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
+import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/supabase-challenge.repository';
+import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/supabase-topic.repository';
 
 // Components UI Modulars
 import { ChallengeFilters } from '@/presentation/components/admin/challenges/list/challenge-filters';

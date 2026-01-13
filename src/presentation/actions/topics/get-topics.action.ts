@@ -2,7 +2,7 @@
 'use server';
 
 import { GetActiveTopicsUseCase } from '@/application/use-cases/topics/get-active-topics.use-case';
-import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
+import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/supabase-topic.repository';
 import { Topic } from '@/core/entities/topic.entity';
 
 // Definim un tipus de retorn estàndard per a les accions

@@ -1,6 +1,6 @@
 // filepath: src/infrastructure/repositories/supabase/challenge.repository.test.ts
 import { describe, it, expect, vi } from 'vitest';
-import { SupabaseChallengeRepository } from './challenge.repository';
+import { SupabaseChallengeRepository } from './supabase-challenge.repository';
 import { QuizContent } from '@/core/entities/challenges/challenge.entity';
 // Importem el client "RAW" de l'SDK oficial, no el nostre wrapper de Next.js
 import { createClient as createRawSupabaseClient } from '@supabase/supabase-js';

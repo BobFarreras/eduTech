@@ -1,6 +1,7 @@
 // filepath: src/core/repositories/topic.repository.ts
 import { Topic, CreateTopicInput } from '../entities/topic.entity';
 import { ChallengeType } from '../entities/challenges/challenge.entity';
+import { DashboardTopicDTO } from '@/application/dto/dashboard-topic.dto'; // <--- Importa això
 // 1. ✅ DEFINIM EL TIPUS EXPLICIT (Ja no és anònim)
 export interface MapConfig {
   isBoss: boolean;
@@ -26,4 +27,6 @@ export interface ITopicRepository {
   update(id: string, topic: Partial<CreateTopicInput>): Promise<Topic>;
   getTopicProgressSummary(topicId: string, userId: string): Promise<TierProgressStats[]>;
   delete(id: string): Promise<void>;
+  getUserDashboard(userId: string): Promise<DashboardTopicDTO[]>;
+  
 }

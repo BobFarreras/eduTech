@@ -2,7 +2,7 @@
 'use server';
 
 import { CompleteSessionUseCase, SessionResult } from '@/application/use-cases/gamification/complete-session.use-case';
-import { SupabaseUserRepository } from '@/infrastructure/repositories/supabase/user.repository';
+import { SupabaseUserRepository } from '@/infrastructure/repositories/supabase/supabase-user.repository';
 import { createClient } from '@/infrastructure/utils/supabase/server'; // <--- Nou import
 
 type ActionResponse = 

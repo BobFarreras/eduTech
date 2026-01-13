@@ -20,7 +20,7 @@ export default {
       login_btn: "Entrar",
       retry_btn: "Reintentar",
       lesson_complete: "¡Lección completada!",
-      xp_earned: "XP ganada",
+      xp_earned: "XP Ganada",
       dashboard_btn: "Volver al Dashboard",
       level_up: "¡NIVEL SUPERADO!",
       continue_btn: "Continuar",
@@ -28,7 +28,7 @@ export default {
     },
     modes: {
       logic_order: {
-        label: "Orden lógico",
+        label: "Orden Lógico",
         your_answer: "Tu respuesta",
         placeholder: "Arrastra los elementos aquí",
         empty_options: "Todo colocado ✨",
@@ -60,7 +60,6 @@ export default {
       completed: "Completado"
     }
   },
-
   dashboard: {
     welcome_title: "Hola de nuevo",
     subtitle: "¿Qué tecnología quieres dominar hoy?",
@@ -73,23 +72,25 @@ export default {
     legacy: { title: "PHP Legacy" },
     security: { title: "Seguridad OWASP" },
     docker_basics: { title: "Contenedores Docker" },
-    owasp: { title: "Ciberseguridad (OWASP Top 10)" }
+    owasp: {
+      title: "Ciberseguridad (OWASP Top 10)"
+    }
   },
   auth: {
     login: {
       title: "Bienvenido a eduTech 🚀",
       subtitle: "Inicia sesión para seguir aprendiendo.",
-      submit_button: "Iniciar sesión",
-      forgot_password: "¿Olvidaste tu contraseña?",
-      no_account: "¿No tienes una cuenta?",
-      register_link: "Crear cuenta gratis"
+      submit_button: "Entrar",
+      forgot_password: "¿Has olvidado la contraseña?",
+      no_account: "¿Aún no tienes cuenta?",
+      register_link: "Crea una cuenta gratuita"
     },
     register: {
       title: "Únete a eduTech",
-      subtitle: "Empieza a aprender hoy.",
-      submit_button: "Crear cuenta",
-      have_account: "¿Ya tienes una cuenta?",
-      login_link: "Iniciar sesión"
+      subtitle: "Empieza a aprender hoy mismo.",
+      submit_button: "Crear Cuenta",
+      have_account: "¿Ya tienes cuenta?",
+      login_link: "Inicia sesión"
     },
     fields: {
       email: "Correo electrónico",
@@ -98,13 +99,13 @@ export default {
       password_placeholder: "••••••••"
     },
     errors: {
-      generic: "Ocurrió un error inesperado.",
-      invalid_credentials: "Correo electrónico o contraseña incorrectos.",
-      user_already_exists: "El correo electrónico ya está registrado.",
+      generic: "Ha ocurrido un error inesperado.",
+      invalid_credentials: "El correo o la contraseña son incorrectos.",
+      user_already_exists: "Este correo ya está registrado.",
       weak_password: "La contraseña debe tener al menos 6 caracteres."
     },
     success: {
-      check_email: "¡Cuenta creada! Revisa tu correo electrónico."
+      check_email: "¡Cuenta creada! Revisa tu correo."
     },
     logout: "Cerrar sesión"
   },
@@ -120,12 +121,11 @@ export default {
   milestones: {
     junior: "Desarrollador Junior",
     senior: "Ingeniero Senior",
-    architect: "Arquitecto Tech Lead",
+    architect: "Tech Lead Architect",
     legend: "Leyenda del Código",
     junior_architect: "Arquitecto Junior",
     grandmaster: "Gran Maestro del Sistema"
   },
-
   Admin: {
     Challenges: {
       title: "Crear Nuevo Reto",
@@ -141,7 +141,44 @@ export default {
         error: "Error al crear el reto."
       }
     }
+  },
+  profile: {
+    title: "Tu Cuartel General",
+    subtitle: "Gestiona tu identidad en eduTech.",
+    stats: {
+      level: "Nivel",
+      total_xp: "XP Total",
+      streak_days: "Días de racha",
+      member_since: "Miembro desde",
+      id_label: "ID"
+    },
+    form: {
+      configuration: "Configuración",
+      configuration_desc: "Personaliza cómo te ven los demás jugadores.",
+      avatar_label: "Elige tu Avatar",
+      username_label: "Alias (Nickname)",
+      username_placeholder: "Ej: CyberNinja",
+      username_help: "{min}-{max} caracteres. ¡Sé creativo!",
+      save_button: "Guardar Cambios",
+      saving_button: "Guardando...",
+      success_message: "¡Perfil actualizado correctamente!",
+      error_generic: "Error inesperado del servidor."
+    },
+    validation: {
+      username_min: "El nombre debe tener al menos {min} letras",
+      username_max: "Máximo {max} caracteres",
+      avatar_invalid: "Emoji inválido"
+    }
+  },
+  leaderboard: {
+    title: "Salón de la Fama",
+    subtitle: "Competición global de estudiantes eduTech.",
+    empty: "Aún no hay datos.",
+    load_more: "Cargar más",
+    loading: "Cargando...",
+    you: "(Tú)",
+    rank_label: "Tu posición actual",
+    level: "Nivel",
+    back_dashboard: "Volver al Dashboard"
   }
-
-
 } as const;

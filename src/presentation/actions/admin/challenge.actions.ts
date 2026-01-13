@@ -8,7 +8,7 @@ import { assertAdmin } from '@/presentation/utils/auth-guards';
 import { CreateChallengeSchema, CreateChallengeSchemaType, UpdateChallengeSchema, UpdateChallengeSchemaType } from '@/application/dto/challenge.schema';
 
 // Core & Application
-import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
+import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/supabase-challenge.repository';
 import { CreateChallengeUseCase } from '@/application/use-cases/challenges/create-challenge.use-case';
 import { UpdateChallengeUseCase } from '@/application/use-cases/challenges/update-challenge.use-case';
 import { DeleteChallengeUseCase } from '@/application/use-cases/challenges/delete-challenge.use-case';

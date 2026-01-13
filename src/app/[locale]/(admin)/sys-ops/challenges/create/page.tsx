@@ -1,7 +1,7 @@
 // filepath: src/app/[locale]/(admin)/sys-ops/challenges/create/page.tsx
 import { getTranslations, getLocale } from 'next-intl/server'; // ✅ 1. AFEGIR getLocale
 import { assertAdmin } from '@/presentation/utils/auth-guards';
-import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
+import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/supabase-topic.repository';
 import { GetAllTopicsUseCase } from '@/application/use-cases/topics/get-all-topics.use-case';
 import { ChallengeEditor } from '@/presentation/components/admin/challenges/challenge-editor';
 import { getLocalizedText } from '@/core/utils/i18n-utils'; // ✅ 2. IMPORTAR UTILITAT

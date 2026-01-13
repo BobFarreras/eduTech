@@ -1,7 +1,7 @@
 // filepath: src/presentation/components/admin/challenges/list/challenge-table.tsx
 import Link from 'next/link';
 import { deleteChallengeAction } from '@/presentation/actions/admin/challenge.actions';
-import { AdminChallengeSummary } from '@/infrastructure/repositories/supabase/challenge.repository';
+import { AdminChallengeSummary } from '@/infrastructure/repositories/supabase/supabase-challenge.repository';
 
 interface Props {
   challenges: AdminChallengeSummary[];

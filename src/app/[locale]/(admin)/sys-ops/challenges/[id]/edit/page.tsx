@@ -1,8 +1,8 @@
 // filepath: src/app/[locale]/(admin)/sys-ops/challenges/[id]/edit/page.tsx
 import { notFound } from 'next/navigation';
 import { assertAdmin } from '@/presentation/utils/auth-guards';
-import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/challenge.repository';
-import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/topic.repository';
+import { SupabaseChallengeRepository } from '@/infrastructure/repositories/supabase/supabase-challenge.repository';
+import { SupabaseTopicRepository } from '@/infrastructure/repositories/supabase/supabase-topic.repository';
 import { ChallengeEditor } from '@/presentation/components/admin/challenges/challenge-editor';
 import { ChallengeFormValues } from '@/presentation/components/admin/challenges/form/form-config';
 // Importem el nou component de navegació
